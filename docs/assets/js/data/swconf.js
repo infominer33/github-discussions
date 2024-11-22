@@ -1,16 +1,16 @@
 const swconf = {
   
-    cacheName: 'chirpy-1732279607',resources: [
-      '/https://infominer33.github.io/assets/css/jekyll-theme-chirpy.css',
-      '/https://infominer33.github.io/',
+    cacheName: 'chirpy-1732279799',resources: [
+      '/github-discussions/assets/css/jekyll-theme-chirpy.css',
+      '/github-discussions/',
       
-        '/https://infominer33.github.io/categories/',
+        '/github-discussions/categories/',
       
-        '/https://infominer33.github.io/tags/',
+        '/github-discussions/tags/',
       
-        '/https://infominer33.github.io/archives/',
+        '/github-discussions/archives/',
       
-        '/https://infominer33.github.io/about/',
+        '/github-discussions/about/',
       
 
       

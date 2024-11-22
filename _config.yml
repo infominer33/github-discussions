@@ -95,7 +95,6 @@ paginate: 20
 
 # The base URL of your site
 baseurl: "/github-discussions"
-url    : https://infominer33.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 
 # ------------ The following options are not recommended to be modified ------------------
 
