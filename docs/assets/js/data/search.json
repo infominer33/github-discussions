@@ -2,7 +2,7 @@
   
   {
     "title": "acapy/pr/3344: Restore `--base-wallet-routes` flag functionality",
-    "url": "/github-discussions/acapy/pr/3344/",
+    "url": "/https://infominer33.github.io/acapy/pr/3344/",
     "categories": "OWF",
     "tags": "acapy",
     "date": "2024-11-21 10:21:14 -0800",
@@ -19,7 +19,7 @@
   
   {
     "title": "webauthn/issue/2211: CR: Need a way to detect \"cancel\"",
-    "url": "/github-discussions/webauthn/issue/2211/",
+    "url": "/https://infominer33.github.io/webauthn/issue/2211/",
     "categories": "W3C",
     "tags": "webauthn",
     "date": "2024-11-21 09:31:50 -0800",
@@ -36,7 +36,7 @@
   
   {
     "title": "webauthn/pr/2209: Add test vectors",
-    "url": "/github-discussions/webauthn/pr/2209/",
+    "url": "/https://infominer33.github.io/webauthn/pr/2209/",
     "categories": "W3C",
     "tags": "webauthn",
     "date": "2024-11-20 10:38:52 -0800",
@@ -53,7 +53,7 @@
   
   {
     "title": "identus-cloud-agent/issue/1459:  proof request there's no information on holder ",
-    "url": "/github-discussions/identus-cloud-agent/issue/1459/",
+    "url": "/https://infominer33.github.io/identus-cloud-agent/issue/1459/",
     "categories": "Hyperledger",
     "tags": "identus-cloud-agent",
     "date": "2024-11-20 02:34:25 -0800",
@@ -70,7 +70,7 @@
   
   {
     "title": "acapy/issue/3343: DID Management Proposed Update",
-    "url": "/github-discussions/acapy/issue/3343/",
+    "url": "/https://infominer33.github.io/acapy/issue/3343/",
     "categories": "OWF",
     "tags": "acapy",
     "date": "2024-11-19 08:58:08 -0800",
@@ -87,7 +87,7 @@
   
   {
     "title": "webauthn/issue/2208: \"Verify\" is undefined",
-    "url": "/github-discussions/webauthn/issue/2208/",
+    "url": "/https://infominer33.github.io/webauthn/issue/2208/",
     "categories": "W3C",
     "tags": "webauthn",
     "date": "2024-11-18 07:50:14 -0800",
@@ -104,7 +104,7 @@
   
   {
     "title": "webauthn/issue/2207: JSON parsing should be on top of Infra primitives",
-    "url": "/github-discussions/webauthn/issue/2207/",
+    "url": "/https://infominer33.github.io/webauthn/issue/2207/",
     "categories": "W3C",
     "tags": "webauthn",
     "date": "2024-11-18 05:58:14 -0800",
@@ -121,7 +121,7 @@
   
   {
     "title": "webauthn/issue/2206: Use of \"valid domain\" seems wrong",
-    "url": "/github-discussions/webauthn/issue/2206/",
+    "url": "/https://infominer33.github.io/webauthn/issue/2206/",
     "categories": "W3C",
     "tags": "webauthn",
     "date": "2024-11-18 05:55:36 -0800",
@@ -138,7 +138,7 @@
   
   {
     "title": "webauthn/issue/2205: Usage of \"effective domain\" seems wrong",
-    "url": "/github-discussions/webauthn/issue/2205/",
+    "url": "/https://infominer33.github.io/webauthn/issue/2205/",
     "categories": "W3C",
     "tags": "webauthn",
     "date": "2024-11-18 05:54:16 -0800",
@@ -155,7 +155,7 @@
   
   {
     "title": "identus-cloud-agent/issue/1451: Verifiable Credential Issued in JWT uses longform of prism DID in the iss field of JWT",
-    "url": "/github-discussions/identus-cloud-agent/issue/1451/",
+    "url": "/https://infominer33.github.io/identus-cloud-agent/issue/1451/",
     "categories": "Hyperledger",
     "tags": "identus-cloud-agent",
     "date": "2024-11-18 05:19:24 -0800",
@@ -172,7 +172,7 @@
   
   {
     "title": "identus-cloud-agent/issue/1450: Add support for SDJWT  trustedIssuer and credential SchemaId Validation ",
-    "url": "/github-discussions/identus-cloud-agent/issue/1450/",
+    "url": "/https://infominer33.github.io/identus-cloud-agent/issue/1450/",
     "categories": "Hyperledger",
     "tags": "identus-cloud-agent",
     "date": "2024-11-18 05:13:03 -0800",
@@ -189,7 +189,7 @@
   
   {
     "title": "identus-cloud-agent/pr/1442: test: add new tests and refactoring",
-    "url": "/github-discussions/identus-cloud-agent/pr/1442/",
+    "url": "/https://infominer33.github.io/identus-cloud-agent/pr/1442/",
     "categories": "Hyperledger",
     "tags": "identus-cloud-agent",
     "date": "2024-11-15 15:02:41 -0800",
@@ -206,7 +206,7 @@
   
   {
     "title": "identus-cloud-agent/issue/1440: docs/ Docker error",
-    "url": "/github-discussions/identus-cloud-agent/issue/1440/",
+    "url": "/https://infominer33.github.io/identus-cloud-agent/issue/1440/",
     "categories": "Hyperledger",
     "tags": "identus-cloud-agent",
     "date": "2024-11-14 17:27:38 -0800",
@@ -223,7 +223,7 @@
   
   {
     "title": "web-did-resolver/pr/134: Bump typescript from 5.5.4 to 5.6.2 in /AliceFaberAcmeDemo/controllers/alice-controller",
-    "url": "/github-discussions/web-did-resolver/pr/134/",
+    "url": "/https://infominer33.github.io/web-did-resolver/pr/134/",
     "categories": "DIF",
     "tags": "web-did-resolver",
     "date": "2024-11-14 14:09:16 -0800",
@@ -240,7 +240,7 @@
   
   {
     "title": "webauthn/issue/2204: Should steps 28 and 29 occur before Step 27 in the registration ceremony",
-    "url": "/github-discussions/webauthn/issue/2204/",
+    "url": "/https://infominer33.github.io/webauthn/issue/2204/",
     "categories": "W3C",
     "tags": "webauthn",
     "date": "2024-11-14 13:07:57 -0800",
@@ -257,7 +257,7 @@
   
   {
     "title": "identus/issue/86: Incorrect hashing used in tests for `ecdsa-rdfc-2019` `P-384`",
-    "url": "/github-discussions/identus/issue/86/",
+    "url": "/https://infominer33.github.io/identus/issue/86/",
     "categories": "Hyperledger",
     "tags": "identus",
     "date": "2024-11-14 08:12:54 -0800",
@@ -274,7 +274,7 @@
   
   {
     "title": "webauthn/issue/2203: Replace `USVString` with `DOMString`",
-    "url": "/github-discussions/webauthn/issue/2203/",
+    "url": "/https://infominer33.github.io/webauthn/issue/2203/",
     "categories": "W3C",
     "tags": "webauthn",
     "date": "2024-11-14 07:08:41 -0800",
@@ -291,7 +291,7 @@
   
   {
     "title": "webauthn/issue/2202: AttestationFormats may have duplicate entries",
-    "url": "/github-discussions/webauthn/issue/2202/",
+    "url": "/https://infominer33.github.io/webauthn/issue/2202/",
     "categories": "W3C",
     "tags": "webauthn",
     "date": "2024-11-13 18:19:50 -0800",
@@ -308,7 +308,7 @@
   
   {
     "title": "identus-cloud-agent/issue/1438: Proofs from presentation request not work",
-    "url": "/github-discussions/identus-cloud-agent/issue/1438/",
+    "url": "/https://infominer33.github.io/identus-cloud-agent/issue/1438/",
     "categories": "Hyperledger",
     "tags": "identus-cloud-agent",
     "date": "2024-11-13 18:19:10 -0800",
@@ -325,7 +325,7 @@
   
   {
     "title": "webauthn/issue/2198: WebAuthn Clients should NOT zero out AAGUIDs from security keys when attestation is none",
-    "url": "/github-discussions/webauthn/issue/2198/",
+    "url": "/https://infominer33.github.io/webauthn/issue/2198/",
     "categories": "W3C",
     "tags": "webauthn",
     "date": "2024-11-13 12:51:20 -0800",
@@ -342,7 +342,7 @@
   
   {
     "title": "did-extensions/issue/590: SPEC/PROCESS PROPOSAL: To secure a unique method name, require the registration of the corresponding Internet DNS name: did-<method>. directory ",
-    "url": "/github-discussions/did-extensions/issue/590/",
+    "url": "/https://infominer33.github.io/did-extensions/issue/590/",
     "categories": "W3C",
     "tags": "did-extensions",
     "date": "2024-11-10 14:57:39 -0800",
@@ -359,7 +359,7 @@
   
   {
     "title": "did-extensions/issue/586: Objection: approval of did:tdw",
-    "url": "/github-discussions/did-extensions/issue/586/",
+    "url": "/https://infominer33.github.io/did-extensions/issue/586/",
     "categories": "Hyperledger",
     "tags": "did-extensions",
     "date": "2024-11-07 09:37:26 -0800",
@@ -376,7 +376,7 @@
   
   {
     "title": "did-extensions/issue/585: https://www.w3.org/TR/did-extensions-methods/ is unresolvable ",
-    "url": "/github-discussions/did-extensions/issue/585/",
+    "url": "/https://infominer33.github.io/did-extensions/issue/585/",
     "categories": "W3C",
     "tags": "did-extensions",
     "date": "2024-11-07 09:23:22 -0800",
@@ -393,7 +393,7 @@
   
   {
     "title": "acapy/pr/3332: :sparkles: Add TRACE log level and improve logging in core components",
-    "url": "/github-discussions/acapy/pr/3332/",
+    "url": "/https://infominer33.github.io/acapy/pr/3332/",
     "categories": "OWF",
     "tags": "acapy",
     "date": "2024-11-07 07:18:36 -0800",
@@ -410,7 +410,7 @@
   
   {
     "title": "credential-schemas/issue/23: Questions regarding `QueryByExample` structure and handling",
-    "url": "/github-discussions/credential-schemas/issue/23/",
+    "url": "/https://infominer33.github.io/credential-schemas/issue/23/",
     "categories": "DIF",
     "tags": "credential-schemas",
     "date": "2024-11-05 09:54:02 -0800",
@@ -427,7 +427,7 @@
   
   {
     "title": "credential-schemas/issue/21: Fix mac-os build",
-    "url": "/github-discussions/credential-schemas/issue/21/",
+    "url": "/https://infominer33.github.io/credential-schemas/issue/21/",
     "categories": "DIF",
     "tags": "credential-schemas",
     "date": "2024-11-04 05:41:24 -0800",
@@ -444,7 +444,7 @@
   
   {
     "title": "webauthn/issue/2192: The authenticator may hide the credential even if the RP signals unknown credentials",
-    "url": "/github-discussions/webauthn/issue/2192/",
+    "url": "/https://infominer33.github.io/webauthn/issue/2192/",
     "categories": "W3C",
     "tags": "webauthn",
     "date": "2024-10-30 02:03:05 -0700",
@@ -461,7 +461,7 @@
   
   {
     "title": "acapy/issue/3321: Question API: Send Presentation without pres_ex_id or with connection_id",
-    "url": "/github-discussions/acapy/issue/3321/",
+    "url": "/https://infominer33.github.io/acapy/issue/3321/",
     "categories": "OWF",
     "tags": "acapy",
     "date": "2024-10-29 15:17:14 -0700",
@@ -478,7 +478,7 @@
   
   {
     "title": "webauthn/issue/2187: Remove authenticatorDisplayName from L3",
-    "url": "/github-discussions/webauthn/issue/2187/",
+    "url": "/https://infominer33.github.io/webauthn/issue/2187/",
     "categories": "W3C",
     "tags": "webauthn",
     "date": "2024-10-23 12:06:50 -0700",
@@ -495,7 +495,7 @@
   
   {
     "title": "identus/issue/76: DRY principle for multikeys?",
-    "url": "/github-discussions/identus/issue/76/",
+    "url": "/https://infominer33.github.io/identus/issue/76/",
     "categories": "DIF",
     "tags": "identus",
     "date": "2024-10-21 07:31:35 -0700",
@@ -512,7 +512,7 @@
   
   {
     "title": "identus/issue/75: Some examples have the wrong / old context version",
-    "url": "/github-discussions/identus/issue/75/",
+    "url": "/https://infominer33.github.io/identus/issue/75/",
     "categories": "DIF",
     "tags": "identus",
     "date": "2024-10-21 07:18:04 -0700",
@@ -529,7 +529,7 @@
   
   {
     "title": "identus/issue/73: Bug 27755 - Using the Subtle Crypto Interface with Streams",
-    "url": "/github-discussions/identus/issue/73/",
+    "url": "/https://infominer33.github.io/identus/issue/73/",
     "categories": "DIF",
     "tags": "identus",
     "date": "2024-10-21 07:15:57 -0700",
@@ -546,7 +546,7 @@
   
   {
     "title": "json-ld-syntax/issue/443: `@protected` creates unresolvable conflicts when the same term is defined in two contexts top-level",
-    "url": "/github-discussions/json-ld-syntax/issue/443/",
+    "url": "/https://infominer33.github.io/json-ld-syntax/issue/443/",
     "categories": "DIF",
     "tags": "json-ld-syntax",
     "date": "2024-10-19 02:53:21 -0700",
@@ -563,7 +563,7 @@
   
   {
     "title": "identus-apollo/pr/196: docs: update the connectionless documentation",
-    "url": "/github-discussions/identus-apollo/pr/196/",
+    "url": "/https://infominer33.github.io/identus-apollo/pr/196/",
     "categories": "Hyperledger",
     "tags": "identus-apollo",
     "date": "2024-10-16 05:48:45 -0700",
@@ -580,7 +580,7 @@
   
   {
     "title": "acapy/issue/3283: `--base-wallet-routes` flag no longer works",
-    "url": "/github-discussions/acapy/issue/3283/",
+    "url": "/https://infominer33.github.io/acapy/issue/3283/",
     "categories": "OWF",
     "tags": "acapy",
     "date": "2024-10-11 10:16:41 -0700",
@@ -597,7 +597,7 @@
   
   {
     "title": "acapy/pr/3279: More robust verification method selection by did",
-    "url": "/github-discussions/acapy/pr/3279/",
+    "url": "/https://infominer33.github.io/acapy/pr/3279/",
     "categories": "OWF",
     "tags": "acapy",
     "date": "2024-10-09 13:02:31 -0700",
@@ -614,7 +614,7 @@
   
   {
     "title": "bbs-signature/issue/327: test vectors: inconsistency in random scalars",
-    "url": "/github-discussions/bbs-signature/issue/327/",
+    "url": "/https://infominer33.github.io/bbs-signature/issue/327/",
     "categories": "DIF",
     "tags": "bbs-signature",
     "date": "2024-10-07 17:55:53 -0700",
@@ -631,7 +631,7 @@
   
   {
     "title": "webauthn/issue/2169: [[Get]] method doesn't exist in CredMan",
-    "url": "/github-discussions/webauthn/issue/2169/",
+    "url": "/https://infominer33.github.io/webauthn/issue/2169/",
     "categories": "W3C",
     "tags": "webauthn",
     "date": "2024-10-01 07:40:46 -0700",
@@ -648,7 +648,7 @@
   
   {
     "title": "did-core/issue/865: Question about query parameter ordering",
-    "url": "/github-discussions/did-core/issue/865/",
+    "url": "/https://infominer33.github.io/did-core/issue/865/",
     "categories": "W3C",
     "tags": "did-core",
     "date": "2024-09-25 05:50:27 -0700",
@@ -665,7 +665,7 @@
   
   {
     "title": "webauthn/issue/2153: Bit set by the SPC extension should backed up as part of the Public Key Credential Source",
-    "url": "/github-discussions/webauthn/issue/2153/",
+    "url": "/https://infominer33.github.io/webauthn/issue/2153/",
     "categories": "W3C",
     "tags": "webauthn",
     "date": "2024-09-24 18:04:28 -0700",
@@ -682,7 +682,7 @@
   
   {
     "title": "webauthn/issue/2151: authenticatorDisplayName should use a localizable language map",
-    "url": "/github-discussions/webauthn/issue/2151/",
+    "url": "/https://infominer33.github.io/webauthn/issue/2151/",
     "categories": "W3C",
     "tags": "webauthn",
     "date": "2024-09-24 14:39:54 -0700",
@@ -699,7 +699,7 @@
   
   {
     "title": "json-ld-syntax/issue/442: Linking to a JSON-LD schema?",
-    "url": "/github-discussions/json-ld-syntax/issue/442/",
+    "url": "/https://infominer33.github.io/json-ld-syntax/issue/442/",
     "categories": "DIF",
     "tags": "json-ld-syntax",
     "date": "2024-09-24 12:03:22 -0700",
@@ -716,7 +716,7 @@
   
   {
     "title": "aries-endorser-service/issue/157: Exchange of Electronic Certificate of Origin to facilitate Cross Border Trade",
-    "url": "/github-discussions/aries-endorser-service/issue/157/",
+    "url": "/https://infominer33.github.io/aries-endorser-service/issue/157/",
     "categories": "DIF",
     "tags": "aries-endorser-service",
     "date": "2024-09-23 15:29:56 -0700",
@@ -733,7 +733,7 @@
   
   {
     "title": "identus/issue/61: Service Endpoint Construction inconsistency",
-    "url": "/github-discussions/identus/issue/61/",
+    "url": "/https://infominer33.github.io/identus/issue/61/",
     "categories": "DIF",
     "tags": "identus",
     "date": "2024-09-19 06:27:35 -0700",
@@ -750,7 +750,7 @@
   
   {
     "title": "acapy/pr/3237: did:tdw resolver",
-    "url": "/github-discussions/acapy/pr/3237/",
+    "url": "/https://infominer33.github.io/acapy/pr/3237/",
     "categories": "OWF",
     "tags": "acapy",
     "date": "2024-09-16 15:01:14 -0700",
@@ -767,7 +767,7 @@
   
   {
     "title": "vc-data-model/pr/1560: Making Abstract abstract, instead of introduction",
-    "url": "/github-discussions/vc-data-model/pr/1560/",
+    "url": "/https://infominer33.github.io/vc-data-model/pr/1560/",
     "categories": "W3C",
     "tags": "vc-data-model",
     "date": "2024-09-11 08:34:20 -0700",
@@ -784,7 +784,7 @@
   
   {
     "title": "identus-edge-agent-sdk-ts/issue/273: What we mean by \"functional\" and \"technical\"",
-    "url": "/github-discussions/identus-edge-agent-sdk-ts/issue/273/",
+    "url": "/https://infominer33.github.io/identus-edge-agent-sdk-ts/issue/273/",
     "categories": "Hyperledger",
     "tags": "identus-edge-agent-sdk-ts",
     "date": "2024-08-25 16:32:42 -0700",
@@ -801,7 +801,7 @@
   
   {
     "title": "dpv/issue/184: Respec issue on the usage of the '|' character...",
-    "url": "/github-discussions/dpv/issue/184/",
+    "url": "/https://infominer33.github.io/dpv/issue/184/",
     "categories": "Hyperledger",
     "tags": "dpv",
     "date": "2024-08-24 10:03:12 -0700",
@@ -818,7 +818,7 @@
   
   {
     "title": "dpv/issue/183: New status purpose proposal",
-    "url": "/github-discussions/dpv/issue/183/",
+    "url": "/https://infominer33.github.io/dpv/issue/183/",
     "categories": "DIF",
     "tags": "dpv",
     "date": "2024-08-24 09:58:44 -0700",
@@ -835,7 +835,7 @@
   
   {
     "title": "dpv/issue/182: Hosting of the bistring status list context",
-    "url": "/github-discussions/dpv/issue/182/",
+    "url": "/https://infominer33.github.io/dpv/issue/182/",
     "categories": "Hyperledger",
     "tags": "dpv",
     "date": "2024-08-15 01:22:02 -0700",
@@ -852,7 +852,7 @@
   
   {
     "title": "dpv/issue/180: Update Procedures for  Optional Features",
-    "url": "/github-discussions/dpv/issue/180/",
+    "url": "/https://infominer33.github.io/dpv/issue/180/",
     "categories": "Hyperledger",
     "tags": "dpv",
     "date": "2024-08-08 07:38:47 -0700",
@@ -869,7 +869,7 @@
   
   {
     "title": "identus-apollo/issue/189: Base Proof Configuration algorithm missing input",
-    "url": "/github-discussions/identus-apollo/issue/189/",
+    "url": "/https://infominer33.github.io/identus-apollo/issue/189/",
     "categories": "Hyperledger",
     "tags": "identus-apollo",
     "date": "2024-08-07 02:41:58 -0700",
@@ -886,7 +886,7 @@
   
   {
     "title": "acapy-plugins/pr/868: Consolidate media types to `application/did`.",
-    "url": "/github-discussions/acapy-plugins/pr/868/",
+    "url": "/https://infominer33.github.io/acapy-plugins/pr/868/",
     "categories": "W3C",
     "tags": "acapy-plugins",
     "date": "2024-08-05 04:19:27 -0700",
@@ -903,7 +903,7 @@
   
   {
     "title": "did-resolution/issue/80: `urnScheme` unclear and/or missing",
-    "url": "/github-discussions/did-resolution/issue/80/",
+    "url": "/https://infominer33.github.io/did-resolution/issue/80/",
     "categories": "DIF",
     "tags": "did-resolution",
     "date": "2024-07-29 09:04:08 -0700",
@@ -920,7 +920,7 @@
   
   {
     "title": "data-integrity-test-suite-assertion/issue/83: `selectPaths` of partial object in array",
-    "url": "/github-discussions/data-integrity-test-suite-assertion/issue/83/",
+    "url": "/https://infominer33.github.io/data-integrity-test-suite-assertion/issue/83/",
     "categories": "DIF",
     "tags": "data-integrity-test-suite-assertion",
     "date": "2024-07-21 14:17:46 -0700",
@@ -937,7 +937,7 @@
   
   {
     "title": "tswg-keri-specification/issue/199: Adding concepts from the EU General-Purpose AI Code of Practice",
-    "url": "/github-discussions/tswg-keri-specification/issue/199/",
+    "url": "/https://infominer33.github.io/tswg-keri-specification/issue/199/",
     "categories": "DIF",
     "tags": "tswg-keri-specification",
     "date": "2024-07-13 22:41:43 -0700",
@@ -954,7 +954,7 @@
   
   {
     "title": "dwn-user-guide/issue/3: Move it2 helper to test reporter",
-    "url": "/github-discussions/dwn-user-guide/issue/3/",
+    "url": "/https://infominer33.github.io/dwn-user-guide/issue/3/",
     "categories": "DIF",
     "tags": "dwn-user-guide",
     "date": "2024-07-10 10:51:17 -0700",
@@ -971,7 +971,7 @@
   
   {
     "title": "dwn-user-guide/issue/2: Threat model / Trust over IP introduction",
-    "url": "/github-discussions/dwn-user-guide/issue/2/",
+    "url": "/https://infominer33.github.io/dwn-user-guide/issue/2/",
     "categories": "DIF",
     "tags": "dwn-user-guide",
     "date": "2024-07-10 10:48:23 -0700",
@@ -988,7 +988,7 @@
   
   {
     "title": "identus-apollo/pr/179: Remove proof options from base proof serialization again.",
-    "url": "/github-discussions/identus-apollo/pr/179/",
+    "url": "/https://infominer33.github.io/identus-apollo/pr/179/",
     "categories": "Hyperledger",
     "tags": "identus-apollo",
     "date": "2024-07-09 02:58:01 -0700",
@@ -1005,7 +1005,7 @@
   
   {
     "title": "credential-schemas/issue/4: Use Chai assertions over node assert",
-    "url": "/github-discussions/credential-schemas/issue/4/",
+    "url": "/https://infominer33.github.io/credential-schemas/issue/4/",
     "categories": "DIF",
     "tags": "credential-schemas",
     "date": "2024-07-03 16:27:23 -0700",
@@ -1022,7 +1022,7 @@
   
   {
     "title": "identus/issue/22: Signing validation is not defined.",
-    "url": "/github-discussions/identus/issue/22/",
+    "url": "/https://infominer33.github.io/identus/issue/22/",
     "categories": "DIF",
     "tags": "identus",
     "date": "2024-07-03 06:27:43 -0700",
@@ -1039,7 +1039,7 @@
   
   {
     "title": "did-core/issue/855: Simplify abstract data model to be more concrete",
-    "url": "/github-discussions/did-core/issue/855/",
+    "url": "/https://infominer33.github.io/did-core/issue/855/",
     "categories": "Hyperledger",
     "tags": "did-core",
     "date": "2024-07-01 06:07:19 -0700",
@@ -1056,7 +1056,7 @@
   
   {
     "title": "did-extensions/issue/565: Should there be a registry? Process to migrate to a W3C Registry?",
-    "url": "/github-discussions/did-extensions/issue/565/",
+    "url": "/https://infominer33.github.io/did-extensions/issue/565/",
     "categories": "W3C",
     "tags": "did-extensions",
     "date": "2024-06-27 08:52:48 -0700",
@@ -1073,7 +1073,7 @@
   
   {
     "title": "anoncreds-rs/pr/342: test: add connectionless end-to-end tests",
-    "url": "/github-discussions/anoncreds-rs/pr/342/",
+    "url": "/https://infominer33.github.io/anoncreds-rs/pr/342/",
     "categories": "Hyperledger",
     "tags": "anoncreds-rs",
     "date": "2024-06-26 08:45:48 -0700",
@@ -1090,7 +1090,7 @@
   
   {
     "title": "bbs-signature/pr/320: chore(deps-dev): bump @babel/runtime from 7.22.10 to 7.25.4 in /wrappers/javascript",
-    "url": "/github-discussions/bbs-signature/pr/320/",
+    "url": "/https://infominer33.github.io/bbs-signature/pr/320/",
     "categories": "DIF",
     "tags": "bbs-signature",
     "date": "2024-06-25 08:38:48 -0700",
@@ -1107,7 +1107,7 @@
   
   {
     "title": "json-ld-syntax/issue/436: URI in Profile triggers CORS Unsafe Request Header Byte rule",
-    "url": "/github-discussions/json-ld-syntax/issue/436/",
+    "url": "/https://infominer33.github.io/json-ld-syntax/issue/436/",
     "categories": "DIF",
     "tags": "json-ld-syntax",
     "date": "2024-06-24 14:08:08 -0700",
@@ -1124,7 +1124,7 @@
   
   {
     "title": "credential-schemas/issue/1: Publish experimental implementor's draft using specup template",
-    "url": "/github-discussions/credential-schemas/issue/1/",
+    "url": "/https://infominer33.github.io/credential-schemas/issue/1/",
     "categories": "DIF",
     "tags": "credential-schemas",
     "date": "2024-06-18 19:36:22 -0700",
@@ -1141,7 +1141,7 @@
   
   {
     "title": "decentralized-web-node/pr/305: Create userstory-requirement.md",
-    "url": "/github-discussions/decentralized-web-node/pr/305/",
+    "url": "/https://infominer33.github.io/decentralized-web-node/pr/305/",
     "categories": "DIF",
     "tags": "decentralized-web-node",
     "date": "2024-06-12 08:21:27 -0700",
@@ -1158,7 +1158,7 @@
   
   {
     "title": "spec-up/issue/65: Add tests WRT to Prover Id",
-    "url": "/github-discussions/spec-up/issue/65/",
+    "url": "/https://infominer33.github.io/spec-up/issue/65/",
     "categories": "DIF",
     "tags": "spec-up",
     "date": "2024-06-11 09:45:29 -0700",
@@ -1175,7 +1175,7 @@
   
   {
     "title": "aries-endorser-service/issue/100: Call into JSON-LD via its WebIDL API instead of calling algorithms directly",
-    "url": "/github-discussions/aries-endorser-service/issue/100/",
+    "url": "/https://infominer33.github.io/aries-endorser-service/issue/100/",
     "categories": "DIF",
     "tags": "aries-endorser-service",
     "date": "2024-06-05 17:08:20 -0700",
@@ -1192,7 +1192,7 @@
   
   {
     "title": "universal-resolver/pr/428: Add `state` & `variables` to GetExhangeResponse.",
-    "url": "/github-discussions/universal-resolver/pr/428/",
+    "url": "/https://infominer33.github.io/universal-resolver/pr/428/",
     "categories": "DIF",
     "tags": "universal-resolver",
     "date": "2024-06-03 05:16:56 -0700",
@@ -1209,7 +1209,7 @@
   
   {
     "title": "acapy/issue/2998: Regression: Error if anoncreds extra is not installed",
-    "url": "/github-discussions/acapy/issue/2998/",
+    "url": "/https://infominer33.github.io/acapy/issue/2998/",
     "categories": "OWF",
     "tags": "acapy",
     "date": "2024-05-29 08:37:28 -0700",
@@ -1226,7 +1226,7 @@
   
   {
     "title": "vc-api/issue/386: Specify a node type when interpreting JSON as JSON-LD (was: use of \"@type\" in \"@context\")",
-    "url": "/github-discussions/vc-api/issue/386/",
+    "url": "/https://infominer33.github.io/vc-api/issue/386/",
     "categories": "W3C",
     "tags": "vc-api",
     "date": "2024-05-28 12:08:45 -0700",
@@ -1243,7 +1243,7 @@
   
   {
     "title": "aries-endorser-service/pr/96: Add algorithm suites (2 -> 1)",
-    "url": "/github-discussions/aries-endorser-service/pr/96/",
+    "url": "/https://infominer33.github.io/aries-endorser-service/pr/96/",
     "categories": "Hyperledger",
     "tags": "aries-endorser-service",
     "date": "2024-05-22 14:22:39 -0700",
@@ -1260,7 +1260,7 @@
   
   {
     "title": "aries-endorser-service/pr/95: Editorial review: terminology,  clarity, reference consistency",
-    "url": "/github-discussions/aries-endorser-service/pr/95/",
+    "url": "/https://infominer33.github.io/aries-endorser-service/pr/95/",
     "categories": "Hyperledger",
     "tags": "aries-endorser-service",
     "date": "2024-05-22 14:22:24 -0700",
@@ -1277,7 +1277,7 @@
   
   {
     "title": "tswg-keri-specification/issue/178: dueling edits",
-    "url": "/github-discussions/tswg-keri-specification/issue/178/",
+    "url": "/https://infominer33.github.io/tswg-keri-specification/issue/178/",
     "categories": "Hyperledger",
     "tags": "tswg-keri-specification",
     "date": "2024-05-21 07:59:32 -0700",
@@ -1294,7 +1294,7 @@
   
   {
     "title": "vc-api/issue/383: Extractable property not set in `SubtleCrypto.deriveKey`",
-    "url": "/github-discussions/vc-api/issue/383/",
+    "url": "/https://infominer33.github.io/vc-api/issue/383/",
     "categories": "DIF",
     "tags": "vc-api",
     "date": "2024-05-14 09:12:53 -0700",
@@ -1311,7 +1311,7 @@
   
   {
     "title": "didcomm-demo/pr/76: Fix B.3 Representation: Ed25519Signature2020 test vectors",
-    "url": "/github-discussions/didcomm-demo/pr/76/",
+    "url": "/https://infominer33.github.io/didcomm-demo/pr/76/",
     "categories": "DIF",
     "tags": "didcomm-demo",
     "date": "2024-05-07 06:43:52 -0700",
@@ -1328,7 +1328,7 @@
   
   {
     "title": "didcomm-demo/issue/74: Ensure additional custom proof options provided via `proof` are included in the proof configuration",
-    "url": "/github-discussions/didcomm-demo/issue/74/",
+    "url": "/https://infominer33.github.io/didcomm-demo/issue/74/",
     "categories": "DIF",
     "tags": "didcomm-demo",
     "date": "2024-05-06 04:09:29 -0700",
@@ -1345,7 +1345,7 @@
   
   {
     "title": "aries-endorser-service/issue/82: Unify Error Handling",
-    "url": "/github-discussions/aries-endorser-service/issue/82/",
+    "url": "/https://infominer33.github.io/aries-endorser-service/issue/82/",
     "categories": "DIF",
     "tags": "aries-endorser-service",
     "date": "2024-05-03 12:09:35 -0700",
@@ -1362,7 +1362,7 @@
   
   {
     "title": "aries-endorser-service/issue/81: eddsa-jcs-2022 and nested documents",
-    "url": "/github-discussions/aries-endorser-service/issue/81/",
+    "url": "/https://infominer33.github.io/aries-endorser-service/issue/81/",
     "categories": "DIF",
     "tags": "aries-endorser-service",
     "date": "2024-04-30 11:23:13 -0700",
@@ -1379,7 +1379,7 @@
   
   {
     "title": "org/issue/37: Securing Mechanisms section should require that its entries are actually securing mechanisms",
-    "url": "/github-discussions/org/issue/37/",
+    "url": "/https://infominer33.github.io/org/issue/37/",
     "categories": "DIF",
     "tags": "org",
     "date": "2024-04-20 18:16:24 -0700",
@@ -1396,7 +1396,7 @@
   
   {
     "title": "universal-resolver/issue/414: [Question] How to do an array of arrays in a JSON-LD @context",
-    "url": "/github-discussions/universal-resolver/issue/414/",
+    "url": "/https://infominer33.github.io/universal-resolver/issue/414/",
     "categories": "DIF",
     "tags": "universal-resolver",
     "date": "2024-04-15 18:38:28 -0700",
@@ -1413,7 +1413,7 @@
   
   {
     "title": "tswg-cesr-specification/issue/91: Separate \"Security and Privacy Considerations\"",
-    "url": "/github-discussions/tswg-cesr-specification/issue/91/",
+    "url": "/https://infominer33.github.io/tswg-cesr-specification/issue/91/",
     "categories": "Hyperledger",
     "tags": "tswg-cesr-specification",
     "date": "2024-04-11 07:19:46 -0700",
@@ -1430,7 +1430,7 @@
   
   {
     "title": "tswg-cesr-specification/issue/90: Typo in appendix A: `eddsa-rdfc-2022` is wrongly named `edssa-2022`",
-    "url": "/github-discussions/tswg-cesr-specification/issue/90/",
+    "url": "/https://infominer33.github.io/tswg-cesr-specification/issue/90/",
     "categories": "Hyperledger",
     "tags": "tswg-cesr-specification",
     "date": "2024-04-11 07:10:47 -0700",
@@ -1447,7 +1447,7 @@
   
   {
     "title": "aries-acapy-docs/pr/101: Add 3 ecdsa-sd-2023 proof value tests (D -> C)",
-    "url": "/github-discussions/aries-acapy-docs/pr/101/",
+    "url": "/https://infominer33.github.io/aries-acapy-docs/pr/101/",
     "categories": "Hyperledger",
     "tags": "aries-acapy-docs",
     "date": "2024-04-09 13:10:16 -0700",
@@ -1464,7 +1464,7 @@
   
   {
     "title": "spec-up/issue/64: enumerated elements should match the counts of those elements",
-    "url": "/github-discussions/spec-up/issue/64/",
+    "url": "/https://infominer33.github.io/spec-up/issue/64/",
     "categories": "DIF",
     "tags": "spec-up",
     "date": "2024-04-08 22:47:46 -0700",
@@ -1481,7 +1481,7 @@
   
   {
     "title": "didcomm-book/issue/20: How will I be able to enumerate/search/retrieve-in-batches all of the DID Documents represented on a given Ledger?",
-    "url": "/github-discussions/didcomm-book/issue/20/",
+    "url": "/https://infominer33.github.io/didcomm-book/issue/20/",
     "categories": "DIF",
     "tags": "didcomm-book",
     "date": "2024-04-03 08:06:47 -0700",
@@ -1498,7 +1498,7 @@
   
   {
     "title": "org/issue/33: Distinction between the definitions of Verification and Authentication",
-    "url": "/github-discussions/org/issue/33/",
+    "url": "/https://infominer33.github.io/org/issue/33/",
     "categories": "DIF",
     "tags": "org",
     "date": "2024-03-23 12:27:01 -0700",
@@ -1515,7 +1515,7 @@
   
   {
     "title": "aries-acapy-docs/pr/99: Update extended proof chain test vectors",
-    "url": "/github-discussions/aries-acapy-docs/pr/99/",
+    "url": "/https://infominer33.github.io/aries-acapy-docs/pr/99/",
     "categories": "Hyperledger",
     "tags": "aries-acapy-docs",
     "date": "2024-03-22 07:55:16 -0700",
@@ -1532,7 +1532,7 @@
   
   {
     "title": "aries-acapy-docs/pr/97: Update test vectors  to  use  did:key for  verification method",
-    "url": "/github-discussions/aries-acapy-docs/pr/97/",
+    "url": "/https://infominer33.github.io/aries-acapy-docs/pr/97/",
     "categories": "DIF",
     "tags": "aries-acapy-docs",
     "date": "2024-03-22 07:37:54 -0700",
@@ -1549,7 +1549,7 @@
   
   {
     "title": "aries-vcx/issue/1163: Edge-client initiated connections",
-    "url": "/github-discussions/aries-vcx/issue/1163/",
+    "url": "/https://infominer33.github.io/aries-vcx/issue/1163/",
     "categories": "Hyperledger",
     "tags": "aries-vcx",
     "date": "2024-03-22 04:12:01 -0700",
@@ -1566,7 +1566,7 @@
   
   {
     "title": "bbs-signature/issue/318: Remove lowercase must text",
-    "url": "/github-discussions/bbs-signature/issue/318/",
+    "url": "/https://infominer33.github.io/bbs-signature/issue/318/",
     "categories": "DIF",
     "tags": "bbs-signature",
     "date": "2024-03-19 02:13:15 -0700",
@@ -1583,7 +1583,7 @@
   
   {
     "title": "universal-registrar/pr/81: Remove bedrock vc verifier",
-    "url": "/github-discussions/universal-registrar/pr/81/",
+    "url": "/https://infominer33.github.io/universal-registrar/pr/81/",
     "categories": "DIF",
     "tags": "universal-registrar",
     "date": "2024-03-18 09:21:41 -0700",
@@ -1600,7 +1600,7 @@
   
   {
     "title": "labs/issue/6: Link to identus-cloud-agent example / documentation",
-    "url": "/github-discussions/labs/issue/6/",
+    "url": "/https://infominer33.github.io/labs/issue/6/",
     "categories": "DIF",
     "tags": "labs",
     "date": "2024-03-18 09:16:02 -0700",
@@ -1617,7 +1617,7 @@
   
   {
     "title": "bbs-signature/issue/317: Include `digestMultibase` in data integrity context",
-    "url": "/github-discussions/bbs-signature/issue/317/",
+    "url": "/https://infominer33.github.io/bbs-signature/issue/317/",
     "categories": "DIF",
     "tags": "bbs-signature",
     "date": "2024-03-12 08:56:31 -0700",
@@ -1634,7 +1634,7 @@
   
   {
     "title": "linked-vp/issue/50: Test VC doesn't include proper context",
-    "url": "/github-discussions/linked-vp/issue/50/",
+    "url": "/https://infominer33.github.io/linked-vp/issue/50/",
     "categories": "DIF",
     "tags": "linked-vp",
     "date": "2024-02-29 00:53:59 -0800",
@@ -1651,7 +1651,7 @@
   
   {
     "title": "did-jwt/issue/308: Create YAML Template for User Stories Issue",
-    "url": "/github-discussions/did-jwt/issue/308/",
+    "url": "/https://infominer33.github.io/did-jwt/issue/308/",
     "categories": "DIF",
     "tags": "did-jwt",
     "date": "2024-02-28 04:47:17 -0800",
@@ -1668,7 +1668,7 @@
   
   {
     "title": "vc-data-model/pr/1448: docs: connectionless proof",
-    "url": "/github-discussions/vc-data-model/pr/1448/",
+    "url": "/https://infominer33.github.io/vc-data-model/pr/1448/",
     "categories": "W3C",
     "tags": "vc-data-model",
     "date": "2024-02-27 11:04:35 -0800",
@@ -1685,7 +1685,7 @@
   
   {
     "title": "bbs-signature/issue/315: Value of a verification method property?",
-    "url": "/github-discussions/bbs-signature/issue/315/",
+    "url": "/https://infominer33.github.io/bbs-signature/issue/315/",
     "categories": "DIF",
     "tags": "bbs-signature",
     "date": "2024-02-16 15:54:22 -0800",
@@ -1702,7 +1702,7 @@
   
   {
     "title": "tswg-cesr-specification/issue/60: About resolving protocol question",
-    "url": "/github-discussions/tswg-cesr-specification/issue/60/",
+    "url": "/https://infominer33.github.io/tswg-cesr-specification/issue/60/",
     "categories": "DIF",
     "tags": "tswg-cesr-specification",
     "date": "2024-02-15 07:49:35 -0800",
@@ -1719,7 +1719,7 @@
   
   {
     "title": "vc-data-model/pr/1441: fix: Kafka consumer not picking messages",
-    "url": "/github-discussions/vc-data-model/pr/1441/",
+    "url": "/https://infominer33.github.io/vc-data-model/pr/1441/",
     "categories": "W3C",
     "tags": "vc-data-model",
     "date": "2024-02-15 05:31:14 -0800",
@@ -1736,7 +1736,7 @@
   
   {
     "title": "credential-trust-establishment/issue/35: Migration to new AnonCreds object format",
-    "url": "/github-discussions/credential-trust-establishment/issue/35/",
+    "url": "/https://infominer33.github.io/credential-trust-establishment/issue/35/",
     "categories": "DIF",
     "tags": "credential-trust-establishment",
     "date": "2024-02-12 10:05:40 -0800",
@@ -1753,7 +1753,7 @@
   
   {
     "title": "vc-data-model/issue/1432: DIDComm Message Decryption + Disruption by `eth_getLogs`/`eth_getChainId` calls",
-    "url": "/github-discussions/vc-data-model/issue/1432/",
+    "url": "/https://infominer33.github.io/vc-data-model/issue/1432/",
     "categories": "Hyperledger",
     "tags": "vc-data-model",
     "date": "2024-02-03 10:43:05 -0800",
@@ -1770,7 +1770,7 @@
   
   {
     "title": "identus-cloud-agent/issue/864: 3.2 DID URL Syntax \"Fragment\" Example 6 Question",
-    "url": "/github-discussions/identus-cloud-agent/issue/864/",
+    "url": "/https://infominer33.github.io/identus-cloud-agent/issue/864/",
     "categories": "Hyperledger",
     "tags": "identus-cloud-agent",
     "date": "2024-01-25 01:23:55 -0800",
@@ -1787,7 +1787,7 @@
   
   {
     "title": "aries-acapy-docs/issue/93: Proof configuration and previousProof (maybe editorial)",
-    "url": "/github-discussions/aries-acapy-docs/issue/93/",
+    "url": "/https://infominer33.github.io/aries-acapy-docs/issue/93/",
     "categories": "Hyperledger",
     "tags": "aries-acapy-docs",
     "date": "2024-01-09 10:41:08 -0800",
@@ -1804,7 +1804,7 @@
   
   {
     "title": "anoncreds-spec/issue/192: Adjust indexes?",
-    "url": "/github-discussions/anoncreds-spec/issue/192/",
+    "url": "/https://infominer33.github.io/anoncreds-spec/issue/192/",
     "categories": "Hyperledger",
     "tags": "anoncreds-spec",
     "date": "2023-12-13 11:16:33 -0800",
@@ -1821,7 +1821,7 @@
   
   {
     "title": "presentation-exchange/issue/457: Unclear use of `tag` in key derivation and wrapping algorithm",
-    "url": "/github-discussions/presentation-exchange/issue/457/",
+    "url": "/https://infominer33.github.io/presentation-exchange/issue/457/",
     "categories": "DIF",
     "tags": "presentation-exchange",
     "date": "2023-11-02 11:00:26 -0700",
@@ -1838,7 +1838,7 @@
   
   {
     "title": "veramo-plugin/issue/28: New test proposal: validFrom must be before validUntil when both present",
-    "url": "/github-discussions/veramo-plugin/issue/28/",
+    "url": "/https://infominer33.github.io/veramo-plugin/issue/28/",
     "categories": "DIF",
     "tags": "veramo-plugin",
     "date": "2023-10-29 10:01:48 -0700",
@@ -1855,7 +1855,7 @@
   
   {
     "title": "didcomm-demo/issue/19: [Introduction] Clarify who is the Primary Target Audience for the DID Resolution spec",
-    "url": "/github-discussions/didcomm-demo/issue/19/",
+    "url": "/https://infominer33.github.io/didcomm-demo/issue/19/",
     "categories": "DIF",
     "tags": "didcomm-demo",
     "date": "2023-10-03 10:34:16 -0700",
@@ -1872,7 +1872,7 @@
   
   {
     "title": "credential-trust-establishment/issue/18: [Introduction] Clarify the role of the DID Resolution spec relative to other DID specs",
-    "url": "/github-discussions/credential-trust-establishment/issue/18/",
+    "url": "/https://infominer33.github.io/credential-trust-establishment/issue/18/",
     "categories": "DIF",
     "tags": "credential-trust-establishment",
     "date": "2023-08-21 10:44:33 -0700",
@@ -1889,7 +1889,7 @@
   
   {
     "title": "SIG-IoT/issue/17: [standards] Securing mechanisms section could be structured better ",
-    "url": "/github-discussions/SIG-IoT/issue/17/",
+    "url": "/https://infominer33.github.io/SIG-IoT/issue/17/",
     "categories": "DIF",
     "tags": "SIG-IoT",
     "date": "2023-03-15 10:24:28 -0700",
@@ -1906,7 +1906,7 @@
   
   {
     "title": "org/pr/22: Add invalid proof type, cryptosuite, & verificationMethod tests",
-    "url": "/github-discussions/org/pr/22/",
+    "url": "/https://infominer33.github.io/org/pr/22/",
     "categories": "DIF",
     "tags": "org",
     "date": "2023-02-24 03:09:43 -0800",
@@ -1923,7 +1923,7 @@
   
   {
     "title": "decentralized-web-node/issue/190: Where to get `hmacKey` from in `createVerifyData`",
-    "url": "/github-discussions/decentralized-web-node/issue/190/",
+    "url": "/https://infominer33.github.io/decentralized-web-node/issue/190/",
     "categories": "DIF",
     "tags": "decentralized-web-node",
     "date": "2022-07-13 13:46:02 -0700",
@@ -1940,7 +1940,7 @@
   
   {
     "title": "did-resolver/issue/97: Remove `checks` option in favor of loading from implementation configs.",
-    "url": "/github-discussions/did-resolver/issue/97/",
+    "url": "/https://infominer33.github.io/did-resolver/issue/97/",
     "categories": "DIF",
     "tags": "did-resolver",
     "date": "2021-08-30 02:14:56 -0700",
@@ -1957,7 +1957,7 @@
   
   {
     "title": "did-jwt/issue/194: How to know if a credential is a full disclosure?",
-    "url": "/github-discussions/did-jwt/issue/194/",
+    "url": "/https://infominer33.github.io/did-jwt/issue/194/",
     "categories": "DIF",
     "tags": "did-jwt",
     "date": "2021-08-24 21:51:03 -0700",
