@@ -1,0 +1,182 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>/https://infominer33.github.io/</id>
+  <title>Identosphere's Github Discussions</title>
+  <subtitle>Its more Self-Sovereign Identity Feeds</subtitle>
+  <updated>2024-11-22T02:39:28-08:00</updated>
+  <author>
+    <name>DecentralizedID</name>
+    <uri>/https://infominer33.github.io/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="/https://infominer33.github.io/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="/https://infominer33.github.io/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
+  <rights> © 2024 DecentralizedID </rights>
+  <icon>https://infominer33.github.io/assets/img/favicons/favicon.ico</icon>
+  <logo>https://infominer33.github.io/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</title>
+    <link href="/https://infominer33.github.io/acapy/pr/3344/" rel="alternate" type="text/html" title="acapy/pr/3344: Restore `--base-wallet-routes` flag functionality" />
+    <published>2024-11-21T10:21:14-08:00</published>
+  
+    <updated>2024-11-21T10:21:14-08:00</updated>
+  
+    <id>/https://infominer33.github.io/acapy/pr/3344/</id>
+    <content type="text/html" src="/https://infominer33.github.io/acapy/pr/3344/" />
+    <author>
+      <name>esune</name>
+    </author>
+
+  
+    
+    <category term="OWF" />
+    
+  
+
+  <summary>https://github.com/openwallet-foundation/acapy/pull/3344
+
+Resolves #3283
+
+The tenant_authentication has been updated to also allow access to the base wallet when the route matches a path defined using --base-wallet-routes.
+
+Please note that, when compared to the previous implementation, the matcher has been made more greedy to tighten security: if an extra route of /test is specified, the match...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>webauthn/issue/2211: CR: Need a way to detect "cancel"</title>
+    <link href="/https://infominer33.github.io/webauthn/issue/2211/" rel="alternate" type="text/html" title="webauthn/issue/2211: CR: Need a way to detect &amp;quot;cancel&amp;quot;" />
+    <published>2024-11-21T09:31:50-08:00</published>
+  
+    <updated>2024-11-21T09:31:50-08:00</updated>
+  
+    <id>/https://infominer33.github.io/webauthn/issue/2211/</id>
+    <content type="text/html" src="/https://infominer33.github.io/webauthn/issue/2211/" />
+    <author>
+      <name>hemanth</name>
+    </author>
+
+  
+    
+    <category term="W3C" />
+    
+  
+
+  <summary>https://github.com/w3c/webauthn/issues/2211
+
+Proposed Change
+
+Need a way to programmatically detect when the user has cancelled the “Use passkey from another device” browser native prompt by clicking the “Cancel” button. This could be achieved by adding a new property or event to the prompt that indicates whether the user has cancelled the prompt.
+
+
+
+^ the “cancel” button there.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>webauthn/pr/2209: Add test vectors</title>
+    <link href="/https://infominer33.github.io/webauthn/pr/2209/" rel="alternate" type="text/html" title="webauthn/pr/2209: Add test vectors" />
+    <published>2024-11-20T10:38:52-08:00</published>
+  
+    <updated>2024-11-20T10:38:52-08:00</updated>
+  
+    <id>/https://infominer33.github.io/webauthn/pr/2209/</id>
+    <content type="text/html" src="/https://infominer33.github.io/webauthn/pr/2209/" />
+    <author>
+      <name>emlun</name>
+    </author>
+
+  
+    
+    <category term="W3C" />
+    
+  
+
+  <summary>https://github.com/w3c/webauthn/pull/2209
+
+Closes #1633. Sorry it took so long!
+
+The test vectors proposed in #1633 use RP IDs of real websites unaffiliated with W3C, which felt out of place to me, so I chose to generate new ones instead. Also in order to pre-empt any worry that there could be something nefarious hidden in these values, they are all generated deterministically from disclosed PR...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>identus-cloud-agent/issue/1459:  proof request there's no information on holder </title>
+    <link href="/https://infominer33.github.io/identus-cloud-agent/issue/1459/" rel="alternate" type="text/html" title="identus-cloud-agent/issue/1459:  proof request there&amp;apos;s no information on holder " />
+    <published>2024-11-20T02:34:25-08:00</published>
+  
+    <updated>2024-11-20T02:34:25-08:00</updated>
+  
+    <id>/https://infominer33.github.io/identus-cloud-agent/issue/1459/</id>
+    <content type="text/html" src="/https://infominer33.github.io/identus-cloud-agent/issue/1459/" />
+    <author>
+      <name>mineme0110</name>
+    </author>
+
+  
+    
+    <category term="Hyperledger" />
+    
+  
+
+  <summary>https://github.com/hyperledger/identus-cloud-agent/issues/1459
+
+Is this a regression?
+
+NO
+
+Description
+
+Right know when we have a proof request there’s no information on holder side of what’s being requested.
+
+Holder webhook data:
+
+PresentationStatusAdapter(presentationId=94acbe0f-ed87-4477-9757-4b4ba8c3461d, thid=d080d2b5-0498-42aa-a829-22cf021ff3cf, role=PROVER, status=REQUEST_RECEIVED, metaR...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>acapy/issue/3343: DID Management Proposed Update</title>
+    <link href="/https://infominer33.github.io/acapy/issue/3343/" rel="alternate" type="text/html" title="acapy/issue/3343: DID Management Proposed Update" />
+    <published>2024-11-19T08:58:08-08:00</published>
+  
+    <updated>2024-11-19T08:58:08-08:00</updated>
+  
+    <id>/https://infominer33.github.io/acapy/issue/3343/</id>
+    <content type="text/html" src="/https://infominer33.github.io/acapy/issue/3343/" />
+    <author>
+      <name>dbluhm</name>
+    </author>
+
+  
+    
+    <category term="OWF" />
+    
+  
+
+  <summary>https://github.com/openwallet-foundation/acapy/issues/3343
+
+In light of our current push to add support for more DID Methods to ACA-Py, some primitives within ACA-Py need some updates. This issue outlines the updates I propose. I plan to update this further as the topic is discussed or as implementations better inform decisions.
+
+Proposed Updates
+
+DID Storage (updating DIDInfo)
+
+Current State
+A...</summary>
+
+  </entry>
+
+</feed>
+
+
