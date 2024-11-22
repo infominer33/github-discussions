@@ -1,33 +1,33 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>/https://infominer33.github.io/</id>
+  <id>https://infominer33.github.io/github-discussions/</id>
   <title>Identosphere's Github Discussions</title>
   <subtitle>Its more Self-Sovereign Identity Feeds</subtitle>
-  <updated>2024-11-22T02:39:28-08:00</updated>
+  <updated>2024-11-22T04:44:19-08:00</updated>
   <author>
     <name>DecentralizedID</name>
-    <uri>/https://infominer33.github.io/</uri>
+    <uri>https://infominer33.github.io/github-discussions/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="/https://infominer33.github.io/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="https://infominer33.github.io/github-discussions/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="/https://infominer33.github.io/"/>
+    href="https://infominer33.github.io/github-discussions/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
   <rights> © 2024 DecentralizedID </rights>
-  <icon>https://infominer33.github.io/assets/img/favicons/favicon.ico</icon>
-  <logo>https://infominer33.github.io/assets/img/favicons/favicon-96x96.png</logo>
+  <icon>/github-discussions/assets/img/favicons/favicon.ico</icon>
+  <logo>/github-discussions/assets/img/favicons/favicon-96x96.png</logo>
 
 
   
   <entry>
     <title>acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</title>
-    <link href="/https://infominer33.github.io/acapy/pr/3344/" rel="alternate" type="text/html" title="acapy/pr/3344: Restore `--base-wallet-routes` flag functionality" />
+    <link href="https://infominer33.github.io/github-discussions/acapy/pr/3344/" rel="alternate" type="text/html" title="acapy/pr/3344: Restore `--base-wallet-routes` flag functionality" />
     <published>2024-11-21T10:21:14-08:00</published>
   
     <updated>2024-11-21T10:21:14-08:00</updated>
   
-    <id>/https://infominer33.github.io/acapy/pr/3344/</id>
-    <content type="text/html" src="/https://infominer33.github.io/acapy/pr/3344/" />
+    <id>https://infominer33.github.io/github-discussions/acapy/pr/3344/</id>
+    <content type="text/html" src="https://infominer33.github.io/github-discussions/acapy/pr/3344/" />
     <author>
       <name>esune</name>
     </author>
@@ -51,13 +51,13 @@ Please note that, when compared to the previous implementation, the matcher has 
   
   <entry>
     <title>webauthn/issue/2211: CR: Need a way to detect "cancel"</title>
-    <link href="/https://infominer33.github.io/webauthn/issue/2211/" rel="alternate" type="text/html" title="webauthn/issue/2211: CR: Need a way to detect &amp;quot;cancel&amp;quot;" />
+    <link href="https://infominer33.github.io/github-discussions/webauthn/issue/2211/" rel="alternate" type="text/html" title="webauthn/issue/2211: CR: Need a way to detect &amp;quot;cancel&amp;quot;" />
     <published>2024-11-21T09:31:50-08:00</published>
   
     <updated>2024-11-21T09:31:50-08:00</updated>
   
-    <id>/https://infominer33.github.io/webauthn/issue/2211/</id>
-    <content type="text/html" src="/https://infominer33.github.io/webauthn/issue/2211/" />
+    <id>https://infominer33.github.io/github-discussions/webauthn/issue/2211/</id>
+    <content type="text/html" src="https://infominer33.github.io/github-discussions/webauthn/issue/2211/" />
     <author>
       <name>hemanth</name>
     </author>
@@ -83,13 +83,13 @@ Need a way to programmatically detect when the user has cancelled the “Use pas
   
   <entry>
     <title>webauthn/pr/2209: Add test vectors</title>
-    <link href="/https://infominer33.github.io/webauthn/pr/2209/" rel="alternate" type="text/html" title="webauthn/pr/2209: Add test vectors" />
+    <link href="https://infominer33.github.io/github-discussions/webauthn/pr/2209/" rel="alternate" type="text/html" title="webauthn/pr/2209: Add test vectors" />
     <published>2024-11-20T10:38:52-08:00</published>
   
     <updated>2024-11-20T10:38:52-08:00</updated>
   
-    <id>/https://infominer33.github.io/webauthn/pr/2209/</id>
-    <content type="text/html" src="/https://infominer33.github.io/webauthn/pr/2209/" />
+    <id>https://infominer33.github.io/github-discussions/webauthn/pr/2209/</id>
+    <content type="text/html" src="https://infominer33.github.io/github-discussions/webauthn/pr/2209/" />
     <author>
       <name>emlun</name>
     </author>
@@ -111,13 +111,13 @@ The test vectors proposed in #1633 use RP IDs of real websites unaffiliated with
   
   <entry>
     <title>identus-cloud-agent/issue/1459:  proof request there's no information on holder </title>
-    <link href="/https://infominer33.github.io/identus-cloud-agent/issue/1459/" rel="alternate" type="text/html" title="identus-cloud-agent/issue/1459:  proof request there&amp;apos;s no information on holder " />
+    <link href="https://infominer33.github.io/github-discussions/identus-cloud-agent/issue/1459/" rel="alternate" type="text/html" title="identus-cloud-agent/issue/1459:  proof request there&amp;apos;s no information on holder " />
     <published>2024-11-20T02:34:25-08:00</published>
   
     <updated>2024-11-20T02:34:25-08:00</updated>
   
-    <id>/https://infominer33.github.io/identus-cloud-agent/issue/1459/</id>
-    <content type="text/html" src="/https://infominer33.github.io/identus-cloud-agent/issue/1459/" />
+    <id>https://infominer33.github.io/github-discussions/identus-cloud-agent/issue/1459/</id>
+    <content type="text/html" src="https://infominer33.github.io/github-discussions/identus-cloud-agent/issue/1459/" />
     <author>
       <name>mineme0110</name>
     </author>
@@ -147,13 +147,13 @@ PresentationStatusAdapter(presentationId=94acbe0f-ed87-4477-9757-4b4ba8c3461d, t
   
   <entry>
     <title>acapy/issue/3343: DID Management Proposed Update</title>
-    <link href="/https://infominer33.github.io/acapy/issue/3343/" rel="alternate" type="text/html" title="acapy/issue/3343: DID Management Proposed Update" />
+    <link href="https://infominer33.github.io/github-discussions/acapy/issue/3343/" rel="alternate" type="text/html" title="acapy/issue/3343: DID Management Proposed Update" />
     <published>2024-11-19T08:58:08-08:00</published>
   
     <updated>2024-11-19T08:58:08-08:00</updated>
   
-    <id>/https://infominer33.github.io/acapy/issue/3343/</id>
-    <content type="text/html" src="/https://infominer33.github.io/acapy/issue/3343/" />
+    <id>https://infominer33.github.io/github-discussions/acapy/issue/3343/</id>
+    <content type="text/html" src="https://infominer33.github.io/github-discussions/acapy/issue/3343/" />
     <author>
       <name>dbluhm</name>
     </author>

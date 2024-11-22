@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: /https://infominer33.github.io/sitemap.xml
+Sitemap: https://infominer33.github.io/github-discussions/sitemap.xml
