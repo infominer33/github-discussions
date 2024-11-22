@@ -1,0 +1,4 @@
+comment_id,user,date,body
+1837481203,dbluhm,2024-11-12T04:55:50+00:00,We're overwriting `mod` with each version. Only the last mod's routes are actually registered.
+1837481729,dbluhm,2024-11-12T04:56:22+00:00,Similar problem; we're overwriting `mod` with each version. Only the last mod's events are actually registered.
+1837693700,ff137,2024-11-12T08:45:03+00:00,"Aah, that's what I get for micro-optimizing! I moved the `await mod.register(app)` step out of the for loop without noticing ... because it seemed  duplicated in both if and else blocks... Thanks for picking up on that.   These methods also get flagged by sonarcloud for their cognitive complexity, due to all the nesting. So I wanted to refactor that for readability too :+1: but maybe in a follow up, as it might get tricky to review with too many changes"

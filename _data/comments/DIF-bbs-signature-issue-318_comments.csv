@@ -1,0 +1,4 @@
+comment_id,user,date,body
+2467133410,dlongley,2024-11-11T02:55:57+00:00,"+1 to rewording to avoid the use of ""must"" in the above referenced sentence. Neither RFC2119 language nor a testable statement were intended. I think ""has to"" is acceptable clarifying language."
+2467477222,peacekeeper,2024-11-11T08:04:20+00:00,Agree with @dlongley 
+2481434689,msporny,2024-11-17T19:11:39+00:00,"PR #319 was raised to address this issue, closing."

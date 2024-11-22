@@ -1,0 +1,4 @@
+comment_id,user,date,body
+2491399962,FabioPinheiro,2024-11-21T14:37:04+00:00,#86 is also related with this 'need'. But the goal in there is to bypass the Cloud Agent + Prism Node to publish the `did:prism`
+2492598977,robertocarvajal,2024-11-22T00:04:02+00:00,"yeah, I feel we can close this issue and keep the discussion over the other one because it has a broader scope and was discussed recently over the weekly meetings.  The end goal is the same, put a DID on chain that was created by the edge SDK."
+2486037282,davepoltorak,2024-11-19T15:30:10+00:00,@andorsk Can you please adjust the description of the issue to explain the problem you see and the solution you are proposing? It can then be discussed sync/async

@@ -1,0 +1,5 @@
+comment_id,user,date,body
+1845816633,chereseeriepa,2024-11-18T03:46:39+00:00,"There was an issue where the message listener wasnt getting the new messages, so i had to add this method to fallback to getting the messages from pluto"
+1845817334,chereseeriepa,2024-11-18T03:47:54+00:00,Im not sure what is good practise for exposing this method to use it in EdgeAgentWorkflows... if you have any feedback please share
+1847154532,chereseeriepa,2024-11-18T19:43:45+00:00,Removed
+1847155224,chereseeriepa,2024-11-18T19:44:21+00:00,"Appears to be fixed now, so i've removed this method"

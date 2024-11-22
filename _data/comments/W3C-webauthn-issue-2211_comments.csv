@@ -1,0 +1,3 @@
+comment_id,user,date,body
+2491862843,timcappalli,2024-11-21T17:34:12+00:00,"> Use passkey from another device"" browser native prompt by clicking the ""Cancel"" button.  This prompt is WebAuthn client-specific.   If the user cancels out of a WebAuthn ceremony, `NotAllowedError` is returned.  Also, take a look at #2095 which is planned for Level 4."
+2491871758,hemanth,2024-11-21T17:38:36+00:00,`NotAllowedError` can also be returned synchronously without user interaction?

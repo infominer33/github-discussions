@@ -1,0 +1,2 @@
+comment_id,user,date,body
+2471047602,elribonazo,2024-11-12T16:46:45+00:00,"We've decided to just make the models public exported in the SDK, the store will not be implemented as part of the SDK and become a separate package.  This is how we always envisioned it should be but for a period of time and in order to make things easier we integrated the pluto-encrypted Store.  After the storage is available we will be adding a deprecation notice"

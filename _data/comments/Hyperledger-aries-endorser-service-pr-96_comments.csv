@@ -1,0 +1,5 @@
+comment_id,user,date,body
+1842542476,msporny,2024-11-14T16:27:42+00:00,"```suggestion 				For example, if the resource is a representation of a DID document with media type <code>application/did</code>, then ```"
+1842727472,TallTed,2024-11-14T18:39:39+00:00,"```suggestion 		In accordance with [[RFC3986]], it consists of the following three steps: resolving the DID; dereferencing the 		resource; and dereferencing the fragment (only if the <var>input <a>DID URL</a></var> contains a <a>DID fragment</a>):</p> ```"
+1842731756,TallTed,2024-11-14T18:42:58+00:00,"just human-facing whitespace ```suggestion 						DID parameters</a> of the <var>input <a>DID URL</a></var> MUST be passed as <var>resolution options</var> to the 						<a>DID Resolution</a> algorithm. If the <var>input <a>DID</a></var> does not exist, return a null result. 						Otherwise, the result is called the <var>resolved <a>DID document</a></var>.</li> ```"
+1842732449,TallTed,2024-11-14T18:43:33+00:00,"```suggestion 					with the adjusted <var>input <a>DID URL</a></var>.</li> ```"

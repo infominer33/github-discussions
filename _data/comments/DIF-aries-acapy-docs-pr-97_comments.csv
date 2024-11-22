@@ -1,0 +1,4 @@
+comment_id,user,date,body
+1837238770,TallTed,2024-11-11T21:41:09+00:00,"Making it easier to read ```suggestion   // if the implementation failed to issue a VC or to sign the VC,   // return an empty array ```"
+1841016969,aljones15,2024-11-13T19:04:12+00:00,"double check these proofLengths, but they probably work as is."
+1841074895,BigBlueHat,2024-11-13T19:51:02+00:00,"```suggestion     // assume support for vc 2.0 ```"

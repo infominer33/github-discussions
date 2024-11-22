@@ -1,0 +1,5 @@
+comment_id,user,date,body
+2476257246,FabioPinheiro,2024-11-14T12:40:53+00:00,I think with this https://github.com/hyperledger/identus/pull/85 it should be easy enough for anyone with zero knowledge to start.
+2489453426,amagyar-iohk,2024-11-20T20:09:48+00:00,"@FabioPinheiro @elribonazo when running locally there's the docker network issue because SDK runs outside docker and is not able to communicate to the mediator I mean, the SDK resolves the did service endpoint as `http://identus-mediator:8080` so it doesn't work"
+2489620403,amagyar-iohk,2024-11-20T21:57:21+00:00,@FabioPinheiro I noticed this line has a typo https://github.com/hyperledger/identus/blob/main/identus-docker/docker-compose.yaml#L58
+2492119009,amagyar-iohk,2024-11-21T19:45:51+00:00,Working as expected

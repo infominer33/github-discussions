@@ -1,0 +1,2 @@
+comment_id,user,date,body
+2467245427,GHkrishna,2024-11-11T05:05:14+00:00,"> Just install anoncreds. It's a required extra. It should be included in the lastest version by default.  Just a heads up, apart from `anoncreds`, I also had to install other packages. So the missing packages were, - `anoncreds` - `aries_askar` - `indy_credx` - `indy_vdr`  PS: for anyone wondering/facing this issue simply install the above mentioned packages individually by, `pip install package-name`"

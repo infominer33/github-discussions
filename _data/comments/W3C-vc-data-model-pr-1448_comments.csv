@@ -1,0 +1,3 @@
+comment_id,user,date,body
+1846211106,mixmix,2024-11-18T09:56:59+00:00,I'm not sure about the internal states with connectionless flows.
+1846214385,mixmix,2024-11-18T09:59:00+00:00,"I think we need to describe what ""accepting an invite"" means. If you're working with an SDK that's more clear as they have methods, but I think these docs are a bit more generic, and open-agent-centric right? So do we need to describe how to unpack it, build the message to send? (seems verbose)"
