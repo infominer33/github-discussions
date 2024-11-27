@@ -33,7 +33,7 @@ layout: page
             <div class="recent-comment ms-4 mt-1">
               <blockquote class="small text-muted mb-0">
                 <em>Latest comment by <a href="https://github.com/{{ last_comment.user }}">@{{ last_comment.user }}</a> on {{ last_comment.date | date: "%Y-%m-%d" }}:</em><br>
-                {{ last_comment.body | strip_html | truncate: 200 }}
+                {{ last_comment.body | truncate: 500 }}
               </blockquote>
             </div>
           {% endif %}
