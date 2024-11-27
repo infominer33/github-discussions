@@ -4,7 +4,7 @@
   <id>/github-discussions/</id>
   <title>Identosphere's Github Discussions</title>
   <subtitle>Its more Self-Sovereign Identity Feeds</subtitle>
-  <updated>2024-11-27T02:50:42-08:00</updated>
+  <updated>2024-11-27T05:56:53-08:00</updated>
   <author>
     <name>DecentralizedID</name>
     <uri>/github-discussions/</uri>
@@ -17,6 +17,30 @@
   <icon>/github-discussions/assets/img/favicons/favicon.ico</icon>
   <logo>/github-discussions/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Add test wallet config option</title>
+    <link href="/github-discussions/acapy/3355/" rel="alternate" type="text/html" title="Add test wallet config option" />
+    <published>2024-11-26T10:38:58-08:00</published>
+  
+    <updated>2024-11-26T11:05:04-08:00</updated>
+  
+    <id>/github-discussions/acapy/3355/</id>
+    <content type="text/html" src="/github-discussions/acapy/3355/" />
+    <author>
+      <name>jamshale</name>
+    </author>
+
+  
+    
+    <category term="openwallet-foundation" />
+    
+  
+
+  <summary>Should probably just be a `store_true` rather than a str</summary>
+
+  </entry>
 
   
   <entry>
@@ -72,7 +96,7 @@
     <link href="/github-discussions/did-extensions/597/" rel="alternate" type="text/html" title="SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches" />
     <published>2024-11-22T07:09:36-08:00</published>
   
-    <updated>2024-11-25T14:44:07-08:00</updated>
+    <updated>2024-11-26T07:01:00-08:00</updated>
   
     <id>/github-discussions/did-extensions/597/</id>
     <content type="text/html" src="/github-discussions/did-extensions/597/" />
@@ -86,8 +110,7 @@
     
   
 
-  <summary>`attestation` is one suggestion for the name of this new field in a DID Method registration JSON document.
-![image](https://github.com/user-attachments/assets/1aa64734-9db8-42df-998f-d2025b2c20d1)</summary>
+  <summary>Please don&amp;#39;t use pictures of text when the text itself could be used.</summary>
 
   </entry>
 
@@ -112,30 +135,6 @@
   
 
   <summary>Actually just noticed a tiny spelling error here. Might as well fix it.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>CR: Need a way to detect "cancel"</title>
-    <link href="/github-discussions/webauthn/2211/" rel="alternate" type="text/html" title="CR: Need a way to detect &amp;quot;cancel&amp;quot;" />
-    <published>2024-11-21T09:31:50-08:00</published>
-  
-    <updated>2024-11-21T09:38:36-08:00</updated>
-  
-    <id>/github-discussions/webauthn/2211/</id>
-    <content type="text/html" src="/github-discussions/webauthn/2211/" />
-    <author>
-      <name>hemanth</name>
-    </author>
-
-  
-    
-    <category term="w3c" />
-    
-  
-
-  <summary>`NotAllowedError` can also be returned synchronously without user interaction?</summary>
 
   </entry>
 

@@ -1,4 +1,2 @@
 comment_id,user,date,body
-1840487779,wip-abramson,2024-11-13T14:53:34+00:00,I prefer `expressing` over `implementing and managing`. I think it aligns more with the fact that this spec is a for a data model.
-1841179884,TallTed,2024-11-13T21:20:30+00:00,"@wip-abramson — Maybe this? ```suggestion for expressing and consuming [=verifiable credentials=] and associated ```"
 1853081207,brentzundel,2024-11-21T23:31:39+00:00,"```suggestion updating cryptographic systems and managing private signing keys with limited validity periods. It discusses mechanisms for ensuring content integrity of ```"

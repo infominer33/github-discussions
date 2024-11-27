@@ -1,6 +1,23 @@
 [
   
   {
+    "title": "Add test wallet config option",
+    "url": "/github-discussions/acapy/3355/",
+    "categories": "openwallet-foundation",
+    "tags": "acapy",
+    "date": "2024-11-26 10:38:58 -0800",
+    
+
+
+
+
+
+    
+    "snippet": "URL: https://github.com/openwallet-foundation/acapy/pull/3355With the removal of the in-memory wallet we lost the ability to quickly spin up an in-memory agent without a wallet name or key. This ad...",
+    "content": "URL: https://github.com/openwallet-foundation/acapy/pull/3355With the removal of the in-memory wallet we lost the ability to quickly spin up an in-memory agent without a wallet name or key. This adds the ability back if you use the new --wallet-test config. It will create an in-memory askar wallet.If you don’t use wallet-test and fail to supply name and key you now get a wallet-name and wallet-key required for persistent wallet error on startup."
+  },
+  
+  {
     "title": "ACA-Py failing to start, gives KeyError: 'pattern'",
     "url": "/github-discussions/acapy/3353/",
     "categories": "openwallet-foundation",
@@ -307,7 +324,7 @@
   },
   
   {
-    "title": "Cardano Connector for SDK",
+    "title": "Incorrect hashing used in tests for `ecdsa-rdfc-2019` `P-384`",
     "url": "/github-discussions/identus/86/",
     "categories": "hyperledger",
     "tags": "identus",
@@ -319,8 +336,8 @@
 
 
     
-    "snippet": "URL: https://github.com/hyperledger/identus/issues/86Short DescriptionA connector for the SDKs to submit the PRISM Block to the Cardano Blockchain.Value statementAs a community we already agreed th...",
-    "content": "URL: https://github.com/hyperledger/identus/issues/86Short DescriptionA connector for the SDKs to submit the PRISM Block to the Cardano Blockchain.Value statementAs a community we already agreed this is value coming from the discussion in https://github.com/hyperledger/identus/discussions/80But just the summarize:The PRISM Node can be view as a Cardano Connector. But is a component that is able to do much more that simple submit transaction with metadata.But this is a very common use case in Cardano.The value of this come from bypassing this dedicated component of the did:prism method. With a generic component that uses infrastructure that already exists and that is largely available.Again, the ONLY concern that we care about in here is the Writing Path.We don’t care about the status of DID in here. But to create valid PRISM Block you need to know the status of the DID. For that you have the Reading Path. Both PRISM Node or the universal resolver cover that.For example when you create a new did:prism you already know the state of the DID, because it is no existed.So let’s split responsibility:  The SDKs needs to produce the bytes that constitute a valid PRISM Block.Note the PRISM Block is already sign with the private keys if the DID, so the Keys is never shared with the connector.  The Cardano Connector receive the bytes of the PRISM Block (which is a protobuf) and create a transactions with those bytes on the metadata and a metadata id 21325.See Appendix A &amp; B on the PRISM DID method specs for more for more information.  Private keys. There are you two pairs of Private keys, one is the Master key on the DID and another is the key of the wallet.          The Master private key of the DID is never shared with the Connector. This key is used to sign the PRISM Object in order to make the PRISM Block.      The private key of the wallet its also never shared to other components. This key is used to sign the Cardano transactions.      I propose we do a proof of concept of a connector that will be a Chrome extension and use the TS SDK to call the Lace wallet and make a transaction via the Lace wallet.The idea is to explore CIP30 API and try to build from there https://cips.cardano.org/cip/CIP-30ComponentsProof of concept for a new company ComponentWriting path of the did:prism method using the TS SDK"
+    "snippet": "URL: https://github.com/hyperledger/identus/issues/86Hiya, the following tests are failing for P-384 with our implementation:  ecdsa-rdfc-2019 (issuers) VC 1.1 The \"proof\" MUST verify with a confor...",
+    "content": "URL: https://github.com/hyperledger/identus/issues/86Hiya, the following tests are failing for P-384 with our implementation:  ecdsa-rdfc-2019 (issuers) VC 1.1 The \"proof\" MUST verify with a conformant verifier.  ecdsa-rdfc-2019 (issuers) VC 2.0 The \"proof\" MUST verify with a conformant verifier.  ecdsa-rdfc-2019 (verifiers 1.1) MUST verify a valid VC with an ecdsa-rdfc-2019 proof.  ecdsa-rdfc-2019 (verifiers 2.0) MUST verify a valid VC with an ecdsa-rdfc-2019 proof.After trying some random things, I noticed that if we used SHA-256 for the hash data instead of SHA-384 for P-384 keys, then all the tests would pass. So I’m assuming that the implementation used by the tests is incorrect, but maybe our interpretation of the specs is wrong?"
   },
   
   {
@@ -375,24 +392,7 @@
   },
   
   {
-    "title": "WebAuthn Clients should NOT zero out AAGUIDs from security keys when attestation is none",
-    "url": "/github-discussions/webauthn/2198/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-11-13 12:51:20 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/webauthn/issues/2198There has been some confusion across multiple issues, so creating another one 🫠.In #2058, spec text was added to only zero out AAGUIDs for none attes...",
-    "content": "URL: https://github.com/w3c/webauthn/issues/2198There has been some confusion across multiple issues, so creating another one 🫠.In #2058, spec text was added to only zero out AAGUIDs for none attestations when the authenticator was not a platform authenticator.Proposal is to remove this change altogether, which would allow AAGUIDs from security keys to not be zeroed out.Remove:If authenticator is not a [platform authenticator](https://w3c.github.io/webauthn/#platform-authenticators) then replace the [aaguid](https://w3c.github.io/webauthn/#authdata-attestedcredentialdata-aaguid) in the [attested credential data](https://w3c.github.io/webauthn/#attested-credential-data) with 16 zero bytes.This makes the behavior the same across all authenticator types from the client perspective."
-  },
-  
-  {
-    "title": "Scalability and Performance Optimization",
+    "title": "TPAC 2024 Presentations",
     "url": "/github-discussions/org/57/",
     "categories": "decentralized-identity",
     "tags": "org",
@@ -404,8 +404,8 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/org/issues/57Optimize scalability and performance when interacting with decentralized web nodes, ensuring a reliable and efficient user experience.",
-    "content": "URL: https://github.com/decentralized-identity/org/issues/57Optimize scalability and performance when interacting with decentralized web nodes, ensuring a reliable and efficient user experience."
+    "snippet": "URL: https://github.com/decentralized-identity/org/issues/57We are interested in dedicating time at TPAC to hear from working group members using DIDs. We would like to aim for shorter presentation...",
+    "content": "URL: https://github.com/decentralized-identity/org/issues/57We are interested in dedicating time at TPAC to hear from working group members using DIDs. We would like to aim for shorter presentations (under 15m or so) that showcase real-world usage of DIDs.Please note your intent to present (topic and requested time) here.Additionally, if there are other topics you would like to see discussed during TPAC please suggest them here."
   },
   
   {
@@ -426,23 +426,6 @@
   },
   
   {
-    "title": "Objection: approval of did:tdw",
-    "url": "/github-discussions/did-extensions/586/",
-    "categories": "w3c",
-    "tags": "did-extensions",
-    "date": "2024-11-07 09:37:26 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/did-extensions/issues/586I have a commercial objection to the approval of did:tdw.“tdw” overlaps significantly with the Trusted Digital Web, the parent project of the We...",
-    "content": "URL: https://github.com/w3c/did-extensions/issues/586I have a commercial objection to the approval of did:tdw.“tdw” overlaps significantly with the Trusted Digital Web, the parent project of the Web 7.0 Ultraweb.Reference: https://github.com/mwherman2000/TrustedDigitalWebSee PR  https://github.com/w3c/did-extensions/pull/581#issuecomment-2462828639 for the details."
-  },
-  
-  {
     "title": "https://www.w3.org/TR/did-extensions-methods/ is unresolvable ",
     "url": "/github-discussions/did-extensions/585/",
     "categories": "w3c",
@@ -460,7 +443,7 @@
   },
   
   {
-    "title": "Support Verification in SDK - Anoncreds",
+    "title": "The did is not a url for the did, but for a resolution structure which as yet has no name",
     "url": "/github-discussions/credential-schemas/23/",
     "categories": "decentralized-identity",
     "tags": "credential-schemas",
@@ -472,8 +455,8 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/credential-schemas/issues/23No content available",
-    "content": "URL: https://github.com/decentralized-identity/credential-schemas/issues/23No content available"
+    "snippet": "URL: https://github.com/decentralized-identity/credential-schemas/issues/23This not only makes the definition of did incorrect, but it points to a need for a name for the structure returned by a di...",
+    "content": "URL: https://github.com/decentralized-identity/credential-schemas/issues/23This not only makes the definition of did incorrect, but it points to a need for a name for the structure returned by a did resolution. Would also like to understand how redirects fit into this structure."
   },
   
   {
@@ -494,40 +477,6 @@
   },
   
   {
-    "title": "The authenticator may hide the credential even if the RP signals unknown credentials",
-    "url": "/github-discussions/webauthn/2192/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-10-30 02:03:05 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/webauthn/issues/2192Proposed ChangeIn the spec, there are some description and recommendation how the authenticator handles signal APIs.Currently, in many parts, there a...",
-    "content": "URL: https://github.com/w3c/webauthn/issues/2192Proposed ChangeIn the spec, there are some description and recommendation how the authenticator handles signal APIs.Currently, in many parts, there are description like this.  WebAuthn Relying Parties may use these signal methods to inform authenticators of the state of public key credentials, so that incorrect or revoked credentials may be updated, removed, or hidden.The authenticator may decide not to remove the credential at the time of receiving the signal and it may remove it after certain amount of time passes. It implies that the credential would not delete the credential and for some reasons the hidden credential would be changed to active credential.In the case of the user directly goes through the authenticator dedicated UI and then delete the credential, it would not be reported to the RP and which causes credential mismatch. So, for this case, the authenticator would hide the credential if the user deletes the credential through menu and it would be restored depending on some cases, and it would still work without any issue.For this scenario, the hidden feature might be a good choice as an authenticator to prevent the credential is accidentally removed so that the user avoid user lock out case.However, for the signal APIs, RP indicates that the acceptable credentials with an intention, so It would be better for authenticators to delete or update credentials if it is required to meet the original requirement (synchronization between authenticators and RP)."
-  },
-  
-  {
-    "title": "Question API: Send Presentation without pres_ex_id or with connection_id",
-    "url": "/github-discussions/acapy/3321/",
-    "categories": "openwallet-foundation",
-    "tags": "acapy",
-    "date": "2024-10-29 15:17:14 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/openwallet-foundation/acapy/issues/3321Hi there,I am using aca-py for my master’s thesis and trying to achieve the trust between user and my system.What I am trying to achie...",
-    "content": "URL: https://github.com/openwallet-foundation/acapy/issues/3321Hi there,I am using aca-py for my master’s thesis and trying to achieve the trust between user and my system.What I am trying to achieve is to expose the system’s VC to the user’s wallet so they can be sure that they have connected with the right entity.Is there a way to send VC presentation without needing a request first?Thanks in advance!"
-  },
-  
-  {
     "title": "Multitenancy support for OID4VC plugin",
     "url": "/github-discussions/acapy-plugins/1161/",
     "categories": "openwallet-foundation",
@@ -545,11 +494,11 @@
   },
   
   {
-    "title": "Remove authenticatorDisplayName from L3",
-    "url": "/github-discussions/webauthn/2187/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-10-23 12:06:50 -0700",
+    "title": "Backchannels Moved to Framework Repos",
+    "url": "/github-discussions/owl-agent-test-harness/881/",
+    "categories": "openwallet-foundation",
+    "tags": "owl-agent-test-harness",
+    "date": "2024-10-22 14:49:59 -0700",
     
 
 
@@ -557,12 +506,12 @@
 
 
     
-    "snippet": "URL: https://github.com/w3c/webauthn/issues/2187Discussed at TPAC as well as the 2024-10-23 call.  Remove authenticatorDisplayName from credProps for Level 3  Address the use case in Level 4 via ht...",
-    "content": "URL: https://github.com/w3c/webauthn/issues/2187Discussed at TPAC as well as the 2024-10-23 call.  Remove authenticatorDisplayName from credProps for Level 3  Address the use case in Level 4 via https://github.com/w3c/webauthn/issues/2157Relevant Issues and PRs:  https://github.com/w3c/webauthn/pull/2163  https://github.com/w3c/webauthn/pull/1880  https://github.com/w3c/webauthn/issues/2156  https://github.com/w3c/webauthn/pull/2005"
+    "snippet": "URL: https://github.com/openwallet-foundation/owl-agent-test-harness/issues/881Backchannels are moved out of AATH repo.Follow the pattern of the Aries-VCX backchannel",
+    "content": "URL: https://github.com/openwallet-foundation/owl-agent-test-harness/issues/881Backchannels are moved out of AATH repo.Follow the pattern of the Aries-VCX backchannel"
   },
   
   {
-    "title": "Improve Infrastructure provisioning",
+    "title": "DRY principle for multikeys?",
     "url": "/github-discussions/identus/76/",
     "categories": "hyperledger",
     "tags": "identus",
@@ -574,29 +523,12 @@
 
 
     
-    "snippet": "URL: https://github.com/hyperledger/identus/issues/76Short DescriptionImprove the infrastructure provisioning by reducing the amount of services that are bundled by default + making those easier to...",
-    "content": "URL: https://github.com/hyperledger/identus/issues/76Short DescriptionImprove the infrastructure provisioning by reducing the amount of services that are bundled by default + making those easier to configure and not require any specific SH configuration script. On top of that we also aim to make everything deployable from a single docker image and not require too many images.Value statementMain goal behind this EPIC is to make our services easier to configure and maintain over time. For existing users, this will improve code maintenance and reduce the time spent on configuring the services and for our new users this will make it extremely easier to kick-off your project in Identus ecosystem. We mainly aim to reduce friction when it comes to configuring the services and get everything configured to start developing code.ComponentsCloud AgentTeam members@hyperledger/identusArchitect@hyperledger/identus-maintainersQA Member@hyperledger/identus-maintainersOwner@hyperledger/identus-maintainers"
+    "snippet": "URL: https://github.com/hyperledger/identus/issues/76This issue is also valid for the EdDSA and BBS specifications.The §2.1.1 Multikey section gives a (normative!) definition for Multikeys for the ...",
+    "content": "URL: https://github.com/hyperledger/identus/issues/76This issue is also valid for the EdDSA and BBS specifications.The §2.1.1 Multikey section gives a (normative!) definition for Multikeys for the various versions of ECDSA. However, section §2.2.2 Mulltikey of the controller document also defines (normatively!) not only the concept of Multikeys, but also its specific definitions for ECDSA/EdDSA/BBS.I think this is wrong, it violates the DRY principles and, worse, it may lead to discrepancies. (To be clear, I did not see any discrepancies today.) In the current setting of the various specifications, I believe the right place is the CD specification.(Note that the DID spec possibly adopting Multikeys as one of the standard key representation. The Multikey definition is relevant for DID, the cryptosuites are not…)In my view, the definition should be removed from the ECDSA (and EdDSA and BBS) specification."
   },
   
   {
-    "title": "DID management component discussion",
-    "url": "/github-discussions/identus/75/",
-    "categories": "hyperledger",
-    "tags": "identus",
-    "date": "2024-10-21 07:18:04 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus/issues/75The reason for this discussion is there is a need for a better did management component.As part of this discussion the following is purposed:  S...",
-    "content": "URL: https://github.com/hyperledger/identus/issues/75The reason for this discussion is there is a need for a better did management component.As part of this discussion the following is purposed:  Separate Plutos DID Management side into a more flexible protocol.  Make the DID management data more common, aka: instead of having a different storage for PrismDID and PeerDID have a storage for DIDs.  Make a DID Management default component that is capable of manage (search, create, update, delete) DIDs and is components in the database.Then make this component available within PrismAgent."
-  },
-  
-  {
-    "title": "VCDM Improvements Phase 1: Standardize our implementation of 1.1 ",
+    "title": "Bug 27755 - Using the Subtle Crypto Interface with Streams",
     "url": "/github-discussions/identus/73/",
     "categories": "hyperledger",
     "tags": "identus",
@@ -608,16 +540,16 @@
 
 
     
-    "snippet": "URL: https://github.com/hyperledger/identus/issues/73Short DescriptionWe need to change the schemaId from being an  strings vs array of object, and the field should also be replaced by another fiel...",
-    "content": "URL: https://github.com/hyperledger/identus/issues/73Short DescriptionWe need to change the schemaId from being an  strings vs array of object, and the field should also be replaced by another fieldName, from “schemaId” to “credentialSchema”Value statementTBDComponents  OAS  SDKsTeam members@hyperledger/identusArchitect@hyperledger/identus-maintainersQA Member@hyperledger/identus-maintainersOwner@hyperledger/identus-maintainers"
+    "snippet": "URL: https://github.com/hyperledger/identus/issues/73Bug 27755:Though the StreamsAPI is referenced in Informative Reference, the functions under window.crypto.subtle are specified with only one-sho...",
+    "content": "URL: https://github.com/hyperledger/identus/issues/73Bug 27755:Though the StreamsAPI is referenced in Informative Reference, the functions under window.crypto.subtle are specified with only one-shot data inputs.Use-cases: Data may not be available at once. Data may be too huge to keep in memory.For encrypt()/decrypt() it would make sense to have a streaming readable output if the input is a readable stream."
   },
   
   {
-    "title": "`@protected` creates unresolvable conflicts when the same term is defined in two contexts top-level",
-    "url": "/github-discussions/json-ld-syntax/443/",
-    "categories": "w3c",
-    "tags": "json-ld-syntax",
-    "date": "2024-10-19 02:53:21 -0700",
+    "title": "Remove Indy/Vdrtools",
+    "url": "/github-discussions/aries-vcx/1298/",
+    "categories": "hyperledger",
+    "tags": "aries-vcx",
+    "date": "2024-10-11 15:38:48 -0700",
     
 
 
@@ -625,8 +557,8 @@
 
 
     
-    "snippet": "URL: https://github.com/w3c/json-ld-syntax/issues/443I’ve just encountered issue #424 (and the related #361 as well) and in a similar situation with https://www.w3.org/ns/controller/v1 defining als...",
-    "content": "URL: https://github.com/w3c/json-ld-syntax/issues/443I’ve just encountered issue #424 (and the related #361 as well) and in a similar situation with https://www.w3.org/ns/controller/v1 defining alsoKnownAs top-level alongside @protected: true, while https://www.w3.org/ns/activitystreams defines alsoKnownAs in a different namespace (as: vs sec:, loosely)From controller/v1:{  \"@context\": {    \"@protected\": true,    \"id\": \"@id\",    \"type\": \"@type\",    \"alsoKnownAs\": {      \"@id\": \"https://w3id.org/security#alsoKnownAs\",      \"@type\": \"@id\",      \"@container\": \"@set\"    },//...From activitystreams:{  \"@context\": {    \"@vocab\": \"_:\",    \"xsd\": \"http://www.w3.org/2001/XMLSchema#\",    \"as\": \"https://www.w3.org/ns/activitystreams#\",// ...\"alsoKnownAs\": {      \"@id\": \"as:alsoKnownAs\",      \"@type\": \"@id\"    }// ...Putting activitystreams before controller/v1 causes the later definition to override the older one, as expected (but not as desired):{  \"@context\": [\"https://www.w3.org/ns/activitystreams\", \"https://www.w3.org/ns/controller/v1\"],  \"type\": \"Person\",  \"id\": \"http://person.example\",  \"alsoKnownAs\": \"https://person.example\"  // sec:alsoKnownAs}[  {    \"https://w3id.org/security#alsoKnownAs\": [  // should be https://www.w3.org/ns/activitystreams#alsoKnownAs      {        \"@id\": \"https://person.example\"      }    ],    \"@id\": \"http://person.example\",    \"@type\": [      \"https://www.w3.org/ns/activitystreams#Person\"    ]  }]But putting activitystreams after controller/v1 triggers the error due to @protected: true:{  \"@context\": [\"https://www.w3.org/ns/controller/v1\",  // uses @protected\"https://www.w3.org/ns/activitystreams\"  // will trigger the redefinition error],  \"type\": \"Person\",  \"id\": \"http://person.example\",  \"alsoKnownAs\": \"https://person.example\"}jsonld.SyntaxError: Invalid JSON-LD syntax; tried to redefine a protected term.JSON-LD 1.1 4.1.11 Protected term definitions https://www.w3.org/TR/json-ld11/#protected-term-definitions describes two exceptions. The first exception is when the definition is the same, which is not applicable here. The second exception is for property-scoped context definitions, which is unworkable because in this case the singular top-level object is intended to be both an Actor as well as a Controller Document.To veryify, here’s a type-scoped context definition that errors out:{  \"@context\": [    \"https://www.w3.org/ns/controller/v1\",     {       \"Person\": {         \"@id\": \"https://www.w3.org/ns/activitystreams#Person\",         \"@context\": {           \"alsoKnownAs\": {  // triggers the redefinition error             \"@id\": \"https://www.w3.org/ns/activitystreams#alsoKnownAs\"           }         }       }     }],  \"type\": \"Person\",  \"id\": \"http://person.example\",  \"alsoKnownAs\": \"https://person.example\"}And to reiterate, a property-scoped context definition can’t be used because the alsoKnownAs property is top-level. So the way I see it, there’s nothing that can be done to resolve this in a “plain JSON” compatible way except:  a) convince whoever is responsible for controller/v1 to remove @protected: true  b) convince whoever is responsible for controller/v1 to redefine alsoKnownAs with the activitystreams-namespaced @id instead of the security-namespaced one  c) write my own context documentThis leads me to think that @protected is a generally poorly-thought-out mechanism that highly increases the likelihood of such conflicts. Without it, as a producer I could just redefine the term later, for example by putting the activitystreams context last, or by using a local context object that comes after both remote contexts:{  \"@context\": [  \"https://www.w3.org/ns/controller/v1\",  // needs to remove @protected  \"https://www.w3.org/ns/activitystreams\"  // as:alsoKnownAs will override controller/v1's sec:alsoKnownAs],  \"type\": \"Person\",  \"id\": \"http://person.example\",  \"alsoKnownAs\": \"https://person.example\"  // as:alsoKnownAs}or{  \"@context\": [\"https://www.w3.org/ns/activitystreams\",  // defines as:alsoKnownAs\"https://www.w3.org/ns/controller/v1\",  // redefines sec:alsoKnownAs as @protected {\"alsoKnownAs\": {  \"@id\": \"https://www.w3.org/ns/activitystreams#alsoKnownAs\",  // won't work unless controller/v1 removes @protected  \"@type\": \"@id\"}}],  \"type\": \"Person\",  \"id\": \"http://person.example\",  \"alsoKnownAs\": \"https://person.example\"  // as:alsoKnownAs}I’m not sure the existence of @protected accomplishes its stated goal of “prevent[ing] this divergence of interpretation”, nor that the rationale “that “plain JSON” implementations, relying on a given specification, will only traverse properties defined by that specification” is sufficiently addressing the issue of conflicts (or that it is a valid assumption in the first place). The issue arises when two specifications define the same term, and both specifications apply to the current object or document. It effectively leads to a hard incompatibility where it is impossible to implement both specs fully; you have to pick between them.If there’s an option I’m not aware of I’d like to hear it."
+    "snippet": "URL: https://github.com/hyperledger/aries-vcx/pull/1298Closes #1250Other changesI believe switching the pipelines has caused a whole lot of new tests to run in askar mode, so there’s plenty of new ...",
+    "content": "URL: https://github.com/hyperledger/aries-vcx/pull/1298Closes #1250Other changesI believe switching the pipelines has caused a whole lot of new tests to run in askar mode, so there’s plenty of new test failures.  in aries_vcx, add support for expanding verkeys read from ledgers (abbreviated with ~ prefix, expanded into full verkey)  rm mysql wallet tests for now, i don’t believe these ever worked for askar, we may need to look into it if we want to support it  askar wallet verify function only worked if the signer key is owned by the wallet; not useful for verify external signers  change the from_seed to from_secret_bytes in askar key generation (similar to #1224 ), however i’ve taken the easy path out by just swapping it in-place  small issues with the unpack alg, where the reported sender_vk was missing 1 step of base58 decoding.  just using a dummy in-memory askar wallet for tests/agents currently. i left a TODO comment, but i think we can defer this for solving later, it will require consideration of how we want to make storage path configurable (previously we just let indy select some default location)  pin the mediator build image to our globally used rust toolchain version (1.79)"
   },
   
   {
@@ -647,11 +579,11 @@
   },
   
   {
-    "title": "[[Get]] method doesn't exist in CredMan",
-    "url": "/github-discussions/webauthn/2169/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-10-01 07:40:46 -0700",
+    "title": "Scenario testing - Restarts and upgrades",
+    "url": "/github-discussions/acapy/3269/",
+    "categories": "openwallet-foundation",
+    "tags": "acapy",
+    "date": "2024-10-03 09:16:38 -0700",
     
 
 
@@ -659,8 +591,8 @@
 
 
     
-    "snippet": "URL: https://github.com/w3c/webauthn/issues/2169§5.1.4. Use an Existing Credential to Make an Assertion - PublicKeyCredential’s [[Get]](options) Method appears to reference a [[Get]] internal metho...",
-    "content": "URL: https://github.com/w3c/webauthn/issues/2169§5.1.4. Use an Existing Credential to Make an Assertion - PublicKeyCredential’s [[Get]](options) Method appears to reference a [[Get]] internal method on the Credential interface from CredMan, but no such internal method exists (unlike [[Create]], which does exist). Rather, [[DiscoverFromExternalSource]] is the actual internal method we override.Proposed Change  Delete the heading §5.1.4.1. PublicKeyCredential’s [[DiscoverFromExternalSource]](origin, options, sameOriginWithAncestors) Method (without changing any of the text around it).  Rename the heading §5.1.4. Use an Existing Credential to Make an Assertion - PublicKeyCredential’s [[Get]](options) Method to 5.1.4. Use an Existing Credential to Make an Assertion - PublicKeyCredential’s [DiscoverFromExternalSource] Internal Method.  For consistency, change “Method” to “Internal Method” in the heading §5.1.3. Create a New Credential - PublicKeyCredential’s [[Create]](origin, options, sameOriginWithAncestors) Method.  Similarly, change “Method” to “Internal Method” in the heading §5.1.5. Store an Existing Credential - PublicKeyCredential’s [[Store]](credential, sameOriginWithAncestors) Method."
+    "snippet": "URL: https://github.com/openwallet-foundation/acapy/issues/3269In the acapy tools repo there is some really useful testing using docker containers that allows testing of upgrade scripts and restart...",
+    "content": "URL: https://github.com/openwallet-foundation/acapy/issues/3269In the acapy tools repo there is some really useful testing using docker containers that allows testing of upgrade scripts and restarts. https://github.com/hyperledger/aries-acapy-tools/tree/main/askar_tools/tests/e2e.It should be possible to support this in the scenarios directory from acapy itself. It would be awesome to be able to test a supported upgrade path from the last LTS version and test a few different restarts with changed configurations such as making public dids and using seeds etc."
   },
   
   {
@@ -715,11 +647,11 @@
   },
   
   {
-    "title": "authenticatorDisplayName should use a localizable language map",
-    "url": "/github-discussions/webauthn/2151/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-09-24 14:39:54 -0700",
+    "title": "Exchange of Electronic Certificate of Origin to facilitate Cross Border Trade",
+    "url": "/github-discussions/acapy-endorser-service/157/",
+    "categories": "openwallet-foundation",
+    "tags": "acapy-endorser-service",
+    "date": "2024-09-23 15:29:56 -0700",
     
 
 
@@ -727,12 +659,12 @@
 
 
     
-    "snippet": "URL: https://github.com/w3c/webauthn/issues/2151Related to #1644Proposed ChangeauthenticatorDisplayName is currently a DOMString and does not support localization, specifically language codes and d...",
-    "content": "URL: https://github.com/w3c/webauthn/issues/2151Related to #1644Proposed ChangeauthenticatorDisplayName is currently a DOMString and does not support localization, specifically language codes and direction.Change to a map following the String Meta spec: https://www.w3.org/TR/string-meta/#language-maps\"authenticatorDisplayName\": {    \"en\":    {\"value\": \"This is English\"},    \"en-GB\": {\"value\": \"This is UK English\", \"dir\": \"ltr\"},    \"fr\":    {\"value\": \"C'est français\", \"lang\": \"fr-CA\", \"dir\": \"ltr\"},    \"ar\":    {\"value\": \"هذه عربية\", \"dir\": \"rtl\"}}"
+    "snippet": "URL: https://github.com/openwallet-foundation/acapy-endorser-service/issues/157BackgroundToday, cross-border trade and transport of goods take place on the basis of many documents and processes tha...",
+    "content": "URL: https://github.com/openwallet-foundation/acapy-endorser-service/issues/157BackgroundToday, cross-border trade and transport of goods take place on the basis of many documents and processes that are paper-based (hence manual), time-consuming, and resource-intensive process for all stakeholders. Another downside of such paper-based processes is that there is no easy way to verify the accuracy and authenticity of the trade documents. This results in inefficiencies and delays as the time required to process such paper documents far exceeds the actual time taken for the physical movement of goods. According to a study by McKinsey in 2022, documentation for a single shipment can require up to 50 sheets of paper that are exchanged with up to 30 different stakeholders.To address these inefficiencies, we have developed TradeTrust. TradeTrust, which is built upon OpenAttestation framework, comprises globally accepted standards and frameworks that allow governments and businesses to issue, verify and effect title transfer of electronic documents across different digital platforms seamlessly. TradeTrust uses cryptography and decentralised identifier (DID) technical methods to assure the authenticity and provenance of these electronic documents.As a framework, TradeTrust is designed and developed to support the digitalization of documents used in Cross-Border Trade processes. Such documents could include those that are used to convey information such as Packing Lists and Certificates of Origin (CO) thus making them verifiable with respect to their authenticity and provenance. A CO is a document commonly used in Trade to attest that a product originates from a particular country. For more information, please see https://iccwbo.org/business-solutions/certificates-of-origin/.# DistinctionExisting trade documents are typically printed hardcopies secured with wet ink stamps. These documents are susceptible to forgery and manipulation. A digital verifiable document would allow for * Assurance that the document has not been tampered with * Assurance that the document was issued by a particular Issuer * As these trade documents are shared across different parties in a long chain that may cross many borders, the holders of these documents may want control over what information is shared downstream. A shipper may choose to selectively redact commercially sensitive information (such as suppliers' names or products' pricing) before sharing it onto the next receiving party. This is based on a lossy selective redaction, removing the need to re-issue ‘a version sans the commercially sensitive information’.# ActorsUsing an electronic Certificate of Origin (eCO) as an example of a digital document that is issued via the TradeTrust framework, below are the typical actors involved in its processing.## Customs Administration or duly licensed parties like Chambers of CommerceCustoms Administration and/or Chamber of Commerce are the typical authorities responsible for producing an eCO. It is typically needed by importers/buyers to claim tariff exemptions from the importing customs authority or to provide assurance that the goods are indeed from a particular country. It is provided to importers/buyers by the exporters/sellers whom they buy from and often used in financing arrangements with banks.## BanksIn cross-border trade, sometimes buyers and sellers may arrange for trade financing services to mitigate the risks of non-payment or non-delivery. Banks and other Financial Institutions are often engaged as intermediaries to mitigate these risks using financing instruments such as a Letter of Credit (L/C). A L/C is applied for by the Buyer and will specify a list of trade documents that the Banks will need to sight and verify on behalf of their clients. One of the often-required documents can be an eCO.## ImporterAn Importer/Buyer is the party who purchases and receives products from the seller. If there is a Free Trade Agreement between the importing country and the goods’ origin country, the Importer can provide the eCO during importation clearance procedures to obtain tariff exemptions for the goods.## ExporterAn Exporter/Seller is the party who sells and transports products to his buyer. The Exporter is the party who applies for the eCO from the Customs Administration or duly licensed parties like Chambers of Commerce within the exporting country, upon the request of the Importer.## IssuerA Customs Administration and/or Chamber of Commerce are the typical authorities responsible for producing an eCO.## SubjectThe eCO attests that the origin of the goods is a particular country. It is used to claim tariff exemptions from the importing customs authority or to provide assurance that the goods are indeed from a particular country.## HolderThe eCO can be held by the Importer (and/or their appointed customs broker) and presented to the importing country’s customs administration for import tariff exemption if there is an in-force Free Trade Agreement between the goods’ origin country and the importing country. The eCO can also be held by the Exporter and Banks for trade financing purposes.## VerifierThe eCO is verified by the importing country’s Custom Authority during the importation of goods. It is also verified by Banks if the Exporter and/or Importer has financing arrangements that call for it. It is also verified by the importer to assure that the goods originated from the expected country.# Validation RequirementsDocument verification can be initiated by invoking the open-sourced verification library, or via the trusted verification portals which run the open-sourced verification library.There are no other relationship or dependencies on other Verifiable Credentials.# Example Artefacts## Verifiable CredentialElectronic Certificate of OriginBased on older OpenAttestation v2. Latest OpenAttestation v4 Alpha is now W3C VC Data Model 2.0 compliant.```json{    \"version\": \"https://schema.openattestation.com/2.0/schema.json\",    \"data\": {        \"firstSignatoryAuthentication\": {},        \"supplyChainConsignment\": {            \"exportCountry\": {},            \"exporter\": {                \"postalAddress\": {}            },            \"importCountry\": {},            \"importer\": {                \"postalAddress\": {}            },            \"loadingBaseportLocation\": {},            \"mainCarriageTransportMovement\": {                \"usedTransportMeans\": {},                \"departureEvent\": {}            },            \"unloadingBaseportLocation\": {}        },        \"$template\": {            \"type\": \"7a29f8c9-47a0-429d-a043-0eceee351090:string:EMBEDDED_RENDERER\",            \"name\": \"907e4a2d-0d16-491d-99a6-531eb4a5d06f:string:CHAFTA_COO\",            \"url\": \"7a149cd6-33d9-4813-9a6c-f7ea00b2683c:string:https://generic-templates.tradetrust.io\"        },        \"issuers\": [            {                \"name\": \"eef12038-1f5f-40de-9491-fea8a3c3771e:string:Demo Issuer\",                \"documentStore\": \"b75454f5-79c8-4f8c-9e92-77626b6871d2:string:0x70f83193bE363348Ec769c8752690eB915E640A4\",                \"identityProof\": {                    \"type\": \"b4aee06a-d226-4f0e-8bf4-b0f125735a14:string:DNS-TXT\",                    \"location\": \"4d830cea-5332-4cd7-91dd-0187c096e3af:string:sandbox.tradetrust.io\"                },                \"revocation\": {                    \"type\": \"59cf4245-6d93-4b63-91b1-f9b100e8f304:string:NONE\"                }            }        ],        \"network\": {            \"chain\": \"2d9f5493-416e-448c-8404-e308a6093bd7:string:FREE\",            \"chainId\": \"bf39e664-b37c-4e0c-bf9b-e74c257da7bd:string:101010\"        }    },    \"signature\": {        \"type\": \"SHA3MerkleProof\",        \"targetHash\": \"cff3db9808786f9ad214f3ae79cb83fccc74103a9db78f786335f85871b517cd\",        \"proof\": [],        \"merkleRoot\": \"cff3db9808786f9ad214f3ae79cb83fccc74103a9db78f786335f85871b517cd\"    }}```# Trust HierarchyThe trust can be separated into 2 parts.1. The issuer’s identity is based on the ownership of the DNS    1. This is where we intend to have an alternative identity provided by the Trust Anchors2.\tData integrity is based on the hash that is written on blockchain OR signed by the issuer.# Threat ModelTo be added.## Risk - Put simple description herePut detailed description here, including and especially the response(s) to the risk."
   },
   
   {
-    "title": "Test roadmap item",
+    "title": "Service Endpoint Construction inconsistency",
     "url": "/github-discussions/identus/61/",
     "categories": "hyperledger",
     "tags": "identus",
@@ -744,25 +676,8 @@
 
 
     
-    "snippet": "URL: https://github.com/hyperledger/identus/issues/61Short DescriptionNew cool featureValue statementEnable new awesome solutionsArchitectPersonQA MemberPersonComponentsSDKs, Cloud AgentTeam member...",
-    "content": "URL: https://github.com/hyperledger/identus/issues/61Short DescriptionNew cool featureValue statementEnable new awesome solutionsArchitectPersonQA MemberPersonComponentsSDKs, Cloud AgentTeam membersx, y, z @essbante-io  task 1  task 2"
-  },
-  
-  {
-    "title": "did:tdw resolver",
-    "url": "/github-discussions/acapy/3237/",
-    "categories": "openwallet-foundation",
-    "tags": "acapy",
-    "date": "2024-09-16 15:01:14 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/openwallet-foundation/acapy/pull/3237  Uses the trustdidweb-py library to implement the resolver.  Plugs the resolve endpoint and library into the base_resolver class for ca...",
-    "content": "URL: https://github.com/openwallet-foundation/acapy/pull/3237  Uses the trustdidweb-py library to implement the resolver.  Plugs the resolve endpoint and library into the base_resolver class for caching and future other resolution."
+    "snippet": "URL: https://github.com/hyperledger/identus/issues/61The example (https://w3c-ccg.github.io/did-resolution/#example-11) is inconsistent with the algorithm (https://w3c-ccg.github.io/did-resolution/...",
+    "content": "URL: https://github.com/hyperledger/identus/issues/61The example (https://w3c-ccg.github.io/did-resolution/#example-11) is inconsistent with the algorithm (https://w3c-ccg.github.io/did-resolution/#algorithm).The example says:  Given the following input service endpoint URL:  https://example.com/messages/8377464  And given the following input DID URL:  did:example:123456789abcdefghi?service=messages&amp;relative-ref=%2Fsome%2Fpath%3Fquery#frag  Then the output service endpoint URL is:  https://example.com/messages/8377464/some/path?query#fragBut by following the algorithm, I get this as the output URL:https://example.com/messages/8377464?service=messages&amp;relative-ref=%2Fsome%2Fpath%3Fquery#fragIt looks like in the example the relative-ref DID parameter is used instead of (or in addition to) the input DID URL path and query.There is also an example in did-core (https://w3c.github.io/did-core/#example-9) for “A resource external to a DID Document”, using service and relativeRef:did:example:123?service=agent&amp;relativeRef=/credentials#degreeIs using relativeRef/relative-ref the way to go? If so, how should it interact with the path component and other query parameters in service endpoint construction?"
   },
   
   {
@@ -783,6 +698,23 @@
   },
   
   {
+    "title": "Need guidance on mediator customization",
+    "url": "/github-discussions/identus-docs/171/",
+    "categories": "hyperledger",
+    "tags": "identus-docs",
+    "date": "2024-09-11 03:26:37 -0700",
+    
+
+
+
+
+
+    
+    "snippet": "URL: https://github.com/hyperledger/identus-docs/issues/171I am currently working on a project where I need to modify the behavior of the Aries mediator service, specifically in the areas of keylis...",
+    "content": "URL: https://github.com/hyperledger/identus-docs/issues/171I am currently working on a project where I need to modify the behavior of the Aries mediator service, specifically in the areas of keylist management and message forwarding. However, I am unsure where to start, particularly because the mediator is deployed via a Docker image.Could you please provide guidance on where I can find the source code associated with the Docker image used for the mediator service? Additionally, any advice on how to proceed with customizing the service to alter the handling of keylists and message forwarding would be greatly appreciated."
+  },
+  
+  {
     "title": "[Expo SDK 52][Android] failing with CMake Error at CMakeLists.txt:30 (add_library):",
     "url": "/github-discussions/indy-vdr/324/",
     "categories": "hyperledger",
@@ -800,24 +732,7 @@
   },
   
   {
-    "title": "npm install fails",
-    "url": "/github-discussions/identus-edge-agent-sdk-ts/273/",
-    "categories": "hyperledger",
-    "tags": "identus-edge-agent-sdk-ts",
-    "date": "2024-08-25 16:32:42 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus-edge-agent-sdk-ts/issues/273Is this a regression?YesDescriptionDoesn’t install happily on a fresh install with npm. Seems to be some typedoc version prob...",
-    "content": "URL: https://github.com/hyperledger/identus-edge-agent-sdk-ts/issues/273Is this a regression?YesDescriptionDoesn’t install happily on a fresh install with npm. Seems to be some typedoc version problems in your repoPlease provide the exception or error you saw➜  ATALA cd test➜  test npm init -yWrote to /home/fakename/projects/ATALA/test/package.json:{  \"name\": \"test\",  \"version\": \"1.0.0\",  \"description\": \"\",  \"main\": \"index.js\",  \"scripts\": {    \"test\": \"echo \\\"Error: no test specified\\\" &amp;&amp; exit 1\"  },  \"keywords\": [],  \"author\": \"\",  \"license\": \"ISC\"}➜  test npm i @hyperledger/identus-edge-agent-sdknpm WARN deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.npm WARN deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supportednpm WARN deprecated glob@7.2.3: Glob versions prior to v9 are no longer supportednpm WARN deprecated text-encoding@0.7.0: no longer maintainednpm ERR! code 1npm ERR! path /home/fakename/projects/ATALA/test/node_modules/@hyperledger/identus-edge-agent-sdknpm ERR! command failednpm ERR! command sh -c sh preinstall.shnpm ERR! running preinstall in /home/fakename/projects/ATALA/test/node_modules/@hyperledger/identus-edge-agent-sdknpm ERR! npm ERR! code ERESOLVEnpm ERR! npm ERR! ERESOLVE unable to resolve dependency treenpm ERR! npm ERR!npm ERR! npm ERR! While resolving: @hyperledger/identus-edge-agent-sdk@6.0.0npm ERR! npm ERR! Found: typedoc@0.25.13npm ERR! npm ERR! node_modules/typedocnpm ERR! npm ERR!   dev typedoc@\"^0.25.6\" from the root projectnpm ERR! npm ERR!npm ERR! npm ERR! Could not resolve dependency:npm ERR! npm ERR! peer typedoc@\"&gt;=0.26 &lt;2.0\" from typedoc-plugin-external-module-map@2.1.0npm ERR! npm ERR! node_modules/typedoc-plugin-external-module-mapnpm ERR! npm ERR!   dev typedoc-plugin-external-module-map@\"^2.0.1\" from the root projectnpm ERR! npm ERR!npm ERR! npm ERR! Fix the upstream dependency conflict, or retrynpm ERR! npm ERR! this command with --force or --legacy-peer-depsnpm ERR! npm ERR! to accept an incorrect (and potentially broken) dependency resolution.Please provide the environment you discovered this bug in➜  node -vv20.10.0➜  npm -v10.2.3Anything else?:cry:"
-  },
-  
-  {
-    "title": "Typos in docs",
+    "title": "Clarification on multiple items inside `BitstringStatusListCredential.credentialSubject`",
     "url": "/github-discussions/dpv/184/",
     "categories": "w3c",
     "tags": "dpv",
@@ -829,12 +744,12 @@
 
 
     
-    "snippet": "URL: https://github.com/w3c/dpv/issues/184The quick start docs are showing typos.https://github.com/hyperledger/identus-docs/blame/ad4c0a07d4cdb2ca8c369e6dd40e4bd2db2084fc/documentation/docs/quick-...",
-    "content": "URL: https://github.com/w3c/dpv/issues/184The quick start docs are showing typos.https://github.com/hyperledger/identus-docs/blame/ad4c0a07d4cdb2ca8c369e6dd40e4bd2db2084fc/documentation/docs/quick-start.md#L655"
+    "snippet": "URL: https://github.com/w3c/dpv/issues/184The credentialSubject property of a document can contain a one or more items inside. The https://www.w3.org/TR/vc-bitstring-status-list/ document is taking...",
+    "content": "URL: https://github.com/w3c/dpv/issues/184The credentialSubject property of a document can contain a one or more items inside. The https://www.w3.org/TR/vc-bitstring-status-list/ document is taking the assumption that there will be only a single credential subject item, and that item can be used for further status check.It is not possible to use the credentialSubject.id as it is in no way linked to the VC’s credentialStatus that is being checked.It is no possible to use credentialSubject.statusPurpose as there might be multiple credential subject with the same statusPurpose.How to pick the correct credential subject for the given credential status check?"
   },
   
   {
-    "title": "Add capability to choose either polling or websocket",
+    "title": "New status purpose proposal",
     "url": "/github-discussions/dpv/183/",
     "categories": "w3c",
     "tags": "dpv",
@@ -846,12 +761,12 @@
 
 
     
-    "snippet": "URL: https://github.com/w3c/dpv/issues/183Proposed featureAdd possibility to choose the mediator connection either from pulling or websocket. Default (if no argument is passed) when starting the co...",
-    "content": "URL: https://github.com/w3c/dpv/issues/183Proposed featureAdd possibility to choose the mediator connection either from pulling or websocket. Default (if no argument is passed) when starting the connection to the mediator, should be WS if availableFeature descriptionEnable user to choose the message receival mechanismAnything else?No response"
+    "snippet": "URL: https://github.com/w3c/dpv/issues/183Greetings, while implementing BitstringStatusList in our use case (supply-chain), we uncovered a situation where an issued credential might have a new vers...",
+    "content": "URL: https://github.com/w3c/dpv/issues/183Greetings, while implementing BitstringStatusList in our use case (supply-chain), we uncovered a situation where an issued credential might have a new version available for pickup which doesn’t warrant a revocation of the previous version, but it would still be worthwhile to have a status to signal that an updated version is available.Therefore I would like to suggest adding a status purpose ~supersession~ refresh, which can have a value of 0(meaning this is the latest version of the credential available) or 1 (MAY be refreshed).The process for a holder and/or verifier to get the latest version is out of scope, however I would intend this to be used in parallel with a ~SupersessionRefresh~ defined refreshService type, which contains an endpoint to query and get an updated version of the credential.Once the software have retrieved the latest version of the credential, they would archive the current version and replace it with the latest version in their software, or create a Symbolic link towards it.edit: renamed supersession to refresh as proposed."
   },
   
   {
-    "title": "Link in the CONTRIBUTING.md is broken",
+    "title": "Hosting of the bistring status list context",
     "url": "/github-discussions/dpv/182/",
     "categories": "w3c",
     "tags": "dpv",
@@ -863,8 +778,8 @@
 
 
     
-    "snippet": "URL: https://github.com/w3c/dpv/issues/182Is this a regression?NoDescriptionSteps:  Got to https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/master/CONTRIBUTING.md  Click on the lin...",
-    "content": "URL: https://github.com/w3c/dpv/issues/182Is this a regression?NoDescriptionSteps:  Got to https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/master/CONTRIBUTING.md  Click on the link on the line 53 “1. Follow all instructions in the template”  It will open this browser window: https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/main/.github/PULL_REQUEST_TEMPLATE.mdPlease provide the exception or error you sawThe error is that the file does not exist: 404 - page not foundThe master branch of atala-prism-wallet-sdk-ts does not contain the path CONTRIBUTING.md.Please provide the environment you discovered this bug inOn the GitHub remote site (corresponding to latest version v5.0.0), master branch.Anything else?No"
+    "snippet": "URL: https://github.com/w3c/dpv/issues/182Hello, I have a small question on referencing the Bitstring Status List context in VCDM 1.0 credentials:With https://github.com/w3c/vc-bitstring-status-lis...",
+    "content": "URL: https://github.com/w3c/dpv/issues/182Hello, I have a small question on referencing the Bitstring Status List context in VCDM 1.0 credentials:With https://github.com/w3c/vc-bitstring-status-list/issues/91 and https://github.com/perma-id/w3id.org/pull/3662, we can refer to the Status List 2021 context through w3c perma-ids.I am under the impression however that this same change prevents referencing the bistring status list context that’s here: https://github.com/w3c/vc-bitstring-status-list/blob/main/contexts/v1.jsonldIs this second context intended to be hosted too, should implementers that use VCDM 1.0 with bitstring status lists reference it from somewhere else, or am I simply missing the correct url to reference it ?Kind regards."
   },
   
   {
@@ -885,7 +800,7 @@
   },
   
   {
-    "title": "Wallet recovery with a password-protected backup file (from a single point of failure to 2FA) in addition to Seed Phrase Recovery",
+    "title": "Necessary update on the formal vocabulary?",
     "url": "/github-discussions/bbs-signature/322/",
     "categories": "decentralized-identity",
     "tags": "bbs-signature",
@@ -897,12 +812,12 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/bbs-signature/issues/322Proposed featureWe propose to contribute to this repository to add a functionality to recover a wallet through a password-prot...",
-    "content": "URL: https://github.com/decentralized-identity/bbs-signature/issues/322Proposed featureWe propose to contribute to this repository to add a functionality to recover a wallet through a password-protected backup file.We’ve already implemented this on the Socious Wallet.Demos:Backup wallet flow:https://drive.google.com/file/d/1ae7t0MfNhgFz4FKy3LfLVfibYimfUgR8/view?usp=drivesdkRestore wallet with a password-protected backup file flow:https://drive.google.com/file/d/1qXmEhtN3Z4IEPWdSzdVmRTUZgeOI-mwj/view?usp=drivesdkProblem: The reliance on seed phrase-based wallet recovery is hindering mass adoption.The widespread adoption of blockchain wallets is significantly hindered by the use of seed phrases for wallet recovery. Seed phrases, also known as recovery or mnemonic phrases, are a list of words required to recover a blockchain wallet. This applies to both crypto wallets for token transactions and identity wallets for managing Decentralized Identifiers (DIDs) and Verifiable Credentials (VCs). For security reasons, this phrase must be kept confidential[^1^].Backgrounds on seed phrasesSince a private key consists of random binaries, it’s not human-readable, so it must be stored digitally. However, due to hacking risks, BIP39 was created to allow these keys to be written down on paper[^2^].However, the seed phrase being a single point of failure poses several challenges. Firstly, users may forget their seed phrases or misplace the physical copy containing it[^3^]. Secondly, if another person acquires the seed phrase, they can access the wallet and its funds[^4^]. Lastly, non-technical users may find the concept of a seed phrase difficult to comprehend and manage[^5^].These challenges are discussed in several sources. For instance, [this Cointelegraph article](https://cointelegraph.com/learn/how-to-recover-a-crypto-wallet) states that seed phrase recovery is a hindrance to mass adoption: “As the Web3 space looks to onboard its first billion users, intuitive wallet experiences are critical. Seed phrases are a hindrance to that experience.” In addition, [this Blockworks article](https://blockworks.co/news/what-are-seed-phrases) states that seed phrases have become a “major pain point for users”.Currently, the [Atala PRISM Identity Wallet SDK](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts) only supports wallet recovery based on seed phrases. This limitation hinders mass adoption.Alternatives to seed phrase-based recovery:Two primary alternatives to seed phrase-based recovery exist: social recovery and multifactor recovery involving backup files. Social recovery, which has been endorsed by Ethereum co-founder Vitalik Buterin[^1^], utilizes trusted contacts to help users regain access to their accounts. A prominent example of a wallet employing this method is the Argent wallet[^2^].On the other hand, multifactor recovery involves the use of backup files in addition to other authentication measures. Wallets using this method are rare, especially within the Cardano ecosystem. However, some examples do exist outside of it. For instance, the [Dock.io](http://dock.io/) identity wallet uses a recovery system involving a password-protected backup file[^3^]. Our plan includes implementing a similar solution to enhance the security and user experience of our wallet.See also:https://wirexapp.com/https://www.cypherock.com/features/no-backuphttps://medium.com/@bitizenwallet/private-keys-single-point-of-failure-a20b5f00a67dSolution: We improve the Atala identity wallet SDK to allow wallet recovery using a password-protected backup file instead of a seed phrase.The solution aims to address the vulnerability of seed phrases by enhancing the Atala identity wallet SDK to allow wallet recovery using a password-protected backup file instead of a seed phrase. Essentially, this wallet eliminates a single point of failure through the use of two-factor authentication, i.e., a password and a backup file. Consequently, even if someone acquires your backup file, they can’t decrypt it without your password. Similarly, a password alone is useless without access to your backup file. Moreover, you can always change your password. Implementing two-factor authentication for recovery significantly improves both security and user experience.Wallets with multi-factor authentication are rare, but they do exist outside the Cardano ecosystem. For example, the [Dock.io](http://dock.io/) identity wallet uses a recovery system with a [password-protected backup file](https://drive.google.com/file/d/1qatflQ6aDrQOqx8QlBtda5GlnILuckyV/view?usp=drive_link). We plan to implement a similar solution.Specifically, we will contribute to the [Atala PRISM Identity Wallet SDK](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts) repository. We aim to add new features without affecting the existing wallet recovery feature which uses seed phrases. The new features include the following:  Users do not see seed phrases when creating a wallet.  Users see an alert: “Please secure your wallet by backing up the wallet”.  Users select a secure password to encrypt the backup file.  Users have the freedom to save the backup file wherever they prefer, including on an external hard drive or cloud.  Users can restore a wallet by decrypting the backup file with the password.This plan has been discussed with IOG’s Atala PRISM team. They have confirmed that this improvement is not part of their roadmap and would welcome this additional feature to the SDK.This solution allows projects in the Cardano ecosystem to create their own wallets using this SDK. They can use a password-protected backup file for wallet recovery. This method is not only user-friendly but also secure. It will contribute to the widespread adoption of identity wallets and Self-Sovereign Identity.With this enhanced SDK, we’ll boost Socious Wallet’s security by shifting from seed phrase recovery to multifactor file backup recovery. This will let end-users enjoy the advantages of SSI, DID, and VC without the complexity of managing seed phrases or the risk of a single point of failure. Upon completion of this project, users will have a secure identity wallet on their iOS and Android mobile devices without the need to manage seed phrases.Feature descriptionWe propose to contribute to this repository to add a functionality to recover a wallet through a password-protected backup file.We’ve already implemented this on the Socious Wallet.Demos:Backup wallet flow:https://drive.google.com/file/d/1ae7t0MfNhgFz4FKy3LfLVfibYimfUgR8/view?usp=drivesdkRestore wallet with a password-protected backup file flow:https://drive.google.com/file/d/1qXmEhtN3Z4IEPWdSzdVmRTUZgeOI-mwj/view?usp=drivesdkProblem: The reliance on seed phrase-based wallet recovery is hindering mass adoption.The widespread adoption of blockchain wallets is significantly hindered by the use of seed phrases for wallet recovery. Seed phrases, also known as recovery or mnemonic phrases, are a list of words required to recover a blockchain wallet. This applies to both crypto wallets for token transactions and identity wallets for managing Decentralized Identifiers (DIDs) and Verifiable Credentials (VCs). For security reasons, this phrase must be kept confidential[^1^].Backgrounds on seed phrasesSince a private key consists of random binaries, it’s not human-readable, so it must be stored digitally. However, due to hacking risks, BIP39 was created to allow these keys to be written down on paper[^2^].However, the seed phrase being a single point of failure poses several challenges. Firstly, users may forget their seed phrases or misplace the physical copy containing it[^3^]. Secondly, if another person acquires the seed phrase, they can access the wallet and its funds[^4^]. Lastly, non-technical users may find the concept of a seed phrase difficult to comprehend and manage[^5^].These challenges are discussed in several sources. For instance, [this Cointelegraph article](https://cointelegraph.com/learn/how-to-recover-a-crypto-wallet) states that seed phrase recovery is a hindrance to mass adoption: “As the Web3 space looks to onboard its first billion users, intuitive wallet experiences are critical. Seed phrases are a hindrance to that experience.” In addition, [this Blockworks article](https://blockworks.co/news/what-are-seed-phrases) states that seed phrases have become a “major pain point for users”.Currently, the [Atala PRISM Identity Wallet SDK](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts) only supports wallet recovery based on seed phrases. This limitation hinders mass adoption.Alternatives to seed phrase-based recovery:Two primary alternatives to seed phrase-based recovery exist: social recovery and multifactor recovery involving backup files. Social recovery, which has been endorsed by Ethereum co-founder Vitalik Buterin[^1^], utilizes trusted contacts to help users regain access to their accounts. A prominent example of a wallet employing this method is the Argent wallet[^2^].On the other hand, multifactor recovery involves the use of backup files in addition to other authentication measures. Wallets using this method are rare, especially within the Cardano ecosystem. However, some examples do exist outside of it. For instance, the [Dock.io](http://dock.io/) identity wallet uses a recovery system involving a password-protected backup file[^3^]. Our plan includes implementing a similar solution to enhance the security and user experience of our wallet.See also:https://wirexapp.com/https://www.cypherock.com/features/no-backuphttps://medium.com/@bitizenwallet/private-keys-single-point-of-failure-a20b5f00a67dSolution: We improve the Atala identity wallet SDK to allow wallet recovery using a password-protected backup file instead of a seed phrase.The solution aims to address the vulnerability of seed phrases by enhancing the Atala identity wallet SDK to allow wallet recovery using a password-protected backup file instead of a seed phrase. Essentially, this wallet eliminates a single point of failure through the use of two-factor authentication, i.e., a password and a backup file. Consequently, even if someone acquires your backup file, they can’t decrypt it without your password. Similarly, a password alone is useless without access to your backup file. Moreover, you can always change your password. Implementing two-factor authentication for recovery significantly improves both security and user experience.Wallets with multi-factor authentication are rare, but they do exist outside the Cardano ecosystem. For example, the [Dock.io](http://dock.io/) identity wallet uses a recovery system with a [password-protected backup file](https://drive.google.com/file/d/1qatflQ6aDrQOqx8QlBtda5GlnILuckyV/view?usp=drive_link). We plan to implement a similar solution.Specifically, we will contribute to the [Atala PRISM Identity Wallet SDK](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts) repository. We aim to add new features without affecting the existing wallet recovery feature which uses seed phrases. The new features include the following:  Users do not see seed phrases when creating a wallet.  Users see an alert: “Please secure your wallet by backing up the wallet”.  Users select a secure password to encrypt the backup file.  Users have the freedom to save the backup file wherever they prefer, including on an external hard drive or cloud.  Users can restore a wallet by decrypting the backup file with the password.This plan has been discussed with IOG’s Atala PRISM team. They have confirmed that this improvement is not part of their roadmap and would welcome this additional feature to the SDK.This solution allows projects in the Cardano ecosystem to create their own wallets using this SDK. They can use a password-protected backup file for wallet recovery. This method is not only user-friendly but also secure. It will contribute to the widespread adoption of identity wallets and Self-Sovereign Identity.With this enhanced SDK, we’ll boost Socious Wallet’s security by shifting from seed phrase recovery to multifactor file backup recovery. This will let end-users enjoy the advantages of SSI, DID, and VC without the complexity of managing seed phrases or the risk of a single point of failure. Upon completion of this project, users will have a secure identity wallet on their iOS and Android mobile devices without the need to manage seed phrases.Anything else?No response"
+    "snippet": "URL: https://github.com/decentralized-identity/bbs-signature/issues/322Reading through w3c/controller-document#116 it helped me to understand some things. My way of getting my thoughts in order was...",
+    "content": "URL: https://github.com/decentralized-identity/bbs-signature/issues/322Reading through w3c/controller-document#116 it helped me to understand some things. My way of getting my thoughts in order was to try to map what I read to the security vocabulary (which is, after all, simple ontology).To check my understanding, I believe the following statements are true (some are trivial, some less):  VerificationMethod and ControllerDocument are two distinct concepts (i.e., they should be considered as distinct Classes, in RDFS parlance).  The verifcationMethod property designates a VerificationMethod instance (i.e., the range of the property is a resource of type VerificationMethod)  The VerificationMethod class has some subclasses defined in the controller specification, namely Multikey, JsonWebKey, and Ed25519VerificationKey2020.  The two classes in (1) have a common property, namely controller (i.e., the property’s domain is the union of those two classes).  The ControllerDocument concept is not used by the Data Integrity specification, only the VerificationMethod (by the way of the verificationMethod property).  As consequence of the previous statement that it would be a mistake to define the domain of the verificationMethod as being a ControllerDocument (i.e., ontologically one cannot restrain the classes on which it is used to be a controller document.) Actually, there should be no restraint on the domain whatsoever.Looking at the vocabulary (see also its graphic representation) we are almost o.k. but not fully. The glaring (and significant) missing concept is the ControllerDocument. Per (1) above I believe it should be added as a separate class and, per (4) it should be an alternative domain for the controller property.(Note that the alsoKnownAs and service properties, though listed in the specification as properties on controller document, do not appear in the vocabulary or in its diagram. That is because these two properties are “borrowed” from other vocabularies.)Long story short, I believe the following changes should be done on the vocabulary:  Add the ControllerDocument class to the vocabulary  The domain of the controller property should be changed to include ControllerDocument as an alternative.I also believe that the statement (5) is not absolutely obvious from the current text, and it should be reinforced somehow…"
   },
   
   {
-    "title": "Failed deployment is shown as successful",
+    "title": "`urnScheme` unclear and/or missing",
     "url": "/github-discussions/did-resolution/80/",
     "categories": "w3c",
     "tags": "did-resolution",
@@ -914,16 +829,16 @@
 
 
     
-    "snippet": "URL: https://github.com/w3c/did-resolution/issues/80In order to deploy the docs corresponding to prism v2.9, https://github.com/input-output-hk/atala-releases/blob/master/Atala%20PRISM/2.9.md, I ha...",
-    "content": "URL: https://github.com/w3c/did-resolution/issues/80In order to deploy the docs corresponding to prism v2.9, https://github.com/input-output-hk/atala-releases/blob/master/Atala%20PRISM/2.9.md, I have chosen the wrong version (OEA version instead of the documentation version).In https://github.com/input-output-hk/atala-prism-docs/actions, click on Deployment and then Run workflowI chose: main branch, v1.25.0 and production and click Run workflow.It gave a successful deployment when looking after but the docs.atalaprism.io was still not updated as it showed in API –&gt; Agent API the same old version v1.22.0. See attached screenshot.The expectation is that as the workflow failed, the status should show as failed. If you look at the workflow file, there is no information that would give any indication of what was run.If you look at the https://github.com/input-output-hk/atala-prism-docs/actions/runs/7959863521/job/21727672596 , there is no information on the parsing of the version for example."
+    "snippet": "URL: https://github.com/w3c/did-resolution/issues/80The spec isn’t clear and when I got to skolemizeCompactJsonLD I encountered I needed a urnScheme that wasn’t an input anywhere.. Is this supposed...",
+    "content": "URL: https://github.com/w3c/did-resolution/issues/80The spec isn’t clear and when I got to skolemizeCompactJsonLD I encountered I needed a urnScheme that wasn’t an input anywhere.. Is this supposed to be a constant? custom-scheme perhaps?"
   },
   
   {
-    "title": "Adding concepts from the EU General-Purpose AI Code of Practice",
-    "url": "/github-discussions/tswg-keri-specification/199/",
-    "categories": "trustoverip",
-    "tags": "tswg-keri-specification",
-    "date": "2024-07-13 22:41:43 -0700",
+    "title": "Make `AuthenticatorAttestationResponseJSON.publicKeyAlgorithm` optional",
+    "url": "/github-discussions/webauthn/2106/",
+    "categories": "w3c",
+    "tags": "webauthn",
+    "date": "2024-07-26 18:46:22 -0700",
     
 
 
@@ -931,12 +846,46 @@
 
 
     
-    "snippet": "URL: https://github.com/trustoverip/tswg-keri-specification/issues/199Adding concepts from the EU General-Purpose AI Code of Practice upon its publication (expected to be published  in April 2025).",
-    "content": "URL: https://github.com/trustoverip/tswg-keri-specification/issues/199Adding concepts from the EU General-Purpose AI Code of Practice upon its publication (expected to be published  in April 2025)."
+    "snippet": "URL: https://github.com/w3c/webauthn/issues/2106The motivation behind both AuthenticatorAttestationResponseJSON.publicKey and AuthenticatorAttestationResponseJSON.publicKeyAlgorithm is the same: ea...",
+    "content": "URL: https://github.com/w3c/webauthn/issues/2106The motivation behind both AuthenticatorAttestationResponseJSON.publicKey and AuthenticatorAttestationResponseJSON.publicKeyAlgorithm is the same: easy access to credential data. For good reason though,  AuthenticatorAttestationResponseJSON.publicKey is not required since technically such data exists in the required AuthenticatorAttestationResponseJSON.attestationObject. I believe the same should be true for AuthenticatorAttestationResponseJSON.publicKeyAlgorithm since it doesn’t really serve purpose without AuthenticatorAttestationResponseJSON.publicKey also existing."
   },
   
   {
-    "title": "Adding labels and triage process",
+    "title": "Retroactively sign-off Shota's commits",
+    "url": "/github-discussions/vc-bitstring-status-list/173/",
+    "categories": "w3c",
+    "tags": "vc-bitstring-status-list",
+    "date": "2024-07-24 08:04:10 -0700",
+    
+
+
+
+
+
+    
+    "snippet": "URL: https://github.com/w3c/vc-bitstring-status-list/issues/173@shotexa, you need to add the commit to the main branchI, shotexa, retroactively sign off on these commits:commit ff926ba feat: add do...",
+    "content": "URL: https://github.com/w3c/vc-bitstring-status-list/issues/173@shotexa, you need to add the commit to the main branchI, shotexa, retroactively sign off on these commits:commit ff926ba feat: add docs for agent env variables (#50)Signed-off-by: shotexa shota.jolbordi.me@gmail.com"
+  },
+  
+  {
+    "title": "Add `refresh` status purpose.",
+    "url": "/github-discussions/identus-apollo/185/",
+    "categories": "hyperledger",
+    "tags": "identus-apollo",
+    "date": "2024-07-18 10:25:42 -0700",
+    
+
+
+
+
+
+    
+    "snippet": "URL: https://github.com/hyperledger/identus-apollo/pull/185This PR is an attempt to address issue #183 by adding a refresh status purpose.:boom: Error: 500 Internal Server Error :boom:PR Preview fa...",
+    "content": "URL: https://github.com/hyperledger/identus-apollo/pull/185This PR is an attempt to address issue #183 by adding a refresh status purpose.:boom: Error: 500 Internal Server Error :boom:PR Preview failed to build. (Last tried on Nov 24, 2024, 10:55 PM UTC).MorePR Preview relies on a number of web services to run. There seems to be an issue with the following one::rotating_light: [Spec Generator](https://www.w3.org/2015/labs/) - Spec Generator is the web service used to build specs that rely on ReSpec.:link: [Related URL]([object Object])```Timed out after waiting 30000ms```_If you don't have enough information above to solve the error by yourself (or to understand to which web service the error is related to, if any), please [file an issue](https://github.com/tobie/pr-preview/issues/new?title=Error%20not%20surfaced%20properly&amp;body=See%20w3c/vc-bitstring-status-list%23185.)._"
+  },
+  
+  {
+    "title": "Move it2 helper to test reporter",
     "url": "/github-discussions/dwn-user-guide/3/",
     "categories": "decentralized-identity",
     "tags": "dwn-user-guide",
@@ -948,8 +897,8 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/dwn-user-guide/issues/3Is your feature request related to a problem? Please describe.As the number of contributors is growing, the number of issues is...",
-    "content": "URL: https://github.com/decentralized-identity/dwn-user-guide/issues/3Is your feature request related to a problem? Please describe.As the number of contributors is growing, the number of issues is growing. We need a triage process with a labelling system in place.Describe the solution you’d likeLabels to be added in contributing.md (or another file that will be referred in contributing triage part) in Identus repo.Each label should have a prefix: for example:  Type: bug, docs, enhancement, support, research, maintenance, chore, ci, refactor, perf, test  Priority: critical, major, normal, minor  Component: cloud-agent, infrastructure, mediator, edge-agent-SDK-swift, edge-agent-SDK-KMP, edge-agent-SDK-TS, node, VDR, …  Team: marketing, product, engineering, management, dev-ops, security  Triage: needs-repro, needs-fix, stale, good-first-issue/up-for-graps, help-wanted, question/query, tech-debt  Closed: out-of-scope, can’t-repro, duplicate, won’t-fix, design-limitation  Status: new, ready, in-review, in-progress, fixed, qa-ready, qa-progress, qa-support (to indicate QA team needs support), stale, done/closed/terminatedColors for labels should follow a rule to be described.Each label should have a description associated to it.All Identus repos will use the same labels.Triage process needs to be written down: Have a look at Identus Technical Charter as reference first.Describe alternatives you’ve consideredWe need to check if the status are labels or customised fields.Best practices to be looked at as well so the solution is practical.Additional contextThe triage should be efficient and regularly done (recommendation is every 2 days) and it should be linked closely to the release process and cadence.Follow: https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labelsUse Conventional commit to match some labels"
+    "snippet": "URL: https://github.com/decentralized-identity/dwn-user-guide/issues/3This is great code:https://github.com/digitalbazaar/vc-data-model-2-test-suite/blob/6884551bb388784032d40a222340995c55adc75e/te...",
+    "content": "URL: https://github.com/decentralized-identity/dwn-user-guide/issues/3This is great code:https://github.com/digitalbazaar/vc-data-model-2-test-suite/blob/6884551bb388784032d40a222340995c55adc75e/tests/10-vcdm2.js#L57-L65But it should be here: https://github.com/digitalbazaar/mocha-w3c-interop-reporterIt also needs a better name, such as reportRow({title: '', test: async function() {}})"
   },
   
   {
@@ -970,7 +919,7 @@
   },
   
   {
-    "title": "Add the identus release process",
+    "title": "Use Chai assertions over node assert",
     "url": "/github-discussions/credential-schemas/4/",
     "categories": "decentralized-identity",
     "tags": "credential-schemas",
@@ -982,25 +931,8 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/credential-schemas/issues/4Is your feature request related to a problem? Please describe.Identus is an eco-system and the release process should be de...",
-    "content": "URL: https://github.com/decentralized-identity/credential-schemas/issues/4Is your feature request related to a problem? Please describe.Identus is an eco-system and the release process should be described in this repository. Explaining who and what steps are being followed.See ATL-7060 as well.Describe the solution you’d likeMake a release vx.y:  Go to Identus repo hyperledger/identus  Check the latest release version; it should be Identus va.b format. E.g Identus v2.12.  Click on Release and Draft a new release button          In Choose a tag button, create the tag vx.y      Target = main      Previous tag Auto        Click on Generate change log: this will generate the log for this repository only, which should be reviewed.  Fill the release note in this change log,          Copy the template (from the previous release if a template file is not existing yet)      For each component, add the change log according to each component (it should be already available from the component release).      Select Set as a pre-release and click on Save Draft        Ask component owner to review: this is the critical step. The release owner should get an approval from each of the component: Cloud Agent, Edge Agent SDK Swift, KMP, TS, Mediator, Node, Docs.Note: This is not that convenient as having a PR where all can contribute: see alternatives considered  Ask QA team to validate the release by confirming there is no regression and critical bugs have been fixed.  Once all component owners have accepted (with a check in the release note? TBC)), publish the release by editing it and unselect Set as a pre-release and click on Publish release button: the release Identus vx.y should be seen as the latest; if not, fix it.Describe alternatives you’ve considered  Previously, we have a file and a PR was submitted for review. See atala-releases.  We should have a nice way to get the feedback from the component owners, maybe with a checkbox in the release.Or a PR can be actually raise, with the checkbox that all the component owners have reviewed. Only then, the release is accepted. We shall have also the QA team to validate the eco-system.  Using automated release would be a nice follow-up iteration.Additional contextUntil Identus v2.12, the release was done as a PR in another repository: https://github.com/input-output-hk/atala-releases"
-  },
-  
-  {
-    "title": "Implement user level events in SDKs",
-    "url": "/github-discussions/identus/22/",
-    "categories": "hyperledger",
-    "tags": "identus",
-    "date": "2024-07-03 06:27:43 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus/issues/22No content available",
-    "content": "URL: https://github.com/hyperledger/identus/issues/22No content available"
+    "snippet": "URL: https://github.com/decentralized-identity/credential-schemas/issues/4Currently tests here use node’s assertion library.Tests usually use Chai’s should and expect interface.Please do try to use...",
+    "content": "URL: https://github.com/decentralized-identity/credential-schemas/issues/4Currently tests here use node’s assertion library.Tests usually use Chai’s should and expect interface.Please do try to use should:https://www.chaijs.com/guide/styles/#shouldthe use of assert is clever, but if a chai assertion doesn’t throw the mocha reporter might not see it.So use chai to assert on the error from the server."
   },
   
   {
@@ -1021,7 +953,7 @@
   },
   
   {
-    "title": "DWN (Decentralized Web Node)",
+    "title": "Convert suites over to local issuers / vc-gen",
     "url": "/github-discussions/linked-vp/53/",
     "categories": "decentralized-identity",
     "tags": "linked-vp",
@@ -1033,50 +965,16 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/linked-vp/issues/53Is your feature request related to a problem? Please describe.Expanding Identus capabilities through seamless connectivity with dec...",
-    "content": "URL: https://github.com/decentralized-identity/linked-vp/issues/53Is your feature request related to a problem? Please describe.Expanding Identus capabilities through seamless connectivity with decentralized web nodes, enabling a versatile and distributed self-sovereign identity ecosystem.Describe the solution you’d likeIntegrating Identus agents with decentralized web nodes enhances the self-sovereign identity ecosystem by offering diverse features and functionality across multiple DID methods and verifiable credential formats. Our Users benefit from an enriched experience with expanded capabilities such as integrated payments, autonomous credential exchange based on defined ACLs and rules, and customizable interfaces and hooks. For example, machine learning and artificial intelligence are moving towards intelligent Identus agents. This versatile solution fosters a more resilient, distributed, and innovative identity management platform that caters to the evolving needs of the decentralized web.  #54  #55  #56  #57  #58  #59"
+    "snippet": "URL: https://github.com/decentralized-identity/linked-vp/issues/53Currently the JCS suite still creates test data by calling on a remote endpoint:https://github.com/w3c/vc-di-eddsa-test-suite/blob/...",
+    "content": "URL: https://github.com/decentralized-identity/linked-vp/issues/53Currently the JCS suite still creates test data by calling on a remote endpoint:https://github.com/w3c/vc-di-eddsa-test-suite/blob/720e2b094cb87a165eb4e7de79fd2c597ec366b9/tests/50-jcs-verify.js#L10-L31This suite needs to remove all test data creation using endpoints (even outside of the JCS verify suite).  expand the vc-generator to cover all suites involved with the test  use that vc-gen to create both rdfc and jcs test fixtures"
   },
   
   {
-    "title": "Should there be a registry? Process to migrate to a W3C Registry?",
-    "url": "/github-discussions/did-extensions/565/",
-    "categories": "w3c",
-    "tags": "did-extensions",
-    "date": "2024-06-27 08:52:48 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/did-extensions/issues/565Please share your ideas.",
-    "content": "URL: https://github.com/w3c/did-extensions/issues/565Please share your ideas."
-  },
-  
-  {
-    "title": "URI in Profile triggers CORS Unsafe Request Header Byte rule",
-    "url": "/github-discussions/json-ld-syntax/436/",
-    "categories": "w3c",
-    "tags": "json-ld-syntax",
-    "date": "2024-06-24 14:08:08 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/json-ld-syntax/issues/436In the IANA registration [1], we define a media type parameter called ‘profile’. Its value is a space separated list of URIs, for which we regis...",
-    "content": "URL: https://github.com/w3c/json-ld-syntax/issues/436In the IANA registration [1], we define a media type parameter called ‘profile’. Its value is a space separated list of URIs, for which we registered six initial values. These can be composed together, and new values can be added for other “constraints or conventions”.The IIIF specifications use this functionality, for example to define the specific structure of the response in an API [2] as part of the media type. Similarly in Linked Art, we do the same [3].However, in the WHATWG specification for fetch [4], it says that the value for the Accept header is NOT CORS safe, if it has more than 128 bytes (which multiple URIs might easily cause) or (more importantly) if the value contains an unsafe header byte. The unsafe header bytes include the character “:” … which prevents any URI or CURIE with a namespace prefix separate by : from being CORS safe.This means that we cannot use the JSON-LD media type as registered for content negotiation via the accept header according to the fetch specification, which was much of the rationale for the profile parameter.To resolve this, either WHATWG would need to change fetch, or W3C/IANA would need to change the definition of the media type and give some registration function for possible profile values, then all downstream specifications would need to register a safe profile value to use.I’ve added the tag-needs-resolution label, as I think that’s the level this would need to run up to :([1] https://www.w3.org/TR/json-ld11/#iana-considerations[2] https://iiif.io/api/presentation/3.0/#63-responses [3] https://linked.art/api/1.0/json-ld/#introduction[4] https://fetch.spec.whatwg.org/#ref-for-cors-unsafe-request-header-byte"
-  },
-  
-  {
-    "title": "List of Adopters",
-    "url": "/github-discussions/credential-schemas/1/",
+    "title": "Define ControllerDocument class.",
+    "url": "/github-discussions/bbs-signature/320/",
     "categories": "decentralized-identity",
-    "tags": "credential-schemas",
-    "date": "2024-06-18 19:36:22 -0700",
+    "tags": "bbs-signature",
+    "date": "2024-06-25 08:38:48 -0700",
     
 
 
@@ -1084,16 +982,33 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/credential-schemas/issues/1Is your feature request related to a problem? Please describe.For newcomers would be nice to know what else is out there th...",
-    "content": "URL: https://github.com/decentralized-identity/credential-schemas/issues/1Is your feature request related to a problem? Please describe.For newcomers would be nice to know what else is out there that is already using Identus.Describe the solution you’d likeWould be nice to have a list of specific applications that adopted and using this technology/libraries.Can be real applications are just demos.Additional contextThis question was mention on the end of the Identus Community outreach call meeting (2024/04/23)"
+    "snippet": "URL: https://github.com/decentralized-identity/bbs-signature/pull/320This PR is an attempt to address issue https://github.com/w3c/vc-data-integrity/issues/322 by defining a ControllerDocument clas...",
+    "content": "URL: https://github.com/decentralized-identity/bbs-signature/pull/320This PR is an attempt to address issue https://github.com/w3c/vc-data-integrity/issues/322 by defining a ControllerDocument class./cc @filip26"
   },
   
   {
-    "title": "Test",
-    "url": "/github-discussions/spec-up/65/",
+    "title": "Call into JSON-LD via its WebIDL API instead of calling algorithms directly",
+    "url": "/github-discussions/acapy-endorser-service/100/",
+    "categories": "openwallet-foundation",
+    "tags": "acapy-endorser-service",
+    "date": "2024-06-05 17:08:20 -0700",
+    
+
+
+
+
+
+    
+    "snippet": "URL: https://github.com/openwallet-foundation/acapy-endorser-service/issues/100In the discussion at https://github.com/w3c/json-ld-api/issues/580#issuecomment-2463356600, @gkellogg says that specs ...",
+    "content": "URL: https://github.com/openwallet-foundation/acapy-endorser-service/issues/100In the discussion at https://github.com/w3c/json-ld-api/issues/580#issuecomment-2463356600, @gkellogg says that specs should always use the JSON-LD API instead of calling directly into JSON-LD algorithms. data-cite=\"JSON-LD11-API seems to be a good search term in this spec to find places that need fixing."
+  },
+  
+  {
+    "title": "A few errors in the Example 11",
+    "url": "/github-discussions/jsonld-common-java/13/",
     "categories": "decentralized-identity",
-    "tags": "spec-up",
-    "date": "2024-06-11 09:45:29 -0700",
+    "tags": "jsonld-common-java",
+    "date": "2024-05-23 13:15:47 -0700",
     
 
 
@@ -1101,8 +1016,8 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/spec-up/issues/65Short DescriptiontestValue statementtestComponentstestTeam memberstestArchitectNo responseQA MemberNo responseOwnertest  #66  task 2 ...",
-    "content": "URL: https://github.com/decentralized-identity/spec-up/issues/65Short DescriptiontestValue statementtestComponentstestTeam memberstestArchitectNo responseQA MemberNo responseOwnertest  #66  task 2  task 3"
+    "snippet": "URL: https://github.com/decentralized-identity/jsonld-common-java/issues/13I’ve spotted what I believe to be a few errors in the PDF-417 payload showed in Example 11.  There is a missing trailing s...",
+    "content": "URL: https://github.com/decentralized-identity/jsonld-common-java/issues/13I’ve spotted what I believe to be a few errors in the PDF-417 payload showed in Example 11.  There is a missing trailing space in the file type (should be ANSI ), as mentioned in #12  The DL subfile length seems wrong: it is set to 0267 where I find a value of 0234.  The ZZ offset is wrong (probably because of 2.): it is set to 0308 (41 + 267) where I find a value of 0275 (41 + 275)  The ZZ subfile lenght seems wrong: 0162 instead of 0202. This one can be easily decomposed as 202 = 2 (ZZ) + 3 + (ZZA) + 196 (base64-encoded CBOR-LD VC) + 1 (segment terminator)Here is what I think is the correct payload:@\\n\\x1e\\rANSI 000000090002DL00410234ZZ02750202DLDAQF987654321\\nDCSSMITH\\nDDEN\\nDACJOHN\\nDDFN\\nDADNONE\\nDDGN\\nDCAC\\nDCBNONE\\nDCDNONE\\nDBD01012024\\nDBB04191988\\nDBA04192030\\nDBC1\\nDAU069 IN\\nDAYBRO\\nDAG123 MAIN ST\\nDAIANYVILLE\\nDAJUTO\\nDAKF87P20000  \\nDCFUTODOCDISCRIM\\nDCGUTO\\nDAW158\\nDCK1234567890\\nDDAN\\rZZZZA2QZkpgGDGYAAGYABGYACGJ2CGHYYpBi4oxicGKYYzhiyGNAa5ZIggRi6ohicGKAYqER1ggAgGL4YqhjApRicGGwY1gQY4BjmGOJYQXq3wuVrSeLM5iGEziaBjhWosXMWRAG107uT_9bSteuPasCXFQKuPdSdF-xmUoFkA0yRJoW4ERvATNyewT263ZHMGOQYrA==\\rHowever it is possible I misunderstood something in AAMVA’s PDF-417 data encoding."
   },
   
   {
@@ -1140,23 +1055,6 @@
   },
   
   {
-    "title": "Timeout on OPTIONS (cors preflight)",
-    "url": "/github-discussions/vc-api/383/",
-    "categories": "w3c-ccg",
-    "tags": "vc-api",
-    "date": "2024-05-14 09:12:53 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c-ccg/vc-api/issues/383Seems like the mediator is responding like this:atala-prism-mediator-identus-mediator-1  | 2024-11-24_00:56:53.696 WARN  f.d.f.TransportDispatcher@L...",
-    "content": "URL: https://github.com/w3c-ccg/vc-api/issues/383Seems like the mediator is responding like this:atala-prism-mediator-identus-mediator-1  | 2024-11-24_00:56:53.696 WARN  f.d.f.TransportDispatcher@L167:[ZScheduler-Worker-1] {version=1.0.0, msg_sha256=c4946137e7ddb36a3261fd6dfb6b0b4265280b0a3dfc91c3e449513dd2c7ed10} - zio-fiber-1940542155 No url to send messageo.h.i.m.DIDCommRoutes@L167:[ZScheduler-Worker-2] {version=1.0.0} - zio-fiber-1688384339 Request TimeoutFor a CORS check from the browser, this is causing Safari 18 to stop polling the endpoint since it triggers a CORS failureOther browsers seems to just ignore this timeout and work fine.In order for this bug to reproduce you need to run Safari 18 (Sequoia) on mediator v1.0.0."
-  },
-  
-  {
     "title": "chore: upgrade package from AFJ to credo-ts",
     "url": "/github-discussions/didcomm-demo/76/",
     "categories": "decentralized-identity",
@@ -1174,24 +1072,7 @@
   },
   
   {
-    "title": "VCDM Improvements Phase 2: Add versioning to the API to support multiple versions at the same time",
-    "url": "/github-discussions/didcomm-demo/74/",
-    "categories": "decentralized-identity",
-    "tags": "didcomm-demo",
-    "date": "2024-05-06 04:09:29 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/didcomm-demo/issues/74Short DescriptionThis phase we integrate versioning support while we will still be using 1.1, we change the source to be able to...",
-    "content": "URL: https://github.com/decentralized-identity/didcomm-demo/issues/74Short DescriptionThis phase we integrate versioning support while we will still be using 1.1, we change the source to be able to plug more modern versions of the spec soon.Value statementTBDComponents  OASTeam members@hyperledger/identusArchitect@hyperledger/identus-maintainersQA Member@hyperledger/identus-maintainersOwner@hyperledger/identus-maintainers"
-  },
-  
-  {
-    "title": "Tagging this repo",
+    "title": "Securing Mechanisms section should require that its entries are actually securing mechanisms",
     "url": "/github-discussions/org/37/",
     "categories": "decentralized-identity",
     "tags": "org",
@@ -1203,8 +1084,8 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/org/issues/37The concept of tagging this repo came up on the Aries WG call on Nov. 15, 2023. I wanted to continue that discussion here:As prior art, c...",
-    "content": "URL: https://github.com/decentralized-identity/org/issues/37The concept of tagging this repo came up on the Aries WG call on Nov. 15, 2023. I wanted to continue that discussion here:As prior art, consider this text from: https://github.com/hyperledger/aries-acapy-plugin-toolbox#aca-py-version-compatibility  ACA-Py Version Compatibility  To avoid a confusing pseudo-lock-step release, this plugin is versioned independent of ACA-Py. Plugin releases will follow standard semver but each release will also be tagged with a mapping to an ACA-Py version with the format acapy-X.Y.Z-J where X.Y.Z corresponds to the ACA-Py version supported and J is an incrementing number for each new plugin release that targets the same version of ACA-Py.  You should look for the most recent release tagged with the version of ACA-Py you are using (with the highest value for J).This was a convention that the toolbox plugin adopted (back when we were actively working on it). I think tagging the whole repo will be challenging to do meaningfully; for the toolbox plugin, we needed to keep track changes of the plugin itself as well as the versions of ACA-Py it was compatible with. The plugins should be able to evolve and gain features and be able to version themselves to communicate when new features are added."
+    "snippet": "URL: https://github.com/decentralized-identity/org/issues/37https://w3c.github.io/vc-data-model/#verification says to look up a media type in https://w3c.github.io/vc-specs-dir/#securing-mechanisms...",
+    "content": "URL: https://github.com/decentralized-identity/org/issues/37https://w3c.github.io/vc-data-model/#verification says to look up a media type in https://w3c.github.io/vc-specs-dir/#securing-mechanisms (or other mechanisms known to the implementation) and that the result “MUST implement the interface described in [5.12 Securing Mechanism Specifications].” But nothing in this registry constrains the editors to only accept specs that implement that interface. This puts an unnecessary burden on implementations to check every entry in the registry themselves and only use it if it implements the interface.I don’t think the editors should need to check the quality of the securing mechanisms, just that they provide the right interface."
   },
   
   {
@@ -1225,23 +1106,6 @@
   },
   
   {
-    "title": "Separate \"Security and Privacy Considerations\"",
-    "url": "/github-discussions/tswg-cesr-specification/91/",
-    "categories": "trustoverip",
-    "tags": "tswg-cesr-specification",
-    "date": "2024-04-11 07:19:46 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/trustoverip/tswg-cesr-specification/issues/91At the moment, the specification has a “Security and Privacy Considerations” section.In a W3C specification, these should be sep...",
-    "content": "URL: https://github.com/trustoverip/tswg-cesr-specification/issues/91At the moment, the specification has a “Security and Privacy Considerations” section.In a W3C specification, these should be separated into a “Security Considerations” section and a “Privacy Considerations” section."
-  },
-  
-  {
     "title": "Typo in appendix A: `eddsa-rdfc-2022` is wrongly named `edssa-2022`",
     "url": "/github-discussions/tswg-cesr-specification/90/",
     "categories": "trustoverip",
@@ -1259,7 +1123,7 @@
   },
   
   {
-    "title": "task 1",
+    "title": "enumerated elements should match the counts of those elements",
     "url": "/github-discussions/spec-up/64/",
     "categories": "decentralized-identity",
     "tags": "spec-up",
@@ -1271,29 +1135,12 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/spec-up/issues/64No content available",
-    "content": "URL: https://github.com/decentralized-identity/spec-up/issues/64No content available"
+    "snippet": "URL: https://github.com/decentralized-identity/spec-up/issues/64Originally posted by @TallTed in https://github.com/w3c/vc-di-bbs-test-suite/pull/63#discussion_r1809211211  The first paragraph of 3...",
+    "content": "URL: https://github.com/decentralized-identity/spec-up/issues/64Originally posted by @TallTed in https://github.com/w3c/vc-di-bbs-test-suite/pull/63#discussion_r1809211211  The first paragraph of 3.3.7 parseDerivedProofValue —      A single derived proof value object is produced as output, which contains a set of six or seven elements, having the names “bbsProof”, “labelMap”, “mandatoryIndexes”, “selectiveIndexes”, “presentationHeader”, “featureOption”, and, depending on the value of the featureOption parameter, “pseudonym” and/or “lengthBBSMessages”.    — is internally inconsistent (the set may have six, seven, or eight elements) and it disagrees with the last paragraph of that algorithm (again, should say “six, seven, or eight elements” including “featureOption”, “pseudonym” and/or “lengthBBSMessages”) —      Return derived proof value as an object with properties set to the five, six, or seven elements, using the names “bbsProof”, “labelMap”, “mandatoryIndexes”, “selectiveIndexes”, “presentationHeader”, and optional “pseudonym” and/or “lengthBBSMessages”, respectively. In addition, add featureOption and its value to the object.    These should be brought into agreement. Whatever the result is, it should then be applied to this part of the test suite."
   },
   
   {
-    "title": "Problem reporting for the Agent and Mediator",
-    "url": "/github-discussions/didcomm-book/20/",
-    "categories": "decentralized-identity",
-    "tags": "didcomm-book",
-    "date": "2024-04-03 08:06:47 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/didcomm-book/issues/20No content available",
-    "content": "URL: https://github.com/decentralized-identity/didcomm-book/issues/20No content available"
-  },
-  
-  {
-    "title": "Cloud Agent to publish PrismDID on behalf of external wallet into VDR",
+    "title": "Distinction between the definitions of Verification and Authentication",
     "url": "/github-discussions/org/33/",
     "categories": "decentralized-identity",
     "tags": "org",
@@ -1305,12 +1152,12 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/org/issues/33Is your feature request related to a problem? Please describe.Currently, Cloud Agent can only publish PrismDIDs that are created by the s...",
-    "content": "URL: https://github.com/decentralized-identity/org/issues/33Is your feature request related to a problem? Please describe.Currently, Cloud Agent can only publish PrismDIDs that are created by the same Cloud Agent into the VDR. Most Edge Clients will never be connected to a full node in order to publish their PrismDIDs to the VDR and it could be useful for certain use cases.Describe the solution you’d likeIt would be great to ask the Cloud Agent to publish a PrismDID created from my Edge Client Wallet through the REST API.Describe alternatives you’ve consideredAllowing the Edge SDK to connect directly to icarus (like the cloud agent does) and prepare the right payload which I would need to reverse engineer anyways from the cloud agent code :)"
+    "snippet": "URL: https://github.com/decentralized-identity/org/issues/33While the concepts are later clarified using the passport example, the initial definitions of verification and authentication  remain som...",
+    "content": "URL: https://github.com/decentralized-identity/org/issues/33While the concepts are later clarified using the passport example, the initial definitions of verification and authentication  remain somewhat ambiguous.The example provided under the definition of verification also aligns with the provided definition of authentication. It would be more effective to illustrate verification with an example that does not simultaneously constitute authentication. For example, verifying a digital signature exemplifies verification alone: using a public key, one can verify that the signature is valid (in cryptographic terms, ensuring the signature was produced by the private key related to the public key used for verification). However, this process does not reveal the identity of the signer if the link between the public key and the individual (which constitutes authentication) is absent.I find the NIST’s definition of authentication as identity verification (in SP 800-63-3) convincing.Furthermore, what do you mean with “formal” in Authentication is a specific, formal verification type?"
   },
   
   {
-    "title": "Bugfix: vc.credentialSubject.id, vc.issuer, iss, and sub should be DID itself",
+    "title": "Update extended proof chain test vectors",
     "url": "/github-discussions/aries-acapy-docs/99/",
     "categories": "hyperledger",
     "tags": "aries-acapy-docs",
@@ -1322,29 +1169,12 @@
 
 
     
-    "snippet": "URL: https://github.com/hyperledger/aries-acapy-docs/pull/99[OID4VCI]credentialSubject.id, iss, and sub should be DID, not DID URLs pointing to verification methods.",
-    "content": "URL: https://github.com/hyperledger/aries-acapy-docs/pull/99[OID4VCI]credentialSubject.id, iss, and sub should be DID, not DID URLs pointing to verification methods."
+    "snippet": "URL: https://github.com/hyperledger/aries-acapy-docs/pull/99This PR fixes the extended proof chain test vectors to  use all four public/private key pairs as documented in the specification text. Th...",
+    "content": "URL: https://github.com/hyperledger/aries-acapy-docs/pull/99This PR fixes the extended proof chain test vectors to  use all four public/private key pairs as documented in the specification text. The previous test vectors repeated the use of public/private key number 3 rather than using key number 4. Note: test vectors are informative.Preview | Diff"
   },
   
   {
-    "title": "OpenID4VP SD-JWT is not verifying the holder signature (KB-JWT)",
-    "url": "/github-discussions/aries-vcx/1163/",
-    "categories": "hyperledger",
-    "tags": "aries-vcx",
-    "date": "2024-03-22 04:12:01 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/aries-vcx/issues/1163I believe the SD-JWT cred processor verify_presentation is not actually checking the holder’s signature (KB-JWT) on the presented SD-JWT. Me...",
-    "content": "URL: https://github.com/hyperledger/aries-vcx/issues/1163I believe the SD-JWT cred processor verify_presentation is not actually checking the holder’s signature (KB-JWT) on the presented SD-JWT. Meaning the SD-JWT holder does not have to prove they are bound to the SD-JWT.I tested this locally by using a malicious client that intentionally malforms the signature bytes of the KB-JWT it produces. The acapy plugin still reported verified=true (credo reported verified=false with logs that indicate the signature was invalid).I believe this happens because:  verify_presentation calls sd_jwt_verify with only 2 params; profile, presentation: https://github.com/openwallet-foundation/acapy-plugins/blob/main/oid4vc/sd_jwt_vc/cred_processor.py#L205  sd_jwt_verify has 2 additional optional params, expected_aud &amp; expected_nonce. so verify_presentation sets those as None  sd_jwt_verify initializes SDJWTVerifierACAPy with those null values for self.expected_aud &amp; self.expected_nonce  sd_jwt_verify then calls SDJWTVerifierACAPy.verify(), which checks the SD-JWT VC signature, and then only IF if self.expected_aud or self.expected_nonce: does it check the KB JWT:     if self.expected_aud or self.expected_nonce:          if not (self.expected_aud and self.expected_nonce):              raise ValueError(                  \"Either both expected_aud and expected_nonce must be provided \"                  \"or both must be None\"              )          await self._verify_key_binding_jwt(              self.expected_aud,              self.expected_nonce,          )        meaning the KB-JWT signature (holder binding/proof) is not checked"
-  },
-  
-  {
-    "title": "Able to create an in-memory sqlite database?",
+    "title": "Remove lowercase must text",
     "url": "/github-discussions/bbs-signature/318/",
     "categories": "decentralized-identity",
     "tags": "bbs-signature",
@@ -1356,8 +1186,8 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/bbs-signature/issues/318From the python library is there a way to create an in-memory sqlite database?I see this https://github.com/hyperledger/aries-...",
-    "content": "URL: https://github.com/decentralized-identity/bbs-signature/issues/318From the python library is there a way to create an in-memory sqlite database?I see this https://github.com/hyperledger/aries-askar/blob/main/askar-storage/src/backend/sqlite/provision.rs#L50 and will try and figure it out myself. Just posting this here is anyone knows off the to of their head.context: We’re trying to rely on askar fully in aca-py and remove the existing in-memory wallet that was created for testing. Having the option to create an in-memory wallet that is askar based would really help speed up the tests and prevent file IO errors."
+    "snippet": "URL: https://github.com/decentralized-identity/bbs-signature/issues/318The unlinkability section has a lowercase must keyword.  […] This characteristic is called unlinkability which ensures that no...",
+    "content": "URL: https://github.com/decentralized-identity/bbs-signature/issues/318The unlinkability section has a lowercase must keyword.  […] This characteristic is called unlinkability which ensures that no correlatable data are used in a digitally-signed payload while still providing some level of trust, the sufficiency of which must be determined by each verifier.I would suggest to:A) Make this a normative statementB) Change the wording to abstract the word must to avoid confusionSuggested change:  […] the sufficiency of which ~must~ has to be determined by each verifier."
   },
   
   {
@@ -1412,7 +1242,7 @@
   },
   
   {
-    "title": "NGrok setup for local use with indy tails server",
+    "title": "[TO DISCUSS] Add AI transcription to WG meetings",
     "url": "/github-discussions/linked-vp/51/",
     "categories": "decentralized-identity",
     "tags": "linked-vp",
@@ -1424,8 +1254,8 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/linked-vp/issues/51Using the startup instructions in:https://github.com/hyperledger/aries-endorser-service?tab=readme-ov-file#running-locallywon’t rea...",
-    "content": "URL: https://github.com/decentralized-identity/linked-vp/issues/51Using the startup instructions in:https://github.com/hyperledger/aries-endorser-service?tab=readme-ov-file#running-locallywon’t really work as-is any more as Indy Tails Server needs the ngrok auth token as well. And if you use the same auth token in the 2 contexts  Indy Tails Server  Endorser ServiceYou will get the issue about simultaneous ngrok agent sessionsfrom docker-ngrok-endorser-agent container:2024-02-16 16:16:45 ERROR:  authentication failed: Your account is limited to 1 simultaneous ngrok agent session.2024-02-16 16:16:45 ERROR:  You can run multiple tunnels on a single agent session using a configuration file.2024-02-16 16:16:45 ERROR:  To learn more, see https://ngrok.com/docs/secure-tunnels/ngrok-agent/reference/config/2024-02-16 16:16:45 ERROR:  2024-02-16 16:16:45 ERROR:  Active ngrok agent sessions in region 'us-cal-1':2024-02-16 16:16:45 ERROR:    - ts_2cTI2njhg4tmt7Qe1cltNsx3kxT (23.16.82.223)2024-02-16 16:16:45 ERROR:  2024-02-16 16:16:45 ERROR:  ERR_NGROK_1082024-02-16 16:16:45 ERROR:Not sure if we could adjust to have one environment that shares it, or at least need to adjust documentation."
+    "snippet": "URL: https://github.com/decentralized-identity/linked-vp/issues/51@kimdhamilton Is it possible to activate an AI meeting notetaker at Zoom account level so that it automatically takes notes? Would ...",
+    "content": "URL: https://github.com/decentralized-identity/linked-vp/issues/51@kimdhamilton Is it possible to activate an AI meeting notetaker at Zoom account level so that it automatically takes notes? Would people be comfortable meetings being recorded and/or having an AI notetaker?"
   },
   
   {
@@ -1446,7 +1276,7 @@
   },
   
   {
-    "title": "Issues handling didcomm message errors",
+    "title": "Create YAML Template for User Stories Issue",
     "url": "/github-discussions/did-jwt/308/",
     "categories": "decentralized-identity",
     "tags": "did-jwt",
@@ -1458,8 +1288,8 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/did-jwt/issues/308Is this a regression?YesDescriptionBriefWhen didcomm message returns a http status code other than ok the message becomes undefined ...",
-    "content": "URL: https://github.com/decentralized-identity/did-jwt/issues/308Is this a regression?YesDescriptionBriefWhen didcomm message returns a http status code other than ok the message becomes undefined due a try-catch block. This issue’s goal is to enable an error management for didcomm errors.Spec: https://identity.foundation/didcomm-messaging/spec/#problem-reportsFetchApi.ts  async request&lt;T&gt;(    method: HttpMethod,    urlStr: string,    urlParameters: Map&lt;string, string&gt; = new Map(),    httpHeaders: Map&lt;string, string&gt; = new Map(),    body?: string | Record&lt;string, any&gt;  ): Promise&lt;ApiResponse&lt;T&gt;&gt; {    // ...    if (response.ok) {      return new ApiResponse(        data,        response.status,        response.statusText,        response.headers      );    }    throw new ApiError(response.status, response.statusText, data);}Mercury.ts  async sendMessageParseMessage(    message: Domain.Message  ): Promise&lt;Domain.Message | undefined&gt; {    const responseBody = await this.sendMessage&lt;any&gt;(message);    try {      const responseJSON = JSON.stringify(responseBody);      return await this.unpackMessage(responseJSON);    } catch (err) {      return undefined    }  }Any ApiError thrown will cause message to return undefined as per described in the Mercury.ts#sendMessageParseMessage methodPlease provide the exception or error you sawNo responsePlease provide the environment you discovered this bug inNo responseAnything else?No response"
+    "snippet": "URL: https://github.com/decentralized-identity/did-jwt/issues/308So that submission of user stories can be standardized.",
+    "content": "URL: https://github.com/decentralized-identity/did-jwt/issues/308So that submission of user stories can be standardized."
   },
   
   {
@@ -1497,7 +1327,7 @@
   },
   
   {
-    "title": "MySQL Support",
+    "title": "TTL is mandatory 5 minute period if not specified",
     "url": "/github-discussions/identus-edge-agent-sdk-ts/174/",
     "categories": "hyperledger",
     "tags": "identus-edge-agent-sdk-ts",
@@ -1509,59 +1339,8 @@
 
 
     
-    "snippet": "URL: https://github.com/hyperledger/identus-edge-agent-sdk-ts/issues/174Our team currently uses vdr-tools as the underlying framework to support AFJ on our mediator. The reasoning is better support...",
-    "content": "URL: https://github.com/hyperledger/identus-edge-agent-sdk-ts/issues/174Our team currently uses vdr-tools as the underlying framework to support AFJ on our mediator. The reasoning is better support for concurrency, as well as MySQL support.We are now looking to upgrade AFJ to 0.4.x, and in by doing so upgrade to use Aries Askar etc.Askar only supports SqlLite and Postgres - is there a workaround so that we can continue using MySQL?"
-  },
-  
-  {
-    "title": "About resolving protocol question",
-    "url": "/github-discussions/tswg-cesr-specification/60/",
-    "categories": "trustoverip",
-    "tags": "tswg-cesr-specification",
-    "date": "2024-02-15 07:49:35 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/trustoverip/tswg-cesr-specification/issues/60Hi, I’ve been following did for a long time, I want to know besides HTTP (s) + JSON, is there any plan to support COAP + CBOR fo...",
-    "content": "URL: https://github.com/trustoverip/tswg-cesr-specification/issues/60Hi, I’ve been following did for a long time, I want to know besides HTTP (s) + JSON, is there any plan to support COAP + CBOR for did resolution ?"
-  },
-  
-  {
-    "title": "fix: Kafka consumer not picking messages",
-    "url": "/github-discussions/vc-data-model/1441/",
-    "categories": "w3c",
-    "tags": "vc-data-model",
-    "date": "2024-02-15 05:31:14 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/vc-data-model/pull/1441No content available",
-    "content": "URL: https://github.com/w3c/vc-data-model/pull/1441No content available"
-  },
-  
-  {
-    "title": "Migration to new AnonCreds object format",
-    "url": "/github-discussions/credential-trust-establishment/35/",
-    "categories": "decentralized-identity",
-    "tags": "credential-trust-establishment",
-    "date": "2024-02-12 10:05:40 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/credential-trust-establishment/issues/35ACA-Py will eventually move a feature that is currently experimental to ready-for-use status: AnonCreds RS sup...",
-    "content": "URL: https://github.com/decentralized-identity/credential-trust-establishment/issues/35ACA-Py will eventually move a feature that is currently experimental to ready-for-use status: AnonCreds RS support. With this change, the migration strategy used in the wallet upgrade tool will require tweaks to migrate an Indy wallet to the new AnonCreds format.Is this something we should worry about? It should be technically possible to upgrade using this tool as is and then use the upgrade endpoint @jamshale is working on in https://github.com/hyperledger/aries-cloudagent-python/pull/2922.cc: @swcurran"
+    "snippet": "URL: https://github.com/hyperledger/identus-edge-agent-sdk-ts/issues/174The specification currently states that if a TTL isn’t specified, it’s 5 minutes. This is a problem for offline use cases whe...",
+    "content": "URL: https://github.com/hyperledger/identus-edge-agent-sdk-ts/issues/174The specification currently states that if a TTL isn’t specified, it’s 5 minutes. This is a problem for offline use cases where organizations might not want to use the TTL and do not want to presume it is 5 minutes.The specification needs to make TTL completely optional with no minimum timeout assumed unless stated."
   },
   
   {
@@ -1599,6 +1378,23 @@
   },
   
   {
+    "title": "Allow using Crypto.getRandomValues() in Shadow Realms",
+    "url": "/github-discussions/vc-api/361/",
+    "categories": "w3c-ccg",
+    "tags": "vc-api",
+    "date": "2024-01-30 08:47:10 -0800",
+    
+
+
+
+
+
+    
+    "snippet": "URL: https://github.com/w3c-ccg/vc-api/pull/361Note that this depends on the introduction of UniversalGlobalScope in https://github.com/whatwg/html/pull/9893.Closes #338The following implementers h...",
+    "content": "URL: https://github.com/w3c-ccg/vc-api/pull/361Note that this depends on the introduction of UniversalGlobalScope in https://github.com/whatwg/html/pull/9893.Closes #338The following implementers have shown interest:  …  …The following tasks have been completed:  Modified Web platform tests (link to pull request): https://github.com/web-platform-tests/wpt/pull/44137Implementation issues:  Chromium (https://bugs.chromium.org/p/chromium/issues/detail?id=)  Gecko (https://bugzilla.mozilla.org/show_bug.cgi?id=)  WebKit (https://bugs.webkit.org/show_bug.cgi?id=)  Deno (https://github.com/denoland/deno/issues/)  Node.js (https://github.com/nodejs/node/issues/)  workerd (https://github.com/cloudflare/workerd/issues/)  Vercel Edge Runtime (https://github.com/vercel/edge-runtime/issues/)Preview | Diff"
+  },
+  
+  {
     "title": "Missing MAINTAINERS.md",
     "url": "/github-discussions/identus-cloud-agent/864/",
     "categories": "hyperledger",
@@ -1616,7 +1412,7 @@
   },
   
   {
-    "title": "Support DID Exchange Protocol",
+    "title": "Proof configuration and previousProof (maybe editorial)",
     "url": "/github-discussions/aries-acapy-docs/93/",
     "categories": "hyperledger",
     "tags": "aries-acapy-docs",
@@ -1628,8 +1424,42 @@
 
 
     
-    "snippet": "URL: https://github.com/hyperledger/aries-acapy-docs/issues/93  Support only did:peer  Swift did:peer library: https://github.com/beatt83/peerdid-swift  Will not support public DID",
-    "content": "URL: https://github.com/hyperledger/aries-acapy-docs/issues/93  Support only did:peer  Swift did:peer library: https://github.com/beatt83/peerdid-swift  Will not support public DID"
+    "snippet": "URL: https://github.com/hyperledger/aries-acapy-docs/issues/93Just checking.§3.2.5 Proof Configuration does not mention the previousProof property, if applicable. I.e., when calculating the value o...",
+    "content": "URL: https://github.com/hyperledger/aries-acapy-docs/issues/93Just checking.§3.2.5 Proof Configuration does not mention the previousProof property, if applicable. I.e., when calculating the value of canonicalProofConfig, that value is not taken into consideration.I do not know whether this is intentional or an omission.If it is intentional, it might be worth emphasizing. The formulation in §3.2.2 Verify Proof, point (2) only mentions proofValue as the property to be removed, which gives the false impression that previousProof is fine. (I know that in §3.2.5 the properties to be used are listed explicitly, but then why bother with point (2) in §3.2.2 in the first place?)(The ecdsa case is identical.)"
+  },
+  
+  {
+    "title": "(feat) Cheqd DID resolver #1300",
+    "url": "/github-discussions/veramo/1305/",
+    "categories": "decentralized-identity",
+    "tags": "veramo",
+    "date": "2023-12-11 19:25:41 -0800",
+    
+
+
+
+
+
+    
+    "snippet": "URL: https://github.com/decentralized-identity/veramo/pull/1305Closes #1300Implements a did:cheqd resolver using cheqd’s gRPC resolver provided by nodes.For this approach i decided to check-in cheq...",
+    "content": "URL: https://github.com/decentralized-identity/veramo/pull/1305Closes #1300Implements a did:cheqd resolver using cheqd’s gRPC resolver provided by nodes.For this approach i decided to check-in cheqd’s .proto type files, and also check in the generated rust files for these proto types. These rust files are generated using tonic, a defacto rust lib for handling grpc. I justify the decision to check-in the files in the README, please see there.Out of Scope (for now)  doc version resolution  DID resource resolution (including did-doc metadata with the resources metadata)Other changes  added some const context definitions in the did_doc crate, and a utility method to get the required context for a given VM type.          longer term, we may consider have some general “normalize” function of DIDDocuments, which scans the doc contents, finds all appropriate JSON-LD contexts, and adds them if they were missing.        removed RsaVerificationKey2018 - unused legacy VM type  added specific parsing for did:cheqd DIDs"
+  },
+  
+  {
+    "title": "Clarify: node out of consensus",
+    "url": "/github-discussions/linked-vp/10/",
+    "categories": "decentralized-identity",
+    "tags": "linked-vp",
+    "date": "2023-11-27 01:07:15 -0800",
+    
+
+
+
+
+
+    
+    "snippet": "URL: https://github.com/decentralized-identity/linked-vp/issues/10After running the debian based container in the ID Union Test Network for a few days, the node is now out of consensus (“3.0”). May...",
+    "content": "URL: https://github.com/decentralized-identity/linked-vp/issues/10After running the debian based container in the ID Union Test Network for a few days, the node is now out of consensus (“3.0”). Maybe the Pypi package should be replaced by the deb package for indy node 1.12.4, also adressing the missing init script issue https://github.com/IDunion/indy-node-container/issues/3"
   },
   
   {
@@ -1650,40 +1480,6 @@
   },
   
   {
-    "title": "Rewrite PRISM node",
-    "url": "/github-discussions/veramo-plugin/28/",
-    "categories": "decentralized-identity",
-    "tags": "veramo-plugin",
-    "date": "2023-10-29 10:01:48 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/veramo-plugin/issues/28No content available",
-    "content": "URL: https://github.com/decentralized-identity/veramo-plugin/issues/28No content available"
-  },
-  
-  {
-    "title": "Error handling and Problem reporting for SDKs",
-    "url": "/github-discussions/didcomm-demo/19/",
-    "categories": "decentralized-identity",
-    "tags": "didcomm-demo",
-    "date": "2023-10-03 10:34:16 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/didcomm-demo/issues/19No content available",
-    "content": "URL: https://github.com/decentralized-identity/didcomm-demo/issues/19No content available"
-  },
-  
-  {
     "title": "Update maintainers `w3cid` value in documents",
     "url": "/github-discussions/traceability-interop/589/",
     "categories": "w3c-ccg",
@@ -1701,24 +1497,7 @@
   },
   
   {
-    "title": "Identus Cloud Agent Scalability - Background Jobs",
-    "url": "/github-discussions/credential-trust-establishment/18/",
-    "categories": "decentralized-identity",
-    "tags": "credential-trust-establishment",
-    "date": "2023-08-21 10:44:33 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/credential-trust-establishment/issues/18This Epic aims to investigate ZIO Stream and ZIO Kafka as a replacement for the mechanism behind the execution...",
-    "content": "URL: https://github.com/decentralized-identity/credential-trust-establishment/issues/18This Epic aims to investigate ZIO Stream and ZIO Kafka as a replacement for the mechanism behind the execution of background jobs.Currently, each background job is a recurrent ZIO effect created using ZIO#repeat that processes a configurable number of records in parallel during each iteration. This will inevitably lead to conflicts and race conditions as soon as we run two instances of the cloud agent in parallel, as the same record will be processed by those two agents sharing the same DB. The related flows will be executed multiple times, and the same DIDComm message will be sent several times to the DIDComm peer.This can be solved using a message queueing system like Kafka and leveraging Kafka’s consumer groups capability to concurrently distribute the load among multiple agent instances.At a later stage, using a queuing mechanism like Kafka would allow us to better control - and allocate resources to - the execution of the resource-intensive tasks that put pressure on the system (e.g., generation of AnonCreds credential definitions via the Rust library)."
-  },
-  
-  {
-    "title": "User can backup and restore Wallet (KMM)",
+    "title": "context examples in spec have not been updated to reflect did core.",
     "url": "/github-discussions/credential-trust-establishment/8/",
     "categories": "decentralized-identity",
     "tags": "credential-trust-establishment",
@@ -1730,16 +1509,16 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/credential-trust-establishment/issues/8Context | Functionality for backup and restoring wallet data will be available in the KMM SDK– | –Enable develo...",
-    "content": "URL: https://github.com/decentralized-identity/credential-trust-establishment/issues/8Context | Functionality for backup and restoring wallet data will be available in the KMM SDK– | –Enable developers to create wallets that will allow the secure backup and restoration of wallets including all of the wallet dataS&amp;T TBDWe believe that -for wallet users  we will provide functionality to allow them to easily and securely backup and restore their wallet (and its data)and we’ll know this is true when we see:Users can easily backup their wallet (and its data) as an encrypted backup file Users can install a wallet on another device and using the seed can restore their wallet (and its data) Wallet data is encrypted to backup and includes keys, credentials, messages, dids, did-pairsWallet data is decrypted and restored from backup and includes keys, credentials, messages, dids, did-pairsBDD ExampleScenario: Backup wallet data as an encrypted file Given the user has a wallet with data (keys, credentials, messages, dids, did-pairs) When the user initiates a backup operation Then the wallet data is encrypted And saved as a backup file  Scenario: Restore wallet data from an encrypted backup file using a seed Given the user has an encrypted wallet backup file And the user has the seed for the wallet When the user initiates a restore operation on another device Then the wallet data is decrypted And the wallet (including keys, credentials, messages, dids, did-pairs) is restored accurately  Scenario: Validate encryption of wallet data during backup Given the user initiates a backup operation for their wallet When the backup file is created Then the backup file should not be readable without proper decryption And include all wallet data (keys, credentials, messages, dids, did-pairs)  Scenario: Validate decryption and integrity of wallet data during restoration Given the user has an encrypted backup file and the correct seed When the user restores the wallet on a new device Then all wallet data (keys, credentials, messages, dids, did-pairs) is decrypted and restored accurately And matches the original wallet’s data before backup  Scenario: Security of the backup file Given the user has created a backup file of their wallet When an unauthorized person accesses the backup file Then they should not be able to decrypt the wallet data without the seedN/ARelease notes -Prism documentation - Context | Functionality for backup and restoring wallet data will be available in the KMM SDK– | –Enable developers to create wallets that will allow the secure backup and restoration of wallets including all of the wallet dataS&amp;T TBDWe believe that -for wallet users  we will provide functionality to allow them to easily and securely backup and restore their wallet (and its data)and we’ll know this is true when we see:Users can easily backup their wallet (and its data) as an encrypted backup file Users can install a wallet on another device and using the seed can restore their wallet (and its data) Wallet data is encrypted to backup and includes keys, credentials, messages, dids, did-pairsWallet data is decrypted and restored from backup and includes keys, credentials, messages, dids, did-pairsBDD ExampleScenario: Backup wallet data as an encrypted file Given the user has a wallet with data (keys, credentials, messages, dids, did-pairs) When the user initiates a backup operation Then the wallet data is encrypted And saved as a backup file  Scenario: Restore wallet data from an encrypted backup file using a seed Given the user has an encrypted wallet backup file And the user has the seed for the wallet When the user initiates a restore operation on another device Then the wallet data is decrypted And the wallet (including keys, credentials, messages, dids, did-pairs) is restored accurately  Scenario: Validate encryption of wallet data during backup Given the user initiates a backup operation for their wallet When the backup file is created Then the backup file should not be readable without proper decryption And include all wallet data (keys, credentials, messages, dids, did-pairs)  Scenario: Validate decryption and integrity of wallet data during restoration Given the user has an encrypted backup file and the correct seed When the user restores the wallet on a new device Then all wallet data (keys, credentials, messages, dids, did-pairs) is decrypted and restored accurately And matches the original wallet’s data before backup  Scenario: Security of the backup file Given the user has created a backup file of their wallet When an unauthorized person accesses the backup file Then they should not be able to decrypt the wallet data without the seedN/ARelease notes -Prism documentation - Context | Functionality for backup and restoring wallet data will be available in the KMM SDK– | –Enable developers to create wallets that will allow the secure backup and restoration of wallets including all of the wallet dataS&amp;T TBDWe believe that -for wallet users  we will provide functionality to allow them to easily and securely backup and restore their wallet (and its data)and we’ll know this is true when we see:Users can easily backup their wallet (and its data) as an encrypted backup file Users can install a wallet on another device and using the seed can restore their wallet (and its data) Wallet data is encrypted to backup and includes keys, credentials, messages, dids, did-pairsWallet data is decrypted and restored from backup and includes keys, credentials, messages, dids, did-pairsBDD ExampleScenario: Backup wallet data as an encrypted file Given the user has a wallet with data (keys, credentials, messages, dids, did-pairs) When the user initiates a backup operation Then the wallet data is encrypted And saved as a backup file  Scenario: Restore wallet data from an encrypted backup file using a seed Given the user has an encrypted wallet backup file And the user has the seed for the wallet When the user initiates a restore operation on another device Then the wallet data is decrypted And the wallet (including keys, credentials, messages, dids, did-pairs) is restored accurately  Scenario: Validate encryption of wallet data during backup Given the user initiates a backup operation for their wallet When the backup file is created Then the backup file should not be readable without proper decryption And include all wallet data (keys, credentials, messages, dids, did-pairs)  Scenario: Validate decryption and integrity of wallet data during restoration Given the user has an encrypted backup file and the correct seed When the user restores the wallet on a new device Then all wallet data (keys, credentials, messages, dids, did-pairs) is decrypted and restored accurately And matches the original wallet’s data before backup  Scenario: Security of the backup file Given the user has created a backup file of their wallet When an unauthorized person accesses the backup file Then they should not be able to decrypt the wallet data without the seedN/A "
+    "snippet": "URL: https://github.com/decentralized-identity/credential-trust-establishment/issues/8see https://github.com/digitalbazaar/ed25519-signature-2020-context",
+    "content": "URL: https://github.com/decentralized-identity/credential-trust-establishment/issues/8see https://github.com/digitalbazaar/ed25519-signature-2020-context"
   },
   
   {
-    "title": "Error handling for the Agent",
-    "url": "/github-discussions/SIG-IoT/17/",
+    "title": "Add invalid proof type, cryptosuite, & verificationMethod tests",
+    "url": "/github-discussions/org/22/",
     "categories": "decentralized-identity",
-    "tags": "SIG-IoT",
-    "date": "2023-03-15 10:24:28 -0700",
+    "tags": "org",
+    "date": "2023-02-24 03:09:43 -0800",
     
 
 
@@ -1747,12 +1526,29 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/SIG-IoT/issues/17Although PRISM already has some errors defined and returned by our Cloud Agent RestAPI calls, we do not have any mechanism to handle ...",
-    "content": "URL: https://github.com/decentralized-identity/SIG-IoT/issues/17Although PRISM already has some errors defined and returned by our Cloud Agent RestAPI calls, we do not have any mechanism to handle and report errors when they are happening during record processing or sending/receiving DIDComm messages. It is required to implement a mechanism of error handling for Cloud Agent to log, update records in the database, and report errors in the right way.  hyperledger/identus-edge-agent-sdk-ts/issues/308"
+    "snippet": "URL: https://github.com/decentralized-identity/org/pull/22  Adds a new option reason to verificationFail so test report can see why verification should have failed  Adds a new test that simulates w...",
+    "content": "URL: https://github.com/decentralized-identity/org/pull/22  Adds a new option reason to verificationFail so test report can see why verification should have failed  Adds a new test that simulates what happens when transformation options are invalid.Statement tested: “The transformation options MUST contain a type identifier for the cryptographic suite (type), a cryptosuite identifier (cryptosuite), and a verification method (verificationMethod). “"
   },
   
   {
-    "title": "Infinite loop in Release process",
+    "title": "Exporting the Pluto models on the SDK",
+    "url": "/github-discussions/vc-api/331/",
+    "categories": "w3c-ccg",
+    "tags": "vc-api",
+    "date": "2023-01-10 12:58:42 -0800",
+    
+
+
+
+
+
+    
+    "snippet": "URL: https://github.com/w3c-ccg/vc-api/issues/331Proposed featureWe want to propose to export the pluto models, Credentials., DIDs, etc in order to provide external access outside of the SDK and th...",
+    "content": "URL: https://github.com/w3c-ccg/vc-api/issues/331Proposed featureWe want to propose to export the pluto models, Credentials., DIDs, etc in order to provide external access outside of the SDK and that Developers can use this to create their own models.Anything else?No response"
+  },
+  
+  {
+    "title": "Remove `checks` option in favor of loading from implementation configs.",
     "url": "/github-discussions/did-resolver/97/",
     "categories": "decentralized-identity",
     "tags": "did-resolver",
@@ -1764,12 +1560,12 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/did-resolver/issues/97Go to https://handbook.atalaprism.io/engineering/sdlc/release/release-process-overview.And go at the bottom of the page. The lin...",
-    "content": "URL: https://github.com/decentralized-identity/did-resolver/issues/97Go to https://handbook.atalaprism.io/engineering/sdlc/release/release-process-overview.And go at the bottom of the page. The link on the right is Release process anew, so it is an infinite loop."
+    "snippet": "URL: https://github.com/decentralized-identity/did-resolver/issues/97  @PatStLouis @BigBlueHat so DB needs checks: ['proof'] but other implementers might not need that option and further options.ch...",
+    "content": "URL: https://github.com/decentralized-identity/did-resolver/issues/97  @PatStLouis @BigBlueHat so DB needs checks: ['proof'] but other implementers might not need that option and further options.checks has not be in the VC API for awhile so the best way to handle this is to add options.checks to the DB implementation and do something like this:  https://github.com/w3c-ccg/data-integrity-test-suite-assertion/blob/6d61d0f3940694edb12437bcb0f457a8b7cb56cb/assertions.js#L25-L46  How to handle this situation in the bitstring status list suite is another issue as those tests will probably need us to expose a second verify with the correct checks for our verifier.Originally posted by @aljones15 in https://github.com/w3c/vc-data-model-2.0-test-suite/pull/92#discussion_r1693550614"
   },
   
   {
-    "title": "Cleanup the GitHub workflows after moving to the GitHub pages",
+    "title": "How to know if a credential is a full disclosure?",
     "url": "/github-discussions/did-jwt/194/",
     "categories": "decentralized-identity",
     "tags": "did-jwt",
@@ -1781,8 +1577,8 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/did-jwt/issues/194The workflow files should be cleaned up: the docker image with the documentation portal and the corresponding helm chart are not nee...",
-    "content": "URL: https://github.com/decentralized-identity/did-jwt/issues/194The workflow files should be cleaned up: the docker image with the documentation portal and the corresponding helm chart are not needed anymore."
+    "snippet": "URL: https://github.com/decentralized-identity/did-jwt/issues/194If the holder is to never present the base VC it feels like it would be valuable information for a verifier to know that they have r...",
+    "content": "URL: https://github.com/decentralized-identity/did-jwt/issues/194If the holder is to never present the base VC it feels like it would be valuable information for a verifier to know that they have received a derived proof that is a full disclosure.There is probably something technical with the indexes that can help them determine it but I wonder if this information should be easily accessible or at least specified in this spec."
   }
   
 ]

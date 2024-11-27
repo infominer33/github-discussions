@@ -1,3 +1,0 @@
-comment_id,user,date,body
-2474879889,zacknewman,2024-11-13T21:45:25+00:00,"[§ 5.1.3.](https://w3c.github.io/webauthn/#sctn-createCredential) states:  > When this method is invoked, the user agent MUST execute the following algorithm:  This means that not only are AAGUIDs ""allowed"" to not be zeroed out, but that it is in fact _forbidden_ to do so as that would violate the algorithm which _MUST_ be followed. Am I being too pedantic here, or are user agents in fact not allowed to zero out AAGUID?"
-2476308762,emlun,2024-11-14T13:04:56+00:00,@zacknewman I think your conclusion is accurate - clients are expected to conform to the normative algorithm definitions.

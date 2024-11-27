@@ -1,3 +1,0 @@
-comment_id,user,date,body
-1843357409,yshyn-iohk,2024-11-15T08:13:13+00:00,"@bvoiturier, how will this strategy work in the case of the agent restart? Would it consume all the messages from the beginning? "
-1843361777,bvoiturier,2024-11-15T08:17:21+00:00,"@yshyn-iohk Yes, all messages will be processed starting from the beginning 👍 "

@@ -1,3 +1,4 @@
 comment_id,user,date,body
+2501524120,mineme0110,2024-11-26T17:21:35+00:00,cc @elribonazo 
 2491773543,wip-abramson,2024-11-21T16:55:26+00:00,"We discussed this on the call.  We agreed to add a new parameter - `verificationRelationship`. The dereferencing algorithm for this parameter should point to the algorithm documented in the controller document - https://w3c.github.io/controller-document/#retrieve-verification-method  We will wait until the DID Core has been aligned with the Controller Document to make this change."
 2491787886,w3cbot,2024-11-21T17:01:19+00:00,This was discussed during the [#did meeting on 21 November 2024](https://www.w3.org/2024/11/21-did-minutes.html#970d).

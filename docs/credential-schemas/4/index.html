@@ -30,26 +30,26 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Add the identus release process" />
-<meta name="author" content="mkbreuningIOHK" />
+<meta property="og:title" content="Use Chai assertions over node assert" />
+<meta name="author" content="aljones15" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="(Answering procedural questions as ED of DIF) This may introduce more complexity than needed, but it is possible to dedicate a small amount of time to proposing this at a future meeting for consideration by the WG and its chairs. My recommendation is that we hold off on this discussion until we are closer to determining which methods to focus on." />
-<meta property="og:description" content="(Answering procedural questions as ED of DIF) This may introduce more complexity than needed, but it is possible to dedicate a small amount of time to proposing this at a future meeting for consideration by the WG and its chairs. My recommendation is that we hold off on this discussion until we are closer to determining which methods to focus on." />
+<meta name="description" content="@kimdhamilton Apparently we need to start recording our conversations for authentication. I expressed my disgust with your unilateral move on the call (unilateral with no prior consultation). Nothing from my perspective has changed. You didn’t change your post - so nothing appears to have changed from your side either." />
+<meta property="og:description" content="@kimdhamilton Apparently we need to start recording our conversations for authentication. I expressed my disgust with your unilateral move on the call (unilateral with no prior consultation). Nothing from my perspective has changed. You didn’t change your post - so nothing appears to have changed from your side either." />
 <link rel="canonical" href="/github-discussions/credential-schemas/4/" />
 <meta property="og:url" content="/github-discussions/credential-schemas/4/" />
 <meta property="og:site_name" content="Identosphere’s Github Discussions" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-07-03T16:27:23-07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Add the identus release process" />
+<meta property="twitter:title" content="Use Chai assertions over node assert" />
 <meta name="twitter:site" content="@DecentralizeID" />
-<meta name="twitter:creator" content="@mkbreuningIOHK" />
+<meta name="twitter:creator" content="@aljones15" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"mkbreuningIOHK"},"dateModified":"2024-11-25T14:43:50-08:00","datePublished":"2024-07-03T16:27:23-07:00","description":"(Answering procedural questions as ED of DIF) This may introduce more complexity than needed, but it is possible to dedicate a small amount of time to proposing this at a future meeting for consideration by the WG and its chairs. My recommendation is that we hold off on this discussion until we are closer to determining which methods to focus on.","headline":"Add the identus release process","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/credential-schemas/4/"},"url":"/github-discussions/credential-schemas/4/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"aljones15"},"dateModified":"2024-11-26T23:53:09-08:00","datePublished":"2024-07-03T16:27:23-07:00","description":"@kimdhamilton Apparently we need to start recording our conversations for authentication. I expressed my disgust with your unilateral move on the call (unilateral with no prior consultation). Nothing from my perspective has changed. You didn’t change your post - so nothing appears to have changed from your side either.","headline":"Use Chai assertions over node assert","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/credential-schemas/4/"},"url":"/github-discussions/credential-schemas/4/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Add the identus release process | Identosphere's Github Discussions
+  <title>Use Chai assertions over node assert | Identosphere's Github Discussions
   </title>
 
   <!--
@@ -435,7 +435,7 @@
         
           
             
-              <span>Add the identus release process</span>
+              <span>Use Chai assertions over node assert</span>
             
 
           
@@ -550,7 +550,7 @@
 
 <article class="px-1" data-toc="false">
   <header>
-    <h1 data-toc-skip>Add the identus release process</h1>
+    <h1 data-toc-skip>Use Chai assertions over node assert</h1>
     
 
     <div class="post-meta text-muted">
@@ -592,13 +592,13 @@
 
 <time
   
-  data-ts="1732574630"
+  data-ts="1732693989"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Nov 25, 2024
+  Nov 27, 2024
 </time>
 
         </span>
@@ -609,7 +609,7 @@
       <div class="d-flex justify-content-between">
         
           <em>
-            <a href="https://github.com/mkbreuningIOHK">@mkbreuningIOHK</a>
+            <a href="https://github.com/aljones15">@aljones15</a>
           </em>
         
 
@@ -638,9 +638,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="374 words"
+  title="55 words"
 >
-  <em>2 min</em> read</span>
+  <em>1 min</em> read</span>
 
         </div>
       </div>
@@ -652,50 +652,16 @@
   <div class="content">
     <p><strong>URL:</strong> https://github.com/decentralized-identity/credential-schemas/issues/4</p>
 
-<p><strong>Is your feature request related to a problem? Please describe.</strong>
-Identus is an eco-system and the release process should be described in this repository. Explaining who and what steps are being followed.
-See ATL-7060 as well.</p>
+<p>Currently tests here use node’s assertion library.</p>
 
-<p><strong>Describe the solution you’d like</strong>
-Make a release vx.y:</p>
-<ul>
-  <li>Go to Identus repo <a href="https://github.com/hyperledger/identus/">hyperledger/identus</a></li>
-  <li>Check the latest release version; it should be Identus va.b format. E.g Identus v2.12.</li>
-  <li>Click on <code class="language-plaintext highlighter-rouge">Release</code> and <code class="language-plaintext highlighter-rouge">Draft a new release</code> button
-    <ul>
-      <li>In <code class="language-plaintext highlighter-rouge">Choose a tag</code> button, create the tag vx.y</li>
-      <li>Target = <code class="language-plaintext highlighter-rouge">main</code></li>
-      <li>Previous tag <code class="language-plaintext highlighter-rouge">Auto</code></li>
-    </ul>
-  </li>
-  <li>Click on <code class="language-plaintext highlighter-rouge">Generate change log</code>: this will generate the log for this repository only, which should be reviewed.</li>
-  <li>Fill the release note in this change log,
-    <ul>
-      <li>Copy the template (from the previous release if a template file is not existing yet)</li>
-      <li>For each component, add the change log according to each component (it should be already available from the component release).</li>
-      <li>Select <code class="language-plaintext highlighter-rouge">Set as a pre-release</code> and click on <code class="language-plaintext highlighter-rouge">Save Draft</code></li>
-    </ul>
-  </li>
-  <li>Ask component owner to review: this is the critical step. The release owner should get an approval from each of the component: Cloud Agent, Edge Agent SDK Swift, KMP, TS, Mediator, Node, Docs.</li>
-</ul>
+<p>Tests usually use Chai’s should and expect interface.
+Please do try to use should:</p>
 
-<p><em>Note: This is not that convenient as having a PR where all can contribute: see alternatives considered</em></p>
+<p>https://www.chaijs.com/guide/styles/#should</p>
 
-<ul>
-  <li>Ask QA team to validate the release by confirming there is no regression and critical bugs have been fixed.</li>
-  <li>Once all component owners have accepted (with a check in the release note? TBC)), publish the release by editing it and unselect <code class="language-plaintext highlighter-rouge">Set as a pre-release</code> and click on <code class="language-plaintext highlighter-rouge">Publish release</code> button: the release <code class="language-plaintext highlighter-rouge">Identus vx.y</code> should be seen as the <code class="language-plaintext highlighter-rouge">latest</code>; if not, fix it.</li>
-</ul>
+<p>the use of <code class="language-plaintext highlighter-rouge">assert</code> is clever, but if a chai assertion doesn’t throw the mocha reporter might not see it.</p>
 
-<p><strong>Describe alternatives you’ve considered</strong></p>
-<ul>
-  <li>Previously, we have a file and a PR was submitted for review. See <a href="https://github.com/input-output-hk/atala-releases/tree/master/Atala%20PRISM">atala-releases</a>.</li>
-  <li>We should have a nice way to get the feedback from the component owners, maybe with a checkbox in the release.
-Or a PR can be actually raise, with the checkbox that all the component owners have reviewed. Only then, the release is accepted. We shall have also the QA team to validate the eco-system.</li>
-  <li>Using <a href="https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes">automated release</a> would be a nice follow-up iteration.</li>
-</ul>
-
-<p><strong>Additional context</strong>
-Until Identus v2.12, the release was done as a PR in another repository: https://github.com/input-output-hk/atala-releases</p>
+<p>So use chai to assert on the error from the server.</p>
 
   </div>
 
@@ -703,12 +669,6 @@ Until Identus v2.12, the release was done as a PR in another repository: https:/
       
       
           <h2>Comments</h2>
-          
-              <div class="comment">
-                  <h4><strong><a href="https://github.com/mwherman2000">@mwherman2000</a></strong> commented on <mark>2024-11-16</mark></h4>
-                  <p>In Sociocracy terminology, a mini-WG is called a <em>circle</em>. Each category of DID methods (<em>cluster of DID Methods</em>) would be managed by its own independent circle. A circle member can belong to more than 1 circle. Circles are <em>connected</em> to a parent circle for administrative purposes.  The parent circle would correspond to the DID Method WG (co-chaired by @peacekeeper).</p>
-
-              </div>
           
               <div class="comment">
                   <h4><strong><a href="https://github.com/mwherman2000">@mwherman2000</a></strong> commented on <mark>2024-11-23</mark></h4>
@@ -730,6 +690,42 @@ Until Identus v2.12, the release was done as a PR in another repository: https:/
  This may introduce more complexity than needed, but it is possible to dedicate a small amount of time to proposing this at a future meeting for consideration by the WG and its chairs.</p>
 
 <p>My recommendation is that we hold off on this discussion until we are closer to determining which methods to focus on.</p>
+
+              </div>
+          
+              <div class="comment">
+                  <h4><strong><a href="https://github.com/mwherman2000">@mwherman2000</a></strong> commented on <mark>2024-11-26</mark></h4>
+                  <blockquote>
+  <p>This may introduce more complexity than needed</p>
+</blockquote>
+
+<p><strong>Not true</strong>. There has been no opportunity to present, discuss, nor agree on this point.</p>
+
+<p>Background</p>
+
+<p>Yesterday I met with <a href="https://www.linkedin.com/in/ted-rau-bb75a513b/">Ted Rau</a>, the founder of https://www.sociocracyforall.org/, to specifically discuss our project.  We developed a light version of Sociocracy that has a gradual approach to being used in context tuned for our project.</p>
+
+<p>However, if the ED has already ruled that it’s “too complex”, there is no point in preparing anything for further discussion.</p>
+
+<blockquote>
+  <p>proposing this at a future meeting for consideration by the WG and its chairs</p>
+</blockquote>
+
+<p>…is equivalent to burying the topic. If it is to be properly vetted, the time is now.</p>
+
+              </div>
+          
+              <div class="comment">
+                  <h4><strong><a href="https://github.com/kimdhamilton">@kimdhamilton</a></strong> commented on <mark>2024-11-26</mark></h4>
+                  <p>Hi Michael, as we discussed on our call yesterday, and I believed (at the time) that you understood my perspective, it was about timing of introducing this topic.</p>
+
+<p>We agreed on our call that you would present a summarized view of this when you present #3, and at the time, you agreed. Please let me know what has changed in between, or let me know if you would like me to share the notes from our conversation.</p>
+
+              </div>
+          
+              <div class="comment">
+                  <h4><strong><a href="https://github.com/mwherman2000">@mwherman2000</a></strong> commented on <mark>2024-11-27</mark></h4>
+                  <p>@kimdhamilton Apparently we need to start recording our conversations for authentication.   I expressed my disgust with your unilateral move on the call (unilateral with no prior consultation). Nothing from my perspective has changed.  You didn’t change your post - so nothing appears to have changed from your side either.</p>
 
               </div>
           
@@ -788,21 +784,21 @@ Until Identus v2.12, the release was done as a PR in another repository: https:/
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Add%20the%20identus%20release%20process%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fcredential-schemas%2F4%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Use%20Chai%20assertions%20over%20node%20assert%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fcredential-schemas%2F4%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Add%20the%20identus%20release%20process%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fcredential-schemas%2F4%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Use%20Chai%20assertions%20over%20node%20assert%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fcredential-schemas%2F4%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fcredential-schemas%2F4%2F&text=Add%20the%20identus%20release%20process%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fcredential-schemas%2F4%2F&text=Use%20Chai%20assertions%20over%20node%20assert%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -857,35 +853,35 @@ Until Identus v2.12, the release was done as a PR in another repository: https:/
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus/86/">Cardano Connector for SDK</a>
+          <a href="/github-discussions/identus-docs/171/">Need guidance on mediator customization</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/uni-resolver-driver-did-key/9/">Many errors in rocksdb/_rocksdb.pyx cause build failure</a>
+          <a href="/github-discussions/vc-api/331/">Exporting the Pluto models on the SDK</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/did-extensions/597/">SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+          <a href="/github-discussions/vc-bitstring-status-list/173/">Retroactively sign-off Shota's commits</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/credential-schemas/4/">Add the identus release process</a>
+          <a href="/github-discussions/webauthn/2106/">Make `AuthenticatorAttestationResponseJSON.publicKeyAlgorithm` optional</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/did-extensions/590/">SPEC/PROCESS PROPOSAL: To secure a unique method name, require the registration of the corresponding Internet DNS name: did-<method>. directory </a>
+          <a href="/github-discussions/jsonld-common-java/13/">A few errors in the Example 11</a>
         </li>
       
     </ul>
@@ -1094,75 +1090,6 @@ Until Identus v2.12, the release was done as a PR in another repository: https:/
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1187,383 +1114,6 @@ Until Identus v2.12, the release was done as a PR in another repository: https:/
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1673,6 +1223,30 @@ Until Identus v2.12, the release was done as a PR in another repository: https:/
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1712,7 +1286,565 @@ Until Identus v2.12, the release was done as a PR in another repository: https:/
     
     
     
+  
+    
+    
+    
+    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1744,25 +1876,25 @@ Until Identus v2.12, the release was done as a PR in another repository: https:/
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/vc-data-model/">vc-data-model</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/linked-vp/">linked-vp</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-trust-establishment/">credential-trust-establishment</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
     </div>
   </section>
@@ -1797,11 +1929,11 @@ Until Identus v2.12, the release was done as a PR in another repository: https:/
 
   
     <a
-      href="/github-discussions/identus/22/"
+      href="/github-discussions/did-core/855/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Implement user level events in SDKs</p>
+      <p>Simplify abstract data model to be more concrete</p>
     </a>
   
 
@@ -2063,75 +2195,6 @@ Until Identus v2.12, the release was done as a PR in another repository: https:/
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2156,383 +2219,6 @@ Until Identus v2.12, the release was done as a PR in another repository: https:/
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2642,6 +2328,30 @@ Until Identus v2.12, the release was done as a PR in another repository: https:/
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2681,7 +2391,565 @@ Until Identus v2.12, the release was done as a PR in another repository: https:/
     
     
     
+  
+    
+    
+    
+    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2713,25 +2981,25 @@ Until Identus v2.12, the release was done as a PR in another repository: https:/
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/vc-data-model/">vc-data-model</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/linked-vp/">linked-vp</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-trust-establishment/">credential-trust-establishment</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
     </div>
   </section>

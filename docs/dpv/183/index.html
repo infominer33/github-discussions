@@ -30,8 +30,8 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Add capability to choose either polling or websocket" />
-<meta name="author" content="amagyar-iohk" />
+<meta property="og:title" content="New status purpose proposal" />
+<meta name="author" content="PatStLouis" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="PR #185 has been raised to address this issue. This issue will be closed once PR #185 has been merged." />
 <meta property="og:description" content="PR #185 has been raised to address this issue. This issue will be closed once PR #185 has been merged." />
@@ -41,15 +41,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-08-24T09:58:44-07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Add capability to choose either polling or websocket" />
+<meta property="twitter:title" content="New status purpose proposal" />
 <meta name="twitter:site" content="@DecentralizeID" />
-<meta name="twitter:creator" content="@amagyar-iohk" />
+<meta name="twitter:creator" content="@PatStLouis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"amagyar-iohk"},"dateModified":"2024-11-24T14:55:35-08:00","datePublished":"2024-08-24T09:58:44-07:00","description":"PR #185 has been raised to address this issue. This issue will be closed once PR #185 has been merged.","headline":"Add capability to choose either polling or websocket","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/dpv/183/"},"url":"/github-discussions/dpv/183/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"PatStLouis"},"dateModified":"2024-11-24T14:55:35-08:00","datePublished":"2024-08-24T09:58:44-07:00","description":"PR #185 has been raised to address this issue. This issue will be closed once PR #185 has been merged.","headline":"New status purpose proposal","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/dpv/183/"},"url":"/github-discussions/dpv/183/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Add capability to choose either polling or websocket | Identosphere's Github Discussions
+  <title>New status purpose proposal | Identosphere's Github Discussions
   </title>
 
   <!--
@@ -435,7 +435,7 @@
         
           
             
-              <span>Add capability to choose either polling or websocket</span>
+              <span>New status purpose proposal</span>
             
 
           
@@ -523,49 +523,6 @@
   
 
   
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
-  
 
   
   
@@ -593,7 +550,7 @@
 
 <article class="px-1" data-toc="false">
   <header>
-    <h1 data-toc-skip>Add capability to choose either polling or websocket</h1>
+    <h1 data-toc-skip>New status purpose proposal</h1>
     
 
     <div class="post-meta text-muted">
@@ -652,7 +609,7 @@
       <div class="d-flex justify-content-between">
         
           <em>
-            <a href="https://github.com/amagyar-iohk">@amagyar-iohk</a>
+            <a href="https://github.com/PatStLouis">@PatStLouis</a>
           </em>
         
 
@@ -681,7 +638,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="48 words"
+  title="174 words"
 >
   <em>1 min</em> read</span>
 
@@ -695,17 +652,15 @@
   <div class="content">
     <p><strong>URL:</strong> https://github.com/w3c/dpv/issues/183</p>
 
-<h3 id="proposed-feature"><span class="me-2">Proposed feature</span><a href="#proposed-feature" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>Greetings, while implementing <code class="language-plaintext highlighter-rouge">BitstringStatusList</code> in our use case (supply-chain), we uncovered a situation where an issued credential might have a new version available for pickup which doesn’t warrant a revocation of the previous version, but it would still be worthwhile to have a status to signal that an updated version is available.</p>
 
-<p>Add possibility to choose the mediator connection either from pulling or websocket. Default (if no argument is passed) when starting the connection to the mediator, should be WS if available</p>
+<p>Therefore I would like to suggest adding a status purpose ~<code class="language-plaintext highlighter-rouge">supersession</code>~ <code class="language-plaintext highlighter-rouge">refresh</code>, which can have a value of <code class="language-plaintext highlighter-rouge">0</code>(meaning this is the latest version of the credential available) or <code class="language-plaintext highlighter-rouge">1</code> (MAY be refreshed).</p>
 
-<h3 id="feature-description"><span class="me-2">Feature description</span><a href="#feature-description" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>The process for a holder and/or verifier to get the latest version is out of scope, however I would intend this to be used in parallel with a ~<code class="language-plaintext highlighter-rouge">SupersessionRefresh</code>~ defined <code class="language-plaintext highlighter-rouge">refreshService</code> type, which contains an endpoint to query and get an updated version of the credential.</p>
 
-<p>Enable user to choose the message receival mechanism</p>
+<p>Once the software have retrieved the latest version of the credential, they would archive the current version and replace it with the latest version in their software, or create a <a href="https://en.wikipedia.org/wiki/Symbolic_link">Symbolic link</a> towards it.</p>
 
-<h3 id="anything-else"><span class="me-2">Anything else?</span><a href="#anything-else" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><em>No response</em></p>
+<p>edit: renamed <code class="language-plaintext highlighter-rouge">supersession</code> to <code class="language-plaintext highlighter-rouge">refresh</code> as proposed.</p>
 
   </div>
 
@@ -791,21 +746,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Add%20capability%20to%20choose%20either%20polling%20or%20websocket%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fdpv%2F183%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=New%20status%20purpose%20proposal%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fdpv%2F183%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Add%20capability%20to%20choose%20either%20polling%20or%20websocket%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fdpv%2F183%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=New%20status%20purpose%20proposal%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fdpv%2F183%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fdpv%2F183%2F&text=Add%20capability%20to%20choose%20either%20polling%20or%20websocket%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fdpv%2F183%2F&text=New%20status%20purpose%20proposal%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -860,35 +815,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus/86/">Cardano Connector for SDK</a>
+          <a href="/github-discussions/identus-docs/171/">Need guidance on mediator customization</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/uni-resolver-driver-did-key/9/">Many errors in rocksdb/_rocksdb.pyx cause build failure</a>
+          <a href="/github-discussions/vc-api/331/">Exporting the Pluto models on the SDK</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/did-extensions/597/">SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+          <a href="/github-discussions/vc-bitstring-status-list/173/">Retroactively sign-off Shota's commits</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/credential-schemas/4/">Add the identus release process</a>
+          <a href="/github-discussions/webauthn/2106/">Make `AuthenticatorAttestationResponseJSON.publicKeyAlgorithm` optional</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/did-extensions/590/">SPEC/PROCESS PROPOSAL: To secure a unique method name, require the registration of the corresponding Internet DNS name: did-<method>. directory </a>
+          <a href="/github-discussions/jsonld-common-java/13/">A few errors in the Example 11</a>
         </li>
       
     </ul>
@@ -1097,75 +1052,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1190,383 +1076,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1676,6 +1185,30 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1715,7 +1248,565 @@
     
     
     
+  
+    
+    
+    
+    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1747,25 +1838,25 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/vc-data-model/">vc-data-model</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/linked-vp/">linked-vp</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-trust-establishment/">credential-trust-establishment</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
     </div>
   </section>
@@ -1804,7 +1895,7 @@
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Link in the CONTRIBUTING.md is broken</p>
+      <p>Hosting of the bistring status list context</p>
     </a>
   
 
@@ -1814,7 +1905,7 @@
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Typos in docs</p>
+      <p>Clarification on multiple items inside `BitstringStatusListCredential.credentialSubject`</p>
     </a>
   
 </nav>
@@ -2066,75 +2157,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2159,383 +2181,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2645,6 +2290,30 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2684,7 +2353,565 @@
     
     
     
+  
+    
+    
+    
+    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2716,25 +2943,25 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/vc-data-model/">vc-data-model</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/linked-vp/">linked-vp</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-trust-establishment/">credential-trust-establishment</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
     </div>
   </section>

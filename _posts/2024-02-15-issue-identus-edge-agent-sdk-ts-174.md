@@ -1,7 +1,7 @@
 ---
-title: "MySQL Support"
+title: "TTL is mandatory 5 minute period if not specified"
 date: 2024-02-15 15:55:21 +0000
-author: niall-shaw
+author: msporny
 excerpt: >
   PR #186 has been raised to address this issue. This issue will be closed once PR #186 has been merged.
 categories: hyperledger
@@ -15,8 +15,6 @@ last_modified_at: 2024-11-24 23:21:45 +0000
 
 **URL:** https://github.com/hyperledger/identus-edge-agent-sdk-ts/issues/174
 
-Our team currently uses [vdr-tools](https://gitlab.com/evernym/verity/vdr-tools) as the underlying framework to support AFJ on our mediator. The reasoning is better support for concurrency, as well as MySQL support.
-We are now looking to upgrade AFJ to 0.4.x, and in by doing so upgrade to use Aries Askar etc.
+The specification currently states that if a TTL isn't specified, it's 5 minutes. This is a problem for offline use cases where organizations might not want to use the TTL and do not want to presume it is 5 minutes.
 
-Askar only supports SqlLite and Postgres - is there a workaround so that we can continue using MySQL?
-
+The specification needs to make TTL completely optional with no minimum timeout assumed unless stated.

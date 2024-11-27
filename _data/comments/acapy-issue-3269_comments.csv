@@ -1,0 +1,6 @@
+comment_id,user,date,body
+2501722425,ianco,2024-11-26T19:08:15+00:00,"@jamshale  are there instructions for running the e2e tests? "
+2501737517,jamshale,2024-11-26T19:16:22+00:00,"In `[acapy-tools](https://github.com/openwallet-foundation/acapy-tools)` I don't think there is any instructions :/ . It's pretty simple though. I just `poetry install` and then navigate to `askar_tools` and run `poetry run pytest .`.  You can use other pytest commands to run an individual test. "
+2501748154,ianco,2024-11-26T19:22:45+00:00,"ok thanks, I'll add this to the README"
+2501758664,ianco,2024-11-26T19:29:06+00:00,"Probably more useful to be able to test this with a back-end postgres database rather than having to worry about import/export for sqlite wallets (and then the tests could run in a separate docker container, and just point to the external database)."
+2501781139,jamshale,2024-11-26T19:42:46+00:00,I agree. For this scenario testing against a postgres db would be easier and better. The sqlite testing was much more difficult with restarts in acapy-tools. Also would be good to have postgres getting tested more here in general.

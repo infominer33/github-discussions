@@ -30,8 +30,8 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Cardano Connector for SDK" />
-<meta name="author" content="FabioPinheiro" />
+<meta property="og:title" content="Incorrect hashing used in tests for ecdsa-rdfc-2019 P-384" />
+<meta name="author" content="sbihel" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="The edge agent does not require to be in a chrome extension. BUT, our SDK must talk cip-30 if that makes sense and be able to communicate with other cardano wallets to create and submit cardano transactions, starting by the prism did operations + their corresponding metadata" />
 <meta property="og:description" content="The edge agent does not require to be in a chrome extension. BUT, our SDK must talk cip-30 if that makes sense and be able to communicate with other cardano wallets to create and submit cardano transactions, starting by the prism did operations + their corresponding metadata" />
@@ -41,15 +41,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-11-14T08:12:54-08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Cardano Connector for SDK" />
+<meta property="twitter:title" content="Incorrect hashing used in tests for ecdsa-rdfc-2019 P-384" />
 <meta name="twitter:site" content="@DecentralizeID" />
-<meta name="twitter:creator" content="@FabioPinheiro" />
+<meta name="twitter:creator" content="@sbihel" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"FabioPinheiro"},"dateModified":"2024-11-26T03:18:46-08:00","datePublished":"2024-11-14T08:12:54-08:00","description":"The edge agent does not require to be in a chrome extension. BUT, our SDK must talk cip-30 if that makes sense and be able to communicate with other cardano wallets to create and submit cardano transactions, starting by the prism did operations + their corresponding metadata","headline":"Cardano Connector for SDK","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/identus/86/"},"url":"/github-discussions/identus/86/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"sbihel"},"dateModified":"2024-11-26T03:18:46-08:00","datePublished":"2024-11-14T08:12:54-08:00","description":"The edge agent does not require to be in a chrome extension. BUT, our SDK must talk cip-30 if that makes sense and be able to communicate with other cardano wallets to create and submit cardano transactions, starting by the prism did operations + their corresponding metadata","headline":"Incorrect hashing used in tests for ecdsa-rdfc-2019 P-384","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/identus/86/"},"url":"/github-discussions/identus/86/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Cardano Connector for SDK | Identosphere's Github Discussions
+  <title>Incorrect hashing used in tests for `ecdsa-rdfc-2019` `P-384` | Identosphere's Github Discussions
   </title>
 
   <!--
@@ -435,7 +435,7 @@
         
           
             
-              <span>Cardano Connector for SDK</span>
+              <span>Incorrect hashing used in tests for `ecdsa-rdfc-2019` `P-384`</span>
             
 
           
@@ -523,49 +523,6 @@
   
 
   
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
-  
 
   
   
@@ -593,7 +550,7 @@
 
 <article class="px-1" data-toc="false">
   <header>
-    <h1 data-toc-skip>Cardano Connector for SDK</h1>
+    <h1 data-toc-skip>Incorrect hashing used in tests for `ecdsa-rdfc-2019` `P-384`</h1>
     
 
     <div class="post-meta text-muted">
@@ -652,7 +609,7 @@
       <div class="d-flex justify-content-between">
         
           <em>
-            <a href="https://github.com/FabioPinheiro">@FabioPinheiro</a>
+            <a href="https://github.com/sbihel">@sbihel</a>
           </em>
         
 
@@ -681,9 +638,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="411 words"
+  title="110 words"
 >
-  <em>2 min</em> read</span>
+  <em>1 min</em> read</span>
 
         </div>
       </div>
@@ -695,47 +652,15 @@
   <div class="content">
     <p><strong>URL:</strong> https://github.com/hyperledger/identus/issues/86</p>
 
-<h3 id="short-description"><span class="me-2">Short Description</span><a href="#short-description" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p>A connector for the SDKs to submit the PRISM Block to the Cardano Blockchain.</p>
-
-<h3 id="value-statement"><span class="me-2">Value statement</span><a href="#value-statement" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p>As a community we already agreed this is value coming from the discussion in https://github.com/hyperledger/identus/discussions/80</p>
-
-<p>But just the summarize:</p>
-
-<p>The PRISM Node can be view as a Cardano Connector. But is a component that is able to do much more that simple submit transaction with metadata.
-But this is a very common use case in Cardano.</p>
-
-<p>The value of this come from bypassing this dedicated component of the <code class="language-plaintext highlighter-rouge">did:prism</code> method. With a generic component that uses infrastructure that already exists and that is largely available.</p>
-
-<p>Again, the ONLY concern that we care about in here is the <strong>Writing Path</strong>.
-We don’t care about the status of DID in here. But to create valid PRISM Block you need to know the status of the DID. For that you have the <strong>Reading Path</strong>. Both PRISM Node or the universal resolver cover that.
-For example when you create a new <code class="language-plaintext highlighter-rouge">did:prism</code> you already know the state of the DID, because it is no existed.</p>
-
-<p>So let’s split responsibility:</p>
+<p>Hiya, the following tests are failing for <code class="language-plaintext highlighter-rouge">P-384</code> with our implementation:</p>
 <ul>
-  <li>The SDKs needs to produce the bytes that constitute a valid PRISM Block.
-Note the PRISM Block is already sign with the private keys if the DID, so the Keys is never shared with the connector.</li>
-  <li>The Cardano Connector receive the bytes of the PRISM Block (which is a protobuf) and create a transactions with those bytes on the metadata and a metadata id <code class="language-plaintext highlighter-rouge">21325</code>.
-See Appendix A &amp; B on the <a href="https://github.com/input-output-hk/prism-did-method-spec/blob/main/w3c-spec/PRISM-method.md">PRISM DID method specs</a> for more for more information.</li>
-  <li>Private keys. There are you two pairs of Private keys, one is the Master key on the DID and another is the key of the wallet.
-    <ul>
-      <li>The Master private key of the DID is never shared with the Connector. This key is used to sign the PRISM Object in order to make the PRISM Block.</li>
-      <li>The private key of the wallet its also never shared to other components. This key is used to sign the Cardano transactions.</li>
-    </ul>
-  </li>
+  <li><code class="language-plaintext highlighter-rouge">ecdsa-rdfc-2019 (issuers) VC 1.1</code> <code class="language-plaintext highlighter-rouge">The "proof" MUST verify with a conformant verifier.</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ecdsa-rdfc-2019 (issuers) VC 2.0</code> <code class="language-plaintext highlighter-rouge">The "proof" MUST verify with a conformant verifier.</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ecdsa-rdfc-2019 (verifiers 1.1)</code> <code class="language-plaintext highlighter-rouge">MUST verify a valid VC with an ecdsa-rdfc-2019 proof.</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ecdsa-rdfc-2019 (verifiers 2.0)</code> <code class="language-plaintext highlighter-rouge">MUST verify a valid VC with an ecdsa-rdfc-2019 proof.</code></li>
 </ul>
 
-<p>I propose we do a proof of concept of a connector that will be a Chrome extension and use the TS SDK to call the Lace wallet and make a transaction via the Lace wallet.</p>
-
-<p>The idea is to explore CIP30 API and try to build from there https://cips.cardano.org/cip/CIP-30</p>
-
-<h3 id="components"><span class="me-2">Components</span><a href="#components" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p>Proof of concept for a new company Component
-Writing path of the <code class="language-plaintext highlighter-rouge">did:prism</code> method using the TS SDK</p>
+<p>After trying some random things, I noticed that if we used SHA-256 for <a href="https://w3c.github.io/vc-di-ecdsa/#hashing-ecdsa-rdfc-2019">the hash data</a> instead of SHA-384 for P-384 keys, then all the tests would pass. So I’m assuming that the implementation used by the tests is incorrect, but maybe our interpretation of the specs is wrong?</p>
 
   </div>
 
@@ -819,21 +744,21 @@ Writing path of the <code class="language-plaintext highlighter-rouge">did:prism
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Cardano%20Connector%20for%20SDK%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fidentus%2F86%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Incorrect%20hashing%20used%20in%20tests%20for%20%60ecdsa-rdfc-2019%60%20%60P-384%60%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fidentus%2F86%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Cardano%20Connector%20for%20SDK%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fidentus%2F86%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Incorrect%20hashing%20used%20in%20tests%20for%20%60ecdsa-rdfc-2019%60%20%60P-384%60%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fidentus%2F86%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fidentus%2F86%2F&text=Cardano%20Connector%20for%20SDK%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fidentus%2F86%2F&text=Incorrect%20hashing%20used%20in%20tests%20for%20%60ecdsa-rdfc-2019%60%20%60P-384%60%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -888,35 +813,35 @@ Writing path of the <code class="language-plaintext highlighter-rouge">did:prism
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus/86/">Cardano Connector for SDK</a>
+          <a href="/github-discussions/identus-docs/171/">Need guidance on mediator customization</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/uni-resolver-driver-did-key/9/">Many errors in rocksdb/_rocksdb.pyx cause build failure</a>
+          <a href="/github-discussions/vc-api/331/">Exporting the Pluto models on the SDK</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/did-extensions/597/">SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+          <a href="/github-discussions/vc-bitstring-status-list/173/">Retroactively sign-off Shota's commits</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/credential-schemas/4/">Add the identus release process</a>
+          <a href="/github-discussions/webauthn/2106/">Make `AuthenticatorAttestationResponseJSON.publicKeyAlgorithm` optional</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/did-extensions/590/">SPEC/PROCESS PROPOSAL: To secure a unique method name, require the registration of the corresponding Internet DNS name: did-<method>. directory </a>
+          <a href="/github-discussions/jsonld-common-java/13/">A few errors in the Example 11</a>
         </li>
       
     </ul>
@@ -1125,75 +1050,6 @@ Writing path of the <code class="language-plaintext highlighter-rouge">did:prism
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1218,383 +1074,6 @@ Writing path of the <code class="language-plaintext highlighter-rouge">did:prism
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1704,6 +1183,30 @@ Writing path of the <code class="language-plaintext highlighter-rouge">did:prism
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1743,7 +1246,565 @@ Writing path of the <code class="language-plaintext highlighter-rouge">did:prism
     
     
     
+  
+    
+    
+    
+    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1775,25 +1836,25 @@ Writing path of the <code class="language-plaintext highlighter-rouge">did:prism
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/vc-data-model/">vc-data-model</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/linked-vp/">linked-vp</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-trust-establishment/">credential-trust-establishment</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
     </div>
   </section>
@@ -2094,75 +2155,6 @@ Writing path of the <code class="language-plaintext highlighter-rouge">did:prism
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2187,383 +2179,6 @@ Writing path of the <code class="language-plaintext highlighter-rouge">did:prism
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2673,6 +2288,30 @@ Writing path of the <code class="language-plaintext highlighter-rouge">did:prism
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2712,7 +2351,565 @@ Writing path of the <code class="language-plaintext highlighter-rouge">did:prism
     
     
     
+  
+    
+    
+    
+    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2744,25 +2941,25 @@ Writing path of the <code class="language-plaintext highlighter-rouge">did:prism
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/vc-data-model/">vc-data-model</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/linked-vp/">linked-vp</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-trust-establishment/">credential-trust-establishment</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
     </div>
   </section>

@@ -1,2 +1,0 @@
-comment_id,user,date,body
-2478740236,twiss,2024-11-15T12:48:12+00:00,"Thanks for catching that! As @panva noticed, the `[[usages]]` internal slot should be set as well :)  (Btw, if tests didn't catch that one, perhaps we should test that more extensively?)"

@@ -30,8 +30,8 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Test roadmap item" />
-<meta name="author" content="essbante-io" />
+<meta property="og:title" content="Service Endpoint Construction inconsistency" />
+<meta name="author" content="clehner" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="This was discussed during the #did meeting on 21 November 2024." />
 <meta property="og:description" content="This was discussed during the #did meeting on 21 November 2024." />
@@ -41,15 +41,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-09-19T06:27:35-07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Test roadmap item" />
+<meta property="twitter:title" content="Service Endpoint Construction inconsistency" />
 <meta name="twitter:site" content="@DecentralizeID" />
-<meta name="twitter:creator" content="@essbante-io" />
+<meta name="twitter:creator" content="@clehner" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"essbante-io"},"dateModified":"2024-11-21T09:01:21-08:00","datePublished":"2024-09-19T06:27:35-07:00","description":"This was discussed during the #did meeting on 21 November 2024.","headline":"Test roadmap item","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/identus/61/"},"url":"/github-discussions/identus/61/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"clehner"},"dateModified":"2024-11-21T09:01:21-08:00","datePublished":"2024-09-19T06:27:35-07:00","description":"This was discussed during the #did meeting on 21 November 2024.","headline":"Service Endpoint Construction inconsistency","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/identus/61/"},"url":"/github-discussions/identus/61/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Test roadmap item | Identosphere's Github Discussions
+  <title>Service Endpoint Construction inconsistency | Identosphere's Github Discussions
   </title>
 
   <!--
@@ -435,7 +435,7 @@
         
           
             
-              <span>Test roadmap item</span>
+              <span>Service Endpoint Construction inconsistency</span>
             
 
           
@@ -523,82 +523,6 @@
   
 
   
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
-  
 
   
   
@@ -626,7 +550,7 @@
 
 <article class="px-1" data-toc="false">
   <header>
-    <h1 data-toc-skip>Test roadmap item</h1>
+    <h1 data-toc-skip>Service Endpoint Construction inconsistency</h1>
     
 
     <div class="post-meta text-muted">
@@ -685,7 +609,7 @@
       <div class="d-flex justify-content-between">
         
           <em>
-            <a href="https://github.com/essbante-io">@essbante-io</a>
+            <a href="https://github.com/clehner">@clehner</a>
           </em>
         
 
@@ -714,7 +638,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="32 words"
+  title="124 words"
 >
   <em>1 min</em> read</span>
 
@@ -728,34 +652,40 @@
   <div class="content">
     <p><strong>URL:</strong> https://github.com/hyperledger/identus/issues/61</p>
 
-<h3 id="short-description"><span class="me-2">Short Description</span><a href="#short-description" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>The example (https://w3c-ccg.github.io/did-resolution/#example-11) is inconsistent with the algorithm (https://w3c-ccg.github.io/did-resolution/#algorithm).</p>
 
-<p>New cool feature</p>
+<p>The example says:</p>
 
-<h3 id="value-statement"><span class="me-2">Value statement</span><a href="#value-statement" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote>
+  <p>Given the following input service endpoint URL:</p>
 
-<p>Enable new awesome solutions</p>
+  <p><code class="language-plaintext highlighter-rouge">https://example.com/messages/8377464</code></p>
 
-<h3 id="architect"><span class="me-2">Architect</span><a href="#architect" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+  <p>And given the following input DID URL:</p>
 
-<p>Person</p>
+  <p><code class="language-plaintext highlighter-rouge">did:example:123456789abcdefghi?service=messages&amp;relative-ref=%2Fsome%2Fpath%3Fquery#frag</code></p>
 
-<h3 id="qa-member"><span class="me-2">QA Member</span><a href="#qa-member" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+  <p>Then the output service endpoint URL is:</p>
 
-<p>Person</p>
+  <p><code class="language-plaintext highlighter-rouge">https://example.com/messages/8377464/some/path?query#frag</code></p>
+</blockquote>
 
-<h3 id="components"><span class="me-2">Components</span><a href="#components" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>But by following the algorithm, I get this as the output URL:</p>
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>https://example.com/messages/8377464?service=messages&amp;relative-ref=%2Fsome%2Fpath%3Fquery#frag
+</pre></td></tr></tbody></table></code></div></div>
+<p>It looks like in the example the <code class="language-plaintext highlighter-rouge">relative-ref</code> DID parameter is used instead of (or in addition to) the input DID URL path and query.</p>
 
-<p>SDKs, Cloud Agent</p>
+<p>There is also an example in <code class="language-plaintext highlighter-rouge">did-core</code> (https://w3c.github.io/did-core/#example-9) for “A resource external to a DID Document”, using service and relativeRef:</p>
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>did:example:123?service=agent&amp;relativeRef=/credentials#degree
+</pre></td></tr></tbody></table></code></div></div>
 
-<h3 id="team-members"><span class="me-2">Team members</span><a href="#team-members" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p>x, y, z @essbante-io</p>
-
-<ul class="task-list">
-  <li class="task-list-item"><i class="far fa-circle fa-fw"></i>task 1</li>
-  <li class="task-list-item"><i class="far fa-circle fa-fw"></i>task 2</li>
-</ul>
+<p>Is using <code class="language-plaintext highlighter-rouge">relativeRef</code>/<code class="language-plaintext highlighter-rouge">relative-ref</code> the way to go? If so, how should it interact with the path component and other query parameters in service endpoint construction?</p>
 
   </div>
 
@@ -835,21 +765,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Test%20roadmap%20item%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fidentus%2F61%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Service%20Endpoint%20Construction%20inconsistency%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fidentus%2F61%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Test%20roadmap%20item%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fidentus%2F61%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Service%20Endpoint%20Construction%20inconsistency%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fidentus%2F61%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fidentus%2F61%2F&text=Test%20roadmap%20item%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fidentus%2F61%2F&text=Service%20Endpoint%20Construction%20inconsistency%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -904,35 +834,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus/86/">Cardano Connector for SDK</a>
+          <a href="/github-discussions/identus-docs/171/">Need guidance on mediator customization</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/uni-resolver-driver-did-key/9/">Many errors in rocksdb/_rocksdb.pyx cause build failure</a>
+          <a href="/github-discussions/vc-api/331/">Exporting the Pluto models on the SDK</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/did-extensions/597/">SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+          <a href="/github-discussions/vc-bitstring-status-list/173/">Retroactively sign-off Shota's commits</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/credential-schemas/4/">Add the identus release process</a>
+          <a href="/github-discussions/webauthn/2106/">Make `AuthenticatorAttestationResponseJSON.publicKeyAlgorithm` optional</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/did-extensions/590/">SPEC/PROCESS PROPOSAL: To secure a unique method name, require the registration of the corresponding Internet DNS name: did-<method>. directory </a>
+          <a href="/github-discussions/jsonld-common-java/13/">A few errors in the Example 11</a>
         </li>
       
     </ul>
@@ -1141,75 +1071,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1234,383 +1095,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1720,6 +1204,30 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1759,7 +1267,565 @@
     
     
     
+  
+    
+    
+    
+    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1791,25 +1857,25 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/vc-data-model/">vc-data-model</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/linked-vp/">linked-vp</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-trust-establishment/">credential-trust-establishment</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
     </div>
   </section>
@@ -1844,21 +1910,21 @@
 
   
     <a
-      href="/github-discussions/acapy/3237/"
+      href="/github-discussions/vc-data-model/1560/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>did:tdw resolver</p>
+      <p>Making Abstract abstract, instead of introduction</p>
     </a>
   
 
   
     <a
-      href="/github-discussions/webauthn/2151/"
+      href="/github-discussions/acapy-endorser-service/157/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>authenticatorDisplayName should use a localizable language map</p>
+      <p>Exchange of Electronic Certificate of Origin to facilitate Cross Border Trade</p>
     </a>
   
 </nav>
@@ -2110,75 +2176,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2203,383 +2200,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2689,6 +2309,30 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2728,7 +2372,565 @@
     
     
     
+  
+    
+    
+    
+    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2760,25 +2962,25 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/vc-data-model/">vc-data-model</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/linked-vp/">linked-vp</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-trust-establishment/">credential-trust-establishment</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
     </div>
   </section>

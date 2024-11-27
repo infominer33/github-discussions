@@ -30,8 +30,8 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Improve Infrastructure provisioning" />
-<meta name="author" content="elribonazo" />
+<meta property="og:title" content="DRY principle for multikeys?" />
+<meta name="author" content="iherman" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Working as expected" />
 <meta property="og:description" content="Working as expected" />
@@ -41,15 +41,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-10-21T07:31:35-07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Improve Infrastructure provisioning" />
+<meta property="twitter:title" content="DRY principle for multikeys?" />
 <meta name="twitter:site" content="@DecentralizeID" />
-<meta name="twitter:creator" content="@elribonazo" />
+<meta name="twitter:creator" content="@iherman" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"elribonazo"},"dateModified":"2024-11-21T11:45:51-08:00","datePublished":"2024-10-21T07:31:35-07:00","description":"Working as expected","headline":"Improve Infrastructure provisioning","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/identus/76/"},"url":"/github-discussions/identus/76/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"iherman"},"dateModified":"2024-11-21T11:45:51-08:00","datePublished":"2024-10-21T07:31:35-07:00","description":"Working as expected","headline":"DRY principle for multikeys?","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/identus/76/"},"url":"/github-discussions/identus/76/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Improve Infrastructure provisioning | Identosphere's Github Discussions
+  <title>DRY principle for multikeys? | Identosphere's Github Discussions
   </title>
 
   <!--
@@ -435,7 +435,7 @@
         
           
             
-              <span>Improve Infrastructure provisioning</span>
+              <span>DRY principle for multikeys?</span>
             
 
           
@@ -523,93 +523,6 @@
   
 
   
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
-  
 
   
   
@@ -637,7 +550,7 @@
 
 <article class="px-1" data-toc="false">
   <header>
-    <h1 data-toc-skip>Improve Infrastructure provisioning</h1>
+    <h1 data-toc-skip>DRY principle for multikeys?</h1>
     
 
     <div class="post-meta text-muted">
@@ -696,7 +609,7 @@
       <div class="d-flex justify-content-between">
         
           <em>
-            <a href="https://github.com/elribonazo">@elribonazo</a>
+            <a href="https://github.com/iherman">@iherman</a>
           </em>
         
 
@@ -725,7 +638,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="143 words"
+  title="139 words"
 >
   <em>1 min</em> read</span>
 
@@ -739,33 +652,15 @@
   <div class="content">
     <p><strong>URL:</strong> https://github.com/hyperledger/identus/issues/76</p>
 
-<h3 id="short-description"><span class="me-2">Short Description</span><a href="#short-description" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>This issue is also valid for the EdDSA and BBS specifications.</p>
 
-<p>Improve the infrastructure provisioning by reducing the amount of services that are bundled by default + making those easier to configure and not require any specific SH configuration script. On top of that we also aim to make everything deployable from a single docker image and not require too many images.</p>
+<p>The <a href="https://www.w3.org/TR/vc-di-ecdsa/#multikey">§2.1.1 Multikey</a> section gives a (normative!) definition for Multikeys for the various versions of ECDSA. However, <em>section <a href="https://www.w3.org/TR/controller-document/#multikey">§2.2.2 Mulltikey</a> of the controller document</em> also defines (normatively!) not only the concept of Multikeys, but also its specific definitions for ECDSA/EdDSA/BBS.</p>
 
-<h3 id="value-statement"><span class="me-2">Value statement</span><a href="#value-statement" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>I think this is wrong, it violates the DRY principles and, worse, it may lead to discrepancies. (To be clear, I did not see any discrepancies today.) In the current setting of the various specifications, I believe the right place is the CD specification.</p>
 
-<p>Main goal behind this EPIC is to make our services easier to configure and maintain over time. For existing users, this will improve code maintenance and reduce the time spent on configuring the services and for our new users this will make it extremely easier to kick-off your project in Identus ecosystem. We mainly aim to reduce friction when it comes to configuring the services and get everything configured to start developing code.</p>
+<p>(Note that the DID spec possibly adopting Multikeys as one of the standard key representation. The Multikey definition is relevant for DID, the cryptosuites are not…)</p>
 
-<h3 id="components"><span class="me-2">Components</span><a href="#components" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="https://github.com/hyperledger/identus-cloud-agent">Cloud Agent</a></p>
-
-<h3 id="team-members"><span class="me-2">Team members</span><a href="#team-members" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p>@hyperledger/identus</p>
-
-<h3 id="architect"><span class="me-2">Architect</span><a href="#architect" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p>@hyperledger/identus-maintainers</p>
-
-<h3 id="qa-member"><span class="me-2">QA Member</span><a href="#qa-member" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p>@hyperledger/identus-maintainers</p>
-
-<h3 id="owner"><span class="me-2">Owner</span><a href="#owner" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p>@hyperledger/identus-maintainers</p>
+<p>In my view, the definition should be removed from the ECDSA (and EdDSA and BBS) specification.</p>
 
   </div>
 
@@ -773,12 +668,6 @@
       
       
           <h2>Comments</h2>
-          
-              <div class="comment">
-                  <h4><strong><a href="https://github.com/FabioPinheiro">@FabioPinheiro</a></strong> commented on <mark>2024-11-14</mark></h4>
-                  <p>I think with this https://github.com/hyperledger/identus/pull/85 it should be easy enough for anyone with zero knowledge to start.</p>
-
-              </div>
           
               <div class="comment">
                   <h4><strong><a href="https://github.com/amagyar-iohk">@amagyar-iohk</a></strong> commented on <mark>2024-11-20</mark></h4>
@@ -853,21 +742,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Improve%20Infrastructure%20provisioning%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fidentus%2F76%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=DRY%20principle%20for%20multikeys?%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fidentus%2F76%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Improve%20Infrastructure%20provisioning%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fidentus%2F76%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=DRY%20principle%20for%20multikeys?%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fidentus%2F76%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fidentus%2F76%2F&text=Improve%20Infrastructure%20provisioning%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fidentus%2F76%2F&text=DRY%20principle%20for%20multikeys?%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -922,35 +811,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus/86/">Cardano Connector for SDK</a>
+          <a href="/github-discussions/identus-docs/171/">Need guidance on mediator customization</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/uni-resolver-driver-did-key/9/">Many errors in rocksdb/_rocksdb.pyx cause build failure</a>
+          <a href="/github-discussions/vc-api/331/">Exporting the Pluto models on the SDK</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/did-extensions/597/">SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+          <a href="/github-discussions/vc-bitstring-status-list/173/">Retroactively sign-off Shota's commits</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/credential-schemas/4/">Add the identus release process</a>
+          <a href="/github-discussions/webauthn/2106/">Make `AuthenticatorAttestationResponseJSON.publicKeyAlgorithm` optional</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/github-discussions/did-extensions/590/">SPEC/PROCESS PROPOSAL: To secure a unique method name, require the registration of the corresponding Internet DNS name: did-<method>. directory </a>
+          <a href="/github-discussions/jsonld-common-java/13/">A few errors in the Example 11</a>
         </li>
       
     </ul>
@@ -1159,75 +1048,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1252,383 +1072,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1738,6 +1181,30 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1777,7 +1244,565 @@
     
     
     
+  
+    
+    
+    
+    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1809,25 +1834,25 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/vc-data-model/">vc-data-model</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/linked-vp/">linked-vp</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-trust-establishment/">credential-trust-establishment</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
     </div>
   </section>
@@ -1862,21 +1887,21 @@
 
   
     <a
-      href="/github-discussions/identus/75/"
+      href="/github-discussions/identus/73/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>DID management component discussion</p>
+      <p>Bug 27755 - Using the Subtle Crypto Interface with Streams</p>
     </a>
   
 
   
     <a
-      href="/github-discussions/webauthn/2187/"
+      href="/github-discussions/owl-agent-test-harness/881/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Remove authenticatorDisplayName from L3</p>
+      <p>Backchannels Moved to Framework Repos</p>
     </a>
   
 </nav>
@@ -2128,75 +2153,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2221,383 +2177,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2707,6 +2286,30 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2746,7 +2349,565 @@
     
     
     
+  
+    
+    
+    
+    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2778,25 +2939,25 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/vc-data-model/">vc-data-model</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/linked-vp/">linked-vp</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-trust-establishment/">credential-trust-establishment</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
       
     </div>
   </section>

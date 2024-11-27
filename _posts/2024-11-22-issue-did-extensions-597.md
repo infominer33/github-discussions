@@ -3,15 +3,13 @@ title: "SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing
 date: 2024-11-22 15:09:36 +0000
 author: mwherman2000
 excerpt: >
-  `attestation` is one suggestion for the name of this new field in a DID Method registration JSON document.
-  
-  ![image](https://github.com/user-attachments/assets/1aa64734-9db8-42df-998f-d2025b2c20d1)
+  Please don't use pictures of text when the text itself could be used.
 categories: w3c
 tags: did-extensions
 comments_file: did-extensions-issue-597_comments
 permalink: /did-extensions/597/
 url: https://github.com/w3c/did-extensions/issues/597
-last_modified_at: 2024-11-25 22:44:07 +0000
+last_modified_at: 2024-11-26 15:01:00 +0000
 ---
 
 

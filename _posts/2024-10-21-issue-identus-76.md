@@ -1,7 +1,7 @@
 ---
-title: "Improve Infrastructure provisioning"
+title: "DRY principle for multikeys?"
 date: 2024-10-21 14:31:35 +0000
-author: elribonazo
+author: iherman
 excerpt: >
   Working as expected
 categories: hyperledger
@@ -15,30 +15,12 @@ last_modified_at: 2024-11-21 19:45:51 +0000
 
 **URL:** https://github.com/hyperledger/identus/issues/76
 
-### Short Description
+This issue is also valid for the EdDSA and BBS specifications.
 
-Improve the infrastructure provisioning by reducing the amount of services that are bundled by default + making those easier to configure and not require any specific SH configuration script. On top of that we also aim to make everything deployable from a single docker image and not require too many images.
+The [§2.1.1 Multikey](https://www.w3.org/TR/vc-di-ecdsa/#multikey) section gives a (normative!) definition for Multikeys for the various versions of ECDSA. However, _section [§2.2.2 Mulltikey](https://www.w3.org/TR/controller-document/#multikey) of the controller document_ also defines (normatively!) not only the concept of Multikeys, but also its specific definitions for ECDSA/EdDSA/BBS.
 
-### Value statement
+I think this is wrong, it violates the DRY principles and, worse, it may lead to discrepancies. (To be clear, I did not see any discrepancies today.) In the current setting of the various specifications, I believe the right place is the CD specification. 
 
-Main goal behind this EPIC is to make our services easier to configure and maintain over time. For existing users, this will improve code maintenance and reduce the time spent on configuring the services and for our new users this will make it extremely easier to kick-off your project in Identus ecosystem. We mainly aim to reduce friction when it comes to configuring the services and get everything configured to start developing code.
+(Note that the DID spec possibly adopting Multikeys as one of the standard key representation. The Multikey definition is relevant for DID, the cryptosuites are not...) 
 
-### Components
-
-[Cloud Agent](https://github.com/hyperledger/identus-cloud-agent)
-
-### Team members
-
-@hyperledger/identus
-
-### Architect
-
-@hyperledger/identus-maintainers 
-
-### QA Member
-
-@hyperledger/identus-maintainers 
-
-### Owner
-
-@hyperledger/identus-maintainers 
+In my view, the definition should be removed from the ECDSA (and EdDSA and BBS) specification. 

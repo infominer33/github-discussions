@@ -1,0 +1,14 @@
+comment_id,user,date,body
+1853234641,kimdhamilton,2024-11-22T03:24:47+00:00,"```suggestion Well-known proof of personhood protocols include: - [Anima](https://www.animaidentity.com) - [BrightID](https://www.brightid.org/) - [Idena](https://www.idena.io/) - [Proof of Humanity](https://proofofhumanity.id/) - [WorldCoin](https://worldcoin.org/) -  [Humanode](https://humanode.io/) ```"
+1853234788,kimdhamilton,2024-11-22T03:25:05+00:00,Note: added these just for reference
+1853236896,kimdhamilton,2024-11-22T03:28:53+00:00,"```suggestion Outputs are described in Technical Goals ```"
+1853236951,kimdhamilton,2024-11-22T03:29:01+00:00,Just adding this for completeness
+1853236976,kimdhamilton,2024-11-22T03:29:05+00:00,"Question more for @andorsk and @ankurdotb : I can't remember what ""Unresolved Questions"" means -- is it previously unresolved questions that are expected to be addressed with "
+1853411930,andorsk,2024-11-22T07:39:51+00:00,I think this is important. Does DIF need to setup a cadence for this? I.e would you like to have people join in on a call once every 2 weeks to discuss this project? 
+1853412401,andorsk,2024-11-22T07:40:13+00:00,https://github.com/andorsk/awesome-proof-of-personhood <- for reference. 
+1853413383,andorsk,2024-11-22T07:40:59+00:00,Things that the project isn't sure how to handle and may need some help/guidance with.
+1854406344,ahache,2024-11-22T17:58:49+00:00,"Thanks Kim and good idea Andor, will remember to add some links in there"
+1854550363,ahache,2024-11-22T19:31:53+00:00,"Great, added a few known questions"
+1854561496,ahache,2024-11-22T19:43:09+00:00,Definitely open to providing a brief bi-weekly update on progress and blockers
+1857519783,andorsk,2024-11-26T00:47:59+00:00,"@ahache I had a conversation with @kimdhamilton about how the artifact is managed, and I would like to ask a quick question here:   Would you be open to handling the artifact the following way:  1. The protocol specification can live in a DIF repository, so it has the IPR protections and continues to live in DIF as an open source project regardless of where you end up going personally later. 2. All code/artifacts, however you want to manage them outside the protocol specification, can live anywhere else, and may be included into DIF if you would like.   Let me know if this works.  "
+1857715205,ahache,2024-11-26T03:23:23+00:00,"This sounds great @andorsk   I think it would be best if everything mentioned in the primary goals would be open and housed under DIF. It would probably also be useful to include the pilot Manager / Service Provider as a reference for anyone looking to use the protocol."

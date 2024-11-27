@@ -1,3 +1,2 @@
 comment_id,user,date,body
-2475965789,FabioPinheiro,2024-11-14T10:23:49+00:00,"@kieutuan218 thanks for the report. This is probably a bug. We had this problem before we fix it implemented and it seems that we break it again  @amagyar-iohk can you create to tests so we know when if someone breaks this in the future?  @mineme0110 do you have time to figure out where we are missing the check or why its not going to the correct credential state?"
 2488347888,mineme0110,2024-11-20T11:37:05+00:00,"This can be closed now https://github.com/hyperledger/identus-cloud-agent/pull/1453  "
