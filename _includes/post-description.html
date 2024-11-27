@@ -2,7 +2,7 @@
   Get post description or generate it from the post content.
 {%- endcomment -%}
 
-{%- assign max_length = include.max_length | default: 200 -%}
+{%- assign max_length = include.max_length | default: '500' -%}
 
 {%- capture description -%}
 {%- if post.description -%}
