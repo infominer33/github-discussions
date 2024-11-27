@@ -1,0 +1,36 @@
+---
+title: "The authenticator may hide the credential even if the RP signals unknown credentials"
+date: 2024-10-30 09:03:05 +0000
+author: Kieun
+excerpt: >
+  > Experience with HSTS preloading indicates that given the scale of the web, sharp APIs must have some way to undo damage from improper use. Many tears have been shed for a misplaced API call. Someone (probably, lots of people) may hold the API wrong and clear user passkeys.
+  
+  Understood. If it is the case, I recommend that the authenticator would notify the user that the recovered credential may not work when the user tries to restore the hidden credentials from the authenticator. 
+  What do you think so?
+  
+  We could add some notes around how authenticator may communicate with users when restoring the credential.
+categories: w3c
+tags: webauthn
+comments_file: webauthn-issue-2192_comments
+permalink: /webauthn/2192/
+url: https://github.com/w3c/webauthn/issues/2192
+last_modified_at: 2024-11-14 02:07:29 +0000
+---
+
+
+**URL:** https://github.com/w3c/webauthn/issues/2192
+
+## Proposed Change
+
+In the spec, there are some description and recommendation how the authenticator handles signal APIs.
+Currently, in many parts, there are description like this.
+
+> [WebAuthn Relying Parties](https://w3c.github.io/webauthn/#webauthn-relying-party) may use these signal methods to inform [authenticators](https://w3c.github.io/webauthn/#authenticator) of the state of [public key credentials](https://w3c.github.io/webauthn/#public-key-credential), so that incorrect or revoked credentials may be `updated, removed, or hidden`.
+
+The authenticator may decide not to remove the credential at the time of receiving the signal and it may remove it after certain amount of time passes. It implies that the credential would not delete the credential and for some reasons the hidden credential would be changed to active credential.
+
+In the case of the user directly goes through the authenticator dedicated UI and then delete the credential, it would not be reported to the RP and which causes credential mismatch. So, for this case, the authenticator would hide the credential if the user deletes the credential through menu and it would be restored depending on some cases, and it would still work without any issue.
+For this scenario, the hidden feature might be a good choice as an authenticator to prevent the credential is accidentally removed so that the user avoid user lock out case.
+
+However, for the signal APIs, RP indicates that the acceptable credentials with an intention, so It would be better for authenticators to delete or update credentials if it is required to meet the original requirement (synchronization between authenticators and RP).
+

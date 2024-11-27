@@ -4,7 +4,7 @@
   <id>/github-discussions/</id>
   <title>Identosphere's Github Discussions</title>
   <subtitle>Its more Self-Sovereign Identity Feeds</subtitle>
-  <updated>2024-11-26T16:59:59-08:00</updated>
+  <updated>2024-11-27T02:50:42-08:00</updated>
   <author>
     <name>DecentralizedID</name>
     <uri>/github-discussions/</uri>
@@ -20,140 +20,122 @@
 
   
   <entry>
-    <title>acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</title>
-    <link href="/github-discussions/acapy/issue/3353/" rel="alternate" type="text/html" title="acapy/issue/3353: ACA-Py failing to start, gives KeyError: &amp;apos;pattern&amp;apos;" />
+    <title>ACA-Py failing to start, gives KeyError: 'pattern'</title>
+    <link href="/github-discussions/acapy/3353/" rel="alternate" type="text/html" title="ACA-Py failing to start, gives KeyError: &amp;apos;pattern&amp;apos;" />
     <published>2024-11-25T07:25:18-08:00</published>
   
-    <updated>2024-11-25T07:25:18-08:00</updated>
+    <updated>2024-11-25T09:14:31-08:00</updated>
   
-    <id>/github-discussions/acapy/issue/3353/</id>
-    <content type="text/html" src="/github-discussions/acapy/issue/3353/" />
+    <id>/github-discussions/acapy/3353/</id>
+    <content type="text/html" src="/github-discussions/acapy/3353/" />
     <author>
       <name>nodlesh</name>
     </author>
 
   
     
-    <category term="OWF" />
+    <category term="openwallet-foundation" />
     
   
 
-  <summary>ACA-py started failing to start in the Interop Test Pipeline over the weekend. This is the error. The pipeline pull from main to build acapy.
-2024-11-25 15:13:18,787 acapy_agent.core.plugin_registry ERROR Module doesn&amp;#39;t exist: redis_events.v1_0.redis_queue.events
-2024-11-25 15:13:19,438 acapy_agent.commands.start ERROR Exception during startup:
-Traceback (most recent call last):
-  File &amp;quot;/usr/lo...</summary>
+  <summary>The default is the dev universal resolver. So it might be expected to have breaking changes. It&amp;#39;s an easy update in acapy. Creating a PR.</summary>
 
   </entry>
 
   
   <entry>
-    <title>identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</title>
-    <link href="/github-discussions/identus-mediator/issue/382/" rel="alternate" type="text/html" title="identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS" />
+    <title>Support for subdirectory in SERVICE_ENDPOINTS</title>
+    <link href="/github-discussions/identus-mediator/382/" rel="alternate" type="text/html" title="Support for subdirectory in SERVICE_ENDPOINTS" />
     <published>2024-11-23T16:04:25-08:00</published>
   
-    <updated>2024-11-23T16:04:25-08:00</updated>
+    <updated>2024-11-25T00:27:06-08:00</updated>
   
-    <id>/github-discussions/identus-mediator/issue/382/</id>
-    <content type="text/html" src="/github-discussions/identus-mediator/issue/382/" />
+    <id>/github-discussions/identus-mediator/382/</id>
+    <content type="text/html" src="/github-discussions/identus-mediator/382/" />
     <author>
       <name>robertocarvajal</name>
     </author>
 
   
     
-    <category term="W3C" />
+    <category term="hyperledger" />
     
   
 
-  <summary>Sometimes is desirable to run the mediator endpoint in a subdirectory of a webapp to avoid CORS issues, for example, defining SERVICE_ENDPOINTS=&amp;#39;https://www.myapp.com/mediator&amp;#39;. If you setup the ProxyPass on webserver correctly, when you try to load the endpoint it fails trying to load https://www.myapp.com/public/webapp-fastopt-bundle.js because the mediator server endpoint is assuming the SER...</summary>
+  <summary>Yes, forgot to mention, the service seems to still work but the webpage doesn&amp;#39;t render.</summary>
 
   </entry>
 
   
   <entry>
-    <title>did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</title>
-    <link href="/github-discussions/did-extensions/issue/597/" rel="alternate" type="text/html" title="did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches" />
+    <title>SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</title>
+    <link href="/github-discussions/did-extensions/597/" rel="alternate" type="text/html" title="SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches" />
     <published>2024-11-22T07:09:36-08:00</published>
   
-    <updated>2024-11-22T07:09:36-08:00</updated>
+    <updated>2024-11-25T14:44:07-08:00</updated>
   
-    <id>/github-discussions/did-extensions/issue/597/</id>
-    <content type="text/html" src="/github-discussions/did-extensions/issue/597/" />
+    <id>/github-discussions/did-extensions/597/</id>
+    <content type="text/html" src="/github-discussions/did-extensions/597/" />
     <author>
       <name>mwherman2000</name>
     </author>
 
   
     
-    <category term="W3C" />
+    <category term="w3c" />
     
   
 
-  <summary>@msporny proposed restricted approach here: https://github.com/w3c/did-extensions/issues/595
-
-In this Super/Meta Proposal, I want to suggest that the DID method registration section in the spec be modified to support more than one Authentication of unique DID Method names approach that covers the following objectives:
-
-  Removes the burden from the reviewers
-  Removes the W3C from having to arb...</summary>
+  <summary>`attestation` is one suggestion for the name of this new field in a DID Method registration JSON document.
+![image](https://github.com/user-attachments/assets/1aa64734-9db8-42df-998f-d2025b2c20d1)</summary>
 
   </entry>
 
   
   <entry>
-    <title>acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</title>
-    <link href="/github-discussions/acapy/pr/3344/" rel="alternate" type="text/html" title="acapy/pr/3344: Restore `--base-wallet-routes` flag functionality" />
+    <title>Restore `--base-wallet-routes` flag functionality</title>
+    <link href="/github-discussions/acapy/3344/" rel="alternate" type="text/html" title="Restore `--base-wallet-routes` flag functionality" />
     <published>2024-11-21T10:21:14-08:00</published>
   
-    <updated>2024-11-21T10:21:14-08:00</updated>
+    <updated>2024-11-21T11:25:31-08:00</updated>
   
-    <id>/github-discussions/acapy/pr/3344/</id>
-    <content type="text/html" src="/github-discussions/acapy/pr/3344/" />
+    <id>/github-discussions/acapy/3344/</id>
+    <content type="text/html" src="/github-discussions/acapy/3344/" />
     <author>
       <name>esune</name>
     </author>
 
   
     
-    <category term="OWF" />
+    <category term="openwallet-foundation" />
     
   
 
-  <summary>Resolves #3283
-
-The tenant_authentication has been updated to also allow access to the base wallet when the route matches a path defined using --base-wallet-routes.
-
-Please note that, when compared to the previous implementation, the matcher has been made more greedy to tighten security: if an extra route of /test is specified, the matcher will only match that and not /testA or /test-something-...</summary>
+  <summary>Actually just noticed a tiny spelling error here. Might as well fix it.</summary>
 
   </entry>
 
   
   <entry>
-    <title>webauthn/issue/2211: CR: Need a way to detect "cancel"</title>
-    <link href="/github-discussions/webauthn/issue/2211/" rel="alternate" type="text/html" title="webauthn/issue/2211: CR: Need a way to detect &amp;quot;cancel&amp;quot;" />
+    <title>CR: Need a way to detect "cancel"</title>
+    <link href="/github-discussions/webauthn/2211/" rel="alternate" type="text/html" title="CR: Need a way to detect &amp;quot;cancel&amp;quot;" />
     <published>2024-11-21T09:31:50-08:00</published>
   
-    <updated>2024-11-21T09:31:50-08:00</updated>
+    <updated>2024-11-21T09:38:36-08:00</updated>
   
-    <id>/github-discussions/webauthn/issue/2211/</id>
-    <content type="text/html" src="/github-discussions/webauthn/issue/2211/" />
+    <id>/github-discussions/webauthn/2211/</id>
+    <content type="text/html" src="/github-discussions/webauthn/2211/" />
     <author>
       <name>hemanth</name>
     </author>
 
   
     
-    <category term="W3C" />
+    <category term="w3c" />
     
   
 
-  <summary>Proposed Change
-
-Need a way to programmatically detect when the user has cancelled the “Use passkey from another device” browser native prompt by clicking the “Cancel” button. This could be achieved by adding a new property or event to the prompt that indicates whether the user has cancelled the prompt.
-
-
-
-^ the “cancel” button there.</summary>
+  <summary>`NotAllowedError` can also be returned synchronously without user interaction?</summary>
 
   </entry>
 

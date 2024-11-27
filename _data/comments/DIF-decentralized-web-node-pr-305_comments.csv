@@ -1,3 +1,0 @@
-comment_id,user,date,body
-1842246378,elribonazo,2024-11-14T13:44:33+00:00,Proposing to change 'https://didcomm.org/issue-credential/3.0/offer-credential' to SDK.ProtocolType.DidcommOfferCredential
-1842246679,elribonazo,2024-11-14T13:44:45+00:00,"Propose to replace it from 'https://didcomm.org/issue-credential/3.0/issue-credential' to SDK.ProtocolType.DidcommIssueCredential"

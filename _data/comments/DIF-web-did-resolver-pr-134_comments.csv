@@ -1,5 +1,0 @@
-comment_id,user,date,body
-1841144885,BigBlueHat,2024-11-13T20:52:52+00:00,"I updated this one, but am holding off on a larger exact match project. We can update these if/when/as we find deviations."
-1841145448,BigBlueHat,2024-11-13T20:53:21+00:00,"Going for shippable, and holding off on a full scrub of API use at this point. We can revisit if needed."
-1847402800,PatStLouis,2024-11-18T23:10:44+00:00,"```suggestion   ""problemDetails"": [] ```"
-1847403319,PatStLouis,2024-11-18T23:11:11+00:00,"```suggestion   ""problemDetails"": [] ```"

@@ -1,18 +1,0 @@
----
-title: "dpv/issue/184: Typos in docs"
-date: 2024-08-24 17:03:12 +0000
-author: chereseeriepa
-categories: ["Hyperledger"]
-tags: ["dpv"]
-permalink: /dpv/issue/184/
-comments_file: Hyperledger-dpv-issue-184_comments
-excerpt: >
-  Thanks for the response @msporny.    From specification perspective for now could be useful for everyone to be aware of such scenario by:  1. Changing one of the example to include the `credentialStatus` as an array with multiple `BitstringStatusList` entries and another entry with type other than `BitstringStatusList`.  2. Have explicitly written the expected behaviour, example: \"first entry in the array that matches the `statusPurpose`\". This way, issuers and verifiers will be aware what to expect and aware what would happen if there are double entries.    As for a way to make this work better, I don't see another path forward as for adding additional binding identification parameter both to `BitstringStatusList` and `BitstringStatusListEntry`. Not sure how much desire there is for this, as the thing being handled here is incorrect usage of the feature.
----
-The quick start docs are showing typos.
-
-https://github.com/hyperledger/identus-docs/blame/ad4c0a07d4cdb2ca8c369e6dd40e4bd2db2084fc/documentation/docs/quick-start.md#L655
-
-<img width="830" alt="image" src="https://github.com/user-attachments/assets/d7428928-b8d8-4612-a8c2-8dba5174b8f6">
-
-<img width="824" alt="image" src="https://github.com/user-attachments/assets/556b92e9-592c-4531-ae40-43c48ef20534">

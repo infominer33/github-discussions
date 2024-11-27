@@ -1,0 +1,76 @@
+---
+title: "Verifiable Credential Issued in JWT uses longform of prism DID in the iss field of JWT"
+date: 2024-11-18 13:19:24 +0000
+author: mineme0110
+excerpt: >
+  CC @FabioPinheiro  @elribonazo @yshyn-iohk @goncalo-frade-iohk 
+categories: hyperledger
+tags: identus-cloud-agent
+comments_file: identus-cloud-agent-issue-1451_comments
+permalink: /identus-cloud-agent/1451/
+url: https://github.com/hyperledger/identus-cloud-agent/issues/1451
+last_modified_at: 2024-11-18 13:20:53 +0000
+---
+
+
+**URL:** https://github.com/hyperledger/identus-cloud-agent/issues/1451
+
+### Is this a regression?
+
+No
+
+### Description
+
+
+A Verifiable Credential issued in JWT format currently uses the long-form of a Prism DID in the iss field of the JWT. We should update this to use the short-form Prism DID instead. Below is an example of a VC issued in JWT format, and upon decoding, the iss field displays the long-form DID
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJFZERTQSJ9.eyJpc3MiOiJkaWQ6cHJpc206ZjJlYmVjZjFiNWU5NGVkZDZiMGZjNDU2Y2UyZmJhMGNiNzhhMTczNTJlMWFmNWNkODZlMmZhMDJhZDdhOGQ3NzpDcHNDQ3BnQ0VrWUtGVzE1TFd0bGVTMWhkWFJvWlc1MGFXTmhkR2x2YmhBRVNpc0tCMFZrTWpVMU1Ua1NJTm5oaGZqLXQxd3VBaktIVDNtWU1RNDRRTXF3SjRsbzRIT2RrTk1jSUF4bkVrY0tGbTE1TFd0bGVTMWhjM05sY25ScGIyNU5aWFJvYjJRUUFrb3JDZ2RGWkRJMU5URTVFaUNib00yRFJuYS0tWHRGT19FMzRFV2hUYTM0TGpGRDdGZEUzcW55Wk10NXVCSTdDZ2R0WVhOMFpYSXdFQUZLTGdvSmMyVmpjREkxTm1zeEVpRUMxZm9wYXVQLUt6LTdzelpGV0FuZl94RWlGOVlPU2NTNkNmbXZRbTdQV1JzYVNBb09ZV2RsYm5RdFltRnpaUzExY213U0VFeHBibXRsWkZKbGMyOTFjbU5sVmpFYUpHaDBkSEE2THk4eE9USXVNVFk0TGpFdU9EWTZPREF3TUM5amJHOTFaQzFoWjJWdWRBIiwic3ViIjoiZGlkOnByaXNtOmNlMzA3NzUxOTZmZTQ0OWY2NzMxZGRhMmVhZmVlMWE2MjBmZWUyMjRhN2U2ZjYzMWJhNzQ4YWZjYTYxNTUwOTM6Q3BjQ0NwUUNFajhLQzIxNUxXRjFkR2d0YTJWNUVBUktMZ29KYzJWamNESTFObXN4RWlFQzJxSFZFYXdibFZkOG5uR044SE1ocEhwZkZkMFRSTHVSWTlHVS13MFpQdGNTU2dvV2JYa3RhMlY1TFdGemMyVnlkR2x2YmsxbGRHaHZaQkFDU2k0S0NYTmxZM0F5TlRack1SSWhBNUc5TVdOUlJyOFNIeFNIYWgxY3ZqN2VYZHNZelcteC1lcVZBV3NUeFBjeUVqc0tCMjFoYzNSbGNqQVFBVW91Q2dselpXTndNalUyYXpFU0lRTW1MbTVtSGpXTXVGNVJabjRWYjFqNGhHdEhJc1FodDF3SFZDd3YxUXYxWlJwSUNnNWhaMlZ1ZEMxaVlYTmxMWFZ5YkJJUVRHbHVhMlZrVW1WemIzVnlZMlZXTVJva2FIUjBjRG92THpFNU1pNHhOamd1TVM0NE5qbzVNREF3TDJOc2IzVmtMV0ZuWlc1MCIsIm5iZiI6MTczMTkyNzE5NSwiZXhwIjoxNzMxOTMwNzk1LCJ2YyI6eyJjcmVkZW50aWFsU2NoZW1hIjpbeyJpZCI6Imh0dHA6XC9cLzE5Mi4xNjguMS44Njo4MDAwXC9jbG91ZC1hZ2VudFwvc2NoZW1hLXJlZ2lzdHJ5XC9zY2hlbWFzXC83YjRiMGYyMy1kOTk1LTNlN2EtYmY5ZC0xOWJiZTEwZTJkNGIiLCJ0eXBlIjoiQ3JlZGVudGlhbFNjaGVtYTIwMjIifV0sImNyZWRlbnRpYWxTdWJqZWN0Ijp7ImVtYWlsQWRkcmVzcyI6ImFsaWNlQHdvbmRlcmxhbmQuY29tIiwiZHJpdmluZ0NsYXNzIjozLCJmYW1pbHlOYW1lIjoiV29uZGVybGFuZCIsImdpdmVuTmFtZSI6IkFsaWNlIiwiZHJpdmluZ0xpY2Vuc2VJRCI6IjEyMzQ1IiwiaWQiOiJkaWQ6cHJpc206Y2UzMDc3NTE5NmZlNDQ5ZjY3MzFkZGEyZWFmZWUxYTYyMGZlZTIyNGE3ZTZmNjMxYmE3NDhhZmNhNjE1NTA5MzpDcGNDQ3BRQ0VqOEtDMjE1TFdGMWRHZ3RhMlY1RUFSS0xnb0pjMlZqY0RJMU5tc3hFaUVDMnFIVkVhd2JsVmQ4bm5HTjhITWhwSHBmRmQwVFJMdVJZOUdVLXcwWlB0Y1NTZ29XYlhrdGEyVjVMV0Z6YzJWeWRHbHZiazFsZEdodlpCQUNTaTRLQ1hObFkzQXlOVFpyTVJJaEE1RzlNV05SUnI4U0h4U0hhaDFjdmo3ZVhkc1l6Vy14LWVxVkFXc1R4UGN5RWpzS0IyMWhjM1JsY2pBUUFVb3VDZ2x6WldOd01qVTJhekVTSVFNbUxtNW1IaldNdUY1UlpuNFZiMWo0aEd0SElzUWh0MXdIVkN3djFRdjFaUnBJQ2c1aFoyVnVkQzFpWVhObExYVnliQklRVEdsdWEyVmtVbVZ6YjNWeVkyVldNUm9rYUhSMGNEb3ZMekU1TWk0eE5qZ3VNUzQ0TmpvNU1EQXdMMk5zYjNWa0xXRm5aVzUwIiwiZGF0ZU9mSXNzdWFuY2UiOiIyMDIwLTExLTEzVDIwOjIwOjM5KzAwOjAwIn0sInR5cGUiOlsiVmVyaWZpYWJsZUNyZWRlbnRpYWwiXSwiQGNvbnRleHQiOlsiaHR0cHM6XC9cL3d3dy53My5vcmdcLzIwMThcL2NyZWRlbnRpYWxzXC92MSJdLCJpc3N1ZXIiOnsiaWQiOiJkaWQ6cHJpc206ZjJlYmVjZjFiNWU5NGVkZDZiMGZjNDU2Y2UyZmJhMGNiNzhhMTczNTJlMWFmNWNkODZlMmZhMDJhZDdhOGQ3NzpDcHNDQ3BnQ0VrWUtGVzE1TFd0bGVTMWhkWFJvWlc1MGFXTmhkR2x2YmhBRVNpc0tCMFZrTWpVMU1Ua1NJTm5oaGZqLXQxd3VBaktIVDNtWU1RNDRRTXF3SjRsbzRIT2RrTk1jSUF4bkVrY0tGbTE1TFd0bGVTMWhjM05sY25ScGIyNU5aWFJvYjJRUUFrb3JDZ2RGWkRJMU5URTVFaUNib00yRFJuYS0tWHRGT19FMzRFV2hUYTM0TGpGRDdGZEUzcW55Wk10NXVCSTdDZ2R0WVhOMFpYSXdFQUZLTGdvSmMyVmpjREkxTm1zeEVpRUMxZm9wYXVQLUt6LTdzelpGV0FuZl94RWlGOVlPU2NTNkNmbXZRbTdQV1JzYVNBb09ZV2RsYm5RdFltRnpaUzExY213U0VFeHBibXRsWkZKbGMyOTFjbU5sVmpFYUpHaDBkSEE2THk4eE9USXVNVFk0TGpFdU9EWTZPREF3TUM5amJHOTFaQzFoWjJWdWRBIiwidHlwZSI6IlByb2ZpbGUifSwiY3JlZGVudGlhbFN0YXR1cyI6eyJzdGF0dXNQdXJwb3NlIjoiUmV2b2NhdGlvbiIsInN0YXR1c0xpc3RJbmRleCI6MiwiaWQiOiJodHRwOlwvXC8xOTIuMTY4LjEuODY6ODAwMFwvY2xvdWQtYWdlbnRcL2NyZWRlbnRpYWwtc3RhdHVzXC9hNzFiMjY0Ni1hZjlkLTQ0NTMtOTdiZC00ODI1YWVjMzFkMmMjMiIsInR5cGUiOiJTdGF0dXNMaXN0MjAyMUVudHJ5Iiwic3RhdHVzTGlzdENyZWRlbnRpYWwiOiJodHRwOlwvXC8xOTIuMTY4LjEuODY6ODAwMFwvY2xvdWQtYWdlbnRcL2NyZWRlbnRpYWwtc3RhdHVzXC9hNzFiMjY0Ni1hZjlkLTQ0NTMtOTdiZC00ODI1YWVjMzFkMmMifX19.BlhAJdhgJO58y17Xe21iKnOkrj2JNcK_R2tfUAfCh_KO8jjOepCVLZWJWqcV--XkBMraUJCT8R4H1KhIlAIyBQ
+
+```{
+  "iss": "did:prism:f2ebecf1b5e94edd6b0fc456ce2fba0cb78a17352e1af5cd86e2fa02ad7a8d77:CpsCCpgCEkYKFW15LWtleS1hdXRoZW50aWNhdGlvbhAESisKB0VkMjU1MTkSINnhhfj-t1wuAjKHT3mYMQ44QMqwJ4lo4HOdkNMcIAxnEkcKFm15LWtleS1hc3NlcnRpb25NZXRob2QQAkorCgdFZDI1NTE5EiCboM2DRna--XtFO_E34EWhTa34LjFD7FdE3qnyZMt5uBI7CgdtYXN0ZXIwEAFKLgoJc2VjcDI1NmsxEiEC1fopauP-Kz-7szZFWAnf_xEiF9YOScS6CfmvQm7PWRsaSAoOYWdlbnQtYmFzZS11cmwSEExpbmtlZFJlc291cmNlVjEaJGh0dHA6Ly8xOTIuMTY4LjEuODY6ODAwMC9jbG91ZC1hZ2VudA",
+  "sub": "did:prism:ce30775196fe449f6731dda2eafee1a620fee224a7e6f631ba748afca6155093:CpcCCpQCEj8KC215LWF1dGgta2V5EARKLgoJc2VjcDI1NmsxEiEC2qHVEawblVd8nnGN8HMhpHpfFd0TRLuRY9GU-w0ZPtcSSgoWbXkta2V5LWFzc2VydGlvbk1ldGhvZBACSi4KCXNlY3AyNTZrMRIhA5G9MWNRRr8SHxSHah1cvj7eXdsYzW-x-eqVAWsTxPcyEjsKB21hc3RlcjAQAUouCglzZWNwMjU2azESIQMmLm5mHjWMuF5RZn4Vb1j4hGtHIsQht1wHVCwv1Qv1ZRpICg5hZ2VudC1iYXNlLXVybBIQTGlua2VkUmVzb3VyY2VWMRokaHR0cDovLzE5Mi4xNjguMS44Njo5MDAwL2Nsb3VkLWFnZW50",
+  "nbf": 1731927195,
+  "exp": 1731930795,
+  "vc": {
+    "credentialSchema": [
+      {
+        "id": "http://192.168.1.86:8000/cloud-agent/schema-registry/schemas/7b4b0f23-d995-3e7a-bf9d-19bbe10e2d4b",
+        "type": "CredentialSchema2022"
+      }
+    ],
+    "credentialSubject": {
+      "emailAddress": "alice@wonderland.com",
+      "drivingClass": 3,
+      "familyName": "Wonderland",
+      "givenName": "Alice",
+      "drivingLicenseID": "12345",
+      "id": "did:prism:ce30775196fe449f6731dda2eafee1a620fee224a7e6f631ba748afca6155093:CpcCCpQCEj8KC215LWF1dGgta2V5EARKLgoJc2VjcDI1NmsxEiEC2qHVEawblVd8nnGN8HMhpHpfFd0TRLuRY9GU-w0ZPtcSSgoWbXkta2V5LWFzc2VydGlvbk1ldGhvZBACSi4KCXNlY3AyNTZrMRIhA5G9MWNRRr8SHxSHah1cvj7eXdsYzW-x-eqVAWsTxPcyEjsKB21hc3RlcjAQAUouCglzZWNwMjU2azESIQMmLm5mHjWMuF5RZn4Vb1j4hGtHIsQht1wHVCwv1Qv1ZRpICg5hZ2VudC1iYXNlLXVybBIQTGlua2VkUmVzb3VyY2VWMRokaHR0cDovLzE5Mi4xNjguMS44Njo5MDAwL2Nsb3VkLWFnZW50",
+      "dateOfIssuance": "2020-11-13T20:20:39+00:00"
+    },
+    "type": [
+      "VerifiableCredential"
+    ],
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1"
+    ],
+    "issuer": {
+      "id": "did:prism:f2ebecf1b5e94edd6b0fc456ce2fba0cb78a17352e1af5cd86e2fa02ad7a8d77:CpsCCpgCEkYKFW15LWtleS1hdXRoZW50aWNhdGlvbhAESisKB0VkMjU1MTkSINnhhfj-t1wuAjKHT3mYMQ44QMqwJ4lo4HOdkNMcIAxnEkcKFm15LWtleS1hc3NlcnRpb25NZXRob2QQAkorCgdFZDI1NTE5EiCboM2DRna--XtFO_E34EWhTa34LjFD7FdE3qnyZMt5uBI7CgdtYXN0ZXIwEAFKLgoJc2VjcDI1NmsxEiEC1fopauP-Kz-7szZFWAnf_xEiF9YOScS6CfmvQm7PWRsaSAoOYWdlbnQtYmFzZS11cmwSEExpbmtlZFJlc291cmNlVjEaJGh0dHA6Ly8xOTIuMTY4LjEuODY6ODAwMC9jbG91ZC1hZ2VudA",
+      "type": "Profile"
+    },
+    "credentialStatus": {
+      "statusPurpose": "Revocation",
+      "statusListIndex": 2,
+      "id": "http://192.168.1.86:8000/cloud-agent/credential-status/a71b2646-af9d-4453-97bd-4825aec31d2c#2",
+      "type": "StatusList2021Entry",
+      "statusListCredential": "http://192.168.1.86:8000/cloud-agent/credential-status/a71b2646-af9d-4453-97bd-4825aec31d2c"
+    }
+  }
+}``
+
+### Please provide the exception or error you saw
+
+NA
+
+### Please provide the environment you discovered this bug in
+
+NA
