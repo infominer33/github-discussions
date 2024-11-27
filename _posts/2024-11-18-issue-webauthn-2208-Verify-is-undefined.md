@@ -6,10 +6,9 @@ categories: ["W3C"]
 tags: ["webauthn"]
 permalink: /webauthn/issue/2208/
 comments_file: W3C-webauthn-issue-2208_comments
+excerpt: >
+  If you want to record an error or return from the algorithm with some kind of error you need to actually state that.
 ---
-
-[_https://github.com/w3c/webauthn/issues/2208_](https://github.com/w3c/webauthn/issues/2208)
-
 For example, https://w3c.github.io/webauthn/#sctn-registering-a-new-credential has a step that reads
 
 > Verify that the value of C.[type](https://w3c.github.io/webauthn/#dom-collectedclientdata-type) is webauthn.create.

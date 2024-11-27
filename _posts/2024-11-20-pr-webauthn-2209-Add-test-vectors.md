@@ -6,10 +6,9 @@ categories: ["W3C"]
 tags: ["webauthn"]
 permalink: /webauthn/pr/2209/
 comments_file: W3C-webauthn-pr-2209_comments
+excerpt: >
+  For these next 3 sections, I'm assuming no attestation is used despite the existence of the variables `attestation_private_key` and `attestation_cert_serial_number`? If so, it would be nice to add that in the section names. If they do have attestation, then the actual attestation should be added. For example if no attestation is used, this section should be called 'ES256 Credential with No Attestation and \"crossOrigin\": true in clientDataJSON'. Additionally like my first comment, it's less confusing if `attestation_private_key` and `attestation_cert_serial_number` were removed.    I say this since it's not uncommon for RPs to not support attestation—at least non-self attestation—and it would be nice to immediately know which tests are inapplicable/need-to-be-amended without actually parsing `attestationObject` to see if and what attestation is used.
 ---
-
-[_https://github.com/w3c/webauthn/pull/2209_](https://github.com/w3c/webauthn/pull/2209)
-
 Closes #1633. Sorry it took so long!
 
 The test vectors proposed in #1633 use RP IDs of real websites unaffiliated with W3C, which felt out of place to me, so I chose to generate new ones instead. Also in order to pre-empt any worry that there could be something nefarious hidden in these values, they are all generated deterministically from disclosed PRNG seeds. Consequently the attestation statements are synthetic values rather than real attestations from the corresponding trusted source, which unfortunately means there's more room for error, but I think it's worth it to have the examples self-contained and transparent. I invite library authors to try running their registration and authentication procedures on these examples so that we may work out any inconsistencies.

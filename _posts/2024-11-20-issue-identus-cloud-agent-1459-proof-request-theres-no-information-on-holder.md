@@ -6,10 +6,9 @@ categories: ["Hyperledger"]
 tags: ["identus-cloud-agent"]
 permalink: /identus-cloud-agent/issue/1459/
 comments_file: Hyperledger-identus-cloud-agent-issue-1459_comments
+excerpt: >
+  Is this a priority
 ---
-
-[_https://github.com/hyperledger/identus-cloud-agent/issues/1459_](https://github.com/hyperledger/identus-cloud-agent/issues/1459)
-
 ### Is this a regression?
 
 NO

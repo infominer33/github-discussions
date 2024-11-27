@@ -4,7 +4,7 @@
   <id>/github-discussions/</id>
   <title>Identosphere's Github Discussions</title>
   <subtitle>Its more Self-Sovereign Identity Feeds</subtitle>
-  <updated>2024-11-22T04:49:53-08:00</updated>
+  <updated>2024-11-26T16:59:59-08:00</updated>
   <author>
     <name>DecentralizedID</name>
     <uri>/github-discussions/</uri>
@@ -17,6 +17,87 @@
   <icon>/github-discussions/assets/img/favicons/favicon.ico</icon>
   <logo>/github-discussions/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</title>
+    <link href="/github-discussions/acapy/issue/3353/" rel="alternate" type="text/html" title="acapy/issue/3353: ACA-Py failing to start, gives KeyError: &amp;apos;pattern&amp;apos;" />
+    <published>2024-11-25T07:25:18-08:00</published>
+  
+    <updated>2024-11-25T07:25:18-08:00</updated>
+  
+    <id>/github-discussions/acapy/issue/3353/</id>
+    <content type="text/html" src="/github-discussions/acapy/issue/3353/" />
+    <author>
+      <name>nodlesh</name>
+    </author>
+
+  
+    
+    <category term="OWF" />
+    
+  
+
+  <summary>ACA-py started failing to start in the Interop Test Pipeline over the weekend. This is the error. The pipeline pull from main to build acapy.
+2024-11-25 15:13:18,787 acapy_agent.core.plugin_registry ERROR Module doesn&amp;#39;t exist: redis_events.v1_0.redis_queue.events
+2024-11-25 15:13:19,438 acapy_agent.commands.start ERROR Exception during startup:
+Traceback (most recent call last):
+  File &amp;quot;/usr/lo...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</title>
+    <link href="/github-discussions/identus-mediator/issue/382/" rel="alternate" type="text/html" title="identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS" />
+    <published>2024-11-23T16:04:25-08:00</published>
+  
+    <updated>2024-11-23T16:04:25-08:00</updated>
+  
+    <id>/github-discussions/identus-mediator/issue/382/</id>
+    <content type="text/html" src="/github-discussions/identus-mediator/issue/382/" />
+    <author>
+      <name>robertocarvajal</name>
+    </author>
+
+  
+    
+    <category term="W3C" />
+    
+  
+
+  <summary>Sometimes is desirable to run the mediator endpoint in a subdirectory of a webapp to avoid CORS issues, for example, defining SERVICE_ENDPOINTS=&amp;#39;https://www.myapp.com/mediator&amp;#39;. If you setup the ProxyPass on webserver correctly, when you try to load the endpoint it fails trying to load https://www.myapp.com/public/webapp-fastopt-bundle.js because the mediator server endpoint is assuming the SER...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</title>
+    <link href="/github-discussions/did-extensions/issue/597/" rel="alternate" type="text/html" title="did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches" />
+    <published>2024-11-22T07:09:36-08:00</published>
+  
+    <updated>2024-11-22T07:09:36-08:00</updated>
+  
+    <id>/github-discussions/did-extensions/issue/597/</id>
+    <content type="text/html" src="/github-discussions/did-extensions/issue/597/" />
+    <author>
+      <name>mwherman2000</name>
+    </author>
+
+  
+    
+    <category term="W3C" />
+    
+  
+
+  <summary>@msporny proposed restricted approach here: https://github.com/w3c/did-extensions/issues/595
+
+In this Super/Meta Proposal, I want to suggest that the DID method registration section in the spec be modified to support more than one Authentication of unique DID Method names approach that covers the following objectives:
+
+  Removes the burden from the reviewers
+  Removes the W3C from having to arb...</summary>
+
+  </entry>
 
   
   <entry>
@@ -38,13 +119,11 @@
     
   
 
-  <summary>https://github.com/openwallet-foundation/acapy/pull/3344
-
-Resolves #3283
+  <summary>Resolves #3283
 
 The tenant_authentication has been updated to also allow access to the base wallet when the route matches a path defined using --base-wallet-routes.
 
-Please note that, when compared to the previous implementation, the matcher has been made more greedy to tighten security: if an extra route of /test is specified, the match...</summary>
+Please note that, when compared to the previous implementation, the matcher has been made more greedy to tighten security: if an extra route of /test is specified, the matcher will only match that and not /testA or /test-something-...</summary>
 
   </entry>
 
@@ -68,112 +147,13 @@ Please note that, when compared to the previous implementation, the matcher has 
     
   
 
-  <summary>https://github.com/w3c/webauthn/issues/2211
-
-Proposed Change
+  <summary>Proposed Change
 
 Need a way to programmatically detect when the user has cancelled the “Use passkey from another device” browser native prompt by clicking the “Cancel” button. This could be achieved by adding a new property or event to the prompt that indicates whether the user has cancelled the prompt.
 
 
 
 ^ the “cancel” button there.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>webauthn/pr/2209: Add test vectors</title>
-    <link href="/github-discussions/webauthn/pr/2209/" rel="alternate" type="text/html" title="webauthn/pr/2209: Add test vectors" />
-    <published>2024-11-20T10:38:52-08:00</published>
-  
-    <updated>2024-11-20T10:38:52-08:00</updated>
-  
-    <id>/github-discussions/webauthn/pr/2209/</id>
-    <content type="text/html" src="/github-discussions/webauthn/pr/2209/" />
-    <author>
-      <name>emlun</name>
-    </author>
-
-  
-    
-    <category term="W3C" />
-    
-  
-
-  <summary>https://github.com/w3c/webauthn/pull/2209
-
-Closes #1633. Sorry it took so long!
-
-The test vectors proposed in #1633 use RP IDs of real websites unaffiliated with W3C, which felt out of place to me, so I chose to generate new ones instead. Also in order to pre-empt any worry that there could be something nefarious hidden in these values, they are all generated deterministically from disclosed PR...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>identus-cloud-agent/issue/1459:  proof request there's no information on holder </title>
-    <link href="/github-discussions/identus-cloud-agent/issue/1459/" rel="alternate" type="text/html" title="identus-cloud-agent/issue/1459:  proof request there&amp;apos;s no information on holder " />
-    <published>2024-11-20T02:34:25-08:00</published>
-  
-    <updated>2024-11-20T02:34:25-08:00</updated>
-  
-    <id>/github-discussions/identus-cloud-agent/issue/1459/</id>
-    <content type="text/html" src="/github-discussions/identus-cloud-agent/issue/1459/" />
-    <author>
-      <name>mineme0110</name>
-    </author>
-
-  
-    
-    <category term="Hyperledger" />
-    
-  
-
-  <summary>https://github.com/hyperledger/identus-cloud-agent/issues/1459
-
-Is this a regression?
-
-NO
-
-Description
-
-Right know when we have a proof request there’s no information on holder side of what’s being requested.
-
-Holder webhook data:
-
-PresentationStatusAdapter(presentationId=94acbe0f-ed87-4477-9757-4b4ba8c3461d, thid=d080d2b5-0498-42aa-a829-22cf021ff3cf, role=PROVER, status=REQUEST_RECEIVED, metaR...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>acapy/issue/3343: DID Management Proposed Update</title>
-    <link href="/github-discussions/acapy/issue/3343/" rel="alternate" type="text/html" title="acapy/issue/3343: DID Management Proposed Update" />
-    <published>2024-11-19T08:58:08-08:00</published>
-  
-    <updated>2024-11-19T08:58:08-08:00</updated>
-  
-    <id>/github-discussions/acapy/issue/3343/</id>
-    <content type="text/html" src="/github-discussions/acapy/issue/3343/" />
-    <author>
-      <name>dbluhm</name>
-    </author>
-
-  
-    
-    <category term="OWF" />
-    
-  
-
-  <summary>https://github.com/openwallet-foundation/acapy/issues/3343
-
-In light of our current push to add support for more DID Methods to ACA-Py, some primitives within ACA-Py need some updates. This issue outlines the updates I propose. I plan to update this further as the topic is discussed or as implementations better inform decisions.
-
-Proposed Updates
-
-DID Storage (updating DIDInfo)
-
-Current State
-A...</summary>
 
   </entry>
 

@@ -30,26 +30,26 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="org/issue/33: Distinction between the definitions of Verification and Authentication" />
-<meta name="author" content="verocri" />
+<meta property="og:title" content="org/issue/33: Cloud Agent to publish PrismDID on behalf of external wallet into VDR" />
+<meta name="author" content="robertocarvajal" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="https://github.com/decentralized-identity/org/issues/33" />
-<meta property="og:description" content="https://github.com/decentralized-identity/org/issues/33" />
+<meta name="description" content="yeah, I feel we can close this issue and keep the discussion over the other one because it has a broader scope and was discussed recently over the weekly meetings. The end goal is the same, put a DID on chain that was created by the edge SDK." />
+<meta property="og:description" content="yeah, I feel we can close this issue and keep the discussion over the other one because it has a broader scope and was discussed recently over the weekly meetings. The end goal is the same, put a DID on chain that was created by the edge SDK." />
 <link rel="canonical" href="/github-discussions/org/issue/33/" />
 <meta property="og:url" content="/github-discussions/org/issue/33/" />
 <meta property="og:site_name" content="Identosphere’s Github Discussions" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-03-23T12:27:01-07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="org/issue/33: Distinction between the definitions of Verification and Authentication" />
+<meta property="twitter:title" content="org/issue/33: Cloud Agent to publish PrismDID on behalf of external wallet into VDR" />
 <meta name="twitter:site" content="@DecentralizeID" />
-<meta name="twitter:creator" content="@verocri" />
+<meta name="twitter:creator" content="@robertocarvajal" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"verocri"},"dateModified":"2024-03-23T12:27:01-07:00","datePublished":"2024-03-23T12:27:01-07:00","description":"https://github.com/decentralized-identity/org/issues/33","headline":"org/issue/33: Distinction between the definitions of Verification and Authentication","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/org/issue/33/"},"url":"/github-discussions/org/issue/33/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"robertocarvajal"},"dateModified":"2024-03-23T12:27:01-07:00","datePublished":"2024-03-23T12:27:01-07:00","description":"yeah, I feel we can close this issue and keep the discussion over the other one because it has a broader scope and was discussed recently over the weekly meetings. The end goal is the same, put a DID on chain that was created by the edge SDK.","headline":"org/issue/33: Cloud Agent to publish PrismDID on behalf of external wallet into VDR","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/org/issue/33/"},"url":"/github-discussions/org/issue/33/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>org/issue/33: Distinction between the definitions of Verification and Authentication | Identosphere's Github Discussions
+  <title>org/issue/33: Cloud Agent to publish PrismDID on behalf of external wallet into VDR | Identosphere's Github Discussions
   </title>
 
   <!--
@@ -437,7 +437,7 @@
         
           
             
-              <span>org/issue/33: Distinction between the definitions of Verification and Authentication</span>
+              <span>org/issue/33: Cloud Agent to publish PrismDID on behalf of external wallet into VDR</span>
             
 
           
@@ -552,7 +552,7 @@
 
 <article class="px-1" data-toc="false">
   <header>
-    <h1 data-toc-skip>org/issue/33: Distinction between the definitions of Verification and Authentication</h1>
+    <h1 data-toc-skip>org/issue/33: Cloud Agent to publish PrismDID on behalf of external wallet into VDR</h1>
     
 
     <div class="post-meta text-muted">
@@ -588,7 +588,7 @@
       <div class="d-flex justify-content-between">
         
           <em>
-            <a href="https://github.com/verocri">@verocri</a>
+            <a href="https://github.com/robertocarvajal">@robertocarvajal</a>
           </em>
         
 
@@ -617,7 +617,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="147 words"
+  title="122 words"
 >
   <em>1 min</em> read</span>
 
@@ -629,15 +629,15 @@
   
 
   <div class="content">
-    <p><a href="https://github.com/decentralized-identity/org/issues/33"><em>https://github.com/decentralized-identity/org/issues/33</em></a></p>
+    <p><strong>Is your feature request related to a problem? Please describe.</strong>
+Currently, Cloud Agent can only publish PrismDIDs that are created by the same Cloud Agent into the VDR. Most Edge Clients will never be connected to a full node in order to publish their PrismDIDs to the VDR and it could be useful for certain use cases.</p>
 
-<p>While the concepts are later clarified using the passport example, the initial definitions of <a href="https://github.com/w3c/identity-web-impact/blob/49d81e5e99d9c300f4277e3815a0a0a5e0d90058/index.bs#L85">verification</a> and <a href="https://github.com/w3c/identity-web-impact/blob/49d81e5e99d9c300f4277e3815a0a0a5e0d90058/index.bs#L86">authentication </a> remain somewhat ambiguous.</p>
+<p><strong>Describe the solution you’d like</strong>
+It would be great to ask the Cloud Agent to publish a PrismDID created from my Edge Client Wallet through the REST API.</p>
 
-<p>The example provided under the definition of verification also aligns with the provided definition of authentication. It would be more effective to illustrate verification with an example that does not simultaneously constitute authentication. For example, verifying a digital signature exemplifies verification alone: using a public key, one can verify that the signature is valid (in cryptographic terms, ensuring the signature was produced by the private key related to the public key used for verification). However, this process does not reveal the identity of the signer if the link between the public key and the individual (which constitutes authentication) is absent.</p>
+<p><strong>Describe alternatives you’ve considered</strong>
+Allowing the Edge SDK to connect directly to icarus (like the cloud agent does) and prepare the right payload which I would need to reverse engineer anyways from the cloud agent code :)</p>
 
-<p>I find the NIST’s definition of authentication as <em>identity verification</em> (in SP 800-63-3) convincing.</p>
-
-<p>Furthermore, what do you mean with “formal” in <code class="language-plaintext highlighter-rouge">Authentication is a specific, formal verification type</code>?</p>
 
   </div>
 
@@ -645,6 +645,12 @@
       
       
           <h2>Comments</h2>
+          
+              <div class="comment">
+                  <h4><strong><a href="https://github.com/davepoltorak">@davepoltorak</a></strong> commented on <mark>2024-11-19</mark></h4>
+                  <p>@andorsk Can you please adjust the description of the issue to explain the problem you see and the solution you are proposing? It can then be discussed sync/async</p>
+
+              </div>
           
               <div class="comment">
                   <h4><strong><a href="https://github.com/FabioPinheiro">@FabioPinheiro</a></strong> commented on <mark>2024-11-21</mark></h4>
@@ -657,12 +663,6 @@
                   <p>yeah, I feel we can close this issue and keep the discussion over the other one because it has a broader scope and was discussed recently over the weekly meetings.</p>
 
 <p>The end goal is the same, put a DID on chain that was created by the edge SDK.</p>
-
-              </div>
-          
-              <div class="comment">
-                  <h4><strong><a href="https://github.com/davepoltorak">@davepoltorak</a></strong> commented on <mark>2024-11-19</mark></h4>
-                  <p>@andorsk Can you please adjust the description of the issue to explain the problem you see and the solution you are proposing? It can then be discussed sync/async</p>
 
               </div>
           
@@ -721,21 +721,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=org/issue/33:%20Distinction%20between%20the%20definitions%20of%20Verification%20and%20Authentication%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Forg%2Fissue%2F33%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=org/issue/33:%20Cloud%20Agent%20to%20publish%20PrismDID%20on%20behalf%20of%20external%20wallet%20into%20VDR%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Forg%2Fissue%2F33%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=org/issue/33:%20Distinction%20between%20the%20definitions%20of%20Verification%20and%20Authentication%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Forg%2Fissue%2F33%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=org/issue/33:%20Cloud%20Agent%20to%20publish%20PrismDID%20on%20behalf%20of%20external%20wallet%20into%20VDR%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Forg%2Fissue%2F33%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Forg%2Fissue%2F33%2F&text=org/issue/33:%20Distinction%20between%20the%20definitions%20of%20Verification%20and%20Authentication%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Forg%2Fissue%2F33%2F&text=org/issue/33:%20Cloud%20Agent%20to%20publish%20PrismDID%20on%20behalf%20of%20external%20wallet%20into%20VDR%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -790,6 +790,27 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/github-discussions/acapy/issue/3353/">acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/identus-mediator/issue/382/">identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/did-extensions/issue/597/">did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/github-discussions/acapy/pr/3344/">acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</a>
         </li>
       
@@ -798,27 +819,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/github-discussions/webauthn/issue/2211/">webauthn/issue/2211: CR: Need a way to detect "cancel"</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/webauthn/pr/2209/">webauthn/pr/2209: Add test vectors</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus-cloud-agent/issue/1459/">identus-cloud-agent/issue/1459:  proof request there's no information on holder </a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/acapy/issue/3343/">acapy/issue/3343: DID Management Proposed Update</a>
         </li>
       
     </ul>
@@ -1047,10 +1047,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -1170,6 +1166,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -1194,106 +1194,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1359,6 +1260,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1393,135 +1378,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1588,6 +1444,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1624,8 +1718,6 @@
     
     
     
-    
-      
     
   
     
@@ -1671,31 +1763,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>
@@ -1734,7 +1826,7 @@
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>aries-acapy-docs/pr/99: Update extended proof chain test vectors</p>
+      <p>aries-acapy-docs/pr/99: Bugfix: vc.credentialSubject.id, vc.issuer, iss, and sub should be DID itself</p>
     </a>
   
 
@@ -1744,7 +1836,7 @@
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>didcomm-book/issue/20: How will I be able to enumerate/search/retrieve-in-batches all of the DID Documents represented on a given Ledger?</p>
+      <p>didcomm-book/issue/20: Problem reporting for the Agent and Mediator</p>
     </a>
   
 </nav>
@@ -2016,10 +2108,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -2139,6 +2227,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -2163,106 +2255,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2328,6 +2321,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2362,135 +2439,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2557,6 +2505,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2593,8 +2779,6 @@
     
     
     
-    
-      
     
   
     
@@ -2640,31 +2824,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>

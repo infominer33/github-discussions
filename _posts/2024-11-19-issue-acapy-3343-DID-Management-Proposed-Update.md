@@ -6,10 +6,9 @@ categories: ["OWF"]
 tags: ["acapy"]
 permalink: /acapy/issue/3343/
 comments_file: OWF-acapy-issue-3343_comments
+excerpt: >
+  I believe we need to leave the DIDComm v1 stack unchanged; modifying that would be too complex a task to take on right now and wouldn't really provide much benefit. This means:    - For keys that we intend to use for sending or receiving a DIDComm message, there must be a key representation identified by the base58 encoding of the public key (i.e. the \"verkey\").  - There can still be a \"bound key\" representation of the same key where we have explicit VM ID for the key and relationships the key has in the document.  - We do not necessarily need an x25519 key representation stored anywhere to support the DIDComm v1 stack but if we do chose to express the x25519 key, it must always be the key derived from the ed25519 key. The stack does not support using anything but the derived ed25519 key.
 ---
-
-[_https://github.com/openwallet-foundation/acapy/issues/3343_](https://github.com/openwallet-foundation/acapy/issues/3343)
-
 In light of our current push to add support for more DID Methods to ACA-Py, some primitives within ACA-Py need some updates. This issue outlines the updates I propose. I plan to update this further as the topic is discussed or as implementations better inform decisions.
 
 # Proposed Updates

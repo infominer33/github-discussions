@@ -6,10 +6,9 @@ categories: ["W3C"]
 tags: ["webauthn"]
 permalink: /webauthn/issue/2187/
 comments_file: W3C-webauthn-issue-2187_comments
+excerpt: >
+  I think that was more of an oversight as [the registration ceremony](https://w3c.github.io/webauthn/#reg-ceremony-store-credential-record) only mentions `credProps` as a possible _additional_ mechanism to set `authenticatorDisplayName`. The authentication section should have been written similarly. Regardless, I don't care enough about this; so if people want it removed, then so be it.
 ---
-
-[_https://github.com/w3c/webauthn/issues/2187_](https://github.com/w3c/webauthn/issues/2187)
-
 Discussed at TPAC as well as the 2024-10-23 call.
 
 - Remove authenticatorDisplayName from credProps for Level 3

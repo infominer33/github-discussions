@@ -1,0 +1,6 @@
+comment_id,user,date,body
+2498383897,swcurran,2024-11-25T15:48:17+00:00,@jamshale — can you please take a look ASAP?  Doesn’t sound good.
+2498432315,jamshale,2024-11-25T16:06:31+00:00,Looks like something to do with the universal resolver plugin. Maybe the pattern I added affected it in some way I wasn't aware of. I'm looking into it.
+2498572875,jamshale,2024-11-25T17:06:03+00:00,This looks like a problem with the default universal resolver `GET https://dev.uniresolver.io/1.0/properties` response changing. No idea why it changed. I don't think any acapy changes caused this. Looks like a breaking change with the universal resolver service.
+2498585310,swcurran,2024-11-25T17:11:42+00:00,"No PRs to the Universal Resolver, but it looks like direct commits were made ([list here](https://github.com/decentralized-identity/universal-resolver/commits/main/)) on Nov. 24 and 25th."
+2498591480,jamshale,2024-11-25T17:14:31+00:00,The default is the dev universal resolver. So it might be expected to have breaking changes. It's an easy update in acapy. Creating a PR.

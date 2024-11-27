@@ -33,8 +33,8 @@
 <meta property="og:title" content="did-extensions/issue/565: Should there be a registry? Process to migrate to a W3C Registry?" />
 <meta name="author" content="decentralgabe" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="https://github.com/w3c/did-extensions/issues/565" />
-<meta property="og:description" content="https://github.com/w3c/did-extensions/issues/565" />
+<meta name="description" content="This was discussed during the did meeting on 14 November 2024. &lt;summary&gt;View the transcript&lt;/summary&gt; &lt;h4&gt;&lt;a href=&quot;https://github.com/w3c/did-extensions/issues/565&quot; rel=&quot;noopener noreferrer&quot;&gt;w3c/did-extensions#565&lt;/a&gt;&lt;/h4&gt; &lt;p&gt;Wip: Goal – proposal to be discussed and ideally agreed upon. … At the bottom is the actual proposal we want to get to. &quot;What is the first step we can take to a better approach for managing the registry?&quot; … suggestion is to add a &quot;last updated&quot; attribute to the entries. … but is there more or something else that could/should be done. And then ping all entry owners to do a &quot;proof of liveness&quot;&lt;/p&gt; &lt;p&gt;manu: Short proposal – can we put a &quot;last_update_date&quot; and people have a certain amount of time to refresh, and if they don’t we only show the active ones, with a button that there expired ones. Goal is to address the criticism that there are too many &quot;not active&quot; registrations. … we need to pick a time period (perhaps a year), and if you don’t update the method in a year, the entry goes into a second list. … that would reduce the list of default displayed methods to those that people are willing to do a PR on their method entry. … we have in GitHub the last time that the entry was updated. And we can ping all the contacts. We can even automate the PRs that only change the date, but nothing else.&lt;/p&gt; &lt;p&gt;MichaelHerman: why is too many DID Methods a problem? These are identifiers, there are many identifiers, there are many identifier schemes. These should be like domain names. This idea of limiting the names seems weird.&lt;/p&gt; &lt;p&gt;manu: Many of these DID methods are not being developed. You are maintaining something that is dangerously misleading. In comparison to domain names – you are required to keep those alive. Our bar is less, but the goal is the same. You have to keep your DID Method active.&lt;/p&gt; &lt;p&gt;KevinDean: Challenge is one of longevity. If a DID is used in signing something – someone years from now should be able to find how to use a DID to verify the signature. If there are DID Methods that are unused and so we need a way to maintain the list in a better way.&lt;/p&gt; &lt;p&gt;&lt;Zakim&gt; JoeAndrieu, you wanted to mention that &quot;dangerously misleading&quot; exactly why a registry is a bad idea in the first place.&lt;/p&gt; &lt;p&gt;MichaelHerman: agree on keeping fresh and current. Reject wholeheartedly that someone thinks there are too many methods.&lt;/p&gt; &lt;p&gt;JoeAndrieu: It is innate that people will think it is &quot;definitive&quot;. It is not – it is just a list, a resource to find out about DID Methods. Knows about a DID Method that is used 10s of millions of time and not registered.&lt;/p&gt; &lt;p&gt;&lt;Zakim&gt; manu, you wanted to point to new PR: &lt;a href=&quot;https://github.com/w3c/did-extensions/pull/593&quot; rel=&quot;noopener noreferrer&quot;&gt;w3c/did-extensions#593&lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;JoeAndrieu&gt; +1 (no objections to proposal)&lt;/p&gt; &lt;p&gt;manu: Not hearing objections to the proposal.&lt;/p&gt; &lt;p&gt;&lt;JoeAndrieu&gt; -infinity to requiring a domain name&lt;/p&gt; &lt;p&gt;&lt;Wip&gt; PROPOSAL: Add a &quot;lastUpdated&quot; date to the DID Method registration to enable the ability to convey whether a DID Method is actively maintained in the list of DID Methods.&lt;/p&gt; &lt;p&gt;MichaelHerman: approach to resolve the collision issue.&lt;/p&gt; &lt;p&gt;&lt;manu&gt; +1&lt;/p&gt; &lt;p&gt;&lt;Wip&gt; +1&lt;/p&gt; &lt;p&gt;&lt;swcurran&gt; +1&lt;/p&gt; &lt;p&gt;&lt;JoeAndrieu&gt; +1&lt;/p&gt; &lt;p&gt;&lt;markus_sabadello&gt; +1&lt;/p&gt; &lt;p&gt;&lt;swcurran&gt; +1&lt;/p&gt; &lt;p&gt;&lt;bigbluehat&gt; +1&lt;/p&gt; &lt;p&gt;&lt;TallTed&gt; +1&lt;/p&gt; &lt;p&gt;RESOLUTION: Add a &quot;lastUpdated&quot; date to the DID Method registration to enable the ability to convey whether a DID Method is actively maintained in the list of DID Methods.&lt;/p&gt; &lt;p&gt;&lt;Zakim&gt; manu, you wanted to point to new PR: &lt;a href=&quot;https://github.com/w3c/did-extensions/pull/593&quot; rel=&quot;noopener noreferrer&quot;&gt;w3c/did-extensions#593&lt;/a&gt;&lt;/p&gt; &lt;hr /&gt;" />
+<meta property="og:description" content="This was discussed during the did meeting on 14 November 2024. &lt;summary&gt;View the transcript&lt;/summary&gt; &lt;h4&gt;&lt;a href=&quot;https://github.com/w3c/did-extensions/issues/565&quot; rel=&quot;noopener noreferrer&quot;&gt;w3c/did-extensions#565&lt;/a&gt;&lt;/h4&gt; &lt;p&gt;Wip: Goal – proposal to be discussed and ideally agreed upon. … At the bottom is the actual proposal we want to get to. &quot;What is the first step we can take to a better approach for managing the registry?&quot; … suggestion is to add a &quot;last updated&quot; attribute to the entries. … but is there more or something else that could/should be done. And then ping all entry owners to do a &quot;proof of liveness&quot;&lt;/p&gt; &lt;p&gt;manu: Short proposal – can we put a &quot;last_update_date&quot; and people have a certain amount of time to refresh, and if they don’t we only show the active ones, with a button that there expired ones. Goal is to address the criticism that there are too many &quot;not active&quot; registrations. … we need to pick a time period (perhaps a year), and if you don’t update the method in a year, the entry goes into a second list. … that would reduce the list of default displayed methods to those that people are willing to do a PR on their method entry. … we have in GitHub the last time that the entry was updated. And we can ping all the contacts. We can even automate the PRs that only change the date, but nothing else.&lt;/p&gt; &lt;p&gt;MichaelHerman: why is too many DID Methods a problem? These are identifiers, there are many identifiers, there are many identifier schemes. These should be like domain names. This idea of limiting the names seems weird.&lt;/p&gt; &lt;p&gt;manu: Many of these DID methods are not being developed. You are maintaining something that is dangerously misleading. In comparison to domain names – you are required to keep those alive. Our bar is less, but the goal is the same. You have to keep your DID Method active.&lt;/p&gt; &lt;p&gt;KevinDean: Challenge is one of longevity. If a DID is used in signing something – someone years from now should be able to find how to use a DID to verify the signature. If there are DID Methods that are unused and so we need a way to maintain the list in a better way.&lt;/p&gt; &lt;p&gt;&lt;Zakim&gt; JoeAndrieu, you wanted to mention that &quot;dangerously misleading&quot; exactly why a registry is a bad idea in the first place.&lt;/p&gt; &lt;p&gt;MichaelHerman: agree on keeping fresh and current. Reject wholeheartedly that someone thinks there are too many methods.&lt;/p&gt; &lt;p&gt;JoeAndrieu: It is innate that people will think it is &quot;definitive&quot;. It is not – it is just a list, a resource to find out about DID Methods. Knows about a DID Method that is used 10s of millions of time and not registered.&lt;/p&gt; &lt;p&gt;&lt;Zakim&gt; manu, you wanted to point to new PR: &lt;a href=&quot;https://github.com/w3c/did-extensions/pull/593&quot; rel=&quot;noopener noreferrer&quot;&gt;w3c/did-extensions#593&lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;JoeAndrieu&gt; +1 (no objections to proposal)&lt;/p&gt; &lt;p&gt;manu: Not hearing objections to the proposal.&lt;/p&gt; &lt;p&gt;&lt;JoeAndrieu&gt; -infinity to requiring a domain name&lt;/p&gt; &lt;p&gt;&lt;Wip&gt; PROPOSAL: Add a &quot;lastUpdated&quot; date to the DID Method registration to enable the ability to convey whether a DID Method is actively maintained in the list of DID Methods.&lt;/p&gt; &lt;p&gt;MichaelHerman: approach to resolve the collision issue.&lt;/p&gt; &lt;p&gt;&lt;manu&gt; +1&lt;/p&gt; &lt;p&gt;&lt;Wip&gt; +1&lt;/p&gt; &lt;p&gt;&lt;swcurran&gt; +1&lt;/p&gt; &lt;p&gt;&lt;JoeAndrieu&gt; +1&lt;/p&gt; &lt;p&gt;&lt;markus_sabadello&gt; +1&lt;/p&gt; &lt;p&gt;&lt;swcurran&gt; +1&lt;/p&gt; &lt;p&gt;&lt;bigbluehat&gt; +1&lt;/p&gt; &lt;p&gt;&lt;TallTed&gt; +1&lt;/p&gt; &lt;p&gt;RESOLUTION: Add a &quot;lastUpdated&quot; date to the DID Method registration to enable the ability to convey whether a DID Method is actively maintained in the list of DID Methods.&lt;/p&gt; &lt;p&gt;&lt;Zakim&gt; manu, you wanted to point to new PR: &lt;a href=&quot;https://github.com/w3c/did-extensions/pull/593&quot; rel=&quot;noopener noreferrer&quot;&gt;w3c/did-extensions#593&lt;/a&gt;&lt;/p&gt; &lt;hr /&gt;" />
 <link rel="canonical" href="/github-discussions/did-extensions/issue/565/" />
 <meta property="og:url" content="/github-discussions/did-extensions/issue/565/" />
 <meta property="og:site_name" content="Identosphere’s Github Discussions" />
@@ -45,7 +45,7 @@
 <meta name="twitter:site" content="@DecentralizeID" />
 <meta name="twitter:creator" content="@decentralgabe" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"decentralgabe"},"dateModified":"2024-06-27T08:52:48-07:00","datePublished":"2024-06-27T08:52:48-07:00","description":"https://github.com/w3c/did-extensions/issues/565","headline":"did-extensions/issue/565: Should there be a registry? Process to migrate to a W3C Registry?","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/did-extensions/issue/565/"},"url":"/github-discussions/did-extensions/issue/565/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"decentralgabe"},"dateModified":"2024-06-27T08:52:48-07:00","datePublished":"2024-06-27T08:52:48-07:00","description":"This was discussed during the did meeting on 14 November 2024. &lt;summary&gt;View the transcript&lt;/summary&gt; &lt;h4&gt;&lt;a href=&quot;https://github.com/w3c/did-extensions/issues/565&quot; rel=&quot;noopener noreferrer&quot;&gt;w3c/did-extensions#565&lt;/a&gt;&lt;/h4&gt; &lt;p&gt;Wip: Goal – proposal to be discussed and ideally agreed upon. … At the bottom is the actual proposal we want to get to. &quot;What is the first step we can take to a better approach for managing the registry?&quot; … suggestion is to add a &quot;last updated&quot; attribute to the entries. … but is there more or something else that could/should be done. And then ping all entry owners to do a &quot;proof of liveness&quot;&lt;/p&gt; &lt;p&gt;manu: Short proposal – can we put a &quot;last_update_date&quot; and people have a certain amount of time to refresh, and if they don’t we only show the active ones, with a button that there expired ones. Goal is to address the criticism that there are too many &quot;not active&quot; registrations. … we need to pick a time period (perhaps a year), and if you don’t update the method in a year, the entry goes into a second list. … that would reduce the list of default displayed methods to those that people are willing to do a PR on their method entry. … we have in GitHub the last time that the entry was updated. And we can ping all the contacts. We can even automate the PRs that only change the date, but nothing else.&lt;/p&gt; &lt;p&gt;MichaelHerman: why is too many DID Methods a problem? These are identifiers, there are many identifiers, there are many identifier schemes. These should be like domain names. This idea of limiting the names seems weird.&lt;/p&gt; &lt;p&gt;manu: Many of these DID methods are not being developed. You are maintaining something that is dangerously misleading. In comparison to domain names – you are required to keep those alive. Our bar is less, but the goal is the same. You have to keep your DID Method active.&lt;/p&gt; &lt;p&gt;KevinDean: Challenge is one of longevity. If a DID is used in signing something – someone years from now should be able to find how to use a DID to verify the signature. If there are DID Methods that are unused and so we need a way to maintain the list in a better way.&lt;/p&gt; &lt;p&gt;&lt;Zakim&gt; JoeAndrieu, you wanted to mention that &quot;dangerously misleading&quot; exactly why a registry is a bad idea in the first place.&lt;/p&gt; &lt;p&gt;MichaelHerman: agree on keeping fresh and current. Reject wholeheartedly that someone thinks there are too many methods.&lt;/p&gt; &lt;p&gt;JoeAndrieu: It is innate that people will think it is &quot;definitive&quot;. It is not – it is just a list, a resource to find out about DID Methods. Knows about a DID Method that is used 10s of millions of time and not registered.&lt;/p&gt; &lt;p&gt;&lt;Zakim&gt; manu, you wanted to point to new PR: &lt;a href=&quot;https://github.com/w3c/did-extensions/pull/593&quot; rel=&quot;noopener noreferrer&quot;&gt;w3c/did-extensions#593&lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;JoeAndrieu&gt; +1 (no objections to proposal)&lt;/p&gt; &lt;p&gt;manu: Not hearing objections to the proposal.&lt;/p&gt; &lt;p&gt;&lt;JoeAndrieu&gt; -infinity to requiring a domain name&lt;/p&gt; &lt;p&gt;&lt;Wip&gt; PROPOSAL: Add a &quot;lastUpdated&quot; date to the DID Method registration to enable the ability to convey whether a DID Method is actively maintained in the list of DID Methods.&lt;/p&gt; &lt;p&gt;MichaelHerman: approach to resolve the collision issue.&lt;/p&gt; &lt;p&gt;&lt;manu&gt; +1&lt;/p&gt; &lt;p&gt;&lt;Wip&gt; +1&lt;/p&gt; &lt;p&gt;&lt;swcurran&gt; +1&lt;/p&gt; &lt;p&gt;&lt;JoeAndrieu&gt; +1&lt;/p&gt; &lt;p&gt;&lt;markus_sabadello&gt; +1&lt;/p&gt; &lt;p&gt;&lt;swcurran&gt; +1&lt;/p&gt; &lt;p&gt;&lt;bigbluehat&gt; +1&lt;/p&gt; &lt;p&gt;&lt;TallTed&gt; +1&lt;/p&gt; &lt;p&gt;RESOLUTION: Add a &quot;lastUpdated&quot; date to the DID Method registration to enable the ability to convey whether a DID Method is actively maintained in the list of DID Methods.&lt;/p&gt; &lt;p&gt;&lt;Zakim&gt; manu, you wanted to point to new PR: &lt;a href=&quot;https://github.com/w3c/did-extensions/pull/593&quot; rel=&quot;noopener noreferrer&quot;&gt;w3c/did-extensions#593&lt;/a&gt;&lt;/p&gt; &lt;hr /&gt;","headline":"did-extensions/issue/565: Should there be a registry? Process to migrate to a W3C Registry?","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/did-extensions/issue/565/"},"url":"/github-discussions/did-extensions/issue/565/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -617,7 +617,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="5 words"
+  title="4 words"
 >
   <em>1 min</em> read</span>
 
@@ -629,9 +629,7 @@
   
 
   <div class="content">
-    <p><a href="https://github.com/w3c/did-extensions/issues/565"><em>https://github.com/w3c/did-extensions/issues/565</em></a></p>
-
-<p>Please share your ideas.</p>
+    <p>Please share your ideas.</p>
 
   </div>
 
@@ -770,6 +768,27 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/github-discussions/acapy/issue/3353/">acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/identus-mediator/issue/382/">identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/did-extensions/issue/597/">did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/github-discussions/acapy/pr/3344/">acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</a>
         </li>
       
@@ -778,27 +797,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/github-discussions/webauthn/issue/2211/">webauthn/issue/2211: CR: Need a way to detect "cancel"</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/webauthn/pr/2209/">webauthn/pr/2209: Add test vectors</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus-cloud-agent/issue/1459/">identus-cloud-agent/issue/1459:  proof request there's no information on holder </a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/acapy/issue/3343/">acapy/issue/3343: DID Management Proposed Update</a>
         </li>
       
     </ul>
@@ -1027,10 +1025,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -1150,6 +1144,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -1174,106 +1172,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1339,6 +1238,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1373,135 +1356,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1568,6 +1422,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1604,8 +1696,6 @@
     
     
     
-    
-      
     
   
     
@@ -1651,31 +1741,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>
@@ -1714,17 +1804,17 @@
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>anoncreds-rs/pr/342: test: add connectionless end-to-end tests</p>
+      <p>anoncreds-rs/pr/342: chore(deps): Bump idna from 3.6 to 3.7 in /basicmessage_storage</p>
     </a>
   
 
   
     <a
-      href="/github-discussions/did-core/issue/855/"
+      href="/github-discussions/linked-vp/issue/53/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>did-core/issue/855: Simplify abstract data model to be more concrete</p>
+      <p>linked-vp/issue/53: DWN (Decentralized Web Node)</p>
     </a>
   
 </nav>
@@ -1996,10 +2086,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -2119,6 +2205,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -2143,106 +2233,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2308,6 +2299,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2342,135 +2417,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2537,6 +2483,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2573,8 +2757,6 @@
     
     
     
-    
-      
     
   
     
@@ -2620,31 +2802,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>

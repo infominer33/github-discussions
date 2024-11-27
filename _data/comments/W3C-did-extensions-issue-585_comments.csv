@@ -1,2 +1,4 @@
 comment_id,user,date,body
 2476349289,msporny,2024-11-14T13:23:32+00:00,"Yes, we're trying to get that fixed... it's blocked by a W3C publication. /cc @pchampin @iherman "
+2494086460,mwherman2000,2024-11-22T15:56:18+00:00,"Fixed *and* tested The links in a spec should tested - manually or automatically - after each build."
+2495491230,msporny,2024-11-23T14:07:08+00:00,The URLs now resolve.

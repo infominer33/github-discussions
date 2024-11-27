@@ -523,6 +523,183 @@
 <div id="post-list" class="flex-grow-1 px-xl-1">
   
     <article class="card-wrapper card">
+      <a href="/github-discussions/acapy/issue/3353/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>ACA-py started failing to start in the Interop Test Pipeline over the weekend. This is the error. The pipeline pull from main to build acapy.
+2024-11-25 15:13:18,787 acapy_agent.core.plugin_registry ERROR Module doesn&#39;t exist: redis_events.v1_0.redis_queue.events
+2024-11-25 15:13:19,438 acapy_agent.commands.start ERROR Exception during startup:
+Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.12/site-packages/acapy_agent/commands/start.py&quot;, line 72, in init
+    await startup
+...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1732548318"
+  data-df="ll"
+  
+>
+  Nov 25, 2024
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      OWF
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/github-discussions/identus-mediator/issue/382/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>Sometimes is desirable to run the mediator endpoint in a subdirectory of a webapp to avoid CORS issues, for example, defining SERVICE_ENDPOINTS=&#39;https://www.myapp.com/mediator&#39;. If you setup the ProxyPass on webserver correctly, when you try to load the endpoint it fails trying to load https://www.myapp.com/public/webapp-fastopt-bundle.js because the mediator server endpoint is assuming the SERVICE_ENDPOINT is not on a subdirectory and on a web root.</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1732406665"
+  data-df="ll"
+  
+>
+  Nov 23, 2024
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      W3C
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/github-discussions/did-extensions/issue/597/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>@msporny proposed restricted approach here: https://github.com/w3c/did-extensions/issues/595
+
+In this Super/Meta Proposal, I want to suggest that the DID method registration section in the spec be modified to support more than one Authentication of unique DID Method names approach that covers the following objectives:
+
+  Removes the burden from the reviewers
+  Removes the W3C from having to arbitrate DID method uniqueness issues
+  Produces a tangible result in terms of authenticating the uniq...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1732288176"
+  data-df="ll"
+  
+>
+  Nov 22, 2024
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      W3C
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
       <a href="/github-discussions/acapy/pr/3344/" class="post-preview row g-0 flex-md-row-reverse">
         
 
@@ -533,11 +710,13 @@
             <h1 class="card-title my-2 mt-md-0">acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/openwallet-foundation/acapy/pull/3344
+              <p>Resolves #3283
 
-Resolves #3283
+The tenant_authentication has been updated to also allow access to the base wallet when the route matches a path defined using --base-wallet-routes.
 
-The tenant_authentication has been updated to also allow access to the base wallet when the route matches a path defined us...</p>
+Please note that, when compared to the previous implementation, the matcher has been made more greedy to tighten security: if an extra route of /test is specified, the matcher will only match that and not /testA or /test-something-else as it appears it would have done before.
+
+One drawback of having to use this matcher inside the...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -592,11 +771,13 @@ The tenant_authentication has been updated to also allow access to the base wall
             <h1 class="card-title my-2 mt-md-0">webauthn/issue/2211: CR: Need a way to detect "cancel"</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/w3c/webauthn/issues/2211
+              <p>Proposed Change
 
-Proposed Change
+Need a way to programmatically detect when the user has cancelled the “Use passkey from another device” browser native prompt by clicking the “Cancel” button. This could be achieved by adding a new property or event to the prompt that indicates whether the user has cancelled the prompt.
 
-Need a way to programmatically detect when the user has cancelled the “Use passkey from another device” browser native prompt by clicki...</p>
+
+
+^ the “cancel” button there.</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -641,6 +822,61 @@ Need a way to programmatically detect when the user has cancelled the “Use pas
     </article>
   
     <article class="card-wrapper card">
+      <a href="/github-discussions/did-extensions/issue/595/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">did-extensions/issue/595: Clarify the registration process wrt. trademarks and copyrights</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>The current specification doesn’t say that in order to block or remove a registration that a /registered/ trademark is required. The language around copyright is also problematic (granting a copyright holder the broad ability to block a registration). The text needs to be updated to remove much of the evaluation burden from the maintainers (by requiring that the trademark owner has the burden of proof). The purpose of this issue is to track this desired clarification.</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1732207874"
+  data-df="ll"
+  
+>
+  Nov 21, 2024
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      W3C
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
       <a href="/github-discussions/webauthn/pr/2209/" class="post-preview row g-0 flex-md-row-reverse">
         
 
@@ -651,11 +887,9 @@ Need a way to programmatically detect when the user has cancelled the “Use pas
             <h1 class="card-title my-2 mt-md-0">webauthn/pr/2209: Add test vectors</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/w3c/webauthn/pull/2209
+              <p>Closes #1633. Sorry it took so long!
 
-Closes #1633. Sorry it took so long!
-
-The test vectors proposed in #1633 use RP IDs of real websites unaffiliated with W3C, which felt out of place to me,...</p>
+The test vectors proposed in #1633 use RP IDs of real websites unaffiliated with W3C, which felt out of place to me, so I chose to generate new ones instead. Also in order to pre-empt any worry that there could be something nefarious hidden in these values, they are all generated deterministically from disclosed PRNG seeds. Consequently the attestation statements are synthetic values rather than real attestations from the corresponding trusted source, whi...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -710,15 +944,22 @@ The test vectors proposed in #1633 use RP IDs of real websites unaffiliated with
             <h1 class="card-title my-2 mt-md-0">identus-cloud-agent/issue/1459:  proof request there's no information on holder </h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/hyperledger/identus-cloud-agent/issues/1459
-
-Is this a regression?
+              <p>Is this a regression?
 
 NO
 
 Description
 
-Right know when we have a proof request there’s no information on holder side of what’s being...</p>
+Right know when we have a proof request there’s no information on holder side of what’s being requested.
+
+Holder webhook data:
+
+PresentationStatusAdapter(presentationId=94acbe0f-ed87-4477-9757-4b4ba8c3461d, thid=d080d2b5-0498-42aa-a829-22cf021ff3cf, role=PROVER, status=REQUEST_RECEIVED, metaRetries=5, proofs=[], data=[], connectionId=null)
+GET /present-proof/presentations/$presentationId
+
+{
+    “presentationId”: “94acbe0f-ed87-4477-9757-4b4ba8c3461d”,
+ ...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -773,9 +1014,16 @@ Right know when we have a proof request there’s no information on holder side 
             <h1 class="card-title my-2 mt-md-0">acapy/issue/3343: DID Management Proposed Update</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/openwallet-foundation/acapy/issues/3343
+              <p>In light of our current push to add support for more DID Methods to ACA-Py, some primitives within ACA-Py need some updates. This issue outlines the updates I propose. I plan to update this further as the topic is discussed or as implementations better inform decisions.
 
-In light of our current push to add support for more DID Methods to ACA-Py, some primitives within ACA-Py need some updates. This issue o...</p>
+Proposed Updates
+
+DID Storage (updating DIDInfo)
+
+Current State
+At present, the DIDInfo object looks like this:
+
+https://github.com/openwallet-foundation/acapy/blob/f5c49b0710dd180ea31c45f73bc82ef06f9523b4/acapy_agent/wallet/...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -830,12 +1078,15 @@ In light of our current push to add support for more DID Methods to ACA-Py, some
             <h1 class="card-title my-2 mt-md-0">webauthn/issue/2208: "Verify" is undefined</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/w3c/webauthn/issues/2208
-
-For example, https://w3c.github.io/webauthn/#sctn-registering-a-new-credential has a step that reads
+              <p>For example, https://w3c.github.io/webauthn/#sctn-registering-a-new-credential has a step that reads
 
 
-  Verify that the value of C.type is webauthn.cre...</p>
+  Verify that the value of C.type is webauthn.create.
+
+
+but it’s not at all clear what this means or what should happen when it cannot be true. If it’s always meant to be true unless something outside of the scope of the specification has happened, it would be more appropriate to use Infra’s Assert primitive.
+
+If it can actually have other values, you’ll need to define how to handle those.</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -890,9 +1141,7 @@ For example, https://w3c.github.io/webauthn/#sctn-registering-a-new-credential h
             <h1 class="card-title my-2 mt-md-0">webauthn/issue/2207: JSON parsing should be on top of Infra primitives</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/w3c/webauthn/issues/2207
-
-I suspect that most can be replaced by https://infra.spec.whatwg.org/#parse-json-bytes-to-an-infra-value. This will also require some changes to the fol...</p>
+              <p>I suspect that most can be replaced by https://infra.spec.whatwg.org/#parse-json-bytes-to-an-infra-value. This will also require some changes to the following steps as they now have an Infra value. This should also allow for the removal of the notes as now this is all well-defined instead of somewhat hand-wavy.</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -947,11 +1196,9 @@ I suspect that most can be replaced by https://infra.spec.whatwg.org/#parse-json
             <h1 class="card-title my-2 mt-md-0">webauthn/issue/2206: Use of "valid domain" seems wrong</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/w3c/webauthn/issues/2206
+              <p>No user agent implements “valid domain”. I suspect that instead you simply want to do a type check that the host of an origin is a domain.
 
-No user agent implements “valid domain”. I suspect that instead you simply want to do a type check that the host of an origin is a domain.
-
-Also, what k...</p>
+Also, what kind of schemes can this origin have and do those need to be checked?</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -1006,9 +1253,7 @@ Also, what k...</p>
             <h1 class="card-title my-2 mt-md-0">webauthn/issue/2205: Usage of "effective domain" seems wrong</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/w3c/webauthn/issues/2205
-
-No other specification really ought to use “effective domain”. That’s only for document.domain-related business. I suspect you just want to grab an orig...</p>
+              <p>No other specification really ought to use “effective domain”. That’s only for document.domain-related business. I suspect you just want to grab an origin’s host and ignore this operation.</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -1063,15 +1308,15 @@ No other specification really ought to use “effective domain”. That’s only
             <h1 class="card-title my-2 mt-md-0">identus-cloud-agent/issue/1451: Verifiable Credential Issued in JWT uses longform of prism DID in the iss field of JWT</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/hyperledger/identus-cloud-agent/issues/1451
-
-Is this a regression?
+              <p>Is this a regression?
 
 No
 
 Description
 
-A Verifiable Credential issued in JWT format currently uses the long-form of a Prism DID in t...</p>
+A Verifiable Credential issued in JWT format currently uses the long-form of a Prism DID in the iss field of the JWT. We should update this to use the short-form Prism DID instead. Below is an example of a VC issued in JWT format, and upon decoding, the iss field displays the long-form DID
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJFZERTQSJ9.eyJpc3MiOiJkaWQ6cHJpc206ZjJlYmVjZjFiNWU5NGVkZDZiMGZjNDU2Y2UyZmJhMGNiNzhhMTczNTJlMWFmNWNkODZlMmZhMDJhZDdhOGQ3NzpDcHNDQ3BnQ0VrWUtG...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -1126,9 +1371,7 @@ A Verifiable Credential issued in JWT format currently uses the long-form of a P
             <h1 class="card-title my-2 mt-md-0">identus-cloud-agent/issue/1450: Add support for SDJWT  trustedIssuer and credential SchemaId Validation </h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/hyperledger/identus-cloud-agent/issues/1450
-
-Is this a regression?
+              <p>Is this a regression?
 
 No
 
@@ -1136,7 +1379,20 @@ Description
 
 SDJWT is similar flow as JWT so need to support  similar to JWT 
 {
- “connectionId”: “{{VERIFI...</p>
+ “connectionId”: “{{VERIFIER_CONNECTION_ID}}”,
+ “proofs”: [
+            {
+                “schemaId”: “{{baseUrl}}/schema-registry/schemas/{{SCHEMA_ID}}”,
+                “trustIssuers”: [
+                    “did:prism:invalidddddđ”
+                ]
+            }
+],
+ “options”: {
+    “challenge”: “11c91493-01b3-4c4d-ac36-b336bab5bddf”,
+    “domain”: “https://prism-verifier.com”
+  },
+  ...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -1191,15 +1447,17 @@ SDJWT is similar flow as JWT so need to support  similar to JWT
             <h1 class="card-title my-2 mt-md-0">identus-cloud-agent/pr/1442: test: add new tests and refactoring</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/hyperledger/identus-cloud-agent/pull/1442
-
-Description:
+              <p>Description:
 Adds more tests and refactoring
 
 Checklist:
 
   My PR follows the contribution guidelines of this project
-  My PR is free o...</p>
+  My PR is free of third-party dependencies that don’t comply with the Allowlist
+  I have commented my code, particularly in hard-to-understand areas
+  I have made corresponding changes to the documentation
+  I have added tests that prove my fix is effective or that my feature works
+  I have checked the PR title to follow the conventional commit specification</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -1254,15 +1512,21 @@ Checklist:
             <h1 class="card-title my-2 mt-md-0">identus-cloud-agent/issue/1440: docs/ Docker error</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/hyperledger/identus-cloud-agent/issues/1440
-
-Is this a regression?
+              <p>Is this a regression?
 
 Yes
 
 Description
 
-Reading docs/README.md there are instructions for seeing swagger docs. They didn’t work for ...</p>
+Reading docs/README.md there are instructions for seeing swagger docs. They didn’t work for me
+
+Please provide the exception or error you saw
+
+docker compose -f docs/docker-compose.yml up
+
+WARN[0000] /home/projects/IDENTUS/identus-cloud-agent/docs/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] Running 1/2
+ ✘ atala-structurizr-lite Error pull access denied for atala-struc......</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -1314,18 +1578,27 @@ Reading docs/README.md there are instructions for seeing swagger docs. They didn
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">web-did-resolver/pr/134: Bump typescript from 5.5.4 to 5.6.2 in /AliceFaberAcmeDemo/controllers/alice-controller</h1>
+            <h1 class="card-title my-2 mt-md-0">web-did-resolver/pr/134: build(deps): bump express from 4.18.2 to 4.19.2 in /afj</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/decentralized-identity/web-did-resolver/pull/134
-
-Bumps typescript from 5.5.4 to 5.6.2.
+              <p>Bumps express from 4.18.2 to 4.19.2.
 
 Release notes
-Sourced from typescript&#39;s releases.
+Sourced from express&#39;s releases.
 
-TypeScript 5.6
-For release notes, chec...</p>
+4.19.2
+What&#39;s Changed
+
+Improved fix for open redirect allow list bypass
+
+Full Changelog: https://github.com/expressjs/express/compare/4.19.1...4.19.2
+4.19.1
+What&#39;s Changed
+
+Fix ci after location patch by @​wesleytodd in expressjs/express#5552
+fixed un-edited version in history.md for 4.19.0 by @​wesleytodd in expressjs/express#5556
+
+Full Changelog: https://github.com/expressjs/express/compare/4.19.0...4.19.1...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -1380,9 +1653,11 @@ For release notes, chec...</p>
             <h1 class="card-title my-2 mt-md-0">webauthn/issue/2204: Should steps 28 and 29 occur before Step 27 in the registration ceremony</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/w3c/webauthn/issues/2204
+              <p>Currently step 27 occurs before steps 28 and 29; however it seems weird to “create and store a new credential record in the user account” before successfully completing steps 28 and 29, right? This means one could save a credential even though the ceremony fails later.
 
-Currently step 27 occurs before steps 28 and 29; however it seems weird to “create and store a new credential record in the user account” before success...</p>
+A similar issue exists for the authentication ceremony where step 23 occurs before steps 24 and 25.
+
+I think moving those steps last makes the most sense since this way any credential creation or update occurs iff the ceremony...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -1434,14 +1709,23 @@ Currently step 27 occurs before steps 28 and 29; however it seems weird to “cr
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">identus/issue/86: Incorrect hashing used in tests for `ecdsa-rdfc-2019` `P-384`</h1>
+            <h1 class="card-title my-2 mt-md-0">identus/issue/86: Cardano Connector for SDK</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/hyperledger/identus/issues/86
+              <p>Short Description
 
-Hiya, the following tests are failing for P-384 with our implementation:
+A connector for the SDKs to submit the PRISM Block to the Cardano Blockchain.
 
-  ecdsa-rdfc-2019 (issuers) VC 1.1 The &quot;proof&quot; MUST verify with a conform...</p>
+Value statement
+
+As a community we already agreed this is value coming from the discussion in https://github.com/hyperledger/identus/discussions/80
+
+But just the summarize:
+
+The PRISM Node can be view as a Cardano Connector. But is a component that is able to do much more that simple submit transaction with metadata.
+But this is a very common use case in Cardano.
+
+The value of this come from bypa...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -1472,250 +1756,6 @@ Hiya, the following tests are failing for P-384 with our implementation:
                   <span class="categories">
                     
                       Hyperledger
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/github-discussions/webauthn/issue/2203/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">webauthn/issue/2203: Replace `USVString` with `DOMString`</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/w3c/webauthn/issues/2203
-
-It would appear that the same justification that was used for #2115 applies to the remaining areas where USVString is used:
-
-
-  As recommended by the We...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1731596921"
-  data-df="ll"
-  
->
-  Nov 14, 2024
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      W3C
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/github-discussions/webauthn/issue/2202/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">webauthn/issue/2202: AttestationFormats may have duplicate entries</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/w3c/webauthn/issues/2202
-
-Proposed Change
-
-In the spec, we introduce attestationFormats for RPs to indicate the attestation statement format preference for create options.
-The de...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1731550790"
-  data-df="ll"
-  
->
-  Nov 13, 2024
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      W3C
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/github-discussions/identus-cloud-agent/issue/1438/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">identus-cloud-agent/issue/1438: Proofs from presentation request not work</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/hyperledger/identus-cloud-agent/issues/1438
-
-Is this a regression?
-
-Yes
-
-Description
-
-Hello, regarding the request body for the presentation request:
-
-I don’t understand the fiel...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1731550750"
-  data-df="ll"
-  
->
-  Nov 13, 2024
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      Hyperledger
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/github-discussions/webauthn/issue/2198/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">webauthn/issue/2198: WebAuthn Clients should NOT zero out AAGUIDs from security keys when attestation is none</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>https://github.com/w3c/webauthn/issues/2198
-
-There has been some confusion across multiple issues, so creating another one 🫠.
-
-In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1731531080"
-  data-df="ll"
-  
->
-  Nov 13, 2024
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      W3C
                   </span>
                 
               </div>
@@ -1905,6 +1945,27 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
         
         
         <li class="text-truncate lh-lg">
+          <a href="/github-discussions/acapy/issue/3353/">acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/identus-mediator/issue/382/">identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/did-extensions/issue/597/">did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/github-discussions/acapy/pr/3344/">acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</a>
         </li>
       
@@ -1913,27 +1974,6 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
         
         <li class="text-truncate lh-lg">
           <a href="/github-discussions/webauthn/issue/2211/">webauthn/issue/2211: CR: Need a way to detect "cancel"</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/webauthn/pr/2209/">webauthn/pr/2209: Add test vectors</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus-cloud-agent/issue/1459/">identus-cloud-agent/issue/1459:  proof request there's no information on holder </a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/acapy/issue/3343/">acapy/issue/3343: DID Management Proposed Update</a>
         </li>
       
     </ul>
@@ -2162,10 +2202,6 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
     
     
     
-      
-        
-        
-
   
     
     
@@ -2285,6 +2321,10 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
     
     
     
+      
+        
+        
+
   
     
     
@@ -2309,106 +2349,7 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2474,6 +2415,90 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2508,135 +2533,6 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2703,6 +2599,244 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2739,8 +2873,6 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
     
     
     
-    
-      
     
   
     
@@ -2786,31 +2918,31 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>
@@ -3092,10 +3224,6 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
     
     
     
-      
-        
-        
-
   
     
     
@@ -3215,6 +3343,10 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
     
     
     
+      
+        
+        
+
   
     
     
@@ -3239,106 +3371,7 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -3404,6 +3437,90 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3438,135 +3555,6 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -3633,6 +3621,244 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3669,8 +3895,6 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
     
     
     
-    
-      
     
   
     
@@ -3716,31 +3940,31 @@ In #2058, spec text was added to only zero out AAGUIDs for none attest...</p>
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>

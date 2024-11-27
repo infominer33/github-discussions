@@ -6,10 +6,9 @@ categories: ["OWF"]
 tags: ["acapy"]
 permalink: /acapy/issue/3321/
 comments_file: OWF-acapy-issue-3321_comments
+excerpt: >
+  Hi @swcurran,    Thank you for your detailed answer.     I should maybe check out AnonCreds for now in my case, but I am going to watch the given zoom recording as well thank you for that.    Best,
 ---
-
-[_https://github.com/openwallet-foundation/acapy/issues/3321_](https://github.com/openwallet-foundation/acapy/issues/3321)
-
 Hi there, 
 
 I am using aca-py for my master's thesis and trying to achieve the trust between user and my system. 

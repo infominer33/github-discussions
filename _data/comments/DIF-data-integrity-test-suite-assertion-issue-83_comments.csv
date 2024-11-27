@@ -1,2 +1,0 @@
-comment_id,user,date,body
-2468636438,dlongley,2024-11-11T16:57:49+00:00,See [`createInitialSelection`](https://w3c.github.io/vc-di-ecdsa/#createinitialselection) which is called during step 5 of `selectPaths` whenever a new object in the path of a pointer is selected. The `id` (if not a blank node identifier) and `type` values are always included for objects in the path of a pointer (including the final target of the pointer).

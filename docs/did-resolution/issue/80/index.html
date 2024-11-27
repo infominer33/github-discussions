@@ -30,26 +30,26 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="did-resolution/issue/80: urnScheme unclear and/or missing" />
-<meta name="author" content="brianorwhatever" />
+<meta property="og:title" content="did-resolution/issue/80: Failed deployment is shown as successful" />
+<meta name="author" content="mkbreuningIOHK" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="https://github.com/w3c/did-resolution/issues/80" />
-<meta property="og:description" content="https://github.com/w3c/did-resolution/issues/80" />
+<meta name="description" content="PR #81 was applied to address this issue. Closing." />
+<meta property="og:description" content="PR #81 was applied to address this issue. Closing." />
 <link rel="canonical" href="/github-discussions/did-resolution/issue/80/" />
 <meta property="og:url" content="/github-discussions/did-resolution/issue/80/" />
 <meta property="og:site_name" content="Identosphere’s Github Discussions" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-07-29T09:04:08-07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="did-resolution/issue/80: urnScheme unclear and/or missing" />
+<meta property="twitter:title" content="did-resolution/issue/80: Failed deployment is shown as successful" />
 <meta name="twitter:site" content="@DecentralizeID" />
-<meta name="twitter:creator" content="@brianorwhatever" />
+<meta name="twitter:creator" content="@mkbreuningIOHK" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"brianorwhatever"},"dateModified":"2024-07-29T09:04:08-07:00","datePublished":"2024-07-29T09:04:08-07:00","description":"https://github.com/w3c/did-resolution/issues/80","headline":"did-resolution/issue/80: urnScheme unclear and/or missing","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/did-resolution/issue/80/"},"url":"/github-discussions/did-resolution/issue/80/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"mkbreuningIOHK"},"dateModified":"2024-07-29T09:04:08-07:00","datePublished":"2024-07-29T09:04:08-07:00","description":"PR #81 was applied to address this issue. Closing.","headline":"did-resolution/issue/80: Failed deployment is shown as successful","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/did-resolution/issue/80/"},"url":"/github-discussions/did-resolution/issue/80/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>did-resolution/issue/80: `urnScheme` unclear and/or missing | Identosphere's Github Discussions
+  <title>did-resolution/issue/80: Failed deployment is shown as successful | Identosphere's Github Discussions
   </title>
 
   <!--
@@ -437,7 +437,7 @@
         
           
             
-              <span>did-resolution/issue/80: `urnScheme` unclear and/or missing</span>
+              <span>did-resolution/issue/80: Failed deployment is shown as successful</span>
             
 
           
@@ -505,6 +505,79 @@
 
 
 
+  
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+
+  
+
 
 <!-- Add header for code snippets -->
 
@@ -552,7 +625,7 @@
 
 <article class="px-1" data-toc="false">
   <header>
-    <h1 data-toc-skip>did-resolution/issue/80: `urnScheme` unclear and/or missing</h1>
+    <h1 data-toc-skip>did-resolution/issue/80: Failed deployment is shown as successful</h1>
     
 
     <div class="post-meta text-muted">
@@ -588,7 +661,7 @@
       <div class="d-flex justify-content-between">
         
           <em>
-            <a href="https://github.com/brianorwhatever">@brianorwhatever</a>
+            <a href="https://github.com/mkbreuningIOHK">@mkbreuningIOHK</a>
           </em>
         
 
@@ -617,7 +690,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="31 words"
+  title="128 words"
 >
   <em>1 min</em> read</span>
 
@@ -629,10 +702,17 @@
   
 
   <div class="content">
-    <p><a href="https://github.com/w3c/did-resolution/issues/80"><em>https://github.com/w3c/did-resolution/issues/80</em></a></p>
+    <p>In order to deploy the docs corresponding to prism v2.9, https://github.com/input-output-hk/atala-releases/blob/master/Atala%20PRISM/2.9.md, I have chosen the wrong version (OEA version instead of the documentation version).</p>
 
-<p>The spec isn’t clear and when I got to <a href="https://www.w3.org/TR/vc-di-ecdsa/#skolemizecompactjsonld"><code class="language-plaintext highlighter-rouge">skolemizeCompactJsonLD</code></a> I encountered I needed a <code class="language-plaintext highlighter-rouge">urnScheme</code> that wasn’t an input anywhere.. Is this supposed to be a constant? <code class="language-plaintext highlighter-rouge">custom-scheme</code> perhaps?</p>
+<p>In https://github.com/input-output-hk/atala-prism-docs/actions, click on <code class="language-plaintext highlighter-rouge">Deployment</code> and then <code class="language-plaintext highlighter-rouge">Run workflow</code>
+I chose: main branch, v1.25.0 and production and click <code class="language-plaintext highlighter-rouge">Run workflow</code>.
+It gave a successful deployment when looking after but the docs.atalaprism.io was still not updated as it showed in API –&gt; Agent API the same old version v1.22.0. See attached screenshot.</p>
 
+<p>The expectation is that as the workflow failed, the status should show as failed. 
+<a href="https://github.com/input-output-hk/atala-prism-docs/assets/97112931/c6ca4531-464e-4b5b-b133-716b881da379" class="popup img-link  shimmer"><img src="https://github.com/input-output-hk/atala-prism-docs/assets/97112931/c6ca4531-464e-4b5b-b133-716b881da379" alt="image" loading="lazy"></a></p>
+
+<p>If you look at the workflow file, there is no information that would give any indication of what was run.
+If you look at the https://github.com/input-output-hk/atala-prism-docs/actions/runs/7959863521/job/21727672596 , there is no information on the parsing of the version for example.</p>
 
   </div>
 
@@ -702,21 +782,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=did-resolution/issue/80:%20%60urnScheme%60%20unclear%20and/or%20missing%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fdid-resolution%2Fissue%2F80%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=did-resolution/issue/80:%20Failed%20deployment%20is%20shown%20as%20successful%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fdid-resolution%2Fissue%2F80%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=did-resolution/issue/80:%20%60urnScheme%60%20unclear%20and/or%20missing%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fdid-resolution%2Fissue%2F80%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=did-resolution/issue/80:%20Failed%20deployment%20is%20shown%20as%20successful%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fdid-resolution%2Fissue%2F80%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fdid-resolution%2Fissue%2F80%2F&text=did-resolution/issue/80:%20%60urnScheme%60%20unclear%20and/or%20missing%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fdid-resolution%2Fissue%2F80%2F&text=did-resolution/issue/80:%20Failed%20deployment%20is%20shown%20as%20successful%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -771,6 +851,27 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/github-discussions/acapy/issue/3353/">acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/identus-mediator/issue/382/">identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/did-extensions/issue/597/">did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/github-discussions/acapy/pr/3344/">acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</a>
         </li>
       
@@ -779,27 +880,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/github-discussions/webauthn/issue/2211/">webauthn/issue/2211: CR: Need a way to detect "cancel"</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/webauthn/pr/2209/">webauthn/pr/2209: Add test vectors</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus-cloud-agent/issue/1459/">identus-cloud-agent/issue/1459:  proof request there's no information on holder </a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/acapy/issue/3343/">acapy/issue/3343: DID Management Proposed Update</a>
         </li>
       
     </ul>
@@ -1028,10 +1108,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -1151,6 +1227,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -1175,106 +1255,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1340,6 +1321,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1374,135 +1439,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1569,6 +1505,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1605,8 +1779,6 @@
     
     
     
-    
-      
     
   
     
@@ -1652,31 +1824,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>
@@ -1711,21 +1883,21 @@
 
   
     <a
-      href="/github-discussions/data-integrity-test-suite-assertion/issue/83/"
+      href="/github-discussions/identus-apollo/pr/185/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>data-integrity-test-suite-assertion/issue/83: `selectPaths` of partial object in array</p>
+      <p>identus-apollo/pr/185: chore(deps-dev): Bump indy-vdr from 0.3.4 to 0.4.1 in /rpc</p>
     </a>
   
 
   
     <a
-      href="/github-discussions/acapy-plugins/pr/868/"
+      href="/github-discussions/bbs-signature/issue/322/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>acapy-plugins/pr/868: Consolidate media types to `application/did`.</p>
+      <p>bbs-signature/issue/322: Wallet recovery with a password-protected backup file (from a single point of failure to 2FA) in addition to Seed Phrase Recovery</p>
     </a>
   
 </nav>
@@ -1997,10 +2169,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -2120,6 +2288,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -2144,106 +2316,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2309,6 +2382,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2343,135 +2500,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2538,6 +2566,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2574,8 +2840,6 @@
     
     
     
-    
-      
     
   
     
@@ -2621,31 +2885,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>

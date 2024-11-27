@@ -6,10 +6,9 @@ categories: ["OWF"]
 tags: ["acapy"]
 permalink: /acapy/pr/3344/
 comments_file: OWF-acapy-pr-3344_comments
+excerpt: >
+  Actually just noticed a tiny spelling error here. Might as well fix it.
 ---
-
-[_https://github.com/openwallet-foundation/acapy/pull/3344_](https://github.com/openwallet-foundation/acapy/pull/3344)
-
 Resolves #3283
 
 The `tenant_authentication` has been updated to also allow access to the base wallet when the route matches a path defined using `--base-wallet-routes`.

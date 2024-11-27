@@ -6,10 +6,9 @@ categories: ["W3C"]
 tags: ["webauthn"]
 permalink: /webauthn/issue/2202/
 comments_file: W3C-webauthn-issue-2202_comments
+excerpt: >
+  > One could make the argument that duplicates are most likely unintended, so it's better to reject them so the RP finds out about the issue. This would, however, not be backwards compatible with existing RP implementations that (intentionally or accidentally) rely on duplicates being silently ignored.    I agree that throwing an error is a bad approach. But, adding some notes explicitly make the readers and developers to clearly understand how the underlying client and authenticator would work.
 ---
-
-[_https://github.com/w3c/webauthn/issues/2202_](https://github.com/w3c/webauthn/issues/2202)
-
 ## Proposed Change
 
 In the spec, we introduce `attestationFormats` for RPs to indicate the attestation statement format preference for create options.

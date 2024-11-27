@@ -33,8 +33,8 @@
 <meta property="og:title" content="webauthn/issue/2202: AttestationFormats may have duplicate entries" />
 <meta name="author" content="Kieun" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="https://github.com/w3c/webauthn/issues/2202" />
-<meta property="og:description" content="https://github.com/w3c/webauthn/issues/2202" />
+<meta name="description" content="One could make the argument that duplicates are most likely unintended, so it’s better to reject them so the RP finds out about the issue. This would, however, not be backwards compatible with existing RP implementations that (intentionally or accidentally) rely on duplicates being silently ignored. I agree that throwing an error is a bad approach. But, adding some notes explicitly make the readers and developers to clearly understand how the underlying client and authenticator would work." />
+<meta property="og:description" content="One could make the argument that duplicates are most likely unintended, so it’s better to reject them so the RP finds out about the issue. This would, however, not be backwards compatible with existing RP implementations that (intentionally or accidentally) rely on duplicates being silently ignored. I agree that throwing an error is a bad approach. But, adding some notes explicitly make the readers and developers to clearly understand how the underlying client and authenticator would work." />
 <link rel="canonical" href="/github-discussions/webauthn/issue/2202/" />
 <meta property="og:url" content="/github-discussions/webauthn/issue/2202/" />
 <meta property="og:site_name" content="Identosphere’s Github Discussions" />
@@ -45,7 +45,7 @@
 <meta name="twitter:site" content="@DecentralizeID" />
 <meta name="twitter:creator" content="@Kieun" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kieun"},"dateModified":"2024-11-13T18:19:50-08:00","datePublished":"2024-11-13T18:19:50-08:00","description":"https://github.com/w3c/webauthn/issues/2202","headline":"webauthn/issue/2202: AttestationFormats may have duplicate entries","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/webauthn/issue/2202/"},"url":"/github-discussions/webauthn/issue/2202/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kieun"},"dateModified":"2024-11-13T18:19:50-08:00","datePublished":"2024-11-13T18:19:50-08:00","description":"One could make the argument that duplicates are most likely unintended, so it’s better to reject them so the RP finds out about the issue. This would, however, not be backwards compatible with existing RP implementations that (intentionally or accidentally) rely on duplicates being silently ignored. I agree that throwing an error is a bad approach. But, adding some notes explicitly make the readers and developers to clearly understand how the underlying client and authenticator would work.","headline":"webauthn/issue/2202: AttestationFormats may have duplicate entries","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/webauthn/issue/2202/"},"url":"/github-discussions/webauthn/issue/2202/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -645,7 +645,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="190 words"
+  title="189 words"
 >
   <em>1 min</em> read</span>
 
@@ -657,9 +657,7 @@
   
 
   <div class="content">
-    <p><a href="https://github.com/w3c/webauthn/issues/2202"><em>https://github.com/w3c/webauthn/issues/2202</em></a></p>
-
-<h2 id="proposed-change"><span class="me-2">Proposed Change</span><a href="#proposed-change" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="proposed-change"><span class="me-2">Proposed Change</span><a href="#proposed-change" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <p>In the spec, we introduce <code class="language-plaintext highlighter-rouge">attestationFormats</code> for RPs to indicate the attestation statement format preference for create options.
 The definition in the spec is as follows.</p>
@@ -827,6 +825,27 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
         
         
         <li class="text-truncate lh-lg">
+          <a href="/github-discussions/acapy/issue/3353/">acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/identus-mediator/issue/382/">identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/did-extensions/issue/597/">did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/github-discussions/acapy/pr/3344/">acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</a>
         </li>
       
@@ -835,27 +854,6 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
         
         <li class="text-truncate lh-lg">
           <a href="/github-discussions/webauthn/issue/2211/">webauthn/issue/2211: CR: Need a way to detect "cancel"</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/webauthn/pr/2209/">webauthn/pr/2209: Add test vectors</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus-cloud-agent/issue/1459/">identus-cloud-agent/issue/1459:  proof request there's no information on holder </a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/acapy/issue/3343/">acapy/issue/3343: DID Management Proposed Update</a>
         </li>
       
     </ul>
@@ -1084,10 +1082,6 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
     
     
     
-      
-        
-        
-
   
     
     
@@ -1207,6 +1201,10 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
     
     
     
+      
+        
+        
+
   
     
     
@@ -1231,106 +1229,7 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1396,6 +1295,90 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1430,135 +1413,6 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1625,6 +1479,244 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1661,8 +1753,6 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
     
     
     
-    
-      
     
   
     
@@ -1708,31 +1798,31 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>
@@ -2053,10 +2143,6 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
     
     
     
-      
-        
-        
-
   
     
     
@@ -2176,6 +2262,10 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
     
     
     
+      
+        
+        
+
   
     
     
@@ -2200,106 +2290,7 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2365,6 +2356,90 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2399,135 +2474,6 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2594,6 +2540,244 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2630,8 +2814,6 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
     
     
     
-    
-      
     
   
     
@@ -2677,31 +2859,31 @@ The <a href="https://webidl.spec.whatwg.org/#idl-sequence">sequence&lt;’T’&g
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>

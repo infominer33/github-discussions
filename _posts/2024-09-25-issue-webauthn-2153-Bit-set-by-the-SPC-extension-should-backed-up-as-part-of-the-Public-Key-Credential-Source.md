@@ -6,10 +6,9 @@ categories: ["W3C"]
 tags: ["webauthn"]
 permalink: /webauthn/issue/2153/
 comments_file: W3C-webauthn-issue-2153_comments
+excerpt: >
+  Issue created in SPC: https://github.com/w3c/secure-payment-confirmation/issues/278    Closing.
 ---
-
-[_https://github.com/w3c/webauthn/issues/2153_](https://github.com/w3c/webauthn/issues/2153)
-
 PLACEHOLDER
 
 ## Proposed Change

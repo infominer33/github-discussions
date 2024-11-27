@@ -1,2 +1,0 @@
-comment_id,user,date,body
-2466684017,VladimirAlexiev,2024-11-10T10:50:34+00:00,"A related problem: if `@type` is not present in some JSON-LD output, then [type-scoped contexts](https://w3c.github.io/json-ld-syntax/#x4-1-8-scoped-contexts) will not take effect."

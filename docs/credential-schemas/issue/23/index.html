@@ -30,26 +30,26 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="credential-schemas/issue/23: Questions regarding QueryByExample structure and handling" />
-<meta name="author" content="geel9" />
+<meta property="og:title" content="credential-schemas/issue/23: Support Verification in SDK - Anoncreds" />
+<meta name="author" content="essbante-io" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="https://github.com/decentralized-identity/credential-schemas/issues/23" />
-<meta property="og:description" content="https://github.com/decentralized-identity/credential-schemas/issues/23" />
+<meta name="description" content="OIDC itself only uses a ‘flat’ structure with singular values for everything Yes, which is quite unfortunate, as our experience is that information in credentials often do not have a flat structure (especially when you start combining credential data about the same individual). This could lead to a mismatch between ‘name’ in OIDC Yes, and to put a finer point on how different information models fail to capture properties like &quot;name&quot; properly, see &quot;Falsehoods Programmers Believe About Names&quot;: https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/ No one said data modelling was easy. :P" />
+<meta property="og:description" content="OIDC itself only uses a ‘flat’ structure with singular values for everything Yes, which is quite unfortunate, as our experience is that information in credentials often do not have a flat structure (especially when you start combining credential data about the same individual). This could lead to a mismatch between ‘name’ in OIDC Yes, and to put a finer point on how different information models fail to capture properties like &quot;name&quot; properly, see &quot;Falsehoods Programmers Believe About Names&quot;: https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/ No one said data modelling was easy. :P" />
 <link rel="canonical" href="/github-discussions/credential-schemas/issue/23/" />
 <meta property="og:url" content="/github-discussions/credential-schemas/issue/23/" />
 <meta property="og:site_name" content="Identosphere’s Github Discussions" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-11-05T09:54:02-08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="credential-schemas/issue/23: Questions regarding QueryByExample structure and handling" />
+<meta property="twitter:title" content="credential-schemas/issue/23: Support Verification in SDK - Anoncreds" />
 <meta name="twitter:site" content="@DecentralizeID" />
-<meta name="twitter:creator" content="@geel9" />
+<meta name="twitter:creator" content="@essbante-io" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"geel9"},"dateModified":"2024-11-05T09:54:02-08:00","datePublished":"2024-11-05T09:54:02-08:00","description":"https://github.com/decentralized-identity/credential-schemas/issues/23","headline":"credential-schemas/issue/23: Questions regarding QueryByExample structure and handling","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/credential-schemas/issue/23/"},"url":"/github-discussions/credential-schemas/issue/23/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"essbante-io"},"dateModified":"2024-11-05T09:54:02-08:00","datePublished":"2024-11-05T09:54:02-08:00","description":"OIDC itself only uses a ‘flat’ structure with singular values for everything Yes, which is quite unfortunate, as our experience is that information in credentials often do not have a flat structure (especially when you start combining credential data about the same individual). This could lead to a mismatch between ‘name’ in OIDC Yes, and to put a finer point on how different information models fail to capture properties like &quot;name&quot; properly, see &quot;Falsehoods Programmers Believe About Names&quot;: https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/ No one said data modelling was easy. :P","headline":"credential-schemas/issue/23: Support Verification in SDK - Anoncreds","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/credential-schemas/issue/23/"},"url":"/github-discussions/credential-schemas/issue/23/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>credential-schemas/issue/23: Questions regarding `QueryByExample` structure and handling | Identosphere's Github Discussions
+  <title>credential-schemas/issue/23: Support Verification in SDK - Anoncreds | Identosphere's Github Discussions
   </title>
 
   <!--
@@ -437,7 +437,7 @@
         
           
             
-              <span>credential-schemas/issue/23: Questions regarding `QueryByExample` structure and handling</span>
+              <span>credential-schemas/issue/23: Support Verification in SDK - Anoncreds</span>
             
 
           
@@ -525,27 +525,6 @@
   
 
   
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
-  
 
   
   
@@ -573,7 +552,7 @@
 
 <article class="px-1" data-toc="false">
   <header>
-    <h1 data-toc-skip>credential-schemas/issue/23: Questions regarding `QueryByExample` structure and handling</h1>
+    <h1 data-toc-skip>credential-schemas/issue/23: Support Verification in SDK - Anoncreds</h1>
     
 
     <div class="post-meta text-muted">
@@ -609,7 +588,7 @@
       <div class="d-flex justify-content-between">
         
           <em>
-            <a href="https://github.com/geel9">@geel9</a>
+            <a href="https://github.com/essbante-io">@essbante-io</a>
           </em>
         
 
@@ -638,9 +617,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="536 words"
+  title="3 words"
 >
-  <em>2 min</em> read</span>
+  <em>1 min</em> read</span>
 
         </div>
       </div>
@@ -650,158 +629,7 @@
   
 
   <div class="content">
-    <p><a href="https://github.com/decentralized-identity/credential-schemas/issues/23"><em>https://github.com/decentralized-identity/credential-schemas/issues/23</em></a></p>
-
-<p>Hello,</p>
-
-<p>I have some questions regarding the proper handling of <code class="language-plaintext highlighter-rouge">QueryByExample</code> objects.</p>
-
-<p>I understand that many of these questions may not yet have answers, but I’d appreciate any insight that can be provided.</p>
-
-<ol>
-  <li>Are the <code class="language-plaintext highlighter-rouge">@context</code> and <code class="language-plaintext highlighter-rouge">type</code> fields required or optional?</li>
-  <li>What is the datatype of these fields?
-    <ul>
-      <li>I am operating under the assumption that they are both <code class="language-plaintext highlighter-rouge">string | string[]</code> – is this fair?</li>
-    </ul>
-  </li>
-  <li>How are the <code class="language-plaintext highlighter-rouge">@context</code> and <code class="language-plaintext highlighter-rouge">type</code> fields to be handled?
-    <ul>
-      <li>I am operating under the assumption that every value in the example <code class="language-plaintext highlighter-rouge">@context</code> array (whether it be expressed as an array of strings or a string itself) must be present in the credential’s <code class="language-plaintext highlighter-rouge">@context</code> array, but additional values may be present in the credential’s <code class="language-plaintext highlighter-rouge">@context</code> array. Is this fair?</li>
-      <li>I am operating under an equal assumption for the <code class="language-plaintext highlighter-rouge">type</code> field.</li>
-    </ul>
-  </li>
-  <li>Is <code class="language-plaintext highlighter-rouge">credentialSubject</code> limited to only <code class="language-plaintext highlighter-rouge">id</code> and <code class="language-plaintext highlighter-rouge">name</code> fields, or is it intended for arbitrary key/values to query against the credential’s <code class="language-plaintext highlighter-rouge">credentialSubject</code>?
-    <ul>
-      <li>My intuition tells me that any key/value pairs are valid, but the comment above it in Example 2 states <code class="language-plaintext highlighter-rouge">You can request a specific subject id</code>, which implies that that is the <em>only</em> intended usage.</li>
-    </ul>
-  </li>
-  <li>Assuming <code class="language-plaintext highlighter-rouge">credentialSubject</code> is not limited to <code class="language-plaintext highlighter-rouge">id</code> and <code class="language-plaintext highlighter-rouge">name</code>, how is comparison meant to be handled?
-    <ul>
-      <li>Comparisons of primitives is intuitive, but stringy equality (does <code class="language-plaintext highlighter-rouge">5</code> match <code class="language-plaintext highlighter-rouge">"5"</code>?) should be clarified.</li>
-      <li>Comparisons of objects is also intuitive – just recurse.
-        <ul>
-          <li>I am assuming, however, that all object comparisons (including the top-level <code class="language-plaintext highlighter-rouge">example.credentialSubject</code> to <code class="language-plaintext highlighter-rouge">credential.credentialSubject</code> comparison itself) are loose in the sense that the object on the credential may have additional fields not specified by the example object.</li>
-        </ul>
-      </li>
-      <li>How should one perform a comparison of arrays?
-        <ul>
-          <li>See below</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ol>
-
-<h3 id="array-comparison-in-credentialsubject"><span class="me-2">Array Comparison in <code class="language-plaintext highlighter-rouge">credentialSubject</code></span><a href="#array-comparison-in-credentialsubject" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-<p><em>(This is all assuming that the <code class="language-plaintext highlighter-rouge">credentialSubject</code> field in the example query is not restricted to <code class="language-plaintext highlighter-rouge">id</code> and <code class="language-plaintext highlighter-rouge">name</code> fields)</em></p>
-
-<p>Given the following query:</p>
-
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QueryByExample"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"credentialQuery"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"example"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"credentialSubject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"primitive_array_one"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w">
-        </span><span class="nl">"primitive_array_two"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">],</span><span class="w">
-        </span><span class="nl">"complex_array"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"a"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
-          </span><span class="p">},</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"b"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
-
-<p>And the following <code class="language-plaintext highlighter-rouge">credentialSubject</code> from a VerifiableCredential:</p>
-
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-  </span><span class="nl">"credentialSubject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"whatever"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"primitive_array_one"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w">
-    </span><span class="nl">"primitive_array_two"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">],</span><span class="w">
-    </span><span class="nl">"complex_array"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"a"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"b"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"b"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
-
-<p>It’s not entirely clear how to handle this query by example.</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">primitive_array_one</code>
-    <ul>
-      <li>The credential’s <code class="language-plaintext highlighter-rouge">primitive_array_one</code> contains all values of the example’s <code class="language-plaintext highlighter-rouge">primitive_array_one</code>, in the same order and position, but it has additional entries.</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">primitive_array_two</code>
-    <ul>
-      <li>The credential’s <code class="language-plaintext highlighter-rouge">primitive_array_two</code> contains all values of the example’s <code class="language-plaintext highlighter-rouge">primitive_array_two</code>, and has no additional values, but they are not in the same order.</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">complex_array</code>
-    <ul>
-      <li>The example is looking for an object with an <code class="language-plaintext highlighter-rouge">a</code> value equal to <code class="language-plaintext highlighter-rouge">1</code>, and an object with a <code class="language-plaintext highlighter-rouge">b</code> value equal to <code class="language-plaintext highlighter-rouge">2</code>.
-        <ul>
-          <li>The credential does, in fact, have an object with an <code class="language-plaintext highlighter-rouge">a</code> value equal to <code class="language-plaintext highlighter-rouge">1</code>, <em>and</em> an object with a <code class="language-plaintext highlighter-rouge">b</code> value equal to <code class="language-plaintext highlighter-rouge">2</code>.</li>
-          <li>However, they’re the <em>same object</em>, which likely isn’t what the person who wrote the query was intending.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+    <p>No content available</p>
 
   </div>
 
@@ -964,21 +792,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=credential-schemas/issue/23:%20Questions%20regarding%20%60QueryByExample%60%20structure%20and%20handling%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fcredential-schemas%2Fissue%2F23%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=credential-schemas/issue/23:%20Support%20Verification%20in%20SDK%20-%20Anoncreds%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fcredential-schemas%2Fissue%2F23%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=credential-schemas/issue/23:%20Questions%20regarding%20%60QueryByExample%60%20structure%20and%20handling%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fcredential-schemas%2Fissue%2F23%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=credential-schemas/issue/23:%20Support%20Verification%20in%20SDK%20-%20Anoncreds%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fcredential-schemas%2Fissue%2F23%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fcredential-schemas%2Fissue%2F23%2F&text=credential-schemas/issue/23:%20Questions%20regarding%20%60QueryByExample%60%20structure%20and%20handling%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fcredential-schemas%2Fissue%2F23%2F&text=credential-schemas/issue/23:%20Support%20Verification%20in%20SDK%20-%20Anoncreds%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -1033,6 +861,27 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/github-discussions/acapy/issue/3353/">acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/identus-mediator/issue/382/">identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/did-extensions/issue/597/">did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/github-discussions/acapy/pr/3344/">acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</a>
         </li>
       
@@ -1041,27 +890,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/github-discussions/webauthn/issue/2211/">webauthn/issue/2211: CR: Need a way to detect "cancel"</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/webauthn/pr/2209/">webauthn/pr/2209: Add test vectors</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus-cloud-agent/issue/1459/">identus-cloud-agent/issue/1459:  proof request there's no information on holder </a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/acapy/issue/3343/">acapy/issue/3343: DID Management Proposed Update</a>
         </li>
       
     </ul>
@@ -1290,10 +1118,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -1413,6 +1237,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -1437,106 +1265,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1602,6 +1331,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1636,135 +1449,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1831,6 +1515,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1867,8 +1789,6 @@
     
     
     
-    
-      
     
   
     
@@ -1914,31 +1834,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>
@@ -1983,11 +1903,11 @@
 
   
     <a
-      href="/github-discussions/acapy/pr/3332/"
+      href="/github-discussions/did-extensions/issue/585/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>acapy/pr/3332: :sparkles: Add TRACE log level and improve logging in core components</p>
+      <p>did-extensions/issue/585: https://www.w3.org/TR/did-extensions-methods/ is unresolvable </p>
     </a>
   
 </nav>
@@ -2259,10 +2179,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -2382,6 +2298,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -2406,106 +2326,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2571,6 +2392,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2605,135 +2510,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2800,6 +2576,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2836,8 +2850,6 @@
     
     
     
-    
-      
     
   
     
@@ -2883,31 +2895,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>

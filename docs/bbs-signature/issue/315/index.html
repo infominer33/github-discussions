@@ -30,26 +30,26 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="bbs-signature/issue/315: Value of a verification method property?" />
-<meta name="author" content="iherman" />
+<meta property="og:title" content="bbs-signature/issue/315: SDJWT SDK to SDK Verification" />
+<meta name="author" content="elribonazo" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="https://github.com/decentralized-identity/bbs-signature/issues/315" />
-<meta property="og:description" content="https://github.com/decentralized-identity/bbs-signature/issues/315" />
+<meta name="description" content="Ok. There is also https://github.com/w3c/vc-data-integrity/issues/315#issuecomment-2424992041, but I trust you will do this at some point in the near future. I let you decide whether you want to close the issue now or when that overall editorial pass is done." />
+<meta property="og:description" content="Ok. There is also https://github.com/w3c/vc-data-integrity/issues/315#issuecomment-2424992041, but I trust you will do this at some point in the near future. I let you decide whether you want to close the issue now or when that overall editorial pass is done." />
 <link rel="canonical" href="/github-discussions/bbs-signature/issue/315/" />
 <meta property="og:url" content="/github-discussions/bbs-signature/issue/315/" />
 <meta property="og:site_name" content="Identosphere’s Github Discussions" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-02-16T15:54:22-08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="bbs-signature/issue/315: Value of a verification method property?" />
+<meta property="twitter:title" content="bbs-signature/issue/315: SDJWT SDK to SDK Verification" />
 <meta name="twitter:site" content="@DecentralizeID" />
-<meta name="twitter:creator" content="@iherman" />
+<meta name="twitter:creator" content="@elribonazo" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"iherman"},"dateModified":"2024-02-16T15:54:22-08:00","datePublished":"2024-02-16T15:54:22-08:00","description":"https://github.com/decentralized-identity/bbs-signature/issues/315","headline":"bbs-signature/issue/315: Value of a verification method property?","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/bbs-signature/issue/315/"},"url":"/github-discussions/bbs-signature/issue/315/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"elribonazo"},"dateModified":"2024-02-16T15:54:22-08:00","datePublished":"2024-02-16T15:54:22-08:00","description":"Ok. There is also https://github.com/w3c/vc-data-integrity/issues/315#issuecomment-2424992041, but I trust you will do this at some point in the near future. I let you decide whether you want to close the issue now or when that overall editorial pass is done.","headline":"bbs-signature/issue/315: SDJWT SDK to SDK Verification","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/bbs-signature/issue/315/"},"url":"/github-discussions/bbs-signature/issue/315/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>bbs-signature/issue/315: Value of a verification method property? | Identosphere's Github Discussions
+  <title>bbs-signature/issue/315: SDJWT SDK to SDK Verification | Identosphere's Github Discussions
   </title>
 
   <!--
@@ -437,7 +437,7 @@
         
           
             
-              <span>bbs-signature/issue/315: Value of a verification method property?</span>
+              <span>bbs-signature/issue/315: SDJWT SDK to SDK Verification</span>
             
 
           
@@ -525,6 +525,49 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -552,7 +595,7 @@
 
 <article class="px-1" data-toc="false">
   <header>
-    <h1 data-toc-skip>bbs-signature/issue/315: Value of a verification method property?</h1>
+    <h1 data-toc-skip>bbs-signature/issue/315: SDJWT SDK to SDK Verification</h1>
     
 
     <div class="post-meta text-muted">
@@ -588,7 +631,7 @@
       <div class="d-flex justify-content-between">
         
           <em>
-            <a href="https://github.com/iherman">@iherman</a>
+            <a href="https://github.com/elribonazo">@elribonazo</a>
           </em>
         
 
@@ -617,7 +660,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="164 words"
+  title="236 words"
 >
   <em>1 min</em> read</span>
 
@@ -629,62 +672,30 @@
   
 
   <div class="content">
-    <p><a href="https://github.com/decentralized-identity/bbs-signature/issues/315"><em>https://github.com/decentralized-identity/bbs-signature/issues/315</em></a></p>
+    <h3 id="proposed-feature"><span class="me-2">Proposed feature</span><a href="#proposed-feature" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>In https://www.w3.org/TR/vc-data-integrity/#proofs the definition of <code class="language-plaintext highlighter-rouge">verficationMethod</code> says:</p>
+<p>Our aim is to bring verification capabilities across the different SDK platforms. We will do so by allowing Edge Wallets to initiate a ProofRequest to a known Identifier (DID), also this same Edge wallet need to be capable of Generating the Proof and send it back. This would basically allow any Edge wallet to initiate and complete verification requests by itself with Credential Type SD JWT. As this is a Selective Disclosure JWT, during the verification process the Verifier will receive both the shared disclosures and the SD JWT Credential.</p>
 
-<blockquote>
-  <p><strong>verificationMethod</strong>
-A verification method is the means and information needed to verify the proof. If included, the value MUST be a <a href="https://infra.spec.whatwg.org/#string">string</a> that maps to a [<a href="https://www.w3.org/TR/vc-data-integrity/#bib-url">URL</a>].</p>
-</blockquote>
+<p>User Cases
+High level description <a href="https://www.criipto.com/blog/sd-jwt-based-verifiable-credentials">SD-JWT-Based Verifiable Credentials: An Introduction (criipto.com)</a></p>
 
-<p>This means that the following is not acceptable:</p>
+<p>Current Draft Spec https://datatracker.ietf.org/doc/draft-ietf-oauth-selective-disclosure-jwt/</p>
 
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-</pre></td><td class="rouge-code"><pre><span class="w">
- </span><span class="nl">"proof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DataIntegrityProof"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cryptosuite"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eddsa-jcs-2022"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"verificationMethod"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://controller.example/123456789abcdefghi#keys-1"</span><span class="p">,</span><span class="w">
-       </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Multikey"</span><span class="p">,</span><span class="w"> 
-       </span><span class="nl">"controller"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://controller.example/123456789abcdefghi"</span><span class="p">,</span><span class="w">
-       </span><span class="nl">"publicKeyMultibase"</span><span class="p">:</span><span class="w"> </span><span class="s2">"z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"</span><span class="w">
-   </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
+<p>EBSI Spec https://hub.ebsi.eu/vc-framework/did/selective-disclosure-sd-jwt</p>
 
-<p>This is in contradiction with the definition of the same property for controller documents in https://www.w3.org/TR/controller-document/#verification-methods:</p>
+<p>Age Verification: For services that require age verification, such as venues where entrants need to be over 18. Entrants can share their driving licence as verifiable presentation and security can receive on a mobile device and automatically confirm that they are over the age of 18 without actually disclosing their age.</p>
 
-<blockquote>
-  <p>If present, the value MUST be a <a href="https://infra.spec.whatwg.org/#ordered-set">set</a> of <a href="https://www.w3.org/TR/controller-document/#dfn-verification-method">verification methods</a>, where each <a href="https://www.w3.org/TR/controller-document/#dfn-verification-method">verification method</a> is expressed using a <a href="https://infra.spec.whatwg.org/#ordered-map">map</a>.</p>
-</blockquote>
+<p>Voting Systems: In digital voting systems, edge wallets can store digital identities, allowing citizens to vote securely and anonymously, ensuring the integrity of the electoral process.</p>
 
-<p>Which, interestingly, though would make the example valid if used on a controller document, would make this version invalid:</p>
+<h3 id="feature-description"><span class="me-2">Feature description</span><a href="#feature-description" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nl">"verificationMethod"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://controller.example/123456789abcdefghi#keys-1"</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
+<p>Using Presentation exchange protocol we add the ability for any SDK Verifier to now request SDJWT Presentation with all the disclosure capabilities bundled in.</p>
 
-<p>which is the <em>only</em> acceptable usage of the property for a proof.</p>
+<p>The verification will only pass if the claims we asked have been provided by the user, and disclosed correctly</p>
 
-<p>Is this difference intentional? If so, why? Or are these both specification bugs?</p>
+<h3 id="anything-else"><span class="me-2">Anything else?</span><a href="#anything-else" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>Personally, I tend to believe these are both bugs.</p>
+<p><em>No response</em></p>
 
   </div>
 
@@ -790,21 +801,21 @@ A verification method is the means and information needed to verify the proof. I
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=bbs-signature/issue/315:%20Value%20of%20a%20verification%20method%20property?%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fbbs-signature%2Fissue%2F315%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=bbs-signature/issue/315:%20SDJWT%20SDK%20to%20SDK%20Verification%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fbbs-signature%2Fissue%2F315%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=bbs-signature/issue/315:%20Value%20of%20a%20verification%20method%20property?%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fbbs-signature%2Fissue%2F315%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=bbs-signature/issue/315:%20SDJWT%20SDK%20to%20SDK%20Verification%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fbbs-signature%2Fissue%2F315%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fbbs-signature%2Fissue%2F315%2F&text=bbs-signature/issue/315:%20Value%20of%20a%20verification%20method%20property?%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fbbs-signature%2Fissue%2F315%2F&text=bbs-signature/issue/315:%20SDJWT%20SDK%20to%20SDK%20Verification%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -859,6 +870,27 @@ A verification method is the means and information needed to verify the proof. I
         
         
         <li class="text-truncate lh-lg">
+          <a href="/github-discussions/acapy/issue/3353/">acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/identus-mediator/issue/382/">identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/did-extensions/issue/597/">did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/github-discussions/acapy/pr/3344/">acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</a>
         </li>
       
@@ -867,27 +899,6 @@ A verification method is the means and information needed to verify the proof. I
         
         <li class="text-truncate lh-lg">
           <a href="/github-discussions/webauthn/issue/2211/">webauthn/issue/2211: CR: Need a way to detect "cancel"</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/webauthn/pr/2209/">webauthn/pr/2209: Add test vectors</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus-cloud-agent/issue/1459/">identus-cloud-agent/issue/1459:  proof request there's no information on holder </a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/acapy/issue/3343/">acapy/issue/3343: DID Management Proposed Update</a>
         </li>
       
     </ul>
@@ -1116,10 +1127,6 @@ A verification method is the means and information needed to verify the proof. I
     
     
     
-      
-        
-        
-
   
     
     
@@ -1239,6 +1246,10 @@ A verification method is the means and information needed to verify the proof. I
     
     
     
+      
+        
+        
+
   
     
     
@@ -1263,106 +1274,7 @@ A verification method is the means and information needed to verify the proof. I
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1428,6 +1340,90 @@ A verification method is the means and information needed to verify the proof. I
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1462,135 +1458,6 @@ A verification method is the means and information needed to verify the proof. I
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1657,6 +1524,244 @@ A verification method is the means and information needed to verify the proof. I
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1693,8 +1798,6 @@ A verification method is the means and information needed to verify the proof. I
     
     
     
-    
-      
     
   
     
@@ -1740,31 +1843,31 @@ A verification method is the means and information needed to verify the proof. I
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>
@@ -1799,11 +1902,11 @@ A verification method is the means and information needed to verify the proof. I
 
   
     <a
-      href="/github-discussions/tswg-cesr-specification/issue/60/"
+      href="/github-discussions/identus-edge-agent-sdk-ts/issue/174/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>tswg-cesr-specification/issue/60: About resolving protocol question</p>
+      <p>identus-edge-agent-sdk-ts/issue/174: MySQL Support</p>
     </a>
   
 
@@ -2085,10 +2188,6 @@ A verification method is the means and information needed to verify the proof. I
     
     
     
-      
-        
-        
-
   
     
     
@@ -2208,6 +2307,10 @@ A verification method is the means and information needed to verify the proof. I
     
     
     
+      
+        
+        
+
   
     
     
@@ -2232,106 +2335,7 @@ A verification method is the means and information needed to verify the proof. I
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2397,6 +2401,90 @@ A verification method is the means and information needed to verify the proof. I
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2431,135 +2519,6 @@ A verification method is the means and information needed to verify the proof. I
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2626,6 +2585,244 @@ A verification method is the means and information needed to verify the proof. I
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2662,8 +2859,6 @@ A verification method is the means and information needed to verify the proof. I
     
     
     
-    
-      
     
   
     
@@ -2709,31 +2904,31 @@ A verification method is the means and information needed to verify the proof. I
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>

@@ -6,10 +6,9 @@ categories: ["Hyperledger"]
 tags: ["identus-cloud-agent"]
 permalink: /identus-cloud-agent/issue/1451/
 comments_file: Hyperledger-identus-cloud-agent-issue-1451_comments
+excerpt: >
+  CC @FabioPinheiro  @elribonazo @yshyn-iohk @goncalo-frade-iohk 
 ---
-
-[_https://github.com/hyperledger/identus-cloud-agent/issues/1451_](https://github.com/hyperledger/identus-cloud-agent/issues/1451)
-
 ### Is this a regression?
 
 No

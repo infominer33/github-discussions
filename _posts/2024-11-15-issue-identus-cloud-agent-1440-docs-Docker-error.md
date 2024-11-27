@@ -6,10 +6,9 @@ categories: ["Hyperledger"]
 tags: ["identus-cloud-agent"]
 permalink: /identus-cloud-agent/issue/1440/
 comments_file: Hyperledger-identus-cloud-agent-issue-1440_comments
+excerpt: >
+  @bvoiturier The docs was no instructions how to build the docker image `atala-structurizr-lite`.  Can you have a look since you create the docker image
 ---
-
-[_https://github.com/hyperledger/identus-cloud-agent/issues/1440_](https://github.com/hyperledger/identus-cloud-agent/issues/1440)
-
 ### Is this a regression?
 
 Yes

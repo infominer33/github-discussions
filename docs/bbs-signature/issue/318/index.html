@@ -30,26 +30,26 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="bbs-signature/issue/318: Remove lowercase must text" />
-<meta name="author" content="PatStLouis" />
+<meta property="og:title" content="bbs-signature/issue/318: Able to create an in-memory sqlite database?" />
+<meta name="author" content="jamshale" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="https://github.com/decentralized-identity/bbs-signature/issues/318" />
-<meta property="og:description" content="https://github.com/decentralized-identity/bbs-signature/issues/318" />
+<meta name="description" content="PR #319 was raised to address this issue, closing." />
+<meta property="og:description" content="PR #319 was raised to address this issue, closing." />
 <link rel="canonical" href="/github-discussions/bbs-signature/issue/318/" />
 <meta property="og:url" content="/github-discussions/bbs-signature/issue/318/" />
 <meta property="og:site_name" content="Identosphere’s Github Discussions" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-03-19T02:13:15-07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="bbs-signature/issue/318: Remove lowercase must text" />
+<meta property="twitter:title" content="bbs-signature/issue/318: Able to create an in-memory sqlite database?" />
 <meta name="twitter:site" content="@DecentralizeID" />
-<meta name="twitter:creator" content="@PatStLouis" />
+<meta name="twitter:creator" content="@jamshale" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"PatStLouis"},"dateModified":"2024-03-19T02:13:15-07:00","datePublished":"2024-03-19T02:13:15-07:00","description":"https://github.com/decentralized-identity/bbs-signature/issues/318","headline":"bbs-signature/issue/318: Remove lowercase must text","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/bbs-signature/issue/318/"},"url":"/github-discussions/bbs-signature/issue/318/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"jamshale"},"dateModified":"2024-03-19T02:13:15-07:00","datePublished":"2024-03-19T02:13:15-07:00","description":"PR #319 was raised to address this issue, closing.","headline":"bbs-signature/issue/318: Able to create an in-memory sqlite database?","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/bbs-signature/issue/318/"},"url":"/github-discussions/bbs-signature/issue/318/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>bbs-signature/issue/318: Remove lowercase must text | Identosphere's Github Discussions
+  <title>bbs-signature/issue/318: Able to create an in-memory sqlite database? | Identosphere's Github Discussions
   </title>
 
   <!--
@@ -437,7 +437,7 @@
         
           
             
-              <span>bbs-signature/issue/318: Remove lowercase must text</span>
+              <span>bbs-signature/issue/318: Able to create an in-memory sqlite database?</span>
             
 
           
@@ -552,7 +552,7 @@
 
 <article class="px-1" data-toc="false">
   <header>
-    <h1 data-toc-skip>bbs-signature/issue/318: Remove lowercase must text</h1>
+    <h1 data-toc-skip>bbs-signature/issue/318: Able to create an in-memory sqlite database?</h1>
     
 
     <div class="post-meta text-muted">
@@ -588,7 +588,7 @@
       <div class="d-flex justify-content-between">
         
           <em>
-            <a href="https://github.com/PatStLouis">@PatStLouis</a>
+            <a href="https://github.com/jamshale">@jamshale</a>
           </em>
         
 
@@ -617,7 +617,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="81 words"
+  title="84 words"
 >
   <em>1 min</em> read</span>
 
@@ -629,22 +629,11 @@
   
 
   <div class="content">
-    <p><a href="https://github.com/decentralized-identity/bbs-signature/issues/318"><em>https://github.com/decentralized-identity/bbs-signature/issues/318</em></a></p>
+    <p>From the python library is there a way to create an in-memory sqlite database?</p>
 
-<p>The <a href="https://www.w3.org/TR/vc-data-integrity/#unlinkability">unlinkability section</a> has a lowercase must keyword.</p>
+<p>I see this https://github.com/hyperledger/aries-askar/blob/main/askar-storage/src/backend/sqlite/provision.rs#L50 and will try and figure it out myself. Just posting this here is anyone knows off the to of their head.</p>
 
-<blockquote>
-  <p>[…] This characteristic is called unlinkability which ensures that no correlatable data are used in a digitally-signed payload while still providing some level of trust, the sufficiency of which <em>must</em> be determined by each verifier.</p>
-</blockquote>
-
-<p>I would suggest to:
-A) Make this a normative statement
-B) Change the wording to abstract the word <code class="language-plaintext highlighter-rouge">must</code> to avoid confusion</p>
-
-<p>Suggested change:</p>
-<blockquote>
-  <p>[…] the sufficiency of which ~must~ <strong>has to</strong> be determined by each verifier.</p>
-</blockquote>
+<p><strong><em>context:</em></strong> We’re trying to rely on askar fully in aca-py and remove the existing in-memory wallet that was created for testing. Having the option to create an in-memory wallet that is askar based would really help speed up the tests and prevent file IO errors.</p>
 
   </div>
 
@@ -652,18 +641,6 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
       
       
           <h2>Comments</h2>
-          
-              <div class="comment">
-                  <h4><strong><a href="https://github.com/dlongley">@dlongley</a></strong> commented on <mark>2024-11-11</mark></h4>
-                  <p>+1 to rewording to avoid the use of “must” in the above referenced sentence. Neither RFC2119 language nor a testable statement were intended. I think “has to” is acceptable clarifying language.</p>
-
-              </div>
-          
-              <div class="comment">
-                  <h4><strong><a href="https://github.com/peacekeeper">@peacekeeper</a></strong> commented on <mark>2024-11-11</mark></h4>
-                  <p>Agree with @dlongley</p>
-
-              </div>
           
               <div class="comment">
                   <h4><strong><a href="https://github.com/msporny">@msporny</a></strong> commented on <mark>2024-11-17</mark></h4>
@@ -726,21 +703,21 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=bbs-signature/issue/318:%20Remove%20lowercase%20must%20text%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fbbs-signature%2Fissue%2F318%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=bbs-signature/issue/318:%20Able%20to%20create%20an%20in-memory%20sqlite%20database?%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fbbs-signature%2Fissue%2F318%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=bbs-signature/issue/318:%20Remove%20lowercase%20must%20text%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fbbs-signature%2Fissue%2F318%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=bbs-signature/issue/318:%20Able%20to%20create%20an%20in-memory%20sqlite%20database?%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fbbs-signature%2Fissue%2F318%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fbbs-signature%2Fissue%2F318%2F&text=bbs-signature/issue/318:%20Remove%20lowercase%20must%20text%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fbbs-signature%2Fissue%2F318%2F&text=bbs-signature/issue/318:%20Able%20to%20create%20an%20in-memory%20sqlite%20database?%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -795,6 +772,27 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
         
         
         <li class="text-truncate lh-lg">
+          <a href="/github-discussions/acapy/issue/3353/">acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/identus-mediator/issue/382/">identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/did-extensions/issue/597/">did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/github-discussions/acapy/pr/3344/">acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</a>
         </li>
       
@@ -803,27 +801,6 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
         
         <li class="text-truncate lh-lg">
           <a href="/github-discussions/webauthn/issue/2211/">webauthn/issue/2211: CR: Need a way to detect "cancel"</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/webauthn/pr/2209/">webauthn/pr/2209: Add test vectors</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus-cloud-agent/issue/1459/">identus-cloud-agent/issue/1459:  proof request there's no information on holder </a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/acapy/issue/3343/">acapy/issue/3343: DID Management Proposed Update</a>
         </li>
       
     </ul>
@@ -1052,10 +1029,6 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
     
     
     
-      
-        
-        
-
   
     
     
@@ -1175,6 +1148,10 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
     
     
     
+      
+        
+        
+
   
     
     
@@ -1199,106 +1176,7 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1364,6 +1242,90 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1398,135 +1360,6 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1593,6 +1426,244 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1629,8 +1700,6 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
     
     
     
-    
-      
     
   
     
@@ -1676,31 +1745,31 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>
@@ -1739,7 +1808,7 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>universal-registrar/pr/81: Remove bedrock vc verifier</p>
+      <p>universal-registrar/pr/81: fix: indyNamespace</p>
     </a>
   
 
@@ -1749,7 +1818,7 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>aries-vcx/issue/1163: Edge-client initiated connections</p>
+      <p>aries-vcx/issue/1163: OpenID4VP SD-JWT is not verifying the holder signature (KB-JWT)</p>
     </a>
   
 </nav>
@@ -2021,10 +2090,6 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
     
     
     
-      
-        
-        
-
   
     
     
@@ -2144,6 +2209,10 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
     
     
     
+      
+        
+        
+
   
     
     
@@ -2168,106 +2237,7 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2333,6 +2303,90 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2367,135 +2421,6 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2562,6 +2487,244 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2598,8 +2761,6 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
     
     
     
-    
-      
     
   
     
@@ -2645,31 +2806,31 @@ B) Change the wording to abstract the word <code class="language-plaintext highl
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>

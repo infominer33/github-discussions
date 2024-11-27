@@ -6,10 +6,9 @@ categories: ["Hyperledger"]
 tags: ["identus-cloud-agent"]
 permalink: /identus-cloud-agent/pr/1442/
 comments_file: Hyperledger-identus-cloud-agent-pr-1442_comments
+excerpt: >
+  this was a leftover of some tests I was doing, I just removed it!
 ---
-
-[_https://github.com/hyperledger/identus-cloud-agent/pull/1442_](https://github.com/hyperledger/identus-cloud-agent/pull/1442)
-
 ### Description: 
 Adds more tests and refactoring
 

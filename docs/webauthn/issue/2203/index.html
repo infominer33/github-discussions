@@ -33,8 +33,8 @@
 <meta property="og:title" content="webauthn/issue/2203: Replace USVString with DOMString" />
 <meta name="author" content="zacknewman" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="https://github.com/w3c/webauthn/issues/2203" />
-<meta property="og:description" content="https://github.com/w3c/webauthn/issues/2203" />
+<meta name="description" content="That argument applies to many of the DOMStrings in the spec (i.e., many areas where you see DOMString have to be valid Unicode). Making these lone 3 USVStrings into DOMStrings is a much smaller change, makes the spec consistent, and does not make it more fragile since there are more requirements than just valid Unicode. base64url decoding is defined on arbitrary bytes. If the input is not valid UTF-8, then the decoding will either fail or decode into something invalid which is possible even when the input is valid UTF-8. The prf extension is also inconsistent with how the base64URL encoding of a Credential ID is typed elsewhere. For example, RegistrationResponseJSON.id is a DOMString. It would be nice to pick one approach and stick with it: Pick the most strict type possible * Define all strings as DOMString per the recommendation The first approach will cause a lot of DOMStrings to be changed to USVString—including some of which revert previous changes from USVString to DOMString—and I don’t think it appreciably makes the spec that much more type safe since many things require additional properties anyway (i.e.,USVString won’t make it infallible anyway). The second approach is much easier, aligns with the recommendation, and aligns with previous PRs that changed USVStrings to DOMStrings." />
+<meta property="og:description" content="That argument applies to many of the DOMStrings in the spec (i.e., many areas where you see DOMString have to be valid Unicode). Making these lone 3 USVStrings into DOMStrings is a much smaller change, makes the spec consistent, and does not make it more fragile since there are more requirements than just valid Unicode. base64url decoding is defined on arbitrary bytes. If the input is not valid UTF-8, then the decoding will either fail or decode into something invalid which is possible even when the input is valid UTF-8. The prf extension is also inconsistent with how the base64URL encoding of a Credential ID is typed elsewhere. For example, RegistrationResponseJSON.id is a DOMString. It would be nice to pick one approach and stick with it: Pick the most strict type possible * Define all strings as DOMString per the recommendation The first approach will cause a lot of DOMStrings to be changed to USVString—including some of which revert previous changes from USVString to DOMString—and I don’t think it appreciably makes the spec that much more type safe since many things require additional properties anyway (i.e.,USVString won’t make it infallible anyway). The second approach is much easier, aligns with the recommendation, and aligns with previous PRs that changed USVStrings to DOMStrings." />
 <link rel="canonical" href="/github-discussions/webauthn/issue/2203/" />
 <meta property="og:url" content="/github-discussions/webauthn/issue/2203/" />
 <meta property="og:site_name" content="Identosphere’s Github Discussions" />
@@ -45,7 +45,7 @@
 <meta name="twitter:site" content="@DecentralizeID" />
 <meta name="twitter:creator" content="@zacknewman" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"zacknewman"},"dateModified":"2024-11-14T07:08:41-08:00","datePublished":"2024-11-14T07:08:41-08:00","description":"https://github.com/w3c/webauthn/issues/2203","headline":"webauthn/issue/2203: Replace USVString with DOMString","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/webauthn/issue/2203/"},"url":"/github-discussions/webauthn/issue/2203/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"zacknewman"},"dateModified":"2024-11-14T07:08:41-08:00","datePublished":"2024-11-14T07:08:41-08:00","description":"That argument applies to many of the DOMStrings in the spec (i.e., many areas where you see DOMString have to be valid Unicode). Making these lone 3 USVStrings into DOMStrings is a much smaller change, makes the spec consistent, and does not make it more fragile since there are more requirements than just valid Unicode. base64url decoding is defined on arbitrary bytes. If the input is not valid UTF-8, then the decoding will either fail or decode into something invalid which is possible even when the input is valid UTF-8. The prf extension is also inconsistent with how the base64URL encoding of a Credential ID is typed elsewhere. For example, RegistrationResponseJSON.id is a DOMString. It would be nice to pick one approach and stick with it: Pick the most strict type possible * Define all strings as DOMString per the recommendation The first approach will cause a lot of DOMStrings to be changed to USVString—including some of which revert previous changes from USVString to DOMString—and I don’t think it appreciably makes the spec that much more type safe since many things require additional properties anyway (i.e.,USVString won’t make it infallible anyway). The second approach is much easier, aligns with the recommendation, and aligns with previous PRs that changed USVStrings to DOMStrings.","headline":"webauthn/issue/2203: Replace USVString with DOMString","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/webauthn/issue/2203/"},"url":"/github-discussions/webauthn/issue/2203/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -617,7 +617,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="100 words"
+  title="99 words"
 >
   <em>1 min</em> read</span>
 
@@ -629,9 +629,7 @@
   
 
   <div class="content">
-    <p><a href="https://github.com/w3c/webauthn/issues/2203"><em>https://github.com/w3c/webauthn/issues/2203</em></a></p>
-
-<p>It would appear that the same justification that was used for #2115 applies to the remaining areas where <code class="language-plaintext highlighter-rouge">USVString</code> is used:</p>
+    <p>It would appear that the same justification that was used for #2115 applies to the remaining areas where <code class="language-plaintext highlighter-rouge">USVString</code> is used:</p>
 
 <blockquote>
   <p>As recommended by the <a href="https://webidl.spec.whatwg.org/#idl-USVString">Web IDL spec</a>:</p>
@@ -810,6 +808,27 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/github-discussions/acapy/issue/3353/">acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/identus-mediator/issue/382/">identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/did-extensions/issue/597/">did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/github-discussions/acapy/pr/3344/">acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</a>
         </li>
       
@@ -818,27 +837,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/github-discussions/webauthn/issue/2211/">webauthn/issue/2211: CR: Need a way to detect "cancel"</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/webauthn/pr/2209/">webauthn/pr/2209: Add test vectors</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus-cloud-agent/issue/1459/">identus-cloud-agent/issue/1459:  proof request there's no information on holder </a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/acapy/issue/3343/">acapy/issue/3343: DID Management Proposed Update</a>
         </li>
       
     </ul>
@@ -1067,10 +1065,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -1190,6 +1184,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -1214,106 +1212,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1379,6 +1278,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1413,135 +1396,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1608,6 +1462,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1644,8 +1736,6 @@
     
     
     
-    
-      
     
   
     
@@ -1691,31 +1781,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>
@@ -1764,7 +1854,7 @@
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>identus/issue/86: Incorrect hashing used in tests for `ecdsa-rdfc-2019` `P-384`</p>
+      <p>identus/issue/86: Cardano Connector for SDK</p>
     </a>
   
 </nav>
@@ -2036,10 +2126,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -2159,6 +2245,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -2183,106 +2273,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2348,6 +2339,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2382,135 +2457,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2577,6 +2523,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2613,8 +2797,6 @@
     
     
     
-    
-      
     
   
     
@@ -2660,31 +2842,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>

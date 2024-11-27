@@ -6,10 +6,9 @@ categories: ["W3C"]
 tags: ["webauthn"]
 permalink: /webauthn/issue/2192/
 comments_file: W3C-webauthn-issue-2192_comments
+excerpt: >
+  > Experience with HSTS preloading indicates that given the scale of the web, sharp APIs must have some way to undo damage from improper use. Many tears have been shed for a misplaced API call. Someone (probably, lots of people) may hold the API wrong and clear user passkeys.    Understood. If it is the case, I recommend that the authenticator would notify the user that the recovered credential may not work when the user tries to restore the hidden credentials from the authenticator.   What do you think so?    We could add some notes around how authenticator may communicate with users when restoring the credential.
 ---
-
-[_https://github.com/w3c/webauthn/issues/2192_](https://github.com/w3c/webauthn/issues/2192)
-
 ## Proposed Change
 
 In the spec, there are some description and recommendation how the authenticator handles signal APIs.

@@ -6,10 +6,9 @@ categories: ["W3C"]
 tags: ["vc-data-model"]
 permalink: /vc-data-model/pr/1560/
 comments_file: W3C-vc-data-model-pr-1560_comments
+excerpt: >
+  ```suggestion  updating cryptographic systems and managing private signing keys with limited  validity periods. It discusses mechanisms for ensuring content integrity of  ```
 ---
-
-[_https://github.com/w3c/vc-data-model/pull/1560_](https://github.com/w3c/vc-data-model/pull/1560)
-
 pulled from #1554
 
 

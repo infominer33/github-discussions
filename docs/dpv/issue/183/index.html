@@ -30,26 +30,26 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="dpv/issue/183: New status purpose proposal" />
-<meta name="author" content="PatStLouis" />
+<meta property="og:title" content="dpv/issue/183: Add capability to choose either polling or websocket" />
+<meta name="author" content="amagyar-iohk" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="https://github.com/w3c/dpv/issues/183" />
-<meta property="og:description" content="https://github.com/w3c/dpv/issues/183" />
+<meta name="description" content="PR #185 has been raised to address this issue. This issue will be closed once PR #185 has been merged." />
+<meta property="og:description" content="PR #185 has been raised to address this issue. This issue will be closed once PR #185 has been merged." />
 <link rel="canonical" href="/github-discussions/dpv/issue/183/" />
 <meta property="og:url" content="/github-discussions/dpv/issue/183/" />
 <meta property="og:site_name" content="Identosphere’s Github Discussions" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-08-24T09:58:44-07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="dpv/issue/183: New status purpose proposal" />
+<meta property="twitter:title" content="dpv/issue/183: Add capability to choose either polling or websocket" />
 <meta name="twitter:site" content="@DecentralizeID" />
-<meta name="twitter:creator" content="@PatStLouis" />
+<meta name="twitter:creator" content="@amagyar-iohk" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"PatStLouis"},"dateModified":"2024-08-24T09:58:44-07:00","datePublished":"2024-08-24T09:58:44-07:00","description":"https://github.com/w3c/dpv/issues/183","headline":"dpv/issue/183: New status purpose proposal","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/dpv/issue/183/"},"url":"/github-discussions/dpv/issue/183/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"amagyar-iohk"},"dateModified":"2024-08-24T09:58:44-07:00","datePublished":"2024-08-24T09:58:44-07:00","description":"PR #185 has been raised to address this issue. This issue will be closed once PR #185 has been merged.","headline":"dpv/issue/183: Add capability to choose either polling or websocket","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/dpv/issue/183/"},"url":"/github-discussions/dpv/issue/183/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>dpv/issue/183: New status purpose proposal | Identosphere's Github Discussions
+  <title>dpv/issue/183: Add capability to choose either polling or websocket | Identosphere's Github Discussions
   </title>
 
   <!--
@@ -437,7 +437,7 @@
         
           
             
-              <span>dpv/issue/183: New status purpose proposal</span>
+              <span>dpv/issue/183: Add capability to choose either polling or websocket</span>
             
 
           
@@ -525,6 +525,49 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -552,7 +595,7 @@
 
 <article class="px-1" data-toc="false">
   <header>
-    <h1 data-toc-skip>dpv/issue/183: New status purpose proposal</h1>
+    <h1 data-toc-skip>dpv/issue/183: Add capability to choose either polling or websocket</h1>
     
 
     <div class="post-meta text-muted">
@@ -588,7 +631,7 @@
       <div class="d-flex justify-content-between">
         
           <em>
-            <a href="https://github.com/PatStLouis">@PatStLouis</a>
+            <a href="https://github.com/amagyar-iohk">@amagyar-iohk</a>
           </em>
         
 
@@ -617,7 +660,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="173 words"
+  title="46 words"
 >
   <em>1 min</em> read</span>
 
@@ -629,17 +672,17 @@
   
 
   <div class="content">
-    <p><a href="https://github.com/w3c/dpv/issues/183"><em>https://github.com/w3c/dpv/issues/183</em></a></p>
+    <h3 id="proposed-feature"><span class="me-2">Proposed feature</span><a href="#proposed-feature" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>Greetings, while implementing <code class="language-plaintext highlighter-rouge">BitstringStatusList</code> in our use case (supply-chain), we uncovered a situation where an issued credential might have a new version available for pickup which doesn’t warrant a revocation of the previous version, but it would still be worthwhile to have a status to signal that an updated version is available.</p>
+<p>Add possibility to choose the mediator connection either from pulling or websocket. Default (if no argument is passed) when starting the connection to the mediator, should be WS if available</p>
 
-<p>Therefore I would like to suggest adding a status purpose ~<code class="language-plaintext highlighter-rouge">supersession</code>~ <code class="language-plaintext highlighter-rouge">refresh</code>, which can have a value of <code class="language-plaintext highlighter-rouge">0</code>(meaning this is the latest version of the credential available) or <code class="language-plaintext highlighter-rouge">1</code> (MAY be refreshed).</p>
+<h3 id="feature-description"><span class="me-2">Feature description</span><a href="#feature-description" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>The process for a holder and/or verifier to get the latest version is out of scope, however I would intend this to be used in parallel with a ~<code class="language-plaintext highlighter-rouge">SupersessionRefresh</code>~ defined <code class="language-plaintext highlighter-rouge">refreshService</code> type, which contains an endpoint to query and get an updated version of the credential.</p>
+<p>Enable user to choose the message receival mechanism</p>
 
-<p>Once the software have retrieved the latest version of the credential, they would archive the current version and replace it with the latest version in their software, or create a <a href="https://en.wikipedia.org/wiki/Symbolic_link">Symbolic link</a> towards it.</p>
+<h3 id="anything-else"><span class="me-2">Anything else?</span><a href="#anything-else" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>edit: renamed <code class="language-plaintext highlighter-rouge">supersession</code> to <code class="language-plaintext highlighter-rouge">refresh</code> as proposed.</p>
+<p><em>No response</em></p>
 
   </div>
 
@@ -661,6 +704,12 @@
                   <p>refresh would make sense, especially if its paired with a refresh service (optional, could also be out of bound). I had <code class="language-plaintext highlighter-rouge">update</code> at first then changed to <code class="language-plaintext highlighter-rouge">supersession</code> to align with the revocation/suspension terminologies.</p>
 
 <p>Whichever term has consensus around which is representative of the features.</p>
+
+              </div>
+          
+              <div class="comment">
+                  <h4><strong><a href="https://github.com/msporny">@msporny</a></strong> commented on <mark>2024-11-24</mark></h4>
+                  <p>PR #185 has been raised to address this issue. This issue will be closed once PR #185 has been merged.</p>
 
               </div>
           
@@ -719,21 +768,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=dpv/issue/183:%20New%20status%20purpose%20proposal%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fdpv%2Fissue%2F183%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=dpv/issue/183:%20Add%20capability%20to%20choose%20either%20polling%20or%20websocket%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fdpv%2Fissue%2F183%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=dpv/issue/183:%20New%20status%20purpose%20proposal%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fdpv%2Fissue%2F183%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=dpv/issue/183:%20Add%20capability%20to%20choose%20either%20polling%20or%20websocket%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fdpv%2Fissue%2F183%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fdpv%2Fissue%2F183%2F&text=dpv/issue/183:%20New%20status%20purpose%20proposal%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fdpv%2Fissue%2F183%2F&text=dpv/issue/183:%20Add%20capability%20to%20choose%20either%20polling%20or%20websocket%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -788,6 +837,27 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/github-discussions/acapy/issue/3353/">acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/identus-mediator/issue/382/">identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/did-extensions/issue/597/">did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/github-discussions/acapy/pr/3344/">acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</a>
         </li>
       
@@ -796,27 +866,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/github-discussions/webauthn/issue/2211/">webauthn/issue/2211: CR: Need a way to detect "cancel"</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/webauthn/pr/2209/">webauthn/pr/2209: Add test vectors</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus-cloud-agent/issue/1459/">identus-cloud-agent/issue/1459:  proof request there's no information on holder </a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/acapy/issue/3343/">acapy/issue/3343: DID Management Proposed Update</a>
         </li>
       
     </ul>
@@ -1045,10 +1094,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -1168,6 +1213,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -1192,106 +1241,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1357,6 +1307,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1391,135 +1425,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1586,6 +1491,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1622,8 +1765,6 @@
     
     
     
-    
-      
     
   
     
@@ -1669,31 +1810,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>
@@ -1732,7 +1873,7 @@
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>dpv/issue/182: Hosting of the bistring status list context</p>
+      <p>dpv/issue/182: Link in the CONTRIBUTING.md is broken</p>
     </a>
   
 
@@ -1742,7 +1883,7 @@
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>dpv/issue/184: Respec issue on the usage of the '|' character...</p>
+      <p>dpv/issue/184: Typos in docs</p>
     </a>
   
 </nav>
@@ -2014,10 +2155,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -2137,6 +2274,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -2161,106 +2302,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2326,6 +2368,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2360,135 +2486,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2555,6 +2552,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2591,8 +2826,6 @@
     
     
     
-    
-      
     
   
     
@@ -2638,31 +2871,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>

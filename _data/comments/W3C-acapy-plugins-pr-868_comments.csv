@@ -1,3 +1,0 @@
-comment_id,user,date,body
-1844058199,msporny,2024-11-15T15:37:55+00:00,"We can't say ""this specification"" because these are instructions to IANA (they're supposed to stand on their own). I just removed the reference to address the concern you mentioned since we have a link on the previous line.."
-1844072623,msporny,2024-11-15T15:42:27+00:00,"> line 910 has a Respec-managed internal reference <a href=""#application-did-ld-json""></a> which is now broken and should be adapted  Fixed in d6a7bf62b3679e55d5aae7fb2809a61c2de2ae3d."

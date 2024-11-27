@@ -1,0 +1,3 @@
+comment_id,user,date,body
+2494025957,mwherman2000,2024-11-22T15:29:40+00:00,"> ready for pr > ... > The purpose of this issue is to track this desired clarification.  This is a contradiction. @manu please remove the ""ready for pr"" label until there is more concensus on what the eventual solution is ..i.e. avoid _dueling PRs_. ...perhaps tag your idea as a _proposal_. "
+2494098759,mwherman2000,2024-11-22T16:01:21+00:00,"We can't rely or restrict the uniqueness of a DID Method name based solely on trademarking due to some DID Method names not being trademarkable.  Read https://github.com/w3c/did-extensions/issues/597 for a super/meta proposal,"

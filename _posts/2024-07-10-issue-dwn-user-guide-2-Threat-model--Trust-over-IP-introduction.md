@@ -6,10 +6,9 @@ categories: ["DIF"]
 tags: ["dwn-user-guide"]
 permalink: /dwn-user-guide/issue/2/
 comments_file: DIF-dwn-user-guide-issue-2_comments
+excerpt: >
+  APQC's Process Classification Framework (PCF)  https://www.apqc.org/sites/default/files/files/PCF%20Collateral/Understanding%20the%20PCF%20Elements%20%20-%20FINAL.pdf
 ---
-
-[_https://github.com/decentralized-identity/dwn-user-guide/issues/2_](https://github.com/decentralized-identity/dwn-user-guide/issues/2)
-
 (With caveat that I'm writing this after having read only from start to the end of section 2.2.4, and read the last use-case, and that perhaps somewhere in between lies the key to this issue. If that is the case, it means that the key needs to be brought earlier. If not, disregard the caveat and proceed to reading the below as though I had finished proof-reading the entire doc.)
 
 If the Threat Model summarized in the last [use-case](https://w3c.github.io/identity-web-impact/#pure-digital-credentials) is of importance, I suggest it be more clearly stated.

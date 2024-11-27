@@ -6,10 +6,9 @@ categories: ["W3C"]
 tags: ["did-core"]
 permalink: /did-core/issue/865/
 comments_file: W3C-did-core-issue-865_comments
+excerpt: >
+  > your application/specification will have to contain some query parameter canonicalization rules to ensure equivalence holds in your application area    If I'm reading this correctly, then you're saying that something like:    ```json  {    \"@id\": \"did:example:abc123?service=foo&relativeRef=/\"  }  ```    is going to require some additional equivalence-checking? Which I guess means that it's no longer opaque. So basically this should be part of the protocol considerations of whatever protocol is producing and consuming such identifiers. So basically this should be an ActivityPub concern (for example).    Although I think that at least for the purposes of DID specs, a quick note about query parameter ordering wouldn't be amiss. For example in https://w3c.github.io/did-core/#did-parameters or something.
 ---
-
-[_https://github.com/w3c/did-core/issues/865_](https://github.com/w3c/did-core/issues/865)
-
 I am looking for guidance on query parameter ordering, specifically where a DID URL with a query parameter might be used as an ID
 
 In many systems such as ActivityPub, an ID is basically an opaque string but in practice it is a URL whose structure gives a hint on how to resolve it, like using an HTTPS URL that resolves to the object.

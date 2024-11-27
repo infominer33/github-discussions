@@ -6,10 +6,9 @@ categories: ["W3C"]
 tags: ["did-extensions"]
 permalink: /did-extensions/issue/590/
 comments_file: W3C-did-extensions-issue-590_comments
+excerpt: >
+  Hi @andrewwhitehead, your feedback is a valid consideration.    Please checkout the [Super/Meta Proposal](https://github.com/w3c/did-extensions/issues/597) that proposes the inclusion in the spec of multiple _authentication of unique DID Method names_ approaches (in addition to the one described here) and the one @manu described elsewhere.
 ---
-
-[_https://github.com/w3c/did-extensions/issues/590_](https://github.com/w3c/did-extensions/issues/590)
-
 For example, 
 - did:ns -> http://did-ns.directory
 - did: object -> http://did-object.directory

@@ -6,10 +6,9 @@ categories: ["W3C"]
 tags: ["webauthn"]
 permalink: /webauthn/issue/2151/
 comments_file: W3C-webauthn-issue-2151_comments
+excerpt: >
+  Ironically, this issue is now obsolete with PR #2194 merged.
 ---
-
-[_https://github.com/w3c/webauthn/issues/2151_](https://github.com/w3c/webauthn/issues/2151)
-
 Related to #1644
 
 ## Proposed Change

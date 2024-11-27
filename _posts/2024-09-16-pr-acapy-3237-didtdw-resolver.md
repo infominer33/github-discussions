@@ -6,9 +6,8 @@ categories: ["OWF"]
 tags: ["acapy"]
 permalink: /acapy/pr/3237/
 comments_file: OWF-acapy-pr-3237_comments
+excerpt: >
+  `#whois` does indeed dereference to the service definition, not the whois document itself. I believe `/whois` should be translated to `?service=whois` by the resolver and dereferenced (to the document) that way.
 ---
-
-[_https://github.com/openwallet-foundation/acapy/pull/3237_](https://github.com/openwallet-foundation/acapy/pull/3237)
-
 - Uses the trustdidweb-py library to implement the resolver. 
 - Plugs the resolve endpoint and library into the base_resolver class for caching and future other resolution. 

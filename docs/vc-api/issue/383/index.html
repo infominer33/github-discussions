@@ -30,26 +30,26 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="vc-api/issue/383: Extractable property not set in SubtleCrypto.deriveKey" />
-<meta name="author" content="gmta" />
+<meta property="og:title" content="vc-api/issue/383: Timeout on OPTIONS (cors preflight)" />
+<meta name="author" content="robertocarvajal" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="https://github.com/w3c-ccg/vc-api/issues/383" />
-<meta property="og:description" content="https://github.com/w3c-ccg/vc-api/issues/383" />
+<meta name="description" content="Thanks for catching that! As @panva noticed, the [[usages]] internal slot should be set as well :) (Btw, if tests didn’t catch that one, perhaps we should test that more extensively?)" />
+<meta property="og:description" content="Thanks for catching that! As @panva noticed, the [[usages]] internal slot should be set as well :) (Btw, if tests didn’t catch that one, perhaps we should test that more extensively?)" />
 <link rel="canonical" href="/github-discussions/vc-api/issue/383/" />
 <meta property="og:url" content="/github-discussions/vc-api/issue/383/" />
 <meta property="og:site_name" content="Identosphere’s Github Discussions" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-05-14T09:12:53-07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="vc-api/issue/383: Extractable property not set in SubtleCrypto.deriveKey" />
+<meta property="twitter:title" content="vc-api/issue/383: Timeout on OPTIONS (cors preflight)" />
 <meta name="twitter:site" content="@DecentralizeID" />
-<meta name="twitter:creator" content="@gmta" />
+<meta name="twitter:creator" content="@robertocarvajal" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"gmta"},"dateModified":"2024-05-14T09:12:53-07:00","datePublished":"2024-05-14T09:12:53-07:00","description":"https://github.com/w3c-ccg/vc-api/issues/383","headline":"vc-api/issue/383: Extractable property not set in SubtleCrypto.deriveKey","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/vc-api/issue/383/"},"url":"/github-discussions/vc-api/issue/383/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"robertocarvajal"},"dateModified":"2024-05-14T09:12:53-07:00","datePublished":"2024-05-14T09:12:53-07:00","description":"Thanks for catching that! As @panva noticed, the [[usages]] internal slot should be set as well :) (Btw, if tests didn’t catch that one, perhaps we should test that more extensively?)","headline":"vc-api/issue/383: Timeout on OPTIONS (cors preflight)","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/vc-api/issue/383/"},"url":"/github-discussions/vc-api/issue/383/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>vc-api/issue/383: Extractable property not set in `SubtleCrypto.deriveKey` | Identosphere's Github Discussions
+  <title>vc-api/issue/383: Timeout on OPTIONS (cors preflight) | Identosphere's Github Discussions
   </title>
 
   <!--
@@ -437,7 +437,7 @@
         
           
             
-              <span>vc-api/issue/383: Extractable property not set in `SubtleCrypto.deriveKey`</span>
+              <span>vc-api/issue/383: Timeout on OPTIONS (cors preflight)</span>
             
 
           
@@ -552,7 +552,7 @@
 
 <article class="px-1" data-toc="false">
   <header>
-    <h1 data-toc-skip>vc-api/issue/383: Extractable property not set in `SubtleCrypto.deriveKey`</h1>
+    <h1 data-toc-skip>vc-api/issue/383: Timeout on OPTIONS (cors preflight)</h1>
     
 
     <div class="post-meta text-muted">
@@ -588,7 +588,7 @@
       <div class="d-flex justify-content-between">
         
           <em>
-            <a href="https://github.com/gmta">@gmta</a>
+            <a href="https://github.com/robertocarvajal">@robertocarvajal</a>
           </em>
         
 
@@ -617,7 +617,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="26 words"
+  title="81 words"
 >
   <em>1 min</em> read</span>
 
@@ -629,9 +629,21 @@
   
 
   <div class="content">
-    <p><a href="https://github.com/w3c-ccg/vc-api/issues/383"><em>https://github.com/w3c-ccg/vc-api/issues/383</em></a></p>
+    <p>Seems like the mediator is responding like this:</p>
 
-<p>Similar to <code class="language-plaintext highlighter-rouge">SubtleCrypto.importKey</code>, <code class="language-plaintext highlighter-rouge">.deriveKey</code> should set the <code class="language-plaintext highlighter-rouge">[[extractable]]</code> internal slot of the resulting key. None of the algorithms actually set this property on the key.</p>
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>atala-prism-mediator-identus-mediator-1  | 2024-11-24_00:56:53.696 WARN  f.d.f.TransportDispatcher@L167:[ZScheduler-Worker-1] {version=1.0.0, msg_sha256=c4946137e7ddb36a3261fd6dfb6b0b4265280b0a3dfc91c3e449513dd2c7ed10} - zio-fiber-1940542155 No url to send message
+o.h.i.m.DIDCommRoutes@L167:[ZScheduler-Worker-2] {version=1.0.0} - zio-fiber-1688384339 Request Timeout
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>For a CORS check from the browser, this is causing Safari 18 to stop polling the endpoint since it triggers a CORS failure</p>
+
+<p>Other browsers seems to just ignore this timeout and work fine.</p>
+
+<p>In order for this bug to reproduce you need to run Safari 18 (Sequoia) on mediator v1.0.0.</p>
 
   </div>
 
@@ -703,21 +715,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=vc-api/issue/383:%20Extractable%20property%20not%20set%20in%20%60SubtleCrypto.deriveKey%60%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fvc-api%2Fissue%2F383%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=vc-api/issue/383:%20Timeout%20on%20OPTIONS%20(cors%20preflight)%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fvc-api%2Fissue%2F383%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=vc-api/issue/383:%20Extractable%20property%20not%20set%20in%20%60SubtleCrypto.deriveKey%60%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fvc-api%2Fissue%2F383%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=vc-api/issue/383:%20Timeout%20on%20OPTIONS%20(cors%20preflight)%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fvc-api%2Fissue%2F383%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fvc-api%2Fissue%2F383%2F&text=vc-api/issue/383:%20Extractable%20property%20not%20set%20in%20%60SubtleCrypto.deriveKey%60%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fvc-api%2Fissue%2F383%2F&text=vc-api/issue/383:%20Timeout%20on%20OPTIONS%20(cors%20preflight)%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -772,6 +784,27 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/github-discussions/acapy/issue/3353/">acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/identus-mediator/issue/382/">identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/did-extensions/issue/597/">did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/github-discussions/acapy/pr/3344/">acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</a>
         </li>
       
@@ -780,27 +813,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/github-discussions/webauthn/issue/2211/">webauthn/issue/2211: CR: Need a way to detect "cancel"</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/webauthn/pr/2209/">webauthn/pr/2209: Add test vectors</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus-cloud-agent/issue/1459/">identus-cloud-agent/issue/1459:  proof request there's no information on holder </a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/acapy/issue/3343/">acapy/issue/3343: DID Management Proposed Update</a>
         </li>
       
     </ul>
@@ -1029,10 +1041,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -1152,6 +1160,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -1176,106 +1188,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1341,6 +1254,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1375,135 +1372,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1570,6 +1438,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1606,8 +1712,6 @@
     
     
     
-    
-      
     
   
     
@@ -1653,31 +1757,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>
@@ -1716,17 +1820,17 @@
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>didcomm-demo/pr/76: Fix B.3 Representation: Ed25519Signature2020 test vectors</p>
+      <p>didcomm-demo/pr/76: chore: upgrade package from AFJ to credo-ts</p>
     </a>
   
 
   
     <a
-      href="/github-discussions/tswg-keri-specification/issue/178/"
+      href="/github-discussions/json-ld-syntax/issue/432/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>tswg-keri-specification/issue/178: dueling edits</p>
+      <p>json-ld-syntax/issue/432: An asynchronous issuance</p>
     </a>
   
 </nav>
@@ -1998,10 +2102,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -2121,6 +2221,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -2145,106 +2249,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2310,6 +2315,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2344,135 +2433,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2539,6 +2499,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2575,8 +2773,6 @@
     
     
     
-    
-      
     
   
     
@@ -2622,31 +2818,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>

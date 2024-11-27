@@ -1,5 +1,0 @@
-comment_id,user,date,body
-2470673924,coolharsh55,2024-11-12T14:24:00+00:00,Add note to HTML doc that these are being discussed and aligned with ODRL CG. @besteves4 can you please provide a link to the online resource here?
-2470937515,besteves4,2024-11-12T16:06:53+00:00,Resource is being developed at https://github.com/SolidLabResearch/ODRL-Compliance-Report-Model
-2468825270,Wind4Greg,2024-11-11T18:49:15+00:00,This is essentially the same introductory text as in https://w3c.github.io/vc-di-ecdsa/#base-proof-configuration-ecdsa-sd-2023. Does that need fixing?
-2468829320,brianorwhatever,2024-11-11T18:51:53+00:00,> Set proofConfig.@context to unsecuredDocument.@context.  Looks like it

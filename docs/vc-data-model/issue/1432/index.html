@@ -33,8 +33,8 @@
 <meta property="og:title" content="vc-data-model/issue/1432: DIDComm Message Decryption + Disruption by eth_getLogs/eth_getChainId calls" />
 <meta name="author" content="radleylewis" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="https://github.com/w3c/vc-data-model/issues/1432" />
-<meta property="og:description" content="https://github.com/w3c/vc-data-model/issues/1432" />
+<meta name="description" content="I can venture some guesses as to what’s happening but without a sample to reproduce the issue it’ll be harder to provide a clear solution. The calls to the network: eth_getLogs is needed by the ethr-did-resolver to resolve a did:ethr. The more history a did:ethr has, the more calls to getLogs it will require to resolve. eth_chainId is used by ethers to confirm that the call is going to the right chain. This can be reduced by creating the provider outside of Veramo and supplying it in the configuration for ethr-did-resolver instead of the rpcUrl. the provider should use the staticNetwork option like so: ts import { getResolver } from &#39;ethr-did-resolver&#39; // see https://chainlist.org/ for more RPC options const SEPOLIA_RPC_URL = `https://ethereum-sepolia-rpc.publicnode.com`; const SEPOLIA_CHAIN_ID = 11155111; const network = Network.from(SEPOLIA_CHAIN_ID); const provider = new JsonRpcProvider(SEPOLIA_RPC_URL, network, { staticNetwork: network }); const ethrResolver = getResolver({ networks: [{ chainId: SEPOLIA_CHAIN_ID, name: &#39;sepolia&#39;, registry: &#39;0x03d5003bf0e79C5F5223588F347ebA39AfbC3818&#39;, legacyNonce: false, provider: provider }] }); The long decrypting time. This is very hard to pinpoint without a sample JWE+privateKey to try it locally, BUT there may be some things you can do to speed things up. I suspect that a major slowdown is the DID resolution. For a JWE that’s encrypted using authcrypt, at least 2 DID resolutions take place: one for the sender and one for the receiver DID. For anoncrypt only the receiver DID is resolved. This is compounded by the fact that @veramo/did-comm doesn’t use any sort of caching for the DID resolution, as it relies on the functionality from @veramo/did-resolver. Our examples don’t show how to use caching for DID resolution as we don’t have a smart caching layer (yet) and it may lead to DIDs resolving to older versions even after calls to didManagerAddKey and other methods that should update them. ts import { Resolver } from &#39;did-resolver&#39; const resolver = new Resolver({ ...ethrResolver, // use the ethr resolver configured earlier // ... other resolvers here }, { cache: true }); // &lt;&lt;&lt; ENABLE CACHING FOR DID RESOLUTION const agent = createAgent({ plugins: [ new DIDResolverPlugin({ resolver: resolver }) // ... other plugins ], }) You can implement your own caching mechanism. See how the inMemoryCache is implemented here. Then, instead of supplying { cache: true } to the Resolver options, you use { cache: YourOwnCachingLayer } Notes Configuring an agent like above will result in DID documents that are cached for the lifetime of the Resolver instance, which might not be desirable, but you have some options: * Veramo agents are free to create, so you can create a new agent with DID caching just for JWE decryption (and all other configs can remain the same) * Implement your own caching mechanism and clear the cache after calling agent.didManager...() methods. Long term, the did:ethr resolver should have its own caching layer for the results of evm_getLogs as the logs it uses to build up DID documents can be safely cached. Since it’s an append-only list of events, there should be no need to invalidate the cache to purge older events. — I hope this helps. Please provide updates if you implement these suggestions as you’re surely not the only ones encountering this" />
+<meta property="og:description" content="I can venture some guesses as to what’s happening but without a sample to reproduce the issue it’ll be harder to provide a clear solution. The calls to the network: eth_getLogs is needed by the ethr-did-resolver to resolve a did:ethr. The more history a did:ethr has, the more calls to getLogs it will require to resolve. eth_chainId is used by ethers to confirm that the call is going to the right chain. This can be reduced by creating the provider outside of Veramo and supplying it in the configuration for ethr-did-resolver instead of the rpcUrl. the provider should use the staticNetwork option like so: ts import { getResolver } from &#39;ethr-did-resolver&#39; // see https://chainlist.org/ for more RPC options const SEPOLIA_RPC_URL = `https://ethereum-sepolia-rpc.publicnode.com`; const SEPOLIA_CHAIN_ID = 11155111; const network = Network.from(SEPOLIA_CHAIN_ID); const provider = new JsonRpcProvider(SEPOLIA_RPC_URL, network, { staticNetwork: network }); const ethrResolver = getResolver({ networks: [{ chainId: SEPOLIA_CHAIN_ID, name: &#39;sepolia&#39;, registry: &#39;0x03d5003bf0e79C5F5223588F347ebA39AfbC3818&#39;, legacyNonce: false, provider: provider }] }); The long decrypting time. This is very hard to pinpoint without a sample JWE+privateKey to try it locally, BUT there may be some things you can do to speed things up. I suspect that a major slowdown is the DID resolution. For a JWE that’s encrypted using authcrypt, at least 2 DID resolutions take place: one for the sender and one for the receiver DID. For anoncrypt only the receiver DID is resolved. This is compounded by the fact that @veramo/did-comm doesn’t use any sort of caching for the DID resolution, as it relies on the functionality from @veramo/did-resolver. Our examples don’t show how to use caching for DID resolution as we don’t have a smart caching layer (yet) and it may lead to DIDs resolving to older versions even after calls to didManagerAddKey and other methods that should update them. ts import { Resolver } from &#39;did-resolver&#39; const resolver = new Resolver({ ...ethrResolver, // use the ethr resolver configured earlier // ... other resolvers here }, { cache: true }); // &lt;&lt;&lt; ENABLE CACHING FOR DID RESOLUTION const agent = createAgent({ plugins: [ new DIDResolverPlugin({ resolver: resolver }) // ... other plugins ], }) You can implement your own caching mechanism. See how the inMemoryCache is implemented here. Then, instead of supplying { cache: true } to the Resolver options, you use { cache: YourOwnCachingLayer } Notes Configuring an agent like above will result in DID documents that are cached for the lifetime of the Resolver instance, which might not be desirable, but you have some options: * Veramo agents are free to create, so you can create a new agent with DID caching just for JWE decryption (and all other configs can remain the same) * Implement your own caching mechanism and clear the cache after calling agent.didManager...() methods. Long term, the did:ethr resolver should have its own caching layer for the results of evm_getLogs as the logs it uses to build up DID documents can be safely cached. Since it’s an append-only list of events, there should be no need to invalidate the cache to purge older events. — I hope this helps. Please provide updates if you implement these suggestions as you’re surely not the only ones encountering this" />
 <link rel="canonical" href="/github-discussions/vc-data-model/issue/1432/" />
 <meta property="og:url" content="/github-discussions/vc-data-model/issue/1432/" />
 <meta property="og:site_name" content="Identosphere’s Github Discussions" />
@@ -45,7 +45,7 @@
 <meta name="twitter:site" content="@DecentralizeID" />
 <meta name="twitter:creator" content="@radleylewis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"radleylewis"},"dateModified":"2024-02-03T10:43:05-08:00","datePublished":"2024-02-03T10:43:05-08:00","description":"https://github.com/w3c/vc-data-model/issues/1432","headline":"vc-data-model/issue/1432: DIDComm Message Decryption + Disruption by eth_getLogs/eth_getChainId calls","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/vc-data-model/issue/1432/"},"url":"/github-discussions/vc-data-model/issue/1432/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"radleylewis"},"dateModified":"2024-02-03T10:43:05-08:00","datePublished":"2024-02-03T10:43:05-08:00","description":"I can venture some guesses as to what’s happening but without a sample to reproduce the issue it’ll be harder to provide a clear solution. The calls to the network: eth_getLogs is needed by the ethr-did-resolver to resolve a did:ethr. The more history a did:ethr has, the more calls to getLogs it will require to resolve. eth_chainId is used by ethers to confirm that the call is going to the right chain. This can be reduced by creating the provider outside of Veramo and supplying it in the configuration for ethr-did-resolver instead of the rpcUrl. the provider should use the staticNetwork option like so: ts import { getResolver } from &#39;ethr-did-resolver&#39; // see https://chainlist.org/ for more RPC options const SEPOLIA_RPC_URL = `https://ethereum-sepolia-rpc.publicnode.com`; const SEPOLIA_CHAIN_ID = 11155111; const network = Network.from(SEPOLIA_CHAIN_ID); const provider = new JsonRpcProvider(SEPOLIA_RPC_URL, network, { staticNetwork: network }); const ethrResolver = getResolver({ networks: [{ chainId: SEPOLIA_CHAIN_ID, name: &#39;sepolia&#39;, registry: &#39;0x03d5003bf0e79C5F5223588F347ebA39AfbC3818&#39;, legacyNonce: false, provider: provider }] }); The long decrypting time. This is very hard to pinpoint without a sample JWE+privateKey to try it locally, BUT there may be some things you can do to speed things up. I suspect that a major slowdown is the DID resolution. For a JWE that’s encrypted using authcrypt, at least 2 DID resolutions take place: one for the sender and one for the receiver DID. For anoncrypt only the receiver DID is resolved. This is compounded by the fact that @veramo/did-comm doesn’t use any sort of caching for the DID resolution, as it relies on the functionality from @veramo/did-resolver. Our examples don’t show how to use caching for DID resolution as we don’t have a smart caching layer (yet) and it may lead to DIDs resolving to older versions even after calls to didManagerAddKey and other methods that should update them. ts import { Resolver } from &#39;did-resolver&#39; const resolver = new Resolver({ ...ethrResolver, // use the ethr resolver configured earlier // ... other resolvers here }, { cache: true }); // &lt;&lt;&lt; ENABLE CACHING FOR DID RESOLUTION const agent = createAgent({ plugins: [ new DIDResolverPlugin({ resolver: resolver }) // ... other plugins ], }) You can implement your own caching mechanism. See how the inMemoryCache is implemented here. Then, instead of supplying { cache: true } to the Resolver options, you use { cache: YourOwnCachingLayer } Notes Configuring an agent like above will result in DID documents that are cached for the lifetime of the Resolver instance, which might not be desirable, but you have some options: * Veramo agents are free to create, so you can create a new agent with DID caching just for JWE decryption (and all other configs can remain the same) * Implement your own caching mechanism and clear the cache after calling agent.didManager...() methods. Long term, the did:ethr resolver should have its own caching layer for the results of evm_getLogs as the logs it uses to build up DID documents can be safely cached. Since it’s an append-only list of events, there should be no need to invalidate the cache to purge older events. — I hope this helps. Please provide updates if you implement these suggestions as you’re surely not the only ones encountering this","headline":"vc-data-model/issue/1432: DIDComm Message Decryption + Disruption by eth_getLogs/eth_getChainId calls","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/vc-data-model/issue/1432/"},"url":"/github-discussions/vc-data-model/issue/1432/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -690,7 +690,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="254 words"
+  title="253 words"
 >
   <em>1 min</em> read</span>
 
@@ -702,9 +702,7 @@
   
 
   <div class="content">
-    <p><a href="https://github.com/w3c/vc-data-model/issues/1432"><em>https://github.com/w3c/vc-data-model/issues/1432</em></a></p>
-
-<p><strong>Problem</strong></p>
+    <p><strong>Problem</strong></p>
 
 <p>In our use case we are decrypting didcomm messages within the context of our custom MetaMask Snap. This process is quite time consuming (up to approx. 100 seconds). Our specific use case does not invoke calls to the network, however, Veramo (via the provider) does invoke the <code class="language-plaintext highlighter-rouge">eth_getLogs</code> and <code class="language-plaintext highlighter-rouge">eth_getChainId</code> calls using <code class="language-plaintext highlighter-rouge">ethers</code>. In the case of their failure (i.e. in the case the RPC provider comes back with an error, for example, a rate limit), the long running decryption process (i.e. the decryption) is interrupted. Therefore, there are two components to this issue we are facing:</p>
 
@@ -943,6 +941,27 @@ Example of offending calls within the background.html in the MetaMask Snap.
         
         
         <li class="text-truncate lh-lg">
+          <a href="/github-discussions/acapy/issue/3353/">acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/identus-mediator/issue/382/">identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/did-extensions/issue/597/">did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/github-discussions/acapy/pr/3344/">acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</a>
         </li>
       
@@ -951,27 +970,6 @@ Example of offending calls within the background.html in the MetaMask Snap.
         
         <li class="text-truncate lh-lg">
           <a href="/github-discussions/webauthn/issue/2211/">webauthn/issue/2211: CR: Need a way to detect "cancel"</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/webauthn/pr/2209/">webauthn/pr/2209: Add test vectors</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus-cloud-agent/issue/1459/">identus-cloud-agent/issue/1459:  proof request there's no information on holder </a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/acapy/issue/3343/">acapy/issue/3343: DID Management Proposed Update</a>
         </li>
       
     </ul>
@@ -1200,10 +1198,6 @@ Example of offending calls within the background.html in the MetaMask Snap.
     
     
     
-      
-        
-        
-
   
     
     
@@ -1323,6 +1317,10 @@ Example of offending calls within the background.html in the MetaMask Snap.
     
     
     
+      
+        
+        
+
   
     
     
@@ -1347,106 +1345,7 @@ Example of offending calls within the background.html in the MetaMask Snap.
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1512,6 +1411,90 @@ Example of offending calls within the background.html in the MetaMask Snap.
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1546,135 +1529,6 @@ Example of offending calls within the background.html in the MetaMask Snap.
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1741,6 +1595,244 @@ Example of offending calls within the background.html in the MetaMask Snap.
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1777,8 +1869,6 @@ Example of offending calls within the background.html in the MetaMask Snap.
     
     
     
-    
-      
     
   
     
@@ -1824,31 +1914,31 @@ Example of offending calls within the background.html in the MetaMask Snap.
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>
@@ -1887,17 +1977,17 @@ Example of offending calls within the background.html in the MetaMask Snap.
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>identus-cloud-agent/issue/864: 3.2 DID URL Syntax "Fragment" Example 6 Question</p>
+      <p>identus-cloud-agent/issue/864: Missing MAINTAINERS.md</p>
     </a>
   
 
   
     <a
-      href="/github-discussions/credential-trust-establishment/issue/35/"
+      href="/github-discussions/uni-resolver-driver-did-key/issue/9/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>credential-trust-establishment/issue/35: Migration to new AnonCreds object format</p>
+      <p>uni-resolver-driver-did-key/issue/9: Many errors in rocksdb/_rocksdb.pyx cause build failure</p>
     </a>
   
 </nav>
@@ -2169,10 +2259,6 @@ Example of offending calls within the background.html in the MetaMask Snap.
     
     
     
-      
-        
-        
-
   
     
     
@@ -2292,6 +2378,10 @@ Example of offending calls within the background.html in the MetaMask Snap.
     
     
     
+      
+        
+        
+
   
     
     
@@ -2316,106 +2406,7 @@ Example of offending calls within the background.html in the MetaMask Snap.
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2481,6 +2472,90 @@ Example of offending calls within the background.html in the MetaMask Snap.
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2515,135 +2590,6 @@ Example of offending calls within the background.html in the MetaMask Snap.
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2710,6 +2656,244 @@ Example of offending calls within the background.html in the MetaMask Snap.
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2746,8 +2930,6 @@ Example of offending calls within the background.html in the MetaMask Snap.
     
     
     
-    
-      
     
   
     
@@ -2793,31 +2975,31 @@ Example of offending calls within the background.html in the MetaMask Snap.
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>

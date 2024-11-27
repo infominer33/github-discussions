@@ -6,10 +6,9 @@ categories: ["W3C"]
 tags: ["webauthn"]
 permalink: /webauthn/issue/2211/
 comments_file: W3C-webauthn-issue-2211_comments
+excerpt: >
+  `NotAllowedError` can also be returned synchronously without user interaction?
 ---
-
-[_https://github.com/w3c/webauthn/issues/2211_](https://github.com/w3c/webauthn/issues/2211)
-
 ## Proposed Change
 
 Need a way to programmatically detect when the user has cancelled the "Use passkey from another device" browser native prompt by clicking the "Cancel" button. This could be achieved by adding a new property or event to the prompt that indicates whether the user has cancelled the prompt.

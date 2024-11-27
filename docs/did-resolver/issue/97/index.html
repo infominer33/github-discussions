@@ -30,26 +30,26 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="did-resolver/issue/97: Remove checks option in favor of loading from implementation configs." />
-<meta name="author" content="BigBlueHat" />
+<meta property="og:title" content="did-resolver/issue/97: Infinite loop in Release process" />
+<meta name="author" content="mkbreuningIOHK" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="https://github.com/decentralized-identity/did-resolver/issues/97" />
-<meta property="og:description" content="https://github.com/decentralized-identity/did-resolver/issues/97" />
+<meta name="description" content="This was discussed during the #did meeting on 21 November 2024." />
+<meta property="og:description" content="This was discussed during the #did meeting on 21 November 2024." />
 <link rel="canonical" href="/github-discussions/did-resolver/issue/97/" />
 <meta property="og:url" content="/github-discussions/did-resolver/issue/97/" />
 <meta property="og:site_name" content="Identosphere’s Github Discussions" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-08-30T02:14:56-07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="did-resolver/issue/97: Remove checks option in favor of loading from implementation configs." />
+<meta property="twitter:title" content="did-resolver/issue/97: Infinite loop in Release process" />
 <meta name="twitter:site" content="@DecentralizeID" />
-<meta name="twitter:creator" content="@BigBlueHat" />
+<meta name="twitter:creator" content="@mkbreuningIOHK" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"BigBlueHat"},"dateModified":"2021-08-30T02:14:56-07:00","datePublished":"2021-08-30T02:14:56-07:00","description":"https://github.com/decentralized-identity/did-resolver/issues/97","headline":"did-resolver/issue/97: Remove checks option in favor of loading from implementation configs.","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/did-resolver/issue/97/"},"url":"/github-discussions/did-resolver/issue/97/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"mkbreuningIOHK"},"dateModified":"2021-08-30T02:14:56-07:00","datePublished":"2021-08-30T02:14:56-07:00","description":"This was discussed during the #did meeting on 21 November 2024.","headline":"did-resolver/issue/97: Infinite loop in Release process","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/did-resolver/issue/97/"},"url":"/github-discussions/did-resolver/issue/97/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>did-resolver/issue/97: Remove `checks` option in favor of loading from implementation configs. | Identosphere's Github Discussions
+  <title>did-resolver/issue/97: Infinite loop in Release process | Identosphere's Github Discussions
   </title>
 
   <!--
@@ -437,7 +437,7 @@
         
           
             
-              <span>did-resolver/issue/97: Remove `checks` option in favor of loading from implementation configs.</span>
+              <span>did-resolver/issue/97: Infinite loop in Release process</span>
             
 
           
@@ -552,7 +552,7 @@
 
 <article class="px-1" data-toc="false">
   <header>
-    <h1 data-toc-skip>did-resolver/issue/97: Remove `checks` option in favor of loading from implementation configs.</h1>
+    <h1 data-toc-skip>did-resolver/issue/97: Infinite loop in Release process</h1>
     
 
     <div class="post-meta text-muted">
@@ -588,7 +588,7 @@
       <div class="d-flex justify-content-between">
         
           <em>
-            <a href="https://github.com/BigBlueHat">@BigBlueHat</a>
+            <a href="https://github.com/mkbreuningIOHK">@mkbreuningIOHK</a>
           </em>
         
 
@@ -617,7 +617,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="88 words"
+  title="26 words"
 >
   <em>1 min</em> read</span>
 
@@ -629,18 +629,8 @@
   
 
   <div class="content">
-    <p><a href="https://github.com/decentralized-identity/did-resolver/issues/97"><em>https://github.com/decentralized-identity/did-resolver/issues/97</em></a></p>
-
-<blockquote>
-  <p>@PatStLouis @BigBlueHat so DB needs <code class="language-plaintext highlighter-rouge">checks: ['proof']</code> but other implementers might not need that option and further <code class="language-plaintext highlighter-rouge">options.checks</code> has not be in the VC API for awhile so the best way to handle this is to add <code class="language-plaintext highlighter-rouge">options.checks</code> to the DB implementation and do something like this:</p>
-
-  <p>https://github.com/w3c-ccg/data-integrity-test-suite-assertion/blob/6d61d0f3940694edb12437bcb0f457a8b7cb56cb/assertions.js#L25-L46</p>
-
-  <p>How to handle this situation in the bitstring status list suite is another issue as those tests will probably need us to expose a second verify with the correct checks for our verifier.</p>
-</blockquote>
-
-<p><em>Originally posted by @aljones15 in https://github.com/w3c/vc-data-model-2.0-test-suite/pull/92#discussion_r1693550614</em></p>
-
+    <p>Go to https://handbook.atalaprism.io/engineering/sdlc/release/release-process-overview.
+And go at the bottom of the page. The link on the right is <code class="language-plaintext highlighter-rouge">Release process</code> anew, so it is an infinite loop.</p>
 
   </div>
 
@@ -716,21 +706,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=did-resolver/issue/97:%20Remove%20%60checks%60%20option%20in%20favor%20of%20loading%20from%20implementation%20configs.%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fdid-resolver%2Fissue%2F97%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=did-resolver/issue/97:%20Infinite%20loop%20in%20Release%20process%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fdid-resolver%2Fissue%2F97%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=did-resolver/issue/97:%20Remove%20%60checks%60%20option%20in%20favor%20of%20loading%20from%20implementation%20configs.%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fdid-resolver%2Fissue%2F97%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=did-resolver/issue/97:%20Infinite%20loop%20in%20Release%20process%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fdid-resolver%2Fissue%2F97%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fdid-resolver%2Fissue%2F97%2F&text=did-resolver/issue/97:%20Remove%20%60checks%60%20option%20in%20favor%20of%20loading%20from%20implementation%20configs.%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fdid-resolver%2Fissue%2F97%2F&text=did-resolver/issue/97:%20Infinite%20loop%20in%20Release%20process%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -785,6 +775,27 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/github-discussions/acapy/issue/3353/">acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/identus-mediator/issue/382/">identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/did-extensions/issue/597/">did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/github-discussions/acapy/pr/3344/">acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</a>
         </li>
       
@@ -793,27 +804,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/github-discussions/webauthn/issue/2211/">webauthn/issue/2211: CR: Need a way to detect "cancel"</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/webauthn/pr/2209/">webauthn/pr/2209: Add test vectors</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus-cloud-agent/issue/1459/">identus-cloud-agent/issue/1459:  proof request there's no information on holder </a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/acapy/issue/3343/">acapy/issue/3343: DID Management Proposed Update</a>
         </li>
       
     </ul>
@@ -1042,10 +1032,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -1165,6 +1151,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -1189,106 +1179,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1354,6 +1245,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1388,135 +1363,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1583,6 +1429,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1619,8 +1703,6 @@
     
     
     
-    
-      
     
   
     
@@ -1666,31 +1748,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>
@@ -1729,17 +1811,17 @@
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>did-jwt/issue/194: How to know if a credential is a full disclosure?</p>
+      <p>did-jwt/issue/194: Cleanup the GitHub workflows after moving to the GitHub pages</p>
     </a>
   
 
   
     <a
-      href="/github-discussions/decentralized-web-node/issue/190/"
+      href="/github-discussions/org/pr/22/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>decentralized-web-node/issue/190: Where to get `hmacKey` from in `createVerifyData`</p>
+      <p>org/pr/22: Bump ubuntu from 16.04 to 24.04 in /ci</p>
     </a>
   
 </nav>
@@ -2011,10 +2093,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -2134,6 +2212,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -2158,106 +2240,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2323,6 +2306,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2357,135 +2424,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2552,6 +2490,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2588,8 +2764,6 @@
     
     
     
-    
-      
     
   
     
@@ -2635,31 +2809,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>

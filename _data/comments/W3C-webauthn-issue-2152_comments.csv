@@ -1,0 +1,2 @@
+comment_id,user,date,body
+2498477306,kenrb,2024-11-25T16:24:13+00:00,"@zacknewman I've changed it to POST, along with a couple of other minor tweaks.  The text now includes another motivation for implementing this, other than latency: RPs would have to generate and store far fewer challenges than they currently do when using conditional UI.  It remains an open question of how feasible this is for RPs to implement given the proposed security-related restrictions on its implementation."

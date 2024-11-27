@@ -6,10 +6,9 @@ categories: ["W3C"]
 tags: ["webauthn"]
 permalink: /webauthn/issue/2169/
 comments_file: W3C-webauthn-issue-2169_comments
+excerpt: >
+  Fixed in PR #2180.
 ---
-
-[_https://github.com/w3c/webauthn/issues/2169_](https://github.com/w3c/webauthn/issues/2169)
-
 [§5.1.4. Use an Existing Credential to Make an Assertion - PublicKeyCredential’s \[\[Get\]\](options) Method](https://w3c.github.io/webauthn/#sctn-getAssertion) appears to reference a `[[Get]]` internal method on the [`Credential` interface](https://w3c.github.io/webappsec-credential-management/#the-credential-interface) from CredMan, but no such internal method exists (unlike [`[[Create]]`, which does exist](https://w3c.github.io/webappsec-credential-management/#algorithm-create-cred)). Rather, [`[[DiscoverFromExternalSource]]`](https://w3c.github.io/webappsec-credential-management/#algorithm-discover-creds) is the actual internal method we override.
 
 

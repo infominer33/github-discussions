@@ -6,10 +6,9 @@ categories: ["W3C"]
 tags: ["webauthn"]
 permalink: /webauthn/issue/2198/
 comments_file: W3C-webauthn-issue-2198_comments
+excerpt: >
+  @zacknewman I think your conclusion is accurate - clients are expected to conform to the normative algorithm definitions.
 ---
-
-[_https://github.com/w3c/webauthn/issues/2198_](https://github.com/w3c/webauthn/issues/2198)
-
 There has been some confusion across multiple issues, so creating another one 🫠.
 
 In #2058, spec text was added to only zero out AAGUIDs for none attestations when the authenticator was *not* a platform authenticator.

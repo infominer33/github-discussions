@@ -30,26 +30,26 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="aries-vcx/issue/1163: Edge-client initiated connections" />
-<meta name="author" content="mixmix" />
+<meta property="og:title" content="aries-vcx/issue/1163: OpenID4VP SD-JWT is not verifying the holder signature (KB-JWT)" />
+<meta name="author" content="gmulhearn" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="https://github.com/hyperledger/aries-vcx/issues/1163" />
-<meta property="og:description" content="https://github.com/hyperledger/aries-vcx/issues/1163" />
+<meta name="description" content="This lead to the development of the &quot;connectionless&quot; features for issuance and verification. I’m closing this issue :heart:" />
+<meta property="og:description" content="This lead to the development of the &quot;connectionless&quot; features for issuance and verification. I’m closing this issue :heart:" />
 <link rel="canonical" href="/github-discussions/aries-vcx/issue/1163/" />
 <meta property="og:url" content="/github-discussions/aries-vcx/issue/1163/" />
 <meta property="og:site_name" content="Identosphere’s Github Discussions" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-03-22T04:12:01-07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="aries-vcx/issue/1163: Edge-client initiated connections" />
+<meta property="twitter:title" content="aries-vcx/issue/1163: OpenID4VP SD-JWT is not verifying the holder signature (KB-JWT)" />
 <meta name="twitter:site" content="@DecentralizeID" />
-<meta name="twitter:creator" content="@mixmix" />
+<meta name="twitter:creator" content="@gmulhearn" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"mixmix"},"dateModified":"2024-03-22T04:12:01-07:00","datePublished":"2024-03-22T04:12:01-07:00","description":"https://github.com/hyperledger/aries-vcx/issues/1163","headline":"aries-vcx/issue/1163: Edge-client initiated connections","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/aries-vcx/issue/1163/"},"url":"/github-discussions/aries-vcx/issue/1163/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"gmulhearn"},"dateModified":"2024-03-22T04:12:01-07:00","datePublished":"2024-03-22T04:12:01-07:00","description":"This lead to the development of the &quot;connectionless&quot; features for issuance and verification. I’m closing this issue :heart:","headline":"aries-vcx/issue/1163: OpenID4VP SD-JWT is not verifying the holder signature (KB-JWT)","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/aries-vcx/issue/1163/"},"url":"/github-discussions/aries-vcx/issue/1163/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>aries-vcx/issue/1163: Edge-client initiated connections | Identosphere's Github Discussions
+  <title>aries-vcx/issue/1163: OpenID4VP SD-JWT is not verifying the holder signature (KB-JWT) | Identosphere's Github Discussions
   </title>
 
   <!--
@@ -437,7 +437,7 @@
         
           
             
-              <span>aries-vcx/issue/1163: Edge-client initiated connections</span>
+              <span>aries-vcx/issue/1163: OpenID4VP SD-JWT is not verifying the holder signature (KB-JWT)</span>
             
 
           
@@ -525,38 +525,6 @@
   
 
   
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
-  
 
   
   
@@ -584,7 +552,7 @@
 
 <article class="px-1" data-toc="false">
   <header>
-    <h1 data-toc-skip>aries-vcx/issue/1163: Edge-client initiated connections</h1>
+    <h1 data-toc-skip>aries-vcx/issue/1163: OpenID4VP SD-JWT is not verifying the holder signature (KB-JWT)</h1>
     
 
     <div class="post-meta text-muted">
@@ -620,7 +588,7 @@
       <div class="d-flex justify-content-between">
         
           <em>
-            <a href="https://github.com/mixmix">@mixmix</a>
+            <a href="https://github.com/gmulhearn">@gmulhearn</a>
           </em>
         
 
@@ -649,7 +617,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="99 words"
+  title="186 words"
 >
   <em>1 min</em> read</span>
 
@@ -661,23 +629,42 @@
   
 
   <div class="content">
-    <p><a href="https://github.com/hyperledger/aries-vcx/issues/1163"><em>https://github.com/hyperledger/aries-vcx/issues/1163</em></a></p>
+    <p>I believe the SD-JWT cred processor <code class="language-plaintext highlighter-rouge">verify_presentation</code> is not actually checking the holder’s signature (KB-JWT) on the presented SD-JWT. Meaning the SD-JWT holder does not have to prove they are bound to the SD-JWT.</p>
 
-<h3 id="proposed-feature"><span class="me-2">Proposed feature</span><a href="#proposed-feature" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>I tested this locally by using a malicious client that intentionally malforms the signature bytes of the KB-JWT it produces. The acapy plugin still reported verified=true (credo reported verified=false with logs that indicate the signature was invalid).</p>
 
-<p>We have a Catalyst grant around reducing the overhead for edge-clients initiating connections with cloud-agents.</p>
-
-<p>We’ve looked into how the SDK handles OOB invites, and discovered that the OOB is just converted into a <code class="language-plaintext highlighter-rouge">Message</code> which is then sent to the Agent. We would like the Agent to accept messages made by the SDK purely from the <code class="language-plaintext highlighter-rouge">peerDID</code>.</p>
-
-<h3 id="feature-description"><span class="me-2">Feature description</span><a href="#feature-description" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p>Either:</p>
+<p>I believe this happens because:</p>
 <ul>
-  <li>A) help us craft the right sort of <code class="language-plaintext highlighter-rouge">https://atalaprism.io/mercury/connections/1.0/request</code> message</li>
-  <li>B) change the cloud agent to to accept SDK initiated connections</li>
-  <li>C) change the cloud agent to be configurable to optionally accept SDK initiated connections</li>
+  <li>verify_presentation calls sd_jwt_verify with only 2 params; <code class="language-plaintext highlighter-rouge">profile, presentation</code>: https://github.com/openwallet-foundation/acapy-plugins/blob/main/oid4vc/sd_jwt_vc/cred_processor.py#L205</li>
+  <li><code class="language-plaintext highlighter-rouge">sd_jwt_verify</code> has 2 additional optional params, expected_aud &amp; expected_nonce. so verify_presentation sets those as <code class="language-plaintext highlighter-rouge">None</code></li>
+  <li>sd_jwt_verify initializes SDJWTVerifierACAPy with those null values for self.expected_aud &amp; self.expected_nonce</li>
+  <li>sd_jwt_verify then calls SDJWTVerifierACAPy.verify(), which checks the SD-JWT VC signature, and then only IF <code class="language-plaintext highlighter-rouge">if self.expected_aud or self.expected_nonce:</code> does it check the KB JWT:
+    <div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre> if self.expected_aud or self.expected_nonce:
+          if not (self.expected_aud and self.expected_nonce):
+              raise ValueError(
+                  "Either both expected_aud and expected_nonce must be provided "
+                  "or both must be None"
+              )
+          await self._verify_key_binding_jwt(
+              self.expected_aud,
+              self.expected_nonce,
+          )
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>meaning the KB-JWT signature (holder binding/proof) is not checked</li>
 </ul>
-
 
   </div>
 
@@ -685,12 +672,6 @@
       
       
           <h2>Comments</h2>
-          
-              <div class="comment">
-                  <h4><strong><a href="https://github.com/dbluhm">@dbluhm</a></strong> commented on <mark>2024-11-12</mark></h4>
-                  <p>This should now be solved by #1172</p>
-
-              </div>
           
               <div class="comment">
                   <h4><strong><a href="https://github.com/mixmix">@mixmix</a></strong> commented on <mark>2024-11-15</mark></h4>
@@ -753,21 +734,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=aries-vcx/issue/1163:%20Edge-client%20initiated%20connections%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Faries-vcx%2Fissue%2F1163%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=aries-vcx/issue/1163:%20OpenID4VP%20SD-JWT%20is%20not%20verifying%20the%20holder%20signature%20(KB-JWT)%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Faries-vcx%2Fissue%2F1163%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=aries-vcx/issue/1163:%20Edge-client%20initiated%20connections%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Faries-vcx%2Fissue%2F1163%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=aries-vcx/issue/1163:%20OpenID4VP%20SD-JWT%20is%20not%20verifying%20the%20holder%20signature%20(KB-JWT)%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Faries-vcx%2Fissue%2F1163%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Faries-vcx%2Fissue%2F1163%2F&text=aries-vcx/issue/1163:%20Edge-client%20initiated%20connections%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Faries-vcx%2Fissue%2F1163%2F&text=aries-vcx/issue/1163:%20OpenID4VP%20SD-JWT%20is%20not%20verifying%20the%20holder%20signature%20(KB-JWT)%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -822,6 +803,27 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/github-discussions/acapy/issue/3353/">acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/identus-mediator/issue/382/">identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/did-extensions/issue/597/">did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/github-discussions/acapy/pr/3344/">acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</a>
         </li>
       
@@ -830,27 +832,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/github-discussions/webauthn/issue/2211/">webauthn/issue/2211: CR: Need a way to detect "cancel"</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/webauthn/pr/2209/">webauthn/pr/2209: Add test vectors</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus-cloud-agent/issue/1459/">identus-cloud-agent/issue/1459:  proof request there's no information on holder </a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/acapy/issue/3343/">acapy/issue/3343: DID Management Proposed Update</a>
         </li>
       
     </ul>
@@ -1079,10 +1060,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -1202,6 +1179,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -1226,106 +1207,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1391,6 +1273,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1425,135 +1391,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1620,6 +1457,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1656,8 +1731,6 @@
     
     
     
-    
-      
     
   
     
@@ -1703,31 +1776,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>
@@ -1766,7 +1839,7 @@
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>bbs-signature/issue/318: Remove lowercase must text</p>
+      <p>bbs-signature/issue/318: Able to create an in-memory sqlite database?</p>
     </a>
   
 
@@ -1776,7 +1849,7 @@
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>aries-acapy-docs/pr/97: Update test vectors  to  use  did:key for  verification method</p>
+      <p>aries-acapy-docs/pr/97: Bump hyperledger/aries-cloudagent-python from py3.9-0.10.3 to py3.9-0.12.1 in /docker/acapy</p>
     </a>
   
 </nav>
@@ -2048,10 +2121,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -2171,6 +2240,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -2195,106 +2268,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2360,6 +2334,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2394,135 +2452,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2589,6 +2518,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2625,8 +2792,6 @@
     
     
     
-    
-      
     
   
     
@@ -2672,31 +2837,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>

@@ -1,2 +1,5 @@
 comment_id,user,date,body
 2491871811,brianorwhatever,2024-11-21T17:38:38+00:00,"This mechanism is highly vulnerable to trolling.  It also puts an ongoing financial burden on DID method registration/maintenance."
+2494008325,mwherman2000,2024-11-22T15:22:56+00:00,"> It also puts an ongoing financial burden on DID method registration/maintenance.  So does trademarking.  Checkout https://github.com/w3c/did-extensions/issues/597 for a hybrid approach.  "
+2499160526,andrewwhitehead,2024-11-25T22:24:53+00:00,"I don't believe it's appropriate to require this as it could be seen as a handout to Identity Digital, the registrar for `.directory`. There would also be a gold rush for squatting on existing DID methods."
+2499183382,mwherman2000,2024-11-25T22:41:25+00:00,"Hi @andrewwhitehead, your feedback is a valid consideration.  Please checkout the [Super/Meta Proposal](https://github.com/w3c/did-extensions/issues/597) that proposes the inclusion in the spec of multiple _authentication of unique DID Method names_ approaches (in addition to the one described here) and the one @manu described elsewhere."

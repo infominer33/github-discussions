@@ -30,26 +30,26 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="identus/issue/73: Bug 27755 - Using the Subtle Crypto Interface with Streams" />
-<meta name="author" content="mwatson2" />
+<meta property="og:title" content="identus/issue/73: VCDM Improvements Phase 1: Standardize our implementation of 1.1" />
+<meta name="author" content="elribonazo" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="https://github.com/hyperledger/identus/issues/73" />
-<meta property="og:description" content="https://github.com/hyperledger/identus/issues/73" />
+<meta name="description" content="Oh, I missed that proposal. Very elegant. +1 from me. (I’m jpsugar-flow, but this is not work-related for me.)" />
+<meta property="og:description" content="Oh, I missed that proposal. Very elegant. +1 from me. (I’m jpsugar-flow, but this is not work-related for me.)" />
 <link rel="canonical" href="/github-discussions/identus/issue/73/" />
 <meta property="og:url" content="/github-discussions/identus/issue/73/" />
 <meta property="og:site_name" content="Identosphere’s Github Discussions" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-10-21T07:15:57-07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="identus/issue/73: Bug 27755 - Using the Subtle Crypto Interface with Streams" />
+<meta property="twitter:title" content="identus/issue/73: VCDM Improvements Phase 1: Standardize our implementation of 1.1" />
 <meta name="twitter:site" content="@DecentralizeID" />
-<meta name="twitter:creator" content="@mwatson2" />
+<meta name="twitter:creator" content="@elribonazo" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"mwatson2"},"dateModified":"2024-10-21T07:15:57-07:00","datePublished":"2024-10-21T07:15:57-07:00","description":"https://github.com/hyperledger/identus/issues/73","headline":"identus/issue/73: Bug 27755 - Using the Subtle Crypto Interface with Streams","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/identus/issue/73/"},"url":"/github-discussions/identus/issue/73/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"elribonazo"},"dateModified":"2024-10-21T07:15:57-07:00","datePublished":"2024-10-21T07:15:57-07:00","description":"Oh, I missed that proposal. Very elegant. +1 from me. (I’m jpsugar-flow, but this is not work-related for me.)","headline":"identus/issue/73: VCDM Improvements Phase 1: Standardize our implementation of 1.1","mainEntityOfPage":{"@type":"WebPage","@id":"/github-discussions/identus/issue/73/"},"url":"/github-discussions/identus/issue/73/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>identus/issue/73: Bug 27755 - Using the Subtle Crypto Interface with Streams | Identosphere's Github Discussions
+  <title>identus/issue/73: VCDM Improvements Phase 1: Standardize our implementation of 1.1  | Identosphere's Github Discussions
   </title>
 
   <!--
@@ -437,7 +437,7 @@
         
           
             
-              <span>identus/issue/73: Bug 27755 - Using the Subtle Crypto Interface with Streams</span>
+              <span>identus/issue/73: VCDM Improvements Phase 1: Standardize our implementation of 1.1 </span>
             
 
           
@@ -525,6 +525,93 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -552,7 +639,7 @@
 
 <article class="px-1" data-toc="false">
   <header>
-    <h1 data-toc-skip>identus/issue/73: Bug 27755 - Using the Subtle Crypto Interface with Streams</h1>
+    <h1 data-toc-skip>identus/issue/73: VCDM Improvements Phase 1: Standardize our implementation of 1.1 </h1>
     
 
     <div class="post-meta text-muted">
@@ -588,7 +675,7 @@
       <div class="d-flex justify-content-between">
         
           <em>
-            <a href="https://github.com/mwatson2">@mwatson2</a>
+            <a href="https://github.com/elribonazo">@elribonazo</a>
           </em>
         
 
@@ -617,7 +704,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="58 words"
+  title="46 words"
 >
   <em>1 min</em> read</span>
 
@@ -629,15 +716,36 @@
   
 
   <div class="content">
-    <p><a href="https://github.com/hyperledger/identus/issues/73"><em>https://github.com/hyperledger/identus/issues/73</em></a></p>
+    <h3 id="short-description"><span class="me-2">Short Description</span><a href="#short-description" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=27755">Bug 27755</a>:</p>
+<p>We need to change the schemaId from being an  strings vs array of object, and the field should also be replaced by another fieldName, from “schemaId” to “credentialSchema”</p>
 
-<p>Though the StreamsAPI is referenced in Informative Reference, the functions under window.crypto.subtle are specified with only one-shot data inputs.</p>
+<h3 id="value-statement"><span class="me-2">Value statement</span><a href="#value-statement" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>Use-cases: Data may not be available at once. Data may be too huge to keep in memory.</p>
+<p>TBD</p>
 
-<p>For encrypt()/decrypt() it would make sense to have a streaming readable output if the input is a readable stream.</p>
+<h3 id="components"><span class="me-2">Components</span><a href="#components" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ol>
+  <li>OAS</li>
+  <li>SDKs</li>
+</ol>
+
+<h3 id="team-members"><span class="me-2">Team members</span><a href="#team-members" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>@hyperledger/identus</p>
+
+<h3 id="architect"><span class="me-2">Architect</span><a href="#architect" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>@hyperledger/identus-maintainers</p>
+
+<h3 id="qa-member"><span class="me-2">QA Member</span><a href="#qa-member" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>@hyperledger/identus-maintainers</p>
+
+<h3 id="owner"><span class="me-2">Owner</span><a href="#owner" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>@hyperledger/identus-maintainers</p>
 
   </div>
 
@@ -762,6 +870,36 @@
 
               </div>
           
+              <div class="comment">
+                  <h4><strong><a href="https://github.com/twiss">@twiss</a></strong> commented on <mark>2024-11-22</mark></h4>
+                  <p>@bradisbell Bringing in unrelated issues isn’t really relevant, and also not really helpful while we’re actively discussing the addition of streaming to Web Crypto.</p>
+
+<p>@dead-claudia and @jpsugar-flow I tend to agree.</p>
+
+<p>Taking a step back, and perhaps contrary to what I said before in this thread; if we want to focus on adding streaming hashing first since it’s least controversial, <em>and</em> if everyone is happy with the proposal in https://github.com/w3c/webcrypto/issues/73#issuecomment-455065709 (i.e. extending the existing function rather than adding a new <code class="language-plaintext highlighter-rouge">DigestStream</code> object or some such), perhaps we don’t strictly need to have a separate draft in WICG for that, and we could just directly make a PR here?</p>
+
+<p>If folks are OK with that, I can write something up.</p>
+
+              </div>
+          
+              <div class="comment">
+                  <h4><strong><a href="https://github.com/jasnell">@jasnell</a></strong> commented on <mark>2024-11-22</mark></h4>
+                  <blockquote>
+  <p>… and if everyone is happy with the proposal in https://github.com/w3c/webcrypto/issues/73#issuecomment-455065709 (i.e. extending the existing function rather than adding a new DigestStream object or some such),</p>
+</blockquote>
+
+<p>@jakearchibald’s proposal looks good to me. Workers will need to keep <code class="language-plaintext highlighter-rouge">DigestStream</code> around forever as we don’t make breaking changes but having the existing <code class="language-plaintext highlighter-rouge">crypto.subtle.digest</code> accept a <code class="language-plaintext highlighter-rouge">ReadableStream</code> as input would work just as well for our uses cases. Actually, I would go one step further and say that instead of just accepting a <code class="language-plaintext highlighter-rouge">ReadableStream</code>, allow it to accept any <code class="language-plaintext highlighter-rouge">Iterable</code> and <code class="language-plaintext highlighter-rouge">AsyncIterable</code>.</p>
+
+<p>I imagine that <code class="language-plaintext highlighter-rouge">crypto.subtle.sign</code> and <code class="language-plaintext highlighter-rouge">crypto.subtle.verify</code> could both also follow the same pattern without much controversy.</p>
+
+              </div>
+          
+              <div class="comment">
+                  <h4><strong><a href="https://github.com/taralx">@taralx</a></strong> commented on <mark>2024-11-22</mark></h4>
+                  <p>Oh, I missed that proposal. Very elegant. +1 from me. (I’m jpsugar-flow, but this is not work-related for me.)</p>
+
+              </div>
+          
       
   
 
@@ -817,21 +955,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=identus/issue/73:%20Bug%2027755%20-%20Using%20the%20Subtle%20Crypto%20Interface%20with%20Streams%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fidentus%2Fissue%2F73%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=identus/issue/73:%20VCDM%20Improvements%20Phase%201:%20Standardize%20our%20implementation%20of%201.1%20%20-%20Identosphere's%20Github%20Discussions&url=%2Fgithub-discussions%2Fidentus%2Fissue%2F73%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=identus/issue/73:%20Bug%2027755%20-%20Using%20the%20Subtle%20Crypto%20Interface%20with%20Streams%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fidentus%2Fissue%2F73%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=identus/issue/73:%20VCDM%20Improvements%20Phase%201:%20Standardize%20our%20implementation%20of%201.1%20%20-%20Identosphere's%20Github%20Discussions&u=%2Fgithub-discussions%2Fidentus%2Fissue%2F73%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fidentus%2Fissue%2F73%2F&text=identus/issue/73:%20Bug%2027755%20-%20Using%20the%20Subtle%20Crypto%20Interface%20with%20Streams%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fgithub-discussions%2Fidentus%2Fissue%2F73%2F&text=identus/issue/73:%20VCDM%20Improvements%20Phase%201:%20Standardize%20our%20implementation%20of%201.1%20%20-%20Identosphere's%20Github%20Discussions" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -886,6 +1024,27 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/github-discussions/acapy/issue/3353/">acapy/issue/3353: ACA-Py failing to start, gives KeyError: 'pattern'</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/identus-mediator/issue/382/">identus-mediator/issue/382: Support for subdirectory in SERVICE_ENDPOINTS</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/github-discussions/did-extensions/issue/597/">did-extensions/issue/597: SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/github-discussions/acapy/pr/3344/">acapy/pr/3344: Restore `--base-wallet-routes` flag functionality</a>
         </li>
       
@@ -894,27 +1053,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/github-discussions/webauthn/issue/2211/">webauthn/issue/2211: CR: Need a way to detect "cancel"</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/webauthn/pr/2209/">webauthn/pr/2209: Add test vectors</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/identus-cloud-agent/issue/1459/">identus-cloud-agent/issue/1459:  proof request there's no information on holder </a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/github-discussions/acapy/issue/3343/">acapy/issue/3343: DID Management Proposed Update</a>
         </li>
       
     </ul>
@@ -1143,10 +1281,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -1266,6 +1400,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -1290,106 +1428,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1455,6 +1494,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1489,135 +1612,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1684,6 +1678,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1720,8 +1952,6 @@
     
     
     
-    
-      
     
   
     
@@ -1767,31 +1997,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>
@@ -1840,7 +2070,7 @@
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>identus/issue/75: Some examples have the wrong / old context version</p>
+      <p>identus/issue/75: DID management component discussion</p>
     </a>
   
 </nav>
@@ -2112,10 +2342,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -2235,6 +2461,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -2259,106 +2489,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2424,6 +2555,90 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2458,135 +2673,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2653,6 +2739,244 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2689,8 +3013,6 @@
     
     
     
-    
-      
     
   
     
@@ -2736,31 +3058,31 @@
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/webauthn/">webauthn</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus-cloud-agent/">identus-cloud-agent</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-endorser-service/">aries-endorser-service</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/acapy/">acapy</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/did-extensions/">did-extensions</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/identus/">identus</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/aries-acapy-docs/">aries-acapy-docs</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/bbs-signature/">bbs-signature</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/credential-schemas/">credential-schemas</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/dpv/">dpv</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/github-discussions/tags/org/">org</a>
       
     </div>
   </section>

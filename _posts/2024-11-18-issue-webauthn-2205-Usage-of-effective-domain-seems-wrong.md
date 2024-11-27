@@ -6,8 +6,7 @@ categories: ["W3C"]
 tags: ["webauthn"]
 permalink: /webauthn/issue/2205/
 comments_file: W3C-webauthn-issue-2205_comments
+excerpt: >
+  Because the domain field is only set when `document.domain` is used. Generally that's an internal field for the HTML Standard.
 ---
-
-[_https://github.com/w3c/webauthn/issues/2205_](https://github.com/w3c/webauthn/issues/2205)
-
 No other specification really ought to use "effective domain". That's only for `document.domain`-related business. I suspect you just want to grab an origin's host and ignore this operation.
