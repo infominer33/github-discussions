@@ -5,8 +5,8 @@
 {%- assign max_length = include.max_length | default: '500' -%}
 
 {%- capture description -%}
-{%- if post.description -%}
-  {{- post.description -}}
+{%- if post.excerpt -%}
+  {{- post.excerpt -}}
 {%- else -%}
   {%- include no-linenos.html content=post.content -%}
   {{- content | markdownify | strip_html -}}

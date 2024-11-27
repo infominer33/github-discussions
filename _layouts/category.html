@@ -12,12 +12,32 @@ layout: page
     <span class="lead text-muted ps-2">{{ page.posts | size }}</span>
   </h1>
 
+  {% assign sorted_posts = page.posts | sort: 'last_modified_at' | reverse %}
+
   <ul class="content ps-0">
-    {% for post in page.posts %}
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="dash flex-grow-1"></span>
-        {% include datetime.html date=post.date class='text-muted small text-nowrap' lang=lang %}
+    {% for post in sorted_posts %}
+      <li class="d-flex flex-column px-md-3">
+        <div class="d-flex justify-content-between px-md-3">
+          <div>
+            {% if post.tags %}[{{ post.tags | join: ", " }}]{% endif %}
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </div>
+          <span class="dash flex-grow-1"></span>
+          {% include datetime.html date=post.last_modified_at class='text-muted small text-nowrap' lang=lang %}
+        </div>
+
+        {% if post.comments_file %}
+          {% assign comments = site.data.comments[post.comments_file] %}
+          {% if comments.size > 0 %}
+            {% assign last_comment = comments | last %}
+            <div class="recent-comment ms-4 mt-1">
+              <blockquote class="small text-muted mb-0">
+                <em>Latest comment by <a href="https://github.com/{{ last_comment.user }}">@{{ last_comment.user }}</a> on {{ last_comment.date | date: "%Y-%m-%d" }}:</em><br>
+                {{ last_comment.body | strip_html | truncate: 200 }}
+              </blockquote>
+            </div>
+          {% endif %}
+        {% endif %}
       </li>
     {% endfor %}
   </ul>
