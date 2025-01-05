@@ -1,3 +1,0 @@
-comment_id,user,date,body
-1847971142,yshyn-iohk,2024-11-19T09:25:35+00:00,"```suggestion fun clearScenario() {     Setup.stopActors()     Setup.initActors() } ```"
-1848304017,amagyar-iohk,2024-11-19T12:50:43+00:00,"this was a leftover of some tests I was doing, I just removed it!"

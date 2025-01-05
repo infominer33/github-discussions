@@ -1,4 +1,0 @@
-comment_id,user,date,body
-2481775296,msporny,2024-11-18T02:03:10+00:00,PR #181 has been raised to address this issue. This issue will be closed once PR #181 has been merged.
-2481776044,msporny,2024-11-18T02:04:00+00:00,"PR #181 has been merged, closing."
-2496104700,coveloper,2024-11-24T16:51:01+00:00,"Note, that v6.1.1 does not actually compile, but the SPM appears to install correctly."

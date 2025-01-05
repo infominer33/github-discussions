@@ -1,2 +1,0 @@
-comment_id,user,date,body
-1847926316,AmarjeetAkv,2024-11-19T08:55:57+00:00,"We fixed the changes requested by you. I have moved genesis configuration from sample.env, from now ledger came from config.js ``` indyVdr: new IndyVdrModule({     indyVdr,     networks: [config.ledger]  }), ``` i have also updated config.js code from the PR #81"

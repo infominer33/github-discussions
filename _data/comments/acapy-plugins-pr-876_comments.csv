@@ -1,0 +1,3 @@
+comment_id,user,date,body
+1902225637,danpape,2025-01-03T23:01:45+00:00,"```suggestion         This specification's primary audience is implementors developing conformant DID methods and systems and services that wish to interact and interface with DIDs. The intended audience includes, but is not limited to, software architects, data modelers, application developers, services developers, testers, operators, and user experience (UX) specialists. In addition, other people involved in a broad range of standards efforts related to decentralized identity, verifiable credentials, and secure storage may also be interested in reading this specification. ```"
+1903133678,msporny,2025-01-04T18:05:16+00:00,Change 'may' to 'might' to avoid confusion w/ normative language.

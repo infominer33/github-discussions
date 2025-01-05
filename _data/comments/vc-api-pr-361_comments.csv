@@ -1,2 +1,0 @@
-comment_id,user,date,body
-1858727646,lukewarlow,2024-11-26T15:12:15+00:00,Isn't this Exposed=* superfluous because the whole interface is exposed *?

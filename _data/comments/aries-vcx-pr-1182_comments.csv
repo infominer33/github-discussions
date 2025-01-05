@@ -1,3 +1,0 @@
-comment_id,user,date,body
-1847088572,jamshale,2024-11-18T18:46:24+00:00,Interesting. Thought this would work.
-1847101262,dbluhm,2024-11-18T18:57:14+00:00,"Indeed; subtle nuance is that `.get` will return a None if `sd_list` is present and null. We always want to treat it as a list, even if a null is given, so we have to do the `or` syntax here."

@@ -1,2 +1,0 @@
-comment_id,user,date,body
-2490015311,Kieun,2024-11-21T03:56:06+00:00,"> One could make the argument that duplicates are most likely unintended, so it's better to reject them so the RP finds out about the issue. This would, however, not be backwards compatible with existing RP implementations that (intentionally or accidentally) rely on duplicates being silently ignored.  I agree that throwing an error is a bad approach. But, adding some notes explicitly make the readers and developers to clearly understand how the underlying client and authenticator would work."

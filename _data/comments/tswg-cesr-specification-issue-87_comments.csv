@@ -1,0 +1,2 @@
+comment_id,user,date,body
+2569207886,amagyar-iohk,2025-01-03T13:16:06+00:00,@FabioPinheiro moving back to `Planned` because it's lacking the `cloud-agent` part  About the prism node: https://hub.docker.com/r/identus/prism-node  Let me know if you need any help on the semantic-release side

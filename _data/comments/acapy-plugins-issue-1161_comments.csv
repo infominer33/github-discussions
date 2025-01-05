@@ -1,2 +1,0 @@
-comment_id,user,date,body
-2489535348,pradeepp88,2024-11-20T21:01:57+00:00,"Hi @dbluhm I was able to get the `wallet_id` into the oid4vc issuer url as a subpath and use that to extract the tenant profile. I have created a Draft PR #1214 of the work done so far. Please review and add your comments - I am updating the integration tests now, if the design is ok, I can finalize the changes and make the PR ready for review."

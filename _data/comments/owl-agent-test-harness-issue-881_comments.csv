@@ -1,2 +1,0 @@
-comment_id,user,date,body
-2501742124,ianco,2024-11-26T19:19:10+00:00,"In the VCX repo, the CI builds and publishes an image containing the VCX backchannel.  The Dockerfile in this OATH repo (for this backchannel) just references the name of the publishes image.  For Aca-Py, we'll need to update the Aca-Py repo to contain all backchannel code, and to publish an image each time the `main` branch is updated in the repo.  (For local testing, one can build a local backchannel image and then update the Dockerfile in the OATH repo to point to the locally generated image).  "

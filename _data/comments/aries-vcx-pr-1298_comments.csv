@@ -1,4 +1,0 @@
-comment_id,user,date,body
-1859105839,JamesKEbert,2024-11-26T19:14:29+00:00,Should I complete https://github.com/hyperledger/aries-vcx/pull/1224 given what you've done here? :man_shrugging: 
-1859106579,JamesKEbert,2024-11-26T19:15:08+00:00,Might be nice to see a test for this--but it's definitely not a deal breaker. Cool to see the addition here! 
-1859203973,gmulhearn,2024-11-26T20:46:24+00:00,ye possibly. your fix takes it a little further with the ability to pass in a key. but maybe that could be a feature for another time. the core of the issue should be fixed

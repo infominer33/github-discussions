@@ -1,0 +1,2 @@
+comment_id,user,date,body
+2563179342,enjora,2024-12-27T00:00:25+00:00,"The error “Unexpected identifier ‘assert’” is occurring because: 	1.	Node.js v22 removed support for “import assertions” in favor of “import attributes”. 	2.	The `@veramo/credential-ld` package or its dependencies likely uses the older “import assertions” syntax.  Here is a workaround Add the below lines to your package.json   },     ""engines"": {     ""node"": ""20.0""   },"

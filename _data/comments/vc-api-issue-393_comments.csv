@@ -1,0 +1,2 @@
+comment_id,user,date,body
+2569723800,steveluscher,2025-01-03T19:37:52+00:00,Yes please! We ship a series of helper methods to make importing the raw bytes of an `Ed25519` private key more ergonomic for developers. All it does is to increase the attack surface of our library (which I've proposed to remove in https://github.com/anza-xyz/solana-web3.js/issues/47 at the expense of developer experience) where a platform API to import raw private key bytes would do just fine.
