@@ -1,11 +1,11 @@
 [
   
   {
-    "title": "Add test wallet config option",
-    "url": "/github-discussions/acapy/3355/",
-    "categories": "openwallet-foundation",
-    "tags": "acapy",
-    "date": "2024-11-26 10:38:58 -0800",
+    "title": "Add a method to get all the credentials for a rely party on the client device to support the rely party (website) to limit the number of accounts a user can register",
+    "url": "/github-discussions/webauthn/2222/",
+    "categories": "w3c",
+    "tags": "webauthn",
+    "date": "2024-12-26 16:29:59 -0800",
     
 
 
@@ -13,16 +13,16 @@
 
 
     
-    "snippet": "URL: https://github.com/openwallet-foundation/acapy/pull/3355With the removal of the in-memory wallet we lost the ability to quickly spin up an in-memory agent without a wallet name or key. This ad...",
-    "content": "URL: https://github.com/openwallet-foundation/acapy/pull/3355With the removal of the in-memory wallet we lost the ability to quickly spin up an in-memory agent without a wallet name or key. This adds the ability back if you use the new --wallet-test config. It will create an in-memory askar wallet.If you don’t use wallet-test and fail to supply name and key you now get a wallet-name and wallet-key required for persistent wallet error on startup."
+    "snippet": "URL: https://github.com/w3c/webauthn/issues/2222It is very easy for a user to register many accounts on a website which using webauthn, but it seems that there is no an easy way to limit this capab...",
+    "content": "URL: https://github.com/w3c/webauthn/issues/2222It is very easy for a user to register many accounts on a website which using webauthn, but it seems that there is no an easy way to limit this capability of the user, for it is not easy to identify the user or the authenticator (many platforms do not return its AAGUID even if the “enterprise” conveyance option is used.) using javascript in browsers when the user is registering.If there is a method that can get all the credentials for a rely party on the client device, the rely party (website) can easily limit the number of accounts a user can register using the client device.Thank you very much."
   },
   
   {
-    "title": "ACA-Py failing to start, gives KeyError: 'pattern'",
-    "url": "/github-discussions/acapy/3353/",
-    "categories": "openwallet-foundation",
-    "tags": "acapy",
-    "date": "2024-11-25 07:25:18 -0800",
+    "title": "Define fragment processing rules for `application/did`",
+    "url": "/github-discussions/did-core/873/",
+    "categories": "w3c",
+    "tags": "did-core",
+    "date": "2024-12-19 08:48:46 -0800",
     
 
 
@@ -30,33 +30,16 @@
 
 
     
-    "snippet": "URL: https://github.com/openwallet-foundation/acapy/issues/3353ACA-py started failing to start in the Interop Test Pipeline over the weekend. This is the error. The pipeline pull from main to build...",
-    "content": "URL: https://github.com/openwallet-foundation/acapy/issues/3353ACA-py started failing to start in the Interop Test Pipeline over the weekend. This is the error. The pipeline pull from main to build acapy.2024-11-25 15:13:18,787 acapy_agent.core.plugin_registry ERROR Module doesn't exist: redis_events.v1_0.redis_queue.events2024-11-25 15:13:19,438 acapy_agent.commands.start ERROR Exception during startup:Traceback (most recent call last):  File \"/usr/local/lib/python3.12/site-packages/acapy_agent/commands/start.py\", line 72, in init    await startup  File \"/usr/local/lib/python3.12/site-packages/acapy_agent/commands/start.py\", line 28, in start_app    await conductor.setup()  File \"/usr/local/lib/python3.12/site-packages/acapy_agent/core/conductor.py\", line 128, in setup    context = await self.context_builder.build_context()              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File \"/usr/local/lib/python3.12/site-packages/acapy_agent/config/default_context.py\", line 78, in build_context    await self.load_plugins(context)  File \"/usr/local/lib/python3.12/site-packages/acapy_agent/config/default_context.py\", line 183, in load_plugins    await plugin_registry.init_context(context)  File \"/usr/local/lib/python3.12/site-packages/acapy_agent/core/plugin_registry.py\", line 207, in init_context    await plugin.setup(context)  File \"/usr/local/lib/python3.12/site-packages/acapy_agent/resolver/__init__.py\", line 62, in setup    await universal_resolver.setup(context)  File \"/usr/local/lib/python3.12/site-packages/acapy_agent/resolver/default/universal.py\", line 66, in setup    supported_did_regex = await self._get_supported_did_regex()                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File \"/usr/local/lib/python3.12/site-packages/acapy_agent/resolver/default/universal.py\", line 115, in _get_supported_did_regex    return _compile_supported_did_regex(           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File \"/usr/local/lib/python3.12/site-packages/acapy_agent/resolver/default/universal.py\", line 24, in _compile_supported_did_regex    for pattern in patterns                   ^^^^^^^^  File \"/usr/local/lib/python3.12/site-packages/acapy_agent/resolver/default/universal.py\", line 116, in &lt;genexpr&gt;    driver[\"http\"][\"pattern\"] for driver in props.values()    ~~~~~~~~~~~~~~^^^^^^^^^^^KeyError: 'pattern'Shutting down"
+    "snippet": "URL: https://github.com/w3c/did-core/issues/873The specification currently doesn’t define fragment processing rules. We have to define those rules by either reusing the one from application/cid or ...",
+    "content": "URL: https://github.com/w3c/did-core/issues/873The specification currently doesn’t define fragment processing rules. We have to define those rules by either reusing the one from application/cid or defining new ones."
   },
   
   {
-    "title": "Support for subdirectory in SERVICE_ENDPOINTS",
-    "url": "/github-discussions/identus-mediator/382/",
-    "categories": "hyperledger",
-    "tags": "identus-mediator",
-    "date": "2024-11-23 16:04:25 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus-mediator/issues/382Sometimes is desirable to run the mediator endpoint in a subdirectory of a webapp to avoid CORS issues, for example, defining SERVICE_...",
-    "content": "URL: https://github.com/hyperledger/identus-mediator/issues/382Sometimes is desirable to run the mediator endpoint in a subdirectory of a webapp to avoid CORS issues, for example, defining SERVICE_ENDPOINTS='https://www.myapp.com/mediator'. If you setup the ProxyPass on webserver correctly, when you try to load the endpoint it fails trying to load https://www.myapp.com/public/webapp-fastopt-bundle.js because the mediator server endpoint is assuming the SERVICE_ENDPOINT is not on a subdirectory and on a web root."
-  },
-  
-  {
-    "title": "SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches",
-    "url": "/github-discussions/did-extensions/597/",
+    "title": "The links in a spec should tested - manually or automatically - after each build.",
+    "url": "/github-discussions/did-extensions/598/",
     "categories": "w3c",
     "tags": "did-extensions",
-    "date": "2024-11-22 07:09:36 -0800",
+    "date": "2024-11-22 07:57:38 -0800",
     
 
 
@@ -64,399 +47,8 @@
 
 
     
-    "snippet": "URL: https://github.com/w3c/did-extensions/issues/597@msporny proposed restricted approach here: https://github.com/w3c/did-extensions/issues/595In this Super/Meta Proposal, I want to suggest that ...",
-    "content": "URL: https://github.com/w3c/did-extensions/issues/597@msporny proposed restricted approach here: https://github.com/w3c/did-extensions/issues/595In this Super/Meta Proposal, I want to suggest that the DID method registration section in the spec be modified to support more than one Authentication of unique DID Method names approach that covers the following objectives:  Removes the burden from the reviewers  Removes the W3C from having to arbitrate DID method uniqueness issues  Produces a tangible result in terms of authenticating the uniqueness of new DID Method registration applicationsThe idea is to support, in the specification, more than one trivially easy-to-access Authentication of unique DID Method names  approach - with the goal of giving registrants/controllers at least a couple choices that they can choose from based on time, effort, and cost.  For example, tradmarking is costly especially for registrants who do not have in-house legal council - more cost effective solution(s) are also needed.  The wording of the specification cannot be prejudiced for or against any registrant.  In addition, a DID Method name may not be trademarkable: https://github.com/w3c/did-extensions/issues/595#issuecomment-2494098759So what’s on the table in terms of approaches (in order of strength: effectiveness, cost, time, and effort):  DNS Registration: Leveraging what is already available using Internet Doman Name System (DNS) domain name registration. Examples of such an approach can be found in https://github.com/w3c/did-extensions/issues/590  Registered trademarks per the concepts outlined here: https://github.com/w3c/did-extensions/issues/595  Unregistered trademarks  No authentication of uniqueness supplied in the applicationNOTE: The implication of point 4 is that we add a field to the DID Method Name registration file to specify the registrant’s Authentication of unique DID Method names approach/evidence.  This can be a simple text field with a link to the domain registration, a trademark statement, etc.  An empty or missing field would default to class 4: No authentication of uniqueness provided.  This field can also be used to ajudicate new applications that have or claim to have a stronger authentication.Q: any additional Authentication of unique DID Method names approaches that would be simple in terms of effort, time and cost for the registrant and as well the reviewers and the W3C?Other thoughts?"
-  },
-  
-  {
-    "title": "Restore `--base-wallet-routes` flag functionality",
-    "url": "/github-discussions/acapy/3344/",
-    "categories": "openwallet-foundation",
-    "tags": "acapy",
-    "date": "2024-11-21 10:21:14 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/openwallet-foundation/acapy/pull/3344Resolves #3283The tenant_authentication has been updated to also allow access to the base wallet when the route matches a path defined u...",
-    "content": "URL: https://github.com/openwallet-foundation/acapy/pull/3344Resolves #3283The tenant_authentication has been updated to also allow access to the base wallet when the route matches a path defined using --base-wallet-routes.Please note that, when compared to the previous implementation, the matcher has been made more greedy to tighten security: if an extra route of /test is specified, the matcher will only match that and not /testA or /test-something-else as it appears it would have done before.One drawback of having to use this matcher inside the decorator is that I could not think of an elegant way of caching the compiled pattern for reuse - suggestions on how to achieve that, if desirable/required, will be welcome."
-  },
-  
-  {
-    "title": "CR: Need a way to detect \"cancel\"",
-    "url": "/github-discussions/webauthn/2211/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-11-21 09:31:50 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/webauthn/issues/2211Proposed ChangeNeed a way to programmatically detect when the user has cancelled the “Use passkey from another device” browser native prompt by click...",
-    "content": "URL: https://github.com/w3c/webauthn/issues/2211Proposed ChangeNeed a way to programmatically detect when the user has cancelled the “Use passkey from another device” browser native prompt by clicking the “Cancel” button. This could be achieved by adding a new property or event to the prompt that indicates whether the user has cancelled the prompt.^ the “cancel” button there."
-  },
-  
-  {
-    "title": "Clarify the registration process wrt. trademarks and copyrights",
-    "url": "/github-discussions/did-extensions/595/",
-    "categories": "w3c",
-    "tags": "did-extensions",
-    "date": "2024-11-21 08:51:14 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/did-extensions/issues/595The current specification doesn’t say that in order to block or remove a registration that a /registered/ trademark is required. The language ar...",
-    "content": "URL: https://github.com/w3c/did-extensions/issues/595The current specification doesn’t say that in order to block or remove a registration that a /registered/ trademark is required. The language around copyright is also problematic (granting a copyright holder the broad ability to block a registration). The text needs to be updated to remove much of the evaluation burden from the maintainers (by requiring that the trademark owner has the burden of proof). The purpose of this issue is to track this desired clarification."
-  },
-  
-  {
-    "title": "Add test vectors",
-    "url": "/github-discussions/webauthn/2209/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-11-20 10:38:52 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/webauthn/pull/2209Closes #1633. Sorry it took so long!The test vectors proposed in #1633 use RP IDs of real websites unaffiliated with W3C, which felt out of place to me...",
-    "content": "URL: https://github.com/w3c/webauthn/pull/2209Closes #1633. Sorry it took so long!The test vectors proposed in #1633 use RP IDs of real websites unaffiliated with W3C, which felt out of place to me, so I chose to generate new ones instead. Also in order to pre-empt any worry that there could be something nefarious hidden in these values, they are all generated deterministically from disclosed PRNG seeds. Consequently the attestation statements are synthetic values rather than real attestations from the corresponding trusted source, which unfortunately means there’s more room for error, but I think it’s worth it to have the examples self-contained and transparent. I invite library authors to try running their registration and authentication procedures on these examples so that we may work out any inconsistencies.I plan to also share the code used to generate these, but I needed to patch some of the libraries I used, so I need to resolve that first.Preview | Diff"
-  },
-  
-  {
-    "title": " proof request there's no information on holder ",
-    "url": "/github-discussions/identus-cloud-agent/1459/",
-    "categories": "hyperledger",
-    "tags": "identus-cloud-agent",
-    "date": "2024-11-20 02:34:25 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus-cloud-agent/issues/1459Is this a regression?NODescriptionRight know when we have a proof request there’s no information on holder side of what’s being re...",
-    "content": "URL: https://github.com/hyperledger/identus-cloud-agent/issues/1459Is this a regression?NODescriptionRight know when we have a proof request there’s no information on holder side of what’s being requested.Holder webhook data:PresentationStatusAdapter(presentationId=94acbe0f-ed87-4477-9757-4b4ba8c3461d, thid=d080d2b5-0498-42aa-a829-22cf021ff3cf, role=PROVER, status=REQUEST_RECEIVED, metaRetries=5, proofs=[], data=[], connectionId=null)GET /present-proof/presentations/$presentationId{    “presentationId”: “94acbe0f-ed87-4477-9757-4b4ba8c3461d”,    “thid”: “d080d2b5-0498-42aa-a829-22cf021ff3cf”,    “role”: “Prover”,    “status”: “RequestReceived”,    “proofs”: [],\"data\": [    ],\"requestData\": [    \"{\\n  \\\"options\\\" : {\\n    \\\"domain\\\" : \\\"https://example-verifier.com\\\",\\n    \\\"challenge\\\" : \\\"11c91493-01b3-4c4d-ac36-b336bab5bddf\\\"\\n  },\\n  \\\"presentation_definition\\\" : {\\n    \\\"format\\\" : null,\\n    \\\"name\\\" : null,\\n    \\\"purpose\\\" : null,\\n    \\\"id\\\" : \\\"345b056f-2889-458a-9f59-25d1ab249557\\\",\\n    \\\"input_descriptors\\\" : [\\n    ]\\n  }\\n}\"],\"metaRetries\": 5 }The data is available in the RequestPresentation Attachment but we don’t expose it on the endpoint This will be helpful fro cloud agnet  while testing testPlease provide the exception or error you sawNo responsePlease provide the environment you discovered this bug inNo responseAnything else?No response"
-  },
-  
-  {
-    "title": "DID Management Proposed Update",
-    "url": "/github-discussions/acapy/3343/",
-    "categories": "openwallet-foundation",
-    "tags": "acapy",
-    "date": "2024-11-19 08:58:08 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/openwallet-foundation/acapy/issues/3343In light of our current push to add support for more DID Methods to ACA-Py, some primitives within ACA-Py need some updates. This issu...",
-    "content": "URL: https://github.com/openwallet-foundation/acapy/issues/3343In light of our current push to add support for more DID Methods to ACA-Py, some primitives within ACA-Py need some updates. This issue outlines the updates I propose. I plan to update this further as the topic is discussed or as implementations better inform decisions.Proposed UpdatesDID Storage (updating DIDInfo)Current StateAt present, the DIDInfo object looks like this:https://github.com/openwallet-foundation/acapy/blob/f5c49b0710dd180ea31c45f73bc82ef06f9523b4/acapy_agent/wallet/did_info.py#L20-L29This is stored in the wallet with a category of did, the primary identifier being the DID value, and the following tags:  method: the method name  verkey: the verkey element of the tuple where it is the base58 encoding of the public key  verkey_type: the key type of the verkey (e.g. ed25519)As currently used, metadata will include:  posted: a boolean value representing whether this did has been published to an indy network  endpoint: a string value representing associated with the endpoint attrib of this did on an indy network.EvaluationAs is plain to see, the structure, tags, and metadata of the DIDInfo object are very Indy-oriented. This structure has been in use for years.Currently, ACA-Py will retrieve a DIDInfo object in order to use the key associated with the “DID.” It will do this by taking a “DID” as input (usually, actually more like a “nym” value, i.e. 16 base58 encoded bytes without a did: prefix), then using the verkey value to retrieve a Key object that it can then use to perform a signature or pack a DIDComm message.SolutionDIDs should have multiple keys associated with them rather than a single key. To achieve this while also having an efficient lookup mechanism, we should reorient our storage as outlined below.Quick background on AskarAskar is a secure storage solution used by ACA-Py. Askar encrypts all data and provides a tagging mechanism to enable lookup of encrypted records. An entry in Askar is composed of the following elements:  Category: The major group or “bucket” that the entry belongs to.  Name: The primary identifier for the record; this is roughly equivalent to primary keys on a traditional DB table. The most efficient lookup possible is by name.  Value: The value stored in the entry. This is usually a serialized JSON object.  Tags: A mapping of strings to strings or lists of strings. These values can be used with the “Wallet Query Language (WQL)” to look up encrypted Askar entries efficiently.Askar has a dedicated API for storage and retrieval of keys. However, this API is conceptually just a shorthand for record storage and retrieval from a “private” key category with the key itself as the value of the entry. Key entries behave almost exactly the same as non-key entries, including names and tags.Key StorageBuilding off of Patrick’s contributions of managing keys by multikey instead of “verkey,” the multikey representation of a key should be the default identifier for keys in the wallet.  Name: multikey representation of the key  Tags:          Implicit tag for the KeyAlg (automatically included on every key)      did: the DID (or a list of DIDs) the key is associated with      vm_id: an absolute DID URL (or a list of DID URLs) representing the verification method ID(s) of the key      rel: A list of verification relationships as defined by the DID Core spec; e.g. [\"authentication\", \"assertionMethod\"]. This represents the intended use of this key.      alias: A human-friendly alias (or list of aliases) that can help identify a key to a user      These sets of tags enable us to look up keys with a combination of did and rel; when these tags are lists, Askar will return all keys that contain the tag filter value in their respective list. This permits the controller to continue to specify just a DID as the issuer/signer/sender of a value without having to know exactly which key ACA-Py should use to perform the operation. This also permits the controller to continue to use the verification method ID directly to specify a key that might not normally be selected first. Additionally, when a specific proof type is desired, Askar can also filter by KeyAlg so a simple mapping from proof type to appropriate KeyAlgs can efficiently accomplish this filtering.DID StorageDIDs should be altered to be stored in a way that simply acknowledges that we own the DID and not as the primary key retrieval mechanism.  Category: did  Name: the DID itself  Value:          …        Tags:          method: a string representing the DID Method      (Maybe?) features: the list of features the DID is capable of      Other things it would be valuable to use to look up the DID?      MigrationExisting ACA-Py wallets should have the following migration performed to accommodate this reorientation:  Migrate all existing records in the did category to the new structure and also duplicate the record to a legacy nym category          If the did value is unqualified, “move” to the new did category and map old values onto new, adding did:sov: to the front.      If the did value is unqualified, also create a record in the new nym category with a structure matching the original DIDInfo object, where a verkey is closely associated with the nym. This should enable us to continue using the builtin Indy support in a way that distinguishes the old from the new.      For did values that are qualified, move to the new did category and make sure the associated key entries are properly tagged. This will depend on the DID Method. Plugged in DID Methods may need to account for their own DID methods in a separate migration process.      "
-  },
-  
-  {
-    "title": "\"Verify\" is undefined",
-    "url": "/github-discussions/webauthn/2208/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-11-18 07:50:14 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/webauthn/issues/2208For example, https://w3c.github.io/webauthn/#sctn-registering-a-new-credential has a step that reads  Verify that the value of C.type is webauthn.cre...",
-    "content": "URL: https://github.com/w3c/webauthn/issues/2208For example, https://w3c.github.io/webauthn/#sctn-registering-a-new-credential has a step that reads  Verify that the value of C.type is webauthn.create.but it’s not at all clear what this means or what should happen when it cannot be true. If it’s always meant to be true unless something outside of the scope of the specification has happened, it would be more appropriate to use Infra’s Assert primitive.If it can actually have other values, you’ll need to define how to handle those."
-  },
-  
-  {
-    "title": "JSON parsing should be on top of Infra primitives",
-    "url": "/github-discussions/webauthn/2207/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-11-18 05:58:14 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/webauthn/issues/2207I suspect that most can be replaced by https://infra.spec.whatwg.org/#parse-json-bytes-to-an-infra-value. This will also require some changes to the ...",
-    "content": "URL: https://github.com/w3c/webauthn/issues/2207I suspect that most can be replaced by https://infra.spec.whatwg.org/#parse-json-bytes-to-an-infra-value. This will also require some changes to the following steps as they now have an Infra value. This should also allow for the removal of the notes as now this is all well-defined instead of somewhat hand-wavy."
-  },
-  
-  {
-    "title": "Use of \"valid domain\" seems wrong",
-    "url": "/github-discussions/webauthn/2206/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-11-18 05:55:36 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/webauthn/issues/2206No user agent implements “valid domain”. I suspect that instead you simply want to do a type check that the host of an origin is a domain.Also, what ...",
-    "content": "URL: https://github.com/w3c/webauthn/issues/2206No user agent implements “valid domain”. I suspect that instead you simply want to do a type check that the host of an origin is a domain.Also, what kind of schemes can this origin have and do those need to be checked?"
-  },
-  
-  {
-    "title": "Usage of \"effective domain\" seems wrong",
-    "url": "/github-discussions/webauthn/2205/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-11-18 05:54:16 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/webauthn/issues/2205No other specification really ought to use “effective domain”. That’s only for document.domain-related business. I suspect you just want to grab an o...",
-    "content": "URL: https://github.com/w3c/webauthn/issues/2205No other specification really ought to use “effective domain”. That’s only for document.domain-related business. I suspect you just want to grab an origin’s host and ignore this operation."
-  },
-  
-  {
-    "title": "Verifiable Credential Issued in JWT uses longform of prism DID in the iss field of JWT",
-    "url": "/github-discussions/identus-cloud-agent/1451/",
-    "categories": "hyperledger",
-    "tags": "identus-cloud-agent",
-    "date": "2024-11-18 05:19:24 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus-cloud-agent/issues/1451Is this a regression?NoDescriptionA Verifiable Credential issued in JWT format currently uses the long-form of a Prism DID in the ...",
-    "content": "URL: https://github.com/hyperledger/identus-cloud-agent/issues/1451Is this a regression?NoDescriptionA Verifiable Credential issued in JWT format currently uses the long-form of a Prism DID in the iss field of the JWT. We should update this to use the short-form Prism DID instead. Below is an example of a VC issued in JWT format, and upon decoding, the iss field displays the long-form DIDeyJ0eXAiOiJKV1QiLCJhbGciOiJFZERTQSJ9.eyJpc3MiOiJkaWQ6cHJpc206ZjJlYmVjZjFiNWU5NGVkZDZiMGZjNDU2Y2UyZmJhMGNiNzhhMTczNTJlMWFmNWNkODZlMmZhMDJhZDdhOGQ3NzpDcHNDQ3BnQ0VrWUtGVzE1TFd0bGVTMWhkWFJvWlc1MGFXTmhkR2x2YmhBRVNpc0tCMFZrTWpVMU1Ua1NJTm5oaGZqLXQxd3VBaktIVDNtWU1RNDRRTXF3SjRsbzRIT2RrTk1jSUF4bkVrY0tGbTE1TFd0bGVTMWhjM05sY25ScGIyNU5aWFJvYjJRUUFrb3JDZ2RGWkRJMU5URTVFaUNib00yRFJuYS0tWHRGT19FMzRFV2hUYTM0TGpGRDdGZEUzcW55Wk10NXVCSTdDZ2R0WVhOMFpYSXdFQUZLTGdvSmMyVmpjREkxTm1zeEVpRUMxZm9wYXVQLUt6LTdzelpGV0FuZl94RWlGOVlPU2NTNkNmbXZRbTdQV1JzYVNBb09ZV2RsYm5RdFltRnpaUzExY213U0VFeHBibXRsWkZKbGMyOTFjbU5sVmpFYUpHaDBkSEE2THk4eE9USXVNVFk0TGpFdU9EWTZPREF3TUM5amJHOTFaQzFoWjJWdWRBIiwic3ViIjoiZGlkOnByaXNtOmNlMzA3NzUxOTZmZTQ0OWY2NzMxZGRhMmVhZmVlMWE2MjBmZWUyMjRhN2U2ZjYzMWJhNzQ4YWZjYTYxNTUwOTM6Q3BjQ0NwUUNFajhLQzIxNUxXRjFkR2d0YTJWNUVBUktMZ29KYzJWamNESTFObXN4RWlFQzJxSFZFYXdibFZkOG5uR044SE1ocEhwZkZkMFRSTHVSWTlHVS13MFpQdGNTU2dvV2JYa3RhMlY1TFdGemMyVnlkR2x2YmsxbGRHaHZaQkFDU2k0S0NYTmxZM0F5TlRack1SSWhBNUc5TVdOUlJyOFNIeFNIYWgxY3ZqN2VYZHNZelcteC1lcVZBV3NUeFBjeUVqc0tCMjFoYzNSbGNqQVFBVW91Q2dselpXTndNalUyYXpFU0lRTW1MbTVtSGpXTXVGNVJabjRWYjFqNGhHdEhJc1FodDF3SFZDd3YxUXYxWlJwSUNnNWhaMlZ1ZEMxaVlYTmxMWFZ5YkJJUVRHbHVhMlZrVW1WemIzVnlZMlZXTVJva2FIUjBjRG92THpFNU1pNHhOamd1TVM0NE5qbzVNREF3TDJOc2IzVmtMV0ZuWlc1MCIsIm5iZiI6MTczMTkyNzE5NSwiZXhwIjoxNzMxOTMwNzk1LCJ2YyI6eyJjcmVkZW50aWFsU2NoZW1hIjpbeyJpZCI6Imh0dHA6XC9cLzE5Mi4xNjguMS44Njo4MDAwXC9jbG91ZC1hZ2VudFwvc2NoZW1hLXJlZ2lzdHJ5XC9zY2hlbWFzXC83YjRiMGYyMy1kOTk1LTNlN2EtYmY5ZC0xOWJiZTEwZTJkNGIiLCJ0eXBlIjoiQ3JlZGVudGlhbFNjaGVtYTIwMjIifV0sImNyZWRlbnRpYWxTdWJqZWN0Ijp7ImVtYWlsQWRkcmVzcyI6ImFsaWNlQHdvbmRlcmxhbmQuY29tIiwiZHJpdmluZ0NsYXNzIjozLCJmYW1pbHlOYW1lIjoiV29uZGVybGFuZCIsImdpdmVuTmFtZSI6IkFsaWNlIiwiZHJpdmluZ0xpY2Vuc2VJRCI6IjEyMzQ1IiwiaWQiOiJkaWQ6cHJpc206Y2UzMDc3NTE5NmZlNDQ5ZjY3MzFkZGEyZWFmZWUxYTYyMGZlZTIyNGE3ZTZmNjMxYmE3NDhhZmNhNjE1NTA5MzpDcGNDQ3BRQ0VqOEtDMjE1TFdGMWRHZ3RhMlY1RUFSS0xnb0pjMlZqY0RJMU5tc3hFaUVDMnFIVkVhd2JsVmQ4bm5HTjhITWhwSHBmRmQwVFJMdVJZOUdVLXcwWlB0Y1NTZ29XYlhrdGEyVjVMV0Z6YzJWeWRHbHZiazFsZEdodlpCQUNTaTRLQ1hObFkzQXlOVFpyTVJJaEE1RzlNV05SUnI4U0h4U0hhaDFjdmo3ZVhkc1l6Vy14LWVxVkFXc1R4UGN5RWpzS0IyMWhjM1JsY2pBUUFVb3VDZ2x6WldOd01qVTJhekVTSVFNbUxtNW1IaldNdUY1UlpuNFZiMWo0aEd0SElzUWh0MXdIVkN3djFRdjFaUnBJQ2c1aFoyVnVkQzFpWVhObExYVnliQklRVEdsdWEyVmtVbVZ6YjNWeVkyVldNUm9rYUhSMGNEb3ZMekU1TWk0eE5qZ3VNUzQ0TmpvNU1EQXdMMk5zYjNWa0xXRm5aVzUwIiwiZGF0ZU9mSXNzdWFuY2UiOiIyMDIwLTExLTEzVDIwOjIwOjM5KzAwOjAwIn0sInR5cGUiOlsiVmVyaWZpYWJsZUNyZWRlbnRpYWwiXSwiQGNvbnRleHQiOlsiaHR0cHM6XC9cL3d3dy53My5vcmdcLzIwMThcL2NyZWRlbnRpYWxzXC92MSJdLCJpc3N1ZXIiOnsiaWQiOiJkaWQ6cHJpc206ZjJlYmVjZjFiNWU5NGVkZDZiMGZjNDU2Y2UyZmJhMGNiNzhhMTczNTJlMWFmNWNkODZlMmZhMDJhZDdhOGQ3NzpDcHNDQ3BnQ0VrWUtGVzE1TFd0bGVTMWhkWFJvWlc1MGFXTmhkR2x2YmhBRVNpc0tCMFZrTWpVMU1Ua1NJTm5oaGZqLXQxd3VBaktIVDNtWU1RNDRRTXF3SjRsbzRIT2RrTk1jSUF4bkVrY0tGbTE1TFd0bGVTMWhjM05sY25ScGIyNU5aWFJvYjJRUUFrb3JDZ2RGWkRJMU5URTVFaUNib00yRFJuYS0tWHRGT19FMzRFV2hUYTM0TGpGRDdGZEUzcW55Wk10NXVCSTdDZ2R0WVhOMFpYSXdFQUZLTGdvSmMyVmpjREkxTm1zeEVpRUMxZm9wYXVQLUt6LTdzelpGV0FuZl94RWlGOVlPU2NTNkNmbXZRbTdQV1JzYVNBb09ZV2RsYm5RdFltRnpaUzExY213U0VFeHBibXRsWkZKbGMyOTFjbU5sVmpFYUpHaDBkSEE2THk4eE9USXVNVFk0TGpFdU9EWTZPREF3TUM5amJHOTFaQzFoWjJWdWRBIiwidHlwZSI6IlByb2ZpbGUifSwiY3JlZGVudGlhbFN0YXR1cyI6eyJzdGF0dXNQdXJwb3NlIjoiUmV2b2NhdGlvbiIsInN0YXR1c0xpc3RJbmRleCI6MiwiaWQiOiJodHRwOlwvXC8xOTIuMTY4LjEuODY6ODAwMFwvY2xvdWQtYWdlbnRcL2NyZWRlbnRpYWwtc3RhdHVzXC9hNzFiMjY0Ni1hZjlkLTQ0NTMtOTdiZC00ODI1YWVjMzFkMmMjMiIsInR5cGUiOiJTdGF0dXNMaXN0MjAyMUVudHJ5Iiwic3RhdHVzTGlzdENyZWRlbnRpYWwiOiJodHRwOlwvXC8xOTIuMTY4LjEuODY6ODAwMFwvY2xvdWQtYWdlbnRcL2NyZWRlbnRpYWwtc3RhdHVzXC9hNzFiMjY0Ni1hZjlkLTQ0NTMtOTdiZC00ODI1YWVjMzFkMmMifX19.BlhAJdhgJO58y17Xe21iKnOkrj2JNcK_R2tfUAfCh_KO8jjOepCVLZWJWqcV–XkBMraUJCT8R4H1KhIlAIyBQ```{  “iss”: “did:prism:f2ebecf1b5e94edd6b0fc456ce2fba0cb78a17352e1af5cd86e2fa02ad7a8d77:CpsCCpgCEkYKFW15LWtleS1hdXRoZW50aWNhdGlvbhAESisKB0VkMjU1MTkSINnhhfj-t1wuAjKHT3mYMQ44QMqwJ4lo4HOdkNMcIAxnEkcKFm15LWtleS1hc3NlcnRpb25NZXRob2QQAkorCgdFZDI1NTE5EiCboM2DRna–XtFO_E34EWhTa34LjFD7FdE3qnyZMt5uBI7CgdtYXN0ZXIwEAFKLgoJc2VjcDI1NmsxEiEC1fopauP-Kz-7szZFWAnf_xEiF9YOScS6CfmvQm7PWRsaSAoOYWdlbnQtYmFzZS11cmwSEExpbmtlZFJlc291cmNlVjEaJGh0dHA6Ly8xOTIuMTY4LjEuODY6ODAwMC9jbG91ZC1hZ2VudA”,  “sub”: “did:prism:ce30775196fe449f6731dda2eafee1a620fee224a7e6f631ba748afca6155093:CpcCCpQCEj8KC215LWF1dGgta2V5EARKLgoJc2VjcDI1NmsxEiEC2qHVEawblVd8nnGN8HMhpHpfFd0TRLuRY9GU-w0ZPtcSSgoWbXkta2V5LWFzc2VydGlvbk1ldGhvZBACSi4KCXNlY3AyNTZrMRIhA5G9MWNRRr8SHxSHah1cvj7eXdsYzW-x-eqVAWsTxPcyEjsKB21hc3RlcjAQAUouCglzZWNwMjU2azESIQMmLm5mHjWMuF5RZn4Vb1j4hGtHIsQht1wHVCwv1Qv1ZRpICg5hZ2VudC1iYXNlLXVybBIQTGlua2VkUmVzb3VyY2VWMRokaHR0cDovLzE5Mi4xNjguMS44Njo5MDAwL2Nsb3VkLWFnZW50”,  “nbf”: 1731927195,  “exp”: 1731930795,  “vc”: {    “credentialSchema”: [      {        “id”: “http://192.168.1.86:8000/cloud-agent/schema-registry/schemas/7b4b0f23-d995-3e7a-bf9d-19bbe10e2d4b”,        “type”: “CredentialSchema2022”      }    ],    “credentialSubject”: {      “emailAddress”: “alice@wonderland.com”,      “drivingClass”: 3,      “familyName”: “Wonderland”,      “givenName”: “Alice”,      “drivingLicenseID”: “12345”,      “id”: “did:prism:ce30775196fe449f6731dda2eafee1a620fee224a7e6f631ba748afca6155093:CpcCCpQCEj8KC215LWF1dGgta2V5EARKLgoJc2VjcDI1NmsxEiEC2qHVEawblVd8nnGN8HMhpHpfFd0TRLuRY9GU-w0ZPtcSSgoWbXkta2V5LWFzc2VydGlvbk1ldGhvZBACSi4KCXNlY3AyNTZrMRIhA5G9MWNRRr8SHxSHah1cvj7eXdsYzW-x-eqVAWsTxPcyEjsKB21hc3RlcjAQAUouCglzZWNwMjU2azESIQMmLm5mHjWMuF5RZn4Vb1j4hGtHIsQht1wHVCwv1Qv1ZRpICg5hZ2VudC1iYXNlLXVybBIQTGlua2VkUmVzb3VyY2VWMRokaHR0cDovLzE5Mi4xNjguMS44Njo5MDAwL2Nsb3VkLWFnZW50”,      “dateOfIssuance”: “2020-11-13T20:20:39+00:00”    },    “type”: [      “VerifiableCredential”    ],    “@context”: [      “https://www.w3.org/2018/credentials/v1”    ],    “issuer”: {      “id”: “did:prism:f2ebecf1b5e94edd6b0fc456ce2fba0cb78a17352e1af5cd86e2fa02ad7a8d77:CpsCCpgCEkYKFW15LWtleS1hdXRoZW50aWNhdGlvbhAESisKB0VkMjU1MTkSINnhhfj-t1wuAjKHT3mYMQ44QMqwJ4lo4HOdkNMcIAxnEkcKFm15LWtleS1hc3NlcnRpb25NZXRob2QQAkorCgdFZDI1NTE5EiCboM2DRna–XtFO_E34EWhTa34LjFD7FdE3qnyZMt5uBI7CgdtYXN0ZXIwEAFKLgoJc2VjcDI1NmsxEiEC1fopauP-Kz-7szZFWAnf_xEiF9YOScS6CfmvQm7PWRsaSAoOYWdlbnQtYmFzZS11cmwSEExpbmtlZFJlc291cmNlVjEaJGh0dHA6Ly8xOTIuMTY4LjEuODY6ODAwMC9jbG91ZC1hZ2VudA”,      “type”: “Profile”    },    “credentialStatus”: {      “statusPurpose”: “Revocation”,      “statusListIndex”: 2,      “id”: “http://192.168.1.86:8000/cloud-agent/credential-status/a71b2646-af9d-4453-97bd-4825aec31d2c#2”,      “type”: “StatusList2021Entry”,      “statusListCredential”: “http://192.168.1.86:8000/cloud-agent/credential-status/a71b2646-af9d-4453-97bd-4825aec31d2c”    }  }}``Please provide the exception or error you sawNAPlease provide the environment you discovered this bug inNA"
-  },
-  
-  {
-    "title": "Add support for SDJWT  trustedIssuer and credential SchemaId Validation ",
-    "url": "/github-discussions/identus-cloud-agent/1450/",
-    "categories": "hyperledger",
-    "tags": "identus-cloud-agent",
-    "date": "2024-11-18 05:13:03 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus-cloud-agent/issues/1450Is this a regression?NoDescriptionSDJWT is similar flow as JWT so need to support  similar to JWT { “connectionId”: “{{VERIFIER_CO...",
-    "content": "URL: https://github.com/hyperledger/identus-cloud-agent/issues/1450Is this a regression?NoDescriptionSDJWT is similar flow as JWT so need to support  similar to JWT { “connectionId”: “{{VERIFIER_CONNECTION_ID}}”, “proofs”: [            {                “schemaId”: “{{baseUrl}}/schema-registry/schemas/{{SCHEMA_ID}}”,                “trustIssuers”: [                    “did:prism:invalidddddđ”                ]            }], “options”: {    “challenge”: “11c91493-01b3-4c4d-ac36-b336bab5bddf”,    “domain”: “https://prism-verifier.com”  },  “credentialFormat”: “SDJWT”,  “claims”: {        “emailAddress”: {},        “givenName”: {},        “country” :{}     }}Please provide the exception or error you sawNo responsePlease provide the environment you discovered this bug inNo responseAnything else?No response"
-  },
-  
-  {
-    "title": "test: add new tests and refactoring",
-    "url": "/github-discussions/identus-cloud-agent/1442/",
-    "categories": "hyperledger",
-    "tags": "identus-cloud-agent",
-    "date": "2024-11-15 15:02:41 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus-cloud-agent/pull/1442Description:Adds more tests and refactoringChecklist:  My PR follows the contribution guidelines of this project  My PR is free of t...",
-    "content": "URL: https://github.com/hyperledger/identus-cloud-agent/pull/1442Description:Adds more tests and refactoringChecklist:  My PR follows the contribution guidelines of this project  My PR is free of third-party dependencies that don’t comply with the Allowlist  I have commented my code, particularly in hard-to-understand areas  I have made corresponding changes to the documentation  I have added tests that prove my fix is effective or that my feature works  I have checked the PR title to follow the conventional commit specification"
-  },
-  
-  {
-    "title": "docs/ Docker error",
-    "url": "/github-discussions/identus-cloud-agent/1440/",
-    "categories": "hyperledger",
-    "tags": "identus-cloud-agent",
-    "date": "2024-11-14 17:27:38 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus-cloud-agent/issues/1440Is this a regression?YesDescriptionReading docs/README.md there are instructions for seeing swagger docs. They didn’t work for meP...",
-    "content": "URL: https://github.com/hyperledger/identus-cloud-agent/issues/1440Is this a regression?YesDescriptionReading docs/README.md there are instructions for seeing swagger docs. They didn’t work for mePlease provide the exception or error you sawdocker compose -f docs/docker-compose.yml upWARN[0000] /home/projects/IDENTUS/identus-cloud-agent/docs/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion[+] Running 1/2 ✘ atala-structurizr-lite Error pull access denied for atala-struc...                               4.0s ⠏ swagger-ui Pulling                                                                               4.0sError response from daemon: pull access denied for atala-structurizr-lite, repository does not exist or may require 'docker login': denied: requested access to the resource is deniedPlease provide the environment you discovered this bug inLinux: Debian/Ubuntu 22.04Docker: version 27.3.1, build ce12230Anything else?Note I had to run docker compose not docker-compose … i forget why docker split these out / when … generally it’s not a problem to swap those commands but it is a deviation from the documented command to run"
-  },
-  
-  {
-    "title": "Should steps 28 and 29 occur before Step 27 in the registration ceremony",
-    "url": "/github-discussions/webauthn/2204/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-11-14 13:07:57 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/webauthn/issues/2204Currently step 27 occurs before steps 28 and 29; however it seems weird to “create and store a new credential record in the user account” before succ...",
-    "content": "URL: https://github.com/w3c/webauthn/issues/2204Currently step 27 occurs before steps 28 and 29; however it seems weird to “create and store a new credential record in the user account” before successfully completing steps 28 and 29, right? This means one could save a credential even though the ceremony fails later.A similar issue exists for the authentication ceremony where step 23 occurs before steps 24 and 25.I think moving those steps last makes the most sense since this way any credential creation or update occurs iff the ceremony succeeds."
-  },
-  
-  {
-    "title": "Incorrect hashing used in tests for `ecdsa-rdfc-2019` `P-384`",
-    "url": "/github-discussions/identus/86/",
-    "categories": "hyperledger",
-    "tags": "identus",
-    "date": "2024-11-14 08:12:54 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus/issues/86Hiya, the following tests are failing for P-384 with our implementation:  ecdsa-rdfc-2019 (issuers) VC 1.1 The \"proof\" MUST verify with a confor...",
-    "content": "URL: https://github.com/hyperledger/identus/issues/86Hiya, the following tests are failing for P-384 with our implementation:  ecdsa-rdfc-2019 (issuers) VC 1.1 The \"proof\" MUST verify with a conformant verifier.  ecdsa-rdfc-2019 (issuers) VC 2.0 The \"proof\" MUST verify with a conformant verifier.  ecdsa-rdfc-2019 (verifiers 1.1) MUST verify a valid VC with an ecdsa-rdfc-2019 proof.  ecdsa-rdfc-2019 (verifiers 2.0) MUST verify a valid VC with an ecdsa-rdfc-2019 proof.After trying some random things, I noticed that if we used SHA-256 for the hash data instead of SHA-384 for P-384 keys, then all the tests would pass. So I’m assuming that the implementation used by the tests is incorrect, but maybe our interpretation of the specs is wrong?"
-  },
-  
-  {
-    "title": "Replace `USVString` with `DOMString`",
-    "url": "/github-discussions/webauthn/2203/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-11-14 07:08:41 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/webauthn/issues/2203It would appear that the same justification that was used for #2115 applies to the remaining areas where USVString is used:  As recommended by the We...",
-    "content": "URL: https://github.com/w3c/webauthn/issues/2203It would appear that the same justification that was used for #2115 applies to the remaining areas where USVString is used:  As recommended by the Web IDL spec:      Specifications should only use USVString for APIs that perform text processing and need a string of scalar values to operate on. Most APIs that use strings should instead be using DOMString, which does not make any interpretations of the code units in the string. When in doubt, use DOMString.  Currently the only places where USVString is used are the following extensions:  appid  appidExclude  prfShould these all be changed to DOMString?"
-  },
-  
-  {
-    "title": "AttestationFormats may have duplicate entries",
-    "url": "/github-discussions/webauthn/2202/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-11-13 18:19:50 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/webauthn/issues/2202Proposed ChangeIn the spec, we introduce attestationFormats for RPs to indicate the attestation statement format preference for create options.The de...",
-    "content": "URL: https://github.com/w3c/webauthn/issues/2202Proposed ChangeIn the spec, we introduce attestationFormats for RPs to indicate the attestation statement format preference for create options.The definition in the spec is as follows.  attestationFormats, of type sequence&lt;DOMString&gt;, defaulting to []The Relying Party MAY use this OPTIONAL member to specify a preference regarding the attestation statement format used by the authenticator. Values SHOULD be taken from the IANA “WebAuthn Attestation Statement Format Identifiers” registry [IANA-WebAuthn-Registries] established by [RFC8809]. Values are ordered from most preferable to least preferable. This parameter is advisory and the authenticator MAY use an attestation statement not enumerated in this parameter.Since the value itself is the list of ordered preferences, it implies that the element of the fields would be unique.The sequence&lt;’T’&gt; does not have any such constraints for uniqueness.Thus, duplicated entries in the attestationFormats may be valid input as per the current spec. We may add some constraints around the field itself or we could describe the way for authenticator and client to handle such duplicated entries without throwing errors.This issue is related to the #2145 and maybe we could resolve this issue with similar manner."
-  },
-  
-  {
-    "title": "Proofs from presentation request not work",
-    "url": "/github-discussions/identus-cloud-agent/1438/",
-    "categories": "hyperledger",
-    "tags": "identus-cloud-agent",
-    "date": "2024-11-13 18:19:10 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus-cloud-agent/issues/1438Is this a regression?YesDescriptionHello, regarding the request body for the presentation request:I don’t understand the fields pr...",
-    "content": "URL: https://github.com/hyperledger/identus-cloud-agent/issues/1438Is this a regression?YesDescriptionHello, regarding the request body for the presentation request:I don’t understand the fields proofs.schemaId and proofs.trustIssuers. Although I sent a credential that does not match the schemaId and issuerDid, the status in the cloud agent still returns “PresentationVerified.”Is that a bug?{    \"connectionId\": \"bee34719-def5-4420-8d4f-35318e72e916\",    \"proofs\": [        {            \"schemaId\": \"ddec9bf9-b187-3862-897d-dd11d1c1eb53\",            \"trustIssuers\": [                \"did:prism:invalidddddđ\"            ]        }    ],    \"options\": {        \"challenge\": \"{{$randomUUID}}\",        \"domain\": \"https://prism-verifier.com\"    },    \"credentialFormat\": \"JWT\"}Please provide the exception or error you sawNo responsePlease provide the environment you discovered this bug in1.39.1-104-1c7c38eAnything else?No response"
-  },
-  
-  {
-    "title": "TPAC 2024 Presentations",
-    "url": "/github-discussions/org/57/",
-    "categories": "decentralized-identity",
-    "tags": "org",
-    "date": "2024-11-13 10:04:46 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/org/issues/57We are interested in dedicating time at TPAC to hear from working group members using DIDs. We would like to aim for shorter presentation...",
-    "content": "URL: https://github.com/decentralized-identity/org/issues/57We are interested in dedicating time at TPAC to hear from working group members using DIDs. We would like to aim for shorter presentations (under 15m or so) that showcase real-world usage of DIDs.Please note your intent to present (topic and requested time) here.Additionally, if there are other topics you would like to see discussed during TPAC please suggest them here."
-  },
-  
-  {
-    "title": "SPEC/PROCESS PROPOSAL: To secure a unique method name, require the registration of the corresponding Internet DNS name: did-<method>. directory ",
-    "url": "/github-discussions/did-extensions/590/",
-    "categories": "w3c",
-    "tags": "did-extensions",
-    "date": "2024-11-10 14:57:39 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/did-extensions/issues/590For example,  did:ns -&gt; http://did-ns.directory  did: object -&gt; http://did-object.directoryThere would be no requirement to implement or u...",
-    "content": "URL: https://github.com/w3c/did-extensions/issues/590For example,  did:ns -&gt; http://did-ns.directory  did: object -&gt; http://did-object.directoryThere would be no requirement to implement or use the registered domain. It would be like buying an automobile license plate and never placing it on a vehicle (which is OK).Second, this would remove the W3C from the conflicting method name problem.Third, existing W3C registrations would be “grandfathered in”; i.e. not required to have the DNS name registration but it would still be recommended.Other thoughts?"
-  },
-  
-  {
-    "title": "https://www.w3.org/TR/did-extensions-methods/ is unresolvable ",
-    "url": "/github-discussions/did-extensions/585/",
-    "categories": "w3c",
-    "tags": "did-extensions",
-    "date": "2024-11-07 09:23:22 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/did-extensions/issues/585In the Extensions document, the DID Methods document link doesn’t resolve.See https://w3c.github.io/did-extensions/#extensions@msporny",
-    "content": "URL: https://github.com/w3c/did-extensions/issues/585In the Extensions document, the DID Methods document link doesn’t resolve.See https://w3c.github.io/did-extensions/#extensions@msporny"
-  },
-  
-  {
-    "title": "The did is not a url for the did, but for a resolution structure which as yet has no name",
-    "url": "/github-discussions/credential-schemas/23/",
-    "categories": "decentralized-identity",
-    "tags": "credential-schemas",
-    "date": "2024-11-05 09:54:02 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/credential-schemas/issues/23This not only makes the definition of did incorrect, but it points to a need for a name for the structure returned by a di...",
-    "content": "URL: https://github.com/decentralized-identity/credential-schemas/issues/23This not only makes the definition of did incorrect, but it points to a need for a name for the structure returned by a did resolution. Would also like to understand how redirects fit into this structure."
+    "snippet": "URL: https://github.com/w3c/did-extensions/issues/598Processes / process documentation needs to be updated.RE: https://github.com/w3c/did-extensions/issues/585#issuecomment-2494086460",
+    "content": "URL: https://github.com/w3c/did-extensions/issues/598Processes / process documentation needs to be updated.RE: https://github.com/w3c/did-extensions/issues/585#issuecomment-2494086460"
   },
   
   {
@@ -477,45 +69,11 @@
   },
   
   {
-    "title": "Multitenancy support for OID4VC plugin",
-    "url": "/github-discussions/acapy-plugins/1161/",
-    "categories": "openwallet-foundation",
-    "tags": "acapy-plugins",
-    "date": "2024-10-28 07:14:18 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/openwallet-foundation/acapy-plugins/issues/1161Currently, the OID4VC plugin doesn’t support multitenancy, and all operations are saved in the base wallet. When we secure the...",
-    "content": "URL: https://github.com/openwallet-foundation/acapy-plugins/issues/1161Currently, the OID4VC plugin doesn’t support multitenancy, and all operations are saved in the base wallet. When we secure the admin API, the supported credentials data is not passed on to the .well-known endpoint for the OID4VCI server.We have reviewed the initial design options and have started work on enabling multitenancy for the OID4VC plugin.The following changes are proposed:  Pass wallet information to the OID4VC server. This can be done by:          Creating a separate sub-path for each wallet and hosting all endpoints within that sub-path, e.g., &lt;OID4VCI-Endpoint&gt;/&lt;wallet-id&gt;, using it for identification; or      Passing the wallet ID as a request parameter, e.g., &lt;OID4VCI-Endpoint&gt;/.well-known/openid-credential-issuer?&lt;wallet-id&gt;.        Use the sub-path or request parameter to pass wallet information when issuing the credential offer.We’re opening this issue to gather feedback from maintainers and other OID4VC developers to finalize the design and continue the work. cc: @dbluhm, @jamshale"
-  },
-  
-  {
-    "title": "Backchannels Moved to Framework Repos",
-    "url": "/github-discussions/owl-agent-test-harness/881/",
-    "categories": "openwallet-foundation",
-    "tags": "owl-agent-test-harness",
-    "date": "2024-10-22 14:49:59 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/openwallet-foundation/owl-agent-test-harness/issues/881Backchannels are moved out of AATH repo.Follow the pattern of the Aries-VCX backchannel",
-    "content": "URL: https://github.com/openwallet-foundation/owl-agent-test-harness/issues/881Backchannels are moved out of AATH repo.Follow the pattern of the Aries-VCX backchannel"
-  },
-  
-  {
-    "title": "DRY principle for multikeys?",
-    "url": "/github-discussions/identus/76/",
+    "title": "(chore) rust 1.83 update, dependency updates and workspace deps usage",
+    "url": "/github-discussions/identus-cloud-agent/1320/",
     "categories": "hyperledger",
-    "tags": "identus",
-    "date": "2024-10-21 07:31:35 -0700",
+    "tags": "identus-cloud-agent",
+    "date": "2024-09-04 10:03:40 -0700",
     
 
 
@@ -523,233 +81,12 @@
 
 
     
-    "snippet": "URL: https://github.com/hyperledger/identus/issues/76This issue is also valid for the EdDSA and BBS specifications.The §2.1.1 Multikey section gives a (normative!) definition for Multikeys for the ...",
-    "content": "URL: https://github.com/hyperledger/identus/issues/76This issue is also valid for the EdDSA and BBS specifications.The §2.1.1 Multikey section gives a (normative!) definition for Multikeys for the various versions of ECDSA. However, section §2.2.2 Mulltikey of the controller document also defines (normatively!) not only the concept of Multikeys, but also its specific definitions for ECDSA/EdDSA/BBS.I think this is wrong, it violates the DRY principles and, worse, it may lead to discrepancies. (To be clear, I did not see any discrepancies today.) In the current setting of the various specifications, I believe the right place is the CD specification.(Note that the DID spec possibly adopting Multikeys as one of the standard key representation. The Multikey definition is relevant for DID, the cryptosuites are not…)In my view, the definition should be removed from the ECDSA (and EdDSA and BBS) specification."
+    "snippet": "URL: https://github.com/hyperledger/identus-cloud-agent/pull/1320Updates some major dep versions (notably askar), updates minor versions in the lockfile with cargo update, and convert alot of commo...",
+    "content": "URL: https://github.com/hyperledger/identus-cloud-agent/pull/1320Updates some major dep versions (notably askar), updates minor versions in the lockfile with cargo update, and convert alot of common dependencies to workspace deps"
   },
   
   {
-    "title": "Bug 27755 - Using the Subtle Crypto Interface with Streams",
-    "url": "/github-discussions/identus/73/",
-    "categories": "hyperledger",
-    "tags": "identus",
-    "date": "2024-10-21 07:15:57 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus/issues/73Bug 27755:Though the StreamsAPI is referenced in Informative Reference, the functions under window.crypto.subtle are specified with only one-sho...",
-    "content": "URL: https://github.com/hyperledger/identus/issues/73Bug 27755:Though the StreamsAPI is referenced in Informative Reference, the functions under window.crypto.subtle are specified with only one-shot data inputs.Use-cases: Data may not be available at once. Data may be too huge to keep in memory.For encrypt()/decrypt() it would make sense to have a streaming readable output if the input is a readable stream."
-  },
-  
-  {
-    "title": "Remove Indy/Vdrtools",
-    "url": "/github-discussions/aries-vcx/1298/",
-    "categories": "hyperledger",
-    "tags": "aries-vcx",
-    "date": "2024-10-11 15:38:48 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/aries-vcx/pull/1298Closes #1250Other changesI believe switching the pipelines has caused a whole lot of new tests to run in askar mode, so there’s plenty of new ...",
-    "content": "URL: https://github.com/hyperledger/aries-vcx/pull/1298Closes #1250Other changesI believe switching the pipelines has caused a whole lot of new tests to run in askar mode, so there’s plenty of new test failures.  in aries_vcx, add support for expanding verkeys read from ledgers (abbreviated with ~ prefix, expanded into full verkey)  rm mysql wallet tests for now, i don’t believe these ever worked for askar, we may need to look into it if we want to support it  askar wallet verify function only worked if the signer key is owned by the wallet; not useful for verify external signers  change the from_seed to from_secret_bytes in askar key generation (similar to #1224 ), however i’ve taken the easy path out by just swapping it in-place  small issues with the unpack alg, where the reported sender_vk was missing 1 step of base58 decoding.  just using a dummy in-memory askar wallet for tests/agents currently. i left a TODO comment, but i think we can defer this for solving later, it will require consideration of how we want to make storage path configurable (previously we just let indy select some default location)  pin the mediator build image to our globally used rust toolchain version (1.79)"
-  },
-  
-  {
-    "title": "`--base-wallet-routes` flag no longer works",
-    "url": "/github-discussions/acapy/3283/",
-    "categories": "openwallet-foundation",
-    "tags": "acapy",
-    "date": "2024-10-11 10:16:41 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/openwallet-foundation/acapy/issues/3283After the swap to using decorators to delineate routes accessible by tenants and routes accessible by admins, the ability to grant acc...",
-    "content": "URL: https://github.com/openwallet-foundation/acapy/issues/3283After the swap to using decorators to delineate routes accessible by tenants and routes accessible by admins, the ability to grant access to the base wallet to additional routes was lost.This option made it possible for a base wallet to form a didcomm connection with a mediator and then use that as a base mediator for all tenants, among other things.cc @esune @jamshale"
-  },
-  
-  {
-    "title": "Scenario testing - Restarts and upgrades",
-    "url": "/github-discussions/acapy/3269/",
-    "categories": "openwallet-foundation",
-    "tags": "acapy",
-    "date": "2024-10-03 09:16:38 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/openwallet-foundation/acapy/issues/3269In the acapy tools repo there is some really useful testing using docker containers that allows testing of upgrade scripts and restart...",
-    "content": "URL: https://github.com/openwallet-foundation/acapy/issues/3269In the acapy tools repo there is some really useful testing using docker containers that allows testing of upgrade scripts and restarts. https://github.com/hyperledger/aries-acapy-tools/tree/main/askar_tools/tests/e2e.It should be possible to support this in the scenarios directory from acapy itself. It would be awesome to be able to test a supported upgrade path from the last LTS version and test a few different restarts with changed configurations such as making public dids and using seeds etc."
-  },
-  
-  {
-    "title": "Question about query parameter ordering",
-    "url": "/github-discussions/did-core/865/",
-    "categories": "w3c",
-    "tags": "did-core",
-    "date": "2024-09-25 05:50:27 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/did-core/issues/865I am looking for guidance on query parameter ordering, specifically where a DID URL with a query parameter might be used as an IDIn many systems such ...",
-    "content": "URL: https://github.com/w3c/did-core/issues/865I am looking for guidance on query parameter ordering, specifically where a DID URL with a query parameter might be used as an IDIn many systems such as ActivityPub, an ID is basically an opaque string but in practice it is a URL whose structure gives a hint on how to resolve it, like using an HTTPS URL that resolves to the object.I am in the process of trying to implement did:web for activitystreams object IDs inside of an ActivityPub project, but this would I think equally apply to service IDs in the DID document: How do I deal with query parameters being seemingly unordered if some things rely on IDs equally matching? Is anyone dealing with this in their projects?"
-  },
-  
-  {
-    "title": "Bit set by the SPC extension should backed up as part of the Public Key Credential Source",
-    "url": "/github-discussions/webauthn/2153/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-09-24 18:04:28 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/webauthn/issues/2153PLACEHOLDERProposed ChangeBit set by the SPC extension should backed up as part of the Public Key Credential Source.",
-    "content": "URL: https://github.com/w3c/webauthn/issues/2153PLACEHOLDERProposed ChangeBit set by the SPC extension should backed up as part of the Public Key Credential Source."
-  },
-  
-  {
-    "title": "Add `challengeUrl`",
-    "url": "/github-discussions/webauthn/2152/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-09-24 15:26:51 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/webauthn/issues/2152WebAuthn challenges usually need to be fetched from the server. This introduces extra latency, especially in cases where the page is loaded from offl...",
-    "content": "URL: https://github.com/w3c/webauthn/issues/2152WebAuthn challenges usually need to be fetched from the server. This introduces extra latency, especially in cases where the page is loaded from offline storage and apps. This extra latency delays when WebAuthn credentials can be shown to the user in an empty allow-list request.Proposed ChangeAdd a challengeUrl parameter that lets authenticators (or user agents) asynchronously fetch the challenge. This would let browsers render the list of credentials before the challenge comes back, improving the user experience. Add feature detection for it.This obsoletes issue #1856."
-  },
-  
-  {
-    "title": "Exchange of Electronic Certificate of Origin to facilitate Cross Border Trade",
-    "url": "/github-discussions/acapy-endorser-service/157/",
-    "categories": "openwallet-foundation",
-    "tags": "acapy-endorser-service",
-    "date": "2024-09-23 15:29:56 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/openwallet-foundation/acapy-endorser-service/issues/157BackgroundToday, cross-border trade and transport of goods take place on the basis of many documents and processes tha...",
-    "content": "URL: https://github.com/openwallet-foundation/acapy-endorser-service/issues/157BackgroundToday, cross-border trade and transport of goods take place on the basis of many documents and processes that are paper-based (hence manual), time-consuming, and resource-intensive process for all stakeholders. Another downside of such paper-based processes is that there is no easy way to verify the accuracy and authenticity of the trade documents. This results in inefficiencies and delays as the time required to process such paper documents far exceeds the actual time taken for the physical movement of goods. According to a study by McKinsey in 2022, documentation for a single shipment can require up to 50 sheets of paper that are exchanged with up to 30 different stakeholders.To address these inefficiencies, we have developed TradeTrust. TradeTrust, which is built upon OpenAttestation framework, comprises globally accepted standards and frameworks that allow governments and businesses to issue, verify and effect title transfer of electronic documents across different digital platforms seamlessly. TradeTrust uses cryptography and decentralised identifier (DID) technical methods to assure the authenticity and provenance of these electronic documents.As a framework, TradeTrust is designed and developed to support the digitalization of documents used in Cross-Border Trade processes. Such documents could include those that are used to convey information such as Packing Lists and Certificates of Origin (CO) thus making them verifiable with respect to their authenticity and provenance. A CO is a document commonly used in Trade to attest that a product originates from a particular country. For more information, please see https://iccwbo.org/business-solutions/certificates-of-origin/.# DistinctionExisting trade documents are typically printed hardcopies secured with wet ink stamps. These documents are susceptible to forgery and manipulation. A digital verifiable document would allow for * Assurance that the document has not been tampered with * Assurance that the document was issued by a particular Issuer * As these trade documents are shared across different parties in a long chain that may cross many borders, the holders of these documents may want control over what information is shared downstream. A shipper may choose to selectively redact commercially sensitive information (such as suppliers' names or products' pricing) before sharing it onto the next receiving party. This is based on a lossy selective redaction, removing the need to re-issue ‘a version sans the commercially sensitive information’.# ActorsUsing an electronic Certificate of Origin (eCO) as an example of a digital document that is issued via the TradeTrust framework, below are the typical actors involved in its processing.## Customs Administration or duly licensed parties like Chambers of CommerceCustoms Administration and/or Chamber of Commerce are the typical authorities responsible for producing an eCO. It is typically needed by importers/buyers to claim tariff exemptions from the importing customs authority or to provide assurance that the goods are indeed from a particular country. It is provided to importers/buyers by the exporters/sellers whom they buy from and often used in financing arrangements with banks.## BanksIn cross-border trade, sometimes buyers and sellers may arrange for trade financing services to mitigate the risks of non-payment or non-delivery. Banks and other Financial Institutions are often engaged as intermediaries to mitigate these risks using financing instruments such as a Letter of Credit (L/C). A L/C is applied for by the Buyer and will specify a list of trade documents that the Banks will need to sight and verify on behalf of their clients. One of the often-required documents can be an eCO.## ImporterAn Importer/Buyer is the party who purchases and receives products from the seller. If there is a Free Trade Agreement between the importing country and the goods’ origin country, the Importer can provide the eCO during importation clearance procedures to obtain tariff exemptions for the goods.## ExporterAn Exporter/Seller is the party who sells and transports products to his buyer. The Exporter is the party who applies for the eCO from the Customs Administration or duly licensed parties like Chambers of Commerce within the exporting country, upon the request of the Importer.## IssuerA Customs Administration and/or Chamber of Commerce are the typical authorities responsible for producing an eCO.## SubjectThe eCO attests that the origin of the goods is a particular country. It is used to claim tariff exemptions from the importing customs authority or to provide assurance that the goods are indeed from a particular country.## HolderThe eCO can be held by the Importer (and/or their appointed customs broker) and presented to the importing country’s customs administration for import tariff exemption if there is an in-force Free Trade Agreement between the goods’ origin country and the importing country. The eCO can also be held by the Exporter and Banks for trade financing purposes.## VerifierThe eCO is verified by the importing country’s Custom Authority during the importation of goods. It is also verified by Banks if the Exporter and/or Importer has financing arrangements that call for it. It is also verified by the importer to assure that the goods originated from the expected country.# Validation RequirementsDocument verification can be initiated by invoking the open-sourced verification library, or via the trusted verification portals which run the open-sourced verification library.There are no other relationship or dependencies on other Verifiable Credentials.# Example Artefacts## Verifiable CredentialElectronic Certificate of OriginBased on older OpenAttestation v2. Latest OpenAttestation v4 Alpha is now W3C VC Data Model 2.0 compliant.```json{    \"version\": \"https://schema.openattestation.com/2.0/schema.json\",    \"data\": {        \"firstSignatoryAuthentication\": {},        \"supplyChainConsignment\": {            \"exportCountry\": {},            \"exporter\": {                \"postalAddress\": {}            },            \"importCountry\": {},            \"importer\": {                \"postalAddress\": {}            },            \"loadingBaseportLocation\": {},            \"mainCarriageTransportMovement\": {                \"usedTransportMeans\": {},                \"departureEvent\": {}            },            \"unloadingBaseportLocation\": {}        },        \"$template\": {            \"type\": \"7a29f8c9-47a0-429d-a043-0eceee351090:string:EMBEDDED_RENDERER\",            \"name\": \"907e4a2d-0d16-491d-99a6-531eb4a5d06f:string:CHAFTA_COO\",            \"url\": \"7a149cd6-33d9-4813-9a6c-f7ea00b2683c:string:https://generic-templates.tradetrust.io\"        },        \"issuers\": [            {                \"name\": \"eef12038-1f5f-40de-9491-fea8a3c3771e:string:Demo Issuer\",                \"documentStore\": \"b75454f5-79c8-4f8c-9e92-77626b6871d2:string:0x70f83193bE363348Ec769c8752690eB915E640A4\",                \"identityProof\": {                    \"type\": \"b4aee06a-d226-4f0e-8bf4-b0f125735a14:string:DNS-TXT\",                    \"location\": \"4d830cea-5332-4cd7-91dd-0187c096e3af:string:sandbox.tradetrust.io\"                },                \"revocation\": {                    \"type\": \"59cf4245-6d93-4b63-91b1-f9b100e8f304:string:NONE\"                }            }        ],        \"network\": {            \"chain\": \"2d9f5493-416e-448c-8404-e308a6093bd7:string:FREE\",            \"chainId\": \"bf39e664-b37c-4e0c-bf9b-e74c257da7bd:string:101010\"        }    },    \"signature\": {        \"type\": \"SHA3MerkleProof\",        \"targetHash\": \"cff3db9808786f9ad214f3ae79cb83fccc74103a9db78f786335f85871b517cd\",        \"proof\": [],        \"merkleRoot\": \"cff3db9808786f9ad214f3ae79cb83fccc74103a9db78f786335f85871b517cd\"    }}```# Trust HierarchyThe trust can be separated into 2 parts.1. The issuer’s identity is based on the ownership of the DNS    1. This is where we intend to have an alternative identity provided by the Trust Anchors2.\tData integrity is based on the hash that is written on blockchain OR signed by the issuer.# Threat ModelTo be added.## Risk - Put simple description herePut detailed description here, including and especially the response(s) to the risk."
-  },
-  
-  {
-    "title": "Service Endpoint Construction inconsistency",
-    "url": "/github-discussions/identus/61/",
-    "categories": "hyperledger",
-    "tags": "identus",
-    "date": "2024-09-19 06:27:35 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus/issues/61The example (https://w3c-ccg.github.io/did-resolution/#example-11) is inconsistent with the algorithm (https://w3c-ccg.github.io/did-resolution/...",
-    "content": "URL: https://github.com/hyperledger/identus/issues/61The example (https://w3c-ccg.github.io/did-resolution/#example-11) is inconsistent with the algorithm (https://w3c-ccg.github.io/did-resolution/#algorithm).The example says:  Given the following input service endpoint URL:  https://example.com/messages/8377464  And given the following input DID URL:  did:example:123456789abcdefghi?service=messages&amp;relative-ref=%2Fsome%2Fpath%3Fquery#frag  Then the output service endpoint URL is:  https://example.com/messages/8377464/some/path?query#fragBut by following the algorithm, I get this as the output URL:https://example.com/messages/8377464?service=messages&amp;relative-ref=%2Fsome%2Fpath%3Fquery#fragIt looks like in the example the relative-ref DID parameter is used instead of (or in addition to) the input DID URL path and query.There is also an example in did-core (https://w3c.github.io/did-core/#example-9) for “A resource external to a DID Document”, using service and relativeRef:did:example:123?service=agent&amp;relativeRef=/credentials#degreeIs using relativeRef/relative-ref the way to go? If so, how should it interact with the path component and other query parameters in service endpoint construction?"
-  },
-  
-  {
-    "title": "Making Abstract abstract, instead of introduction",
-    "url": "/github-discussions/vc-data-model/1560/",
-    "categories": "w3c",
-    "tags": "vc-data-model",
-    "date": "2024-09-11 08:34:20 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/vc-data-model/pull/1560pulled from #1554Preview | Diff",
-    "content": "URL: https://github.com/w3c/vc-data-model/pull/1560pulled from #1554Preview | Diff"
-  },
-  
-  {
-    "title": "Need guidance on mediator customization",
-    "url": "/github-discussions/identus-docs/171/",
-    "categories": "hyperledger",
-    "tags": "identus-docs",
-    "date": "2024-09-11 03:26:37 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus-docs/issues/171I am currently working on a project where I need to modify the behavior of the Aries mediator service, specifically in the areas of keylis...",
-    "content": "URL: https://github.com/hyperledger/identus-docs/issues/171I am currently working on a project where I need to modify the behavior of the Aries mediator service, specifically in the areas of keylist management and message forwarding. However, I am unsure where to start, particularly because the mediator is deployed via a Docker image.Could you please provide guidance on where I can find the source code associated with the Docker image used for the mediator service? Additionally, any advice on how to proceed with customizing the service to alter the handling of keylists and message forwarding would be greatly appreciated."
-  },
-  
-  {
-    "title": "[Expo SDK 52][Android] failing with CMake Error at CMakeLists.txt:30 (add_library):",
-    "url": "/github-discussions/indy-vdr/324/",
-    "categories": "hyperledger",
-    "tags": "indy-vdr",
-    "date": "2024-08-29 09:38:05 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/indy-vdr/issues/324After adding the @hyperledger/aries-askar-react-native facing issue in building the package in expo version 52 in androidCMake Error at CMakeL...",
-    "content": "URL: https://github.com/hyperledger/indy-vdr/issues/324After adding the @hyperledger/aries-askar-react-native facing issue in building the package in expo version 52 in androidCMake Error at CMakeLists.txt:30 (add_library):    Target \"ariesaskarreactnative\" links to target    \"ReactAndroid::reactnativejni\" but the target was not found.  Perhaps a    find_package() call is missing for an IMPORTED target, or an ALIAS target    is missing?"
-  },
-  
-  {
-    "title": "Clarification on multiple items inside `BitstringStatusListCredential.credentialSubject`",
-    "url": "/github-discussions/dpv/184/",
-    "categories": "w3c",
-    "tags": "dpv",
-    "date": "2024-08-24 10:03:12 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/dpv/issues/184The credentialSubject property of a document can contain a one or more items inside. The https://www.w3.org/TR/vc-bitstring-status-list/ document is taking...",
-    "content": "URL: https://github.com/w3c/dpv/issues/184The credentialSubject property of a document can contain a one or more items inside. The https://www.w3.org/TR/vc-bitstring-status-list/ document is taking the assumption that there will be only a single credential subject item, and that item can be used for further status check.It is not possible to use the credentialSubject.id as it is in no way linked to the VC’s credentialStatus that is being checked.It is no possible to use credentialSubject.statusPurpose as there might be multiple credential subject with the same statusPurpose.How to pick the correct credential subject for the given credential status check?"
-  },
-  
-  {
-    "title": "New status purpose proposal",
+    "title": "CoreData Crash on credentialsDAO.addCredential",
     "url": "/github-discussions/dpv/183/",
     "categories": "w3c",
     "tags": "dpv",
@@ -761,16 +98,16 @@
 
 
     
-    "snippet": "URL: https://github.com/w3c/dpv/issues/183Greetings, while implementing BitstringStatusList in our use case (supply-chain), we uncovered a situation where an issued credential might have a new vers...",
-    "content": "URL: https://github.com/w3c/dpv/issues/183Greetings, while implementing BitstringStatusList in our use case (supply-chain), we uncovered a situation where an issued credential might have a new version available for pickup which doesn’t warrant a revocation of the previous version, but it would still be worthwhile to have a status to signal that an updated version is available.Therefore I would like to suggest adding a status purpose ~supersession~ refresh, which can have a value of 0(meaning this is the latest version of the credential available) or 1 (MAY be refreshed).The process for a holder and/or verifier to get the latest version is out of scope, however I would intend this to be used in parallel with a ~SupersessionRefresh~ defined refreshService type, which contains an endpoint to query and get an updated version of the credential.Once the software have retrieved the latest version of the credential, they would archive the current version and replace it with the latest version in their software, or create a Symbolic link towards it.edit: renamed supersession to refresh as proposed."
+    "snippet": "URL: https://github.com/w3c/dpv/issues/183Is this a regression?YesDescriptionI’m trying to process didcommIssueCredential3_0 Messages:Because Pluto seems to redeliver EVERY message, including Crede...",
+    "content": "URL: https://github.com/w3c/dpv/issues/183Is this a regression?YesDescriptionI’m trying to process didcommIssueCredential3_0 Messages:Because Pluto seems to redeliver EVERY message, including Credentials, it seems to crash CoreData.I’ve tried calling processIssuedCredentialMessage from Main or Task.detached and it seems to crash each time.  Threading issue? or am I just “holding it wrong”?This is something I found related to the error I’m seeing:  https://stackoverflow.com/questions/44963142/how-to-fix-attempt-to-recursively-call-save-error-with-coredataPlease provide the exception or error you sawError Domain=NSCocoaErrorDomain Code=132001 \"(null)\" UserInfo={message=attempt to recursively call -save: on the context aborted, stack trace=(\t0   CoreData                            0x0000000186dae1f4 -[NSManagedObjectContext save:] + 128Please provide the environment you discovered this bug inidentus-edge-agent-sdk-swift 7.0.0Anything else?It would take a bit to isolate this into an example project, but I’m happy to show you the code over screen share in case it’s something I’m doing wrongError Domain=NSCocoaErrorDomain Code=132001 “(null)” UserInfo={message=attempt to recursively call -save: on the context aborted, stack trace=(\t0   CoreData                            0x0000000186dae1f4 -[NSManagedObjectContext save:] + 128\t1   FlightTix.debug.dylib               0x0000000108103604 $sSo22NSManagedObjectContextC5PlutoE13saveWithBlock5blockyyABKc_tKFyyXEfU_ + 336\t2   FlightTix.debug.dylib               0x00000001080fd830 $sIg_Ieg_TR + 20\t3   FlightTix.debug.dylib               0x00000001080fd854 $sIeg_IyB_TR + 24\t4   CoreData                            0x0000000186db77fc developerSubmittedBlockToNSManagedObjectContextPerform + 476\t5   CoreData                            0x0000000186db7598 -[NSManagedObjectContext performBlockAndWait:] + 256\t6   FlightTix.debug.dylib               0x00000001081033a0 $sSo22NSManagedObjectContextC5PlutoE13saveWithBlock5blockyyABKc_tKF + 416\t7   FlightTix.debug.dylib               0x0000000108101d38 $s5Pluto22WriteContextSubscriber33196AB8F91B0AA4B62B3E4C9093010BD8LLC7performyyxF + 440\t8   FlightTix.debug.dylib               0x0000000108101a74 $s5Pluto22WriteContextSubscriber33_196AB8F91B0AA4B62B3E4C9093010BD8LLC7requestyy7Combine11SubscribersO6DemandVF + 412\t9   FlightTix.debug.dylib               0x0000000108102650 $s5Pluto22WriteContextSubscriber33_196AB8F91B0AA4B62B3E4C9093010BD8LLCyxq_G7Combine12SubscriptionAafGP7requestyyAF11SubscribersO6DemandVFTW + 20\t10  Combine                             0x00000001bd8404a0 $s7Combine10PublishersO7FlatMapV5Outer33_E91C3F00A6DFAAFEA2009FAF507AE039LLC12receiveInner12subscription_yAA12Subscription_p_SitF + 216\t11  Combine                             0x00000001bd8403bc $s7Combine10PublishersO7FlatMapV5Outer33_E91C3F00A6DFAAFEA2009FAF507AE039LLC4SideV7receive12subscriptionyAA12Subscription_p_tF + 20\t12  FlightTix.debug.dylib               0x000000010810293c $s7Combine10PublishersO5PlutoE21WriteContextPublisherV7receive10subscriberyqd__t5InputQyd__RszAA10SubscriberRd__s5Error_p7FailureRtd__lF + 388\t13  FlightTix.debug.dylib               0x0000000108102984 $s7Combine10PublishersO5PlutoE21WriteContextPublisherVy_xGAA0F0AdaHP7receive10subscriberyqd___tAA10SubscriberRd__7FailureQyd__AMRtz5InputQyd__6OutputRtzlFTW + 40\t14  Combine                             0x00000001bd82702c $s7Combine12PublisherBoxC7receive10subscriberyqd___tAA10SubscriberRd__7FailureQyd__AGRtz5InputQyd__6OutputRtzlF + 36\t15  Combine                             0x00000001bd827234 $s7Combine12AnyPublisherV7receive10subscriberyqd___t5InputQyd__Rsz7FailureQyd__Rs_AA10SubscriberRd__lF + 36\t16  Combine                             0x00000001bd84132c $s7Combine10PublishersO7FlatMapV5Outer33E91C3F00A6DFAAFEA2009FAF507AE039LLC7receiveyAA11SubscribersO6DemandV6OutputQy_F + 336\t17  Combine                             0x00000001bd84287c $s7Combine10PublishersO7FlatMapV5Outer33_E91C3F00A6DFAAFEA2009FAF507AE039LLCy_xq__qd__GAA10SubscriberA2aJP7receiveyAA11SubscribersO6DemandV5InputQzFTW + 20\t18  Combine                             0x00000001bd827670 $s7Combine10PublishersO3MapV5Inner33_5A6CD15A64659A6248DAF677D4BB6188LLV7receiveyAA11SubscribersO6DemandV6OutputQzF + 104\t19  Combine                             0x00000001bd7dbb2c $s7Combine14ReduceProducerC7receiveyAA11SubscribersO6DemandVq_F + 1440\t20  Combine                             0x00000001bd7dc324 $s7Combine14ReduceProducerCyxq_q0_q1_q2_GAA10SubscriberA2aEP7receiveyAA11SubscribersO6DemandV5InputQzFTW + 20\t21  Combine                             0x00000001bd827670 $s7Combine10PublishersO3MapV5Inner33_5A6CD15A64659A6248DAF677D4BB6188LLV7receiveyAA11SubscribersO6DemandV6OutputQzF + 104\t22  FlightTix.debug.dylib               0x00000001080febd0 $s5Pluto24FetchedResultsSubscriber33_674D8215A765417DECF51A837DF0E94DLLC10controller_9didChange2at3for12newIndexPathySo09NSFetchedC10ControllerCySo20NSFetchRequestResult_pG_yp10Foundation0qR0VSgSo0scM4TypeVAQtF + 1276\t23  FlightTix.debug.dylib               0x00000001080fee74 $s5Pluto24FetchedResultsSubscriber33_674D8215A765417DECF51A837DF0E94DLLC10controller_9didChange2at3for12newIndexPathySo09NSFetchedC10ControllerCySo20NSFetchRequestResult_pG_yp10Foundation0qR0VSgSo0scM4TypeVAQtFTo + 544\t24  CoreData                            0x0000000186e1b240 82-[NSFetchedResultsController(PrivateMethods) _core_managedObjectContextDidChange:]_block_invoke + 5544\t25  CoreData                            0x0000000186db77fc developerSubmittedBlockToNSManagedObjectContextPerform + 476\t26  CoreData                            0x0000000186db7598 -[NSManagedObjectContext performBlockAndWait:] + 256\t27  CoreData                            0x0000000186e19c7c -[NSFetchedResultsController _core_managedObjectContextDidChange:] + 96\t28  CoreFoundation                      0x00000001803eb800 __CFNOTIFICATIONCENTER_IS_CALLING_OUT_TO_AN_OBSERVER + 140\t29  CoreFoundation                      0x00000001803eb724 _CFXRegistrationPost_block_invoke + 84\t30  CoreFoundation                      0x00000001803eac14 _CFXRegistrationPost + 404\t31  CoreFoundation                      0x00000001803ea5f0 _CFXNotificationPost + 688\t32  Foundation                          0x0000000180ed6820 -[NSNotificationCenter postNotificationName:object:userInfo:] + 88\t33  CoreData                            0x0000000186daa0d8 -[NSManagedObjectContext _postObjectsDidChangeNotificationWithUserInfo:] + 320\t34  CoreData                            0x0000000186dbd6f8 -[NSManagedObjectContext _createAndPostChangeNotification:deletions:updates:refreshes:deferrals:wasMerge:] + 1248\t35  CoreData                            0x0000000186dac14c -[NSManagedObjectContext _processRecentChanges:] + 2840\t36  CoreData                            0x0000000186dae2c8 -[NSManagedObjectContext save:] + 340\t37  FlightTix.debug.dylib               0x0000000108103604 $sSo22NSManagedObjectContextC5PlutoE13saveWithBlock5blockyyABKc_tKFyyXEfU_ + 336\t38  FlightTix.debug.dylib               0x00000001080fd830 $sIg_Ieg_TR + 20\t39  FlightTix.debug.dylib               0x00000001080fd854 $sIeg_IyB_TR + 24\t40  CoreData                            0x0000000186db77fc developerSubmittedBlockToNSManagedObjectContextPerform + 476\t41  CoreData                            0x0000000186db7598 -[NSManagedObjectContext performBlockAndWait:] + 256\t42  FlightTix.debug.dylib               0x00000001081033a0 $sSo22NSManagedObjectContextC5PlutoE13saveWithBlock5blockyyABKc_tKF + 416\t43  FlightTix.debug.dylib               0x0000000108101d38 $s5Pluto22WriteContextSubscriber33_196AB8F91B0AA4B62B3E4C9093010BD8LLC7performyyxF + 440\t44  FlightTix.debug.dylib               0x0000000108101a74 $s5Pluto22WriteContextSubscriber33_196AB8F91B0AA4B62B3E4C9093010BD8LLC7requestyy7Combine11SubscribersO6DemandVF + 412\t45  FlightTix.debug.dylib               0x0000000108102650 $s5Pluto22WriteContextSubscriber33_196AB8F91B0AA4B62B3E4C9093010BD8LLCyxq_G7Combine12SubscriptionAafGP7requestyyAF11SubscribersO6DemandVFTW + 20\t46  Combine                             0x00000001bd8404a0 $s7Combine10PublishersO7FlatMapV5Outer33_E91C3F00A6DFAAFEA2009FAF507AE039LLC12receiveInner12subscription_yAA12Subscription_p_SitF + 216\t47  Combine                             0x00000001bd8403bc $s7Combine10PublishersO7FlatMapV5Outer33_E91C3F00A6DFAAFEA2009FAF507AE039LLC4SideV7receive12subscriptionyAA12Subscription_p_tF + 20\t48  FlightTix.debug.dylib               0x000000010810293c $s7Combine10PublishersO5PlutoE21WriteContextPublisherV7receive10subscriberyqd_t5InputQyd__RszAA10SubscriberRd__s5Error_p7FailureRtd__lF + 388\t49  FlightTix.debug.dylib               0x0000000108102984 $s7Combine10PublishersO5PlutoE21WriteContextPublisherVy_xGAA0F0AdaHP7receive10subscriberyqd__tAA10SubscriberRd__7FailureQyd__AMRtz5InputQyd__6OutputRtzlFTW + 40\t50  Combine                             0x00000001bd82702c $s7Combine12PublisherBoxC7receive10subscriberyqd___tAA10SubscriberRd__7FailureQyd__AGRtz5InputQyd__6OutputRtzlF + 36\t51  Combine                             0x00000001bd827234 $s7Combine12AnyPublisherV7receive10subscriberyqd___t5InputQyd__Rsz7FailureQyd__Rs_AA10SubscriberRd__lF + 36\t52  Combine                             0x00000001bd84132c $s7Combine10PublishersO7FlatMapV5Outer33E91C3F00A6DFAAFEA2009FAF507AE039LLC7receiveyAA11SubscribersO6DemandV6OutputQy_F + 336\t53  Combine                             0x00000001bd84287c $s7Combine10PublishersO7FlatMapV5Outer33_E91C3F00A6DFAAFEA2009FAF507AE039LLCy_xq__qd__GAA10SubscriberA2aJP7receiveyAA11SubscribersO6DemandV5InputQzFTW + 20\t54  Combine                             0x00000001bd827670 $s7Combine10PublishersO3MapV5Inner33_5A6CD15A64659A6248DAF677D4BB6188LLV7receiveyAA11SubscribersO6DemandV6OutputQzF + 104\t55  Combine                             0x00000001bd7dbb2c $s7Combine14ReduceProducerC7receiveyAA11SubscribersO6DemandVq_F + 1440\t56  Combine                             0x00000001bd7dc324 $s7Combine14ReduceProducerCyxq_q0_q1_q2_GAA10SubscriberA2aEP7receiveyAA11SubscribersO6DemandV5InputQzFTW + 20\t57  Combine                             0x00000001bd827670 $s7Combine10PublishersO3MapV5Inner33_5A6CD15A64659A6248DAF677D4BB6188LLV7receiveyAA11SubscribersO6DemandV6OutputQzF + 104\t58  FlightTix.debug.dylib               0x00000001080fd80c $s5Pluto24FetchedResultsSubscriber33_674D8215A765417DECF51A837DF0E94DLLC7requestyy7Combine11SubscribersO6DemandVFyyXEfU + 92\t59  FlightTix.debug.dylib               0x00000001080fd830 $sIg_Ieg_TR + 20\t60  FlightTix.debug.dylib               0x00000001080fd854 $sIeg_IyB_TR + 24\t61  CoreData                            0x0000000186db77fc developerSubmittedBlockToNSManagedObjectContextPerform + 476\t62  libdispatch.dylib                   0x00000001052b25d0 dispatch_client_callout + 16\t63  libdispatch.dylib                   0x00000001052c3b10 _dispatch_sync_invoke_and_complete_recurse + 148\t64  libdispatch.dylib                   0x00000001052c3344 _dispatch_sync_f_slow + 268\t65  CoreData                            0x0000000186db75c8 -[NSManagedObjectContext performBlockAndWait:] + 304\t66  FlightTix.debug.dylib               0x00000001080fd5e4 $s5Pluto24FetchedResultsSubscriber33_674D8215A765417DECF51A837DF0E94DLLC7requestyy7Combine11SubscribersO6DemandVF + 1192\t67  FlightTix.debug.dylib               0x00000001080ff238 $s5Pluto24FetchedResultsSubscriber33_674D8215A765417DECF51A837DF0E94DLLCyxG7Combine12SubscriptionAafGP7requestyyAF11SubscribersO6DemandVFTW + 20\t68  Combine                             0x00000001bd7db574 $s7Combine14ReduceProducerC7receive12subscriptionyAA12Subscription_p_tF + 444\t69  Combine                             0x00000001bd7dc304 $s7Combine14ReduceProducerCyxq_q0_q1_q2_GAA10SubscriberA2aEP7receive12subscriptionyAA12Subscription_p_tFTW + 20\t70  FlightTix.debug.dylib               0x00000001080ff4b0 $s7Combine10PublishersO5PlutoE23FetchedResultsPublisherV7receive10subscriberyx_tAA10SubscriberRzs5Error_p7FailureRtzSaySo20NSFetchRequestResult_pG5InputRtzlF + 356\t71  FlightTix.debug.dylib               0x00000001080ff554 $s7Combine10PublishersO5PlutoE23FetchedResultsPublisherVAA0F0AdaGP7receive10subscriberyqd__tAA10SubscriberRd__7FailureQyd__ALRtz5InputQyd__6OutputRtzlFTW + 28\t72  Combine                             0x00000001bd8274b4 $s7Combine10PublishersO3MapV7receive10subscriberyqd___t5InputQyd__Rs_AA10SubscriberRd__7FailureQyd__AKRtzlF + 268\t73  Combine                             0x00000001bd82702c $s7Combine12PublisherBoxC7receive10subscriberyqd___tAA10SubscriberRd__7FailureQyd__AGRtz5InputQyd__6OutputRtzlF + 36\t74  Combine                             0x00000001bd827234 $s7Combine12AnyPublisherV7receive10subscriberyqd___t5InputQyd__Rsz7FailureQyd__Rs_AA10SubscriberRd__lF + 36\t75  Combine                             0x00000001bd8477f0 $s7Combine10PublishersO5FirstV7receive10subscriberyqd___tAA10SubscriberRd__7FailureQyd__AIRtz5InputQyd__6OutputRtzlF + 288\t76  Combine                             0x00000001bd8274b4 $s7Combine10PublishersO3MapV7receive10subscriberyqd___t5InputQyd__Rs_AA10SubscriberRd__7FailureQyd__AKRtzlF + 268\t77  Combine                             0x00000001bd840178 $s7Combine10PublishersO7FlatMapV7receive10subscriberyqd___tAA10SubscriberRd__5InputQyd__6OutputRtz7FailureQyd__AMRt_lF + 304\t78  Combine                             0x00000001bd8274b4 $s7Combine10PublishersO3MapV7receive10subscriberyqd___t5InputQyd__Rs_AA10SubscriberRd__7FailureQyd__AKRtzlF + 268\t79  Combine                             0x00000001bd80e474 $s7Combine10PublishersO8MapErrorV7receive10subscriberyqd___t7FailureQyd__Rs_AA10SubscriberRd__5InputQyd__6OutputRtzlF + 268\t80  Combine                             0x00000001bd82702c $s7Combine12PublisherBoxC7receive10subscriberyqd___tAA10SubscriberRd__7FailureQyd__AGRtz5InputQyd__6OutputRtzlF + 36\t81  Combine                             0x00000001bd827234 $s7Combine12AnyPublisherV7receive10subscriberyqd___t5InputQyd__Rsz7FailureQyd__Rs_AA10SubscriberRd__lF + 36\t82  Combine                             0x00000001bd840178 $s7Combine10PublishersO7FlatMapV7receive10subscriberyqd___tAA10SubscriberRd__5InputQyd__6OutputRtz7FailureQyd__AMRt_lF + 304\t83  Combine                             0x00000001bd8477f0 $s7Combine10PublishersO5FirstV7receive10subscriberyqd___tAA10SubscriberRd__7FailureQyd__AIRtz5InputQyd__6OutputRtzlF + 288\t84  Combine                             0x00000001bd7e6054 $s7Combine22AsyncThrowingPublisherV8IteratorVyAEyx_GxcfC + 180\t85  Combine                             0x00000001bd7e65d8 $s7Combine14AsyncPublisherV04makeB8IteratorAC0E0Vyx_GyFTm + 104\t86  FlightTix.debug.dylib               0x0000000107ef6b58 $s7Combine10PublishersO5FirstV4Cores5Error_p7FailureRtzrlE5await6OutputQzyYaKFTY0_ + 112\t87  FlightTix.debug.dylib               0x000000010850f355 $s9EdgeAgent22ConnectionsManagerImplC11sendMessagey6Domain0G0VSgAGYaKFTQ1_ + 1\t88  FlightTix.debug.dylib               0x000000010852f7b5 $s9EdgeAgent07DIDCommB0C11sendMessage7message6Domain0E0VSgAH_tYaKFTQ1_ + 1\t89  FlightTix.debug.dylib               0x0000000107aa1c75 $s9FlightTix7IdentusC18startMessageStreamyyFy6Domain0E0VcfU0yyYaKcfU_TQ5 + 1\t90  FlightTix.debug.dylib               0x0000000107aa5371 $s9FlightTix7IdentusC18startMessageStreamyyFy6Domain0E0VcfU0yyYaKcfU_TATQ0 + 1\t91  libswift_Concurrency.dylib          0x00000002493a5829 _ZL23completeTaskWithClosurePN5swift12AsyncContextEPNS_10SwiftErrorE + 1)}"
   },
   
   {
-    "title": "Hosting of the bistring status list context",
-    "url": "/github-discussions/dpv/182/",
-    "categories": "w3c",
-    "tags": "dpv",
-    "date": "2024-08-15 01:22:02 -0700",
+    "title": "Add audience section to the spec",
+    "url": "/github-discussions/acapy-plugins/876/",
+    "categories": "openwallet-foundation",
+    "tags": "acapy-plugins",
+    "date": "2024-08-05 04:44:02 -0700",
     
 
 
@@ -778,16 +115,16 @@
 
 
     
-    "snippet": "URL: https://github.com/w3c/dpv/issues/182Hello, I have a small question on referencing the Bitstring Status List context in VCDM 1.0 credentials:With https://github.com/w3c/vc-bitstring-status-lis...",
-    "content": "URL: https://github.com/w3c/dpv/issues/182Hello, I have a small question on referencing the Bitstring Status List context in VCDM 1.0 credentials:With https://github.com/w3c/vc-bitstring-status-list/issues/91 and https://github.com/perma-id/w3id.org/pull/3662, we can refer to the Status List 2021 context through w3c perma-ids.I am under the impression however that this same change prevents referencing the bistring status list context that’s here: https://github.com/w3c/vc-bitstring-status-list/blob/main/contexts/v1.jsonldIs this second context intended to be hosted too, should implementers that use VCDM 1.0 with bitstring status lists reference it from somewhere else, or am I simply missing the correct url to reference it ?Kind regards."
+    "snippet": "URL: https://github.com/openwallet-foundation/acapy-plugins/pull/876This addresses #870.I largely used the proposed text from that issue, but rewrote the first sentence. It could probably use some ...",
+    "content": "URL: https://github.com/openwallet-foundation/acapy-plugins/pull/876This addresses #870.I largely used the proposed text from that issue, but rewrote the first sentence. It could probably use some wordsmithing.Also I wasn’t sure on the title. Audience, Intended Audience, Target Audience?Preview | Diff"
   },
   
   {
-    "title": "I am not able to add v7.0.0 as a working dependency, 6.1.1 works",
-    "url": "/github-discussions/dpv/180/",
-    "categories": "w3c",
-    "tags": "dpv",
-    "date": "2024-08-08 07:38:47 -0700",
+    "title": "Improve capability delegation example and explanation",
+    "url": "/github-discussions/acapy-plugins/875/",
+    "categories": "openwallet-foundation",
+    "tags": "acapy-plugins",
+    "date": "2024-08-05 04:27:24 -0700",
     
 
 
@@ -795,16 +132,16 @@
 
 
     
-    "snippet": "URL: https://github.com/w3c/dpv/issues/180Is this a regression?YesDescriptionIf I add v7.0.0 as a Package Dependency, it never fully resolves, leaving me in a state where I can’t link it to my targ...",
-    "content": "URL: https://github.com/w3c/dpv/issues/180Is this a regression?YesDescriptionIf I add v7.0.0 as a Package Dependency, it never fully resolves, leaving me in a state where I can’t link it to my target, or import it into Swift files.This works fine with v6.1.1Please provide the exception or error you sawWhen adding the Swift SDK as a Package Dependency, it should resolve all the packages and it should show the display name of the package.  The package list should allow me to open each package and see its contents. This does not happen with v7.0.0 for me.v6.1.1 works fine.Please provide the environment you discovered this bug inUsing from the 7.0.0 Tag in Xcode Package Dependency screenAnything else?Here is how my Package Dependency screen looks when I tag it to 7.0.0:You can see that the packages aren’t fully resolved:v6.1.1 works fine, shows up as it’s name “EdgeAgentSDK” (not the slug name) :And 6.1.1 can be found when I add it to my Target, 7.0.0 does not load fully so it’s not available to this menu."
+    "snippet": "URL: https://github.com/openwallet-foundation/acapy-plugins/pull/875Hopefully this clarifies the confusion raised in #812Preview | Diff",
+    "content": "URL: https://github.com/openwallet-foundation/acapy-plugins/pull/875Hopefully this clarifies the confusion raised in #812Preview | Diff"
   },
   
   {
-    "title": "Necessary update on the formal vocabulary?",
-    "url": "/github-discussions/bbs-signature/322/",
-    "categories": "decentralized-identity",
-    "tags": "bbs-signature",
-    "date": "2024-08-05 15:36:40 -0700",
+    "title": "Normatively reference Controller Document",
+    "url": "/github-discussions/owl-agent-test-harness/854/",
+    "categories": "openwallet-foundation",
+    "tags": "owl-agent-test-harness",
+    "date": "2024-07-26 11:04:16 -0700",
     
 
 
@@ -812,118 +149,16 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/bbs-signature/issues/322Reading through w3c/controller-document#116 it helped me to understand some things. My way of getting my thoughts in order was...",
-    "content": "URL: https://github.com/decentralized-identity/bbs-signature/issues/322Reading through w3c/controller-document#116 it helped me to understand some things. My way of getting my thoughts in order was to try to map what I read to the security vocabulary (which is, after all, simple ontology).To check my understanding, I believe the following statements are true (some are trivial, some less):  VerificationMethod and ControllerDocument are two distinct concepts (i.e., they should be considered as distinct Classes, in RDFS parlance).  The verifcationMethod property designates a VerificationMethod instance (i.e., the range of the property is a resource of type VerificationMethod)  The VerificationMethod class has some subclasses defined in the controller specification, namely Multikey, JsonWebKey, and Ed25519VerificationKey2020.  The two classes in (1) have a common property, namely controller (i.e., the property’s domain is the union of those two classes).  The ControllerDocument concept is not used by the Data Integrity specification, only the VerificationMethod (by the way of the verificationMethod property).  As consequence of the previous statement that it would be a mistake to define the domain of the verificationMethod as being a ControllerDocument (i.e., ontologically one cannot restrain the classes on which it is used to be a controller document.) Actually, there should be no restraint on the domain whatsoever.Looking at the vocabulary (see also its graphic representation) we are almost o.k. but not fully. The glaring (and significant) missing concept is the ControllerDocument. Per (1) above I believe it should be added as a separate class and, per (4) it should be an alternative domain for the controller property.(Note that the alsoKnownAs and service properties, though listed in the specification as properties on controller document, do not appear in the vocabulary or in its diagram. That is because these two properties are “borrowed” from other vocabularies.)Long story short, I believe the following changes should be done on the vocabulary:  Add the ControllerDocument class to the vocabulary  The domain of the controller property should be changed to include ControllerDocument as an alternative.I also believe that the statement (5) is not absolutely obvious from the current text, and it should be reinforced somehow…"
+    "snippet": "URL: https://github.com/openwallet-foundation/owl-agent-test-harness/issues/854There is now a Controller Document specification that is on the W3C Recommendation Track through the W3C Verifiable Cr...",
+    "content": "URL: https://github.com/openwallet-foundation/owl-agent-test-harness/issues/854There is now a Controller Document specification that is on the W3C Recommendation Track through the W3C Verifiable Credentials Working Group. It is, fundamentally, the DID Core specification but generalized to just the document (not resolution) and allows any URL. The DID Core specification might want to use that specification as the base specification (as it can be done in a way that won’t change implementations)."
   },
   
   {
-    "title": "`urnScheme` unclear and/or missing",
-    "url": "/github-discussions/did-resolution/80/",
-    "categories": "w3c",
-    "tags": "did-resolution",
-    "date": "2024-07-29 09:04:08 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/did-resolution/issues/80The spec isn’t clear and when I got to skolemizeCompactJsonLD I encountered I needed a urnScheme that wasn’t an input anywhere.. Is this supposed...",
-    "content": "URL: https://github.com/w3c/did-resolution/issues/80The spec isn’t clear and when I got to skolemizeCompactJsonLD I encountered I needed a urnScheme that wasn’t an input anywhere.. Is this supposed to be a constant? custom-scheme perhaps?"
-  },
-  
-  {
-    "title": "Make `AuthenticatorAttestationResponseJSON.publicKeyAlgorithm` optional",
-    "url": "/github-discussions/webauthn/2106/",
-    "categories": "w3c",
-    "tags": "webauthn",
-    "date": "2024-07-26 18:46:22 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/webauthn/issues/2106The motivation behind both AuthenticatorAttestationResponseJSON.publicKey and AuthenticatorAttestationResponseJSON.publicKeyAlgorithm is the same: ea...",
-    "content": "URL: https://github.com/w3c/webauthn/issues/2106The motivation behind both AuthenticatorAttestationResponseJSON.publicKey and AuthenticatorAttestationResponseJSON.publicKeyAlgorithm is the same: easy access to credential data. For good reason though,  AuthenticatorAttestationResponseJSON.publicKey is not required since technically such data exists in the required AuthenticatorAttestationResponseJSON.attestationObject. I believe the same should be true for AuthenticatorAttestationResponseJSON.publicKeyAlgorithm since it doesn’t really serve purpose without AuthenticatorAttestationResponseJSON.publicKey also existing."
-  },
-  
-  {
-    "title": "Retroactively sign-off Shota's commits",
-    "url": "/github-discussions/vc-bitstring-status-list/173/",
-    "categories": "w3c",
-    "tags": "vc-bitstring-status-list",
-    "date": "2024-07-24 08:04:10 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/vc-bitstring-status-list/issues/173@shotexa, you need to add the commit to the main branchI, shotexa, retroactively sign off on these commits:commit ff926ba feat: add do...",
-    "content": "URL: https://github.com/w3c/vc-bitstring-status-list/issues/173@shotexa, you need to add the commit to the main branchI, shotexa, retroactively sign off on these commits:commit ff926ba feat: add docs for agent env variables (#50)Signed-off-by: shotexa shota.jolbordi.me@gmail.com"
-  },
-  
-  {
-    "title": "Add `refresh` status purpose.",
-    "url": "/github-discussions/identus-apollo/185/",
-    "categories": "hyperledger",
-    "tags": "identus-apollo",
-    "date": "2024-07-18 10:25:42 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus-apollo/pull/185This PR is an attempt to address issue #183 by adding a refresh status purpose.:boom: Error: 500 Internal Server Error :boom:PR Preview fa...",
-    "content": "URL: https://github.com/hyperledger/identus-apollo/pull/185This PR is an attempt to address issue #183 by adding a refresh status purpose.:boom: Error: 500 Internal Server Error :boom:PR Preview failed to build. (Last tried on Nov 24, 2024, 10:55 PM UTC).MorePR Preview relies on a number of web services to run. There seems to be an issue with the following one::rotating_light: [Spec Generator](https://www.w3.org/2015/labs/) - Spec Generator is the web service used to build specs that rely on ReSpec.:link: [Related URL]([object Object])```Timed out after waiting 30000ms```_If you don't have enough information above to solve the error by yourself (or to understand to which web service the error is related to, if any), please [file an issue](https://github.com/tobie/pr-preview/issues/new?title=Error%20not%20surfaced%20properly&amp;body=See%20w3c/vc-bitstring-status-list%23185.)._"
-  },
-  
-  {
-    "title": "Move it2 helper to test reporter",
-    "url": "/github-discussions/dwn-user-guide/3/",
-    "categories": "decentralized-identity",
-    "tags": "dwn-user-guide",
-    "date": "2024-07-10 10:51:17 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/dwn-user-guide/issues/3This is great code:https://github.com/digitalbazaar/vc-data-model-2-test-suite/blob/6884551bb388784032d40a222340995c55adc75e/te...",
-    "content": "URL: https://github.com/decentralized-identity/dwn-user-guide/issues/3This is great code:https://github.com/digitalbazaar/vc-data-model-2-test-suite/blob/6884551bb388784032d40a222340995c55adc75e/tests/10-vcdm2.js#L57-L65But it should be here: https://github.com/digitalbazaar/mocha-w3c-interop-reporterIt also needs a better name, such as reportRow({title: '', test: async function() {}})"
-  },
-  
-  {
-    "title": "Threat model / Trust over IP introduction",
-    "url": "/github-discussions/dwn-user-guide/2/",
-    "categories": "decentralized-identity",
-    "tags": "dwn-user-guide",
-    "date": "2024-07-10 10:48:23 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/dwn-user-guide/issues/2(With caveat that I’m writing this after having read only from start to the end of section 2.2.4, and read the last use-case, a...",
-    "content": "URL: https://github.com/decentralized-identity/dwn-user-guide/issues/2(With caveat that I’m writing this after having read only from start to the end of section 2.2.4, and read the last use-case, and that perhaps somewhere in between lies the key to this issue. If that is the case, it means that the key needs to be brought earlier. If not, disregard the caveat and proceed to reading the below as though I had finished proof-reading the entire doc.)If the Threat Model summarized in the last use-case is of importance, I suggest it be more clearly stated.It is introduced at the very end of section 2.2.4 by a Note that says “W3C is handling this issue with a Threat Model.” (which is problematic as it implies endorsement; see #1 )But then the use case merely summarizes a 35-page document that lacks a clear standing and is hosted elsewhere.There is a discrepancy between the implied endorsement of a threat model and a use-case which summarizes what appears to be introductory slides from 2021.If the threat model that is summarized is what the W3C Team recommends “W3C as an org” considers to handle the issue, then it needs to be framed in such a way. Furthermore, for the recommendation to have teeth, the reader has to understand the path W3C would take to handle the issue and to trust the threat model’s standing.Also “the issue” is unclear. Re-reading again section 2.2.4, it appears that “the issue” is [from the first “note” in this section] “enabling this technological innovation by being aware of the threats to Privacy, security, and Human Rights”, where “this technological innovation” refers to “digital identities and credentials”."
-  },
-  
-  {
-    "title": "Use Chai assertions over node assert",
-    "url": "/github-discussions/credential-schemas/4/",
+    "title": "README is empty",
+    "url": "/github-discussions/credential-schemas/5/",
     "categories": "decentralized-identity",
     "tags": "credential-schemas",
-    "date": "2024-07-03 16:27:23 -0700",
+    "date": "2024-07-16 08:11:03 -0700",
     
 
 
@@ -931,169 +166,16 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/credential-schemas/issues/4Currently tests here use node’s assertion library.Tests usually use Chai’s should and expect interface.Please do try to use...",
-    "content": "URL: https://github.com/decentralized-identity/credential-schemas/issues/4Currently tests here use node’s assertion library.Tests usually use Chai’s should and expect interface.Please do try to use should:https://www.chaijs.com/guide/styles/#shouldthe use of assert is clever, but if a chai assertion doesn’t throw the mocha reporter might not see it.So use chai to assert on the error from the server."
+    "snippet": "URL: https://github.com/decentralized-identity/credential-schemas/issues/5No content available",
+    "content": "URL: https://github.com/decentralized-identity/credential-schemas/issues/5No content available"
   },
   
   {
-    "title": "Simplify abstract data model to be more concrete",
-    "url": "/github-discussions/did-core/855/",
-    "categories": "w3c",
-    "tags": "did-core",
-    "date": "2024-07-01 06:07:19 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/did-core/issues/855It has been suggested that the abstract data model in DID Core creates unnecessary complexity and that a more concrete data model should be selected, ...",
-    "content": "URL: https://github.com/w3c/did-core/issues/855It has been suggested that the abstract data model in DID Core creates unnecessary complexity and that a more concrete data model should be selected, based on implementation experience over the past two years. This issue is to track the discussion of how that simplification might occur."
-  },
-  
-  {
-    "title": "Convert suites over to local issuers / vc-gen",
-    "url": "/github-discussions/linked-vp/53/",
-    "categories": "decentralized-identity",
-    "tags": "linked-vp",
-    "date": "2024-06-30 05:28:40 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/linked-vp/issues/53Currently the JCS suite still creates test data by calling on a remote endpoint:https://github.com/w3c/vc-di-eddsa-test-suite/blob/...",
-    "content": "URL: https://github.com/decentralized-identity/linked-vp/issues/53Currently the JCS suite still creates test data by calling on a remote endpoint:https://github.com/w3c/vc-di-eddsa-test-suite/blob/720e2b094cb87a165eb4e7de79fd2c597ec366b9/tests/50-jcs-verify.js#L10-L31This suite needs to remove all test data creation using endpoints (even outside of the JCS verify suite).  expand the vc-generator to cover all suites involved with the test  use that vc-gen to create both rdfc and jcs test fixtures"
-  },
-  
-  {
-    "title": "Define ControllerDocument class.",
-    "url": "/github-discussions/bbs-signature/320/",
-    "categories": "decentralized-identity",
-    "tags": "bbs-signature",
-    "date": "2024-06-25 08:38:48 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/bbs-signature/pull/320This PR is an attempt to address issue https://github.com/w3c/vc-data-integrity/issues/322 by defining a ControllerDocument clas...",
-    "content": "URL: https://github.com/decentralized-identity/bbs-signature/pull/320This PR is an attempt to address issue https://github.com/w3c/vc-data-integrity/issues/322 by defining a ControllerDocument class./cc @filip26"
-  },
-  
-  {
-    "title": "Call into JSON-LD via its WebIDL API instead of calling algorithms directly",
-    "url": "/github-discussions/acapy-endorser-service/100/",
-    "categories": "openwallet-foundation",
-    "tags": "acapy-endorser-service",
-    "date": "2024-06-05 17:08:20 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/openwallet-foundation/acapy-endorser-service/issues/100In the discussion at https://github.com/w3c/json-ld-api/issues/580#issuecomment-2463356600, @gkellogg says that specs ...",
-    "content": "URL: https://github.com/openwallet-foundation/acapy-endorser-service/issues/100In the discussion at https://github.com/w3c/json-ld-api/issues/580#issuecomment-2463356600, @gkellogg says that specs should always use the JSON-LD API instead of calling directly into JSON-LD algorithms. data-cite=\"JSON-LD11-API seems to be a good search term in this spec to find places that need fixing."
-  },
-  
-  {
-    "title": "A few errors in the Example 11",
-    "url": "/github-discussions/jsonld-common-java/13/",
-    "categories": "decentralized-identity",
-    "tags": "jsonld-common-java",
-    "date": "2024-05-23 13:15:47 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/jsonld-common-java/issues/13I’ve spotted what I believe to be a few errors in the PDF-417 payload showed in Example 11.  There is a missing trailing s...",
-    "content": "URL: https://github.com/decentralized-identity/jsonld-common-java/issues/13I’ve spotted what I believe to be a few errors in the PDF-417 payload showed in Example 11.  There is a missing trailing space in the file type (should be ANSI ), as mentioned in #12  The DL subfile length seems wrong: it is set to 0267 where I find a value of 0234.  The ZZ offset is wrong (probably because of 2.): it is set to 0308 (41 + 267) where I find a value of 0275 (41 + 275)  The ZZ subfile lenght seems wrong: 0162 instead of 0202. This one can be easily decomposed as 202 = 2 (ZZ) + 3 + (ZZA) + 196 (base64-encoded CBOR-LD VC) + 1 (segment terminator)Here is what I think is the correct payload:@\\n\\x1e\\rANSI 000000090002DL00410234ZZ02750202DLDAQF987654321\\nDCSSMITH\\nDDEN\\nDACJOHN\\nDDFN\\nDADNONE\\nDDGN\\nDCAC\\nDCBNONE\\nDCDNONE\\nDBD01012024\\nDBB04191988\\nDBA04192030\\nDBC1\\nDAU069 IN\\nDAYBRO\\nDAG123 MAIN ST\\nDAIANYVILLE\\nDAJUTO\\nDAKF87P20000  \\nDCFUTODOCDISCRIM\\nDCGUTO\\nDAW158\\nDCK1234567890\\nDDAN\\rZZZZA2QZkpgGDGYAAGYABGYACGJ2CGHYYpBi4oxicGKYYzhiyGNAa5ZIggRi6ohicGKAYqER1ggAgGL4YqhjApRicGGwY1gQY4BjmGOJYQXq3wuVrSeLM5iGEziaBjhWosXMWRAG107uT_9bSteuPasCXFQKuPdSdF-xmUoFkA0yRJoW4ERvATNyewT263ZHMGOQYrA==\\rHowever it is possible I misunderstood something in AAMVA’s PDF-417 data encoding."
-  },
-  
-  {
-    "title": "Pollux as a plugin interface and new credentials type plugins can be inserted into the Agent",
-    "url": "/github-discussions/tswg-keri-specification/178/",
-    "categories": "trustoverip",
-    "tags": "tswg-keri-specification",
-    "date": "2024-05-21 07:59:32 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/trustoverip/tswg-keri-specification/issues/178Proposed featurePollux will become a plugin interface, this will enable more control over the available credentials type that c...",
-    "content": "URL: https://github.com/trustoverip/tswg-keri-specification/issues/178Proposed featurePollux will become a plugin interface, this will enable more control over the available credentials type that can be used by the agent. It will as well enable developers to provide their own Plugins for credential types that are not by default supported by the Agent.Feature descriptionPollux will become more inline with a plugin interface. It will be adapted so each plugin as versioning and version support.Each plugin can identify itself and identify the application/types it supports.The agent will receive an array of Pollux plugins and pick the plugin that supports a type of credential to run the flow.Anything else?No response"
-  },
-  
-  {
-    "title": "An asynchronous issuance",
-    "url": "/github-discussions/json-ld-syntax/432/",
-    "categories": "w3c",
-    "tags": "json-ld-syntax",
-    "date": "2024-05-15 03:12:27 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c/json-ld-syntax/issues/432Hi,it might be out of the scope of this spec, it’s not a microservice, but asynchronous issuing is crucial in order to enable:  an approval proc...",
-    "content": "URL: https://github.com/w3c/json-ld-syntax/issues/432Hi,it might be out of the scope of this spec, it’s not a microservice, but asynchronous issuing is crucial in order to enable:  an approval process - a process that might involve collecting additional information, checks, and even human involvement  optimal infrastructure utilization - e.g. a queue of requests scheduled to be processed on an issuer’s termsTo keep this spec simple, perhaps, simply allowing to return 202 Accepted code without specifying any further details, leaving the further interaction details on an implementer for now, could be enough to keep the issuance interface being used for advanced use-cases without a need to introduce a proprietary endpoint on issuer’s side."
-  },
-  
-  {
-    "title": "chore: upgrade package from AFJ to credo-ts",
-    "url": "/github-discussions/didcomm-demo/76/",
-    "categories": "decentralized-identity",
-    "tags": "didcomm-demo",
-    "date": "2024-05-07 06:43:52 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/didcomm-demo/pull/76  Replaced AFJ package with credo-ts across the codebase  Updated relevant imports and dependencies to ensure compatibility with c...",
-    "content": "URL: https://github.com/decentralized-identity/didcomm-demo/pull/76  Replaced AFJ package with credo-ts across the codebase  Updated relevant imports and dependencies to ensure compatibility with credo-ts  Refactored code to align with any breaking changes or differences between AFJ and credo-ts Tested the changes to confirm that the upgrade works as expected without any issues."
-  },
-  
-  {
-    "title": "Securing Mechanisms section should require that its entries are actually securing mechanisms",
-    "url": "/github-discussions/org/37/",
-    "categories": "decentralized-identity",
-    "tags": "org",
-    "date": "2024-04-20 18:16:24 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/org/issues/37https://w3c.github.io/vc-data-model/#verification says to look up a media type in https://w3c.github.io/vc-specs-dir/#securing-mechanisms...",
-    "content": "URL: https://github.com/decentralized-identity/org/issues/37https://w3c.github.io/vc-data-model/#verification says to look up a media type in https://w3c.github.io/vc-specs-dir/#securing-mechanisms (or other mechanisms known to the implementation) and that the result “MUST implement the interface described in [5.12 Securing Mechanism Specifications].” But nothing in this registry constrains the editors to only accept specs that implement that interface. This puts an unnecessary burden on implementations to check every entry in the registry themselves and only use it if it implements the interface.I don’t think the editors should need to check the quality of the securing mechanisms, just that they provide the right interface."
-  },
-  
-  {
-    "title": "Minor Bug Fixes",
-    "url": "/github-discussions/aries-vcx/1182/",
+    "title": "Section 3.2 should refer to OID4",
+    "url": "/github-discussions/identus/22/",
     "categories": "hyperledger",
-    "tags": "aries-vcx",
-    "date": "2024-04-18 22:37:21 -0700",
+    "tags": "identus",
+    "date": "2024-07-03 06:27:43 -0700",
     
 
 
@@ -1101,33 +183,16 @@
 
 
     
-    "snippet": "URL: https://github.com/hyperledger/aries-vcx/pull/1182In our testing, we’ve come across a few minor bugs that this PR intends to sort out",
-    "content": "URL: https://github.com/hyperledger/aries-vcx/pull/1182In our testing, we’ve come across a few minor bugs that this PR intends to sort out"
+    "snippet": "URL: https://github.com/hyperledger/identus/issues/22Section 3.2 should probably be updated to OpenID for Verifiable Credentials Issuance Draft",
+    "content": "URL: https://github.com/hyperledger/identus/issues/22Section 3.2 should probably be updated to OpenID for Verifiable Credentials Issuance Draft"
   },
   
   {
-    "title": "Typo in appendix A: `eddsa-rdfc-2022` is wrongly named `edssa-2022`",
-    "url": "/github-discussions/tswg-cesr-specification/90/",
-    "categories": "trustoverip",
-    "tags": "tswg-cesr-specification",
-    "date": "2024-04-11 07:10:47 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/trustoverip/tswg-cesr-specification/issues/90Hi, I think to have spotted a typo in the first paragraph of appendix A, where eddsa-rdfc-2022 is wrongly named edssa-2022. The ...",
-    "content": "URL: https://github.com/trustoverip/tswg-cesr-specification/issues/90Hi, I think to have spotted a typo in the first paragraph of appendix A, where eddsa-rdfc-2022 is wrongly named edssa-2022. The link correctly points to eddsa-rdfc-2022."
-  },
-  
-  {
-    "title": "enumerated elements should match the counts of those elements",
-    "url": "/github-discussions/spec-up/64/",
+    "title": "ecdsa-rdfc-2019 Transformation passes wrong type to \"Deserialize JSON-LD\"",
+    "url": "/github-discussions/spec-up/66/",
     "categories": "decentralized-identity",
     "tags": "spec-up",
-    "date": "2024-04-08 22:47:46 -0700",
+    "date": "2024-06-24 11:34:05 -0700",
     
 
 
@@ -1135,16 +200,16 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/spec-up/issues/64Originally posted by @TallTed in https://github.com/w3c/vc-di-bbs-test-suite/pull/63#discussion_r1809211211  The first paragraph of 3...",
-    "content": "URL: https://github.com/decentralized-identity/spec-up/issues/64Originally posted by @TallTed in https://github.com/w3c/vc-di-bbs-test-suite/pull/63#discussion_r1809211211  The first paragraph of 3.3.7 parseDerivedProofValue —      A single derived proof value object is produced as output, which contains a set of six or seven elements, having the names “bbsProof”, “labelMap”, “mandatoryIndexes”, “selectiveIndexes”, “presentationHeader”, “featureOption”, and, depending on the value of the featureOption parameter, “pseudonym” and/or “lengthBBSMessages”.    — is internally inconsistent (the set may have six, seven, or eight elements) and it disagrees with the last paragraph of that algorithm (again, should say “six, seven, or eight elements” including “featureOption”, “pseudonym” and/or “lengthBBSMessages”) —      Return derived proof value as an object with properties set to the five, six, or seven elements, using the names “bbsProof”, “labelMap”, “mandatoryIndexes”, “selectiveIndexes”, “presentationHeader”, and optional “pseudonym” and/or “lengthBBSMessages”, respectively. In addition, add featureOption and its value to the object.    These should be brought into agreement. Whatever the result is, it should then be applied to this part of the test suite."
+    "snippet": "URL: https://github.com/decentralized-identity/spec-up/issues/66https://www.w3.org/TR/vc-di-ecdsa/#transformation-ecdsa-rdfc-2019 takes a map that is not the result of the Node Map Generation algor...",
+    "content": "URL: https://github.com/decentralized-identity/spec-up/issues/66https://www.w3.org/TR/vc-di-ecdsa/#transformation-ecdsa-rdfc-2019 takes a map that is not the result of the Node Map Generation algorithm and passes it to https://www.w3.org/TR/json-ld11-api/#deserialize-json-ld-to-rdf-algorithm, which expects “a map node map, which is the result of the Node Map Generation algorithm”.https://github.com/w3c/json-ld-api/issues/579 reports that this type requirement is unclear, but the discussion there indicates that you’re expected to do the extra step in callers."
   },
   
   {
-    "title": "Distinction between the definitions of Verification and Authentication",
-    "url": "/github-discussions/org/33/",
-    "categories": "decentralized-identity",
-    "tags": "org",
-    "date": "2024-03-23 12:27:01 -0700",
+    "title": "Add `raw-private` (and possibly `raw-public` and `raw-secret`) key formats?",
+    "url": "/github-discussions/vc-api/393/",
+    "categories": "w3c-ccg",
+    "tags": "vc-api",
+    "date": "2024-06-18 13:07:29 -0700",
     
 
 
@@ -1152,16 +217,16 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/org/issues/33While the concepts are later clarified using the passport example, the initial definitions of verification and authentication  remain som...",
-    "content": "URL: https://github.com/decentralized-identity/org/issues/33While the concepts are later clarified using the passport example, the initial definitions of verification and authentication  remain somewhat ambiguous.The example provided under the definition of verification also aligns with the provided definition of authentication. It would be more effective to illustrate verification with an example that does not simultaneously constitute authentication. For example, verifying a digital signature exemplifies verification alone: using a public key, one can verify that the signature is valid (in cryptographic terms, ensuring the signature was produced by the private key related to the public key used for verification). However, this process does not reveal the identity of the signer if the link between the public key and the individual (which constitutes authentication) is absent.I find the NIST’s definition of authentication as identity verification (in SP 800-63-3) convincing.Furthermore, what do you mean with “formal” in Authentication is a specific, formal verification type?"
+    "snippet": "URL: https://github.com/w3c-ccg/vc-api/issues/393Currently, it’s not possible to import or export a raw private X25519, Ed25519, ECDH or ECDSA key.The spec says raw is “An unformatted sequence of b...",
+    "content": "URL: https://github.com/w3c-ccg/vc-api/issues/393Currently, it’s not possible to import or export a raw private X25519, Ed25519, ECDH or ECDSA key.The spec says raw is “An unformatted sequence of bytes. Intended for secret keys.” However, in the mentioned asymmetric algorithms it’s actually used to import and export public keys. And unlike with pkcs8, spki and jwk, there’s no natural way to tell from the format name and/or data whether it’s a private or a public key.So, we could introduce a raw-private key format for importing and exporting raw private keys.Conversely, we could introduce raw-public for importing and exporting raw public keys, and deprecate the usage of raw for that purpose.To complete the trio, we could introduce raw-secret for importing and exporting raw secret keys, and deprecate raw entirely.(In the future, when we add ML-KEM, we may also want raw-seed to import/export the private key seed.)"
   },
   
   {
-    "title": "Update extended proof chain test vectors",
-    "url": "/github-discussions/aries-acapy-docs/99/",
-    "categories": "hyperledger",
-    "tags": "aries-acapy-docs",
-    "date": "2024-03-22 07:55:16 -0700",
+    "title": "Possibly missing step in HMAC key generation operation",
+    "url": "/github-discussions/vc-api/392/",
+    "categories": "w3c-ccg",
+    "tags": "vc-api",
+    "date": "2024-06-18 12:43:20 -0700",
     
 
 
@@ -1169,16 +234,16 @@
 
 
     
-    "snippet": "URL: https://github.com/hyperledger/aries-acapy-docs/pull/99This PR fixes the extended proof chain test vectors to  use all four public/private key pairs as documented in the specification text. Th...",
-    "content": "URL: https://github.com/hyperledger/aries-acapy-docs/pull/99This PR fixes the extended proof chain test vectors to  use all four public/private key pairs as documented in the specification text. The previous test vectors repeated the use of public/private key number 3 rather than using key number 4. Note: test vectors are informative.Preview | Diff"
+    "snippet": "URL: https://github.com/w3c-ccg/vc-api/issues/392During the HMAC key generation operation it is never mentioned to set the HmacKeyAlgorithm length property. However, it is mentioned in the key impo...",
+    "content": "URL: https://github.com/w3c-ccg/vc-api/issues/392During the HMAC key generation operation it is never mentioned to set the HmacKeyAlgorithm length property. However, it is mentioned in the key import step 12: Set the length attribute of algorithm to length.I suppose there should be a Set the length attribute of algorithm to length. step in key generation.This is checked by generateKey/successes_HMAC in WPT."
   },
   
   {
-    "title": "Remove lowercase must text",
-    "url": "/github-discussions/bbs-signature/318/",
-    "categories": "decentralized-identity",
-    "tags": "bbs-signature",
-    "date": "2024-03-19 02:13:15 -0700",
+    "title": "eddsa-rdfc-2022 Transformation passes wrong type to \"Deserialize JSON-LD\"",
+    "url": "/github-discussions/tswg-cesr-specification/87/",
+    "categories": "trustoverip",
+    "tags": "tswg-cesr-specification",
+    "date": "2024-04-04 08:14:36 -0700",
     
 
 
@@ -1186,63 +251,12 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/bbs-signature/issues/318The unlinkability section has a lowercase must keyword.  […] This characteristic is called unlinkability which ensures that no...",
-    "content": "URL: https://github.com/decentralized-identity/bbs-signature/issues/318The unlinkability section has a lowercase must keyword.  […] This characteristic is called unlinkability which ensures that no correlatable data are used in a digitally-signed payload while still providing some level of trust, the sufficiency of which must be determined by each verifier.I would suggest to:A) Make this a normative statementB) Change the wording to abstract the word must to avoid confusionSuggested change:  […] the sufficiency of which ~must~ has to be determined by each verifier."
+    "snippet": "URL: https://github.com/trustoverip/tswg-cesr-specification/issues/87https://www.w3.org/TR/vc-di-eddsa/#transformation-eddsa-rdfc-2022 takes a map that is not the result of the Node Map Generation ...",
+    "content": "URL: https://github.com/trustoverip/tswg-cesr-specification/issues/87https://www.w3.org/TR/vc-di-eddsa/#transformation-eddsa-rdfc-2022 takes a map that is not the result of the Node Map Generation algorithm and passes it to https://www.w3.org/TR/json-ld11-api/#deserialize-json-ld-to-rdf-algorithm, which expects “a map node map, which is the result of the Node Map Generation algorithm”.https://github.com/w3c/json-ld-api/issues/579 reports that this type requirement is unclear, but the discussion there indicates that you’re expected to do the extra step in callers."
   },
   
   {
-    "title": "fix: indyNamespace",
-    "url": "/github-discussions/universal-registrar/81/",
-    "categories": "decentralized-identity",
-    "tags": "universal-registrar",
-    "date": "2024-03-18 09:21:41 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/universal-registrar/pull/81Fixes indy name spaces to get the issue credential flows working for the Indicio Testnet and Candy",
-    "content": "URL: https://github.com/decentralized-identity/universal-registrar/pull/81Fixes indy name spaces to get the issue credential flows working for the Indicio Testnet and Candy"
-  },
-  
-  {
-    "title": "Running cargo test shows failure status for most of the test cases",
-    "url": "/github-discussions/labs/7/",
-    "categories": "decentralized-identity",
-    "tags": "labs",
-    "date": "2024-03-18 09:16:27 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/labs/issues/7Fork repository using main branch and clone it on my system. Then execute following:-cargo build =&gt; successfulcargo test =&gt; many te...",
-    "content": "URL: https://github.com/decentralized-identity/labs/issues/7Fork repository using main branch and clone it on my system. Then execute following:-cargo build =&gt; successfulcargo test =&gt; many test cases reported failedBuild system : Fedora 38rustc version: rustc 1.72.0 (5680fa18f 2023-08-23)cargo version: cargo 1.72.0 (103a7ff2e 2023-08-15)"
-  },
-  
-  {
-    "title": "Link to identus-cloud-agent example / documentation",
-    "url": "/github-discussions/labs/6/",
-    "categories": "decentralized-identity",
-    "tags": "labs",
-    "date": "2024-03-18 09:16:02 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/labs/issues/6The “README - getting started” with plugin is not too actionable given it can’t do meaningful thing by itself alone. There should be a po...",
-    "content": "URL: https://github.com/decentralized-identity/labs/issues/6The “README - getting started” with plugin is not too actionable given it can’t do meaningful thing by itself alone. There should be a pointer to identus-cloud-agent documentation / example where the plugin is actually used."
-  },
-  
-  {
-    "title": "[TO DISCUSS] Add AI transcription to WG meetings",
+    "title": "Add AI transcription to WG meetings",
     "url": "/github-discussions/linked-vp/51/",
     "categories": "decentralized-identity",
     "tags": "linked-vp",
@@ -1259,45 +273,11 @@
   },
   
   {
-    "title": "Consider if things should be switched over to Credo",
-    "url": "/github-discussions/linked-vp/50/",
-    "categories": "decentralized-identity",
-    "tags": "linked-vp",
-    "date": "2024-02-29 00:53:59 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/linked-vp/issues/50Instructions, git command to pull the repo, documentation, comments etc all refer to Aries-Framework-Javascript. This has been repl...",
-    "content": "URL: https://github.com/decentralized-identity/linked-vp/issues/50Instructions, git command to pull the repo, documentation, comments etc all refer to Aries-Framework-Javascript. This has been replaced by the move to Credo-TS so Akrida should(?) reference that instead.As well imports in the package.json like @aries-framework/core, @aries-framework/node on 0.4.0 versions do not continue to be updated and the 0.5.x updates look to be released and updated under @credo-ts/node etc on npm."
-  },
-  
-  {
-    "title": "Create YAML Template for User Stories Issue",
-    "url": "/github-discussions/did-jwt/308/",
-    "categories": "decentralized-identity",
-    "tags": "did-jwt",
-    "date": "2024-02-28 04:47:17 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/did-jwt/issues/308So that submission of user stories can be standardized.",
-    "content": "URL: https://github.com/decentralized-identity/did-jwt/issues/308So that submission of user stories can be standardized."
-  },
-  
-  {
-    "title": "docs: connectionless proof",
-    "url": "/github-discussions/vc-data-model/1448/",
+    "title": "Test Vectors don´t follow/match specification",
+    "url": "/github-discussions/dpv/102/",
     "categories": "w3c",
-    "tags": "vc-data-model",
-    "date": "2024-02-27 11:04:35 -0800",
+    "tags": "dpv",
+    "date": "2023-08-02 02:42:03 -0700",
     
 
 
@@ -1305,16 +285,16 @@
 
 
     
-    "snippet": "URL: https://github.com/w3c/vc-data-model/pull/1448Base branch: https://github.com/hyperledger/identus-cloud-agent/pull/1447(merge first)See diff : https://github.com/hyperledger/identus-cloud-agen...",
-    "content": "URL: https://github.com/w3c/vc-data-model/pull/1448Base branch: https://github.com/hyperledger/identus-cloud-agent/pull/1447(merge first)See diff : https://github.com/hyperledger/identus-cloud-agent/commit/b5efc5f62c12dc712458a58c38e0b43f26ae1251Adds  a page for connectionless proof  link in sidebar"
+    "snippet": "URL: https://github.com/w3c/dpv/issues/102I am trying to implement the eddsa-jcs-2022 cryptosuite. The specification says:§ 3.3.1 Create Proof (eddsa-jcs-2022)2) If unsecuredDocument.@context is pr...",
+    "content": "URL: https://github.com/w3c/dpv/issues/102I am trying to implement the eddsa-jcs-2022 cryptosuite. The specification says:§ 3.3.1 Create Proof (eddsa-jcs-2022)2) If unsecuredDocument.@context is present, set proof.@context to unsecuredDocument.@context.The Test Vectors at https://www.w3.org/TR/vc-di-eddsa/#representation-eddsa-jcs-2022 do not reflect that requirement. Do I misunderstand something or are the test vectors outdated?"
   },
   
   {
-    "title": "SDJWT SDK to SDK Verification",
-    "url": "/github-discussions/bbs-signature/315/",
+    "title": "Problematic support of multiple schema versions when using JsonSchemaCredential",
+    "url": "/github-discussions/decentralized-web-node/239/",
     "categories": "decentralized-identity",
-    "tags": "bbs-signature",
-    "date": "2024-02-16 15:54:22 -0800",
+    "tags": "decentralized-web-node",
+    "date": "2023-06-14 09:47:37 -0700",
     
 
 
@@ -1322,50 +302,16 @@
 
 
     
-    "snippet": "URL: https://github.com/decentralized-identity/bbs-signature/issues/315Proposed featureOur aim is to bring verification capabilities across the different SDK platforms. We will do so by allowing Ed...",
-    "content": "URL: https://github.com/decentralized-identity/bbs-signature/issues/315Proposed featureOur aim is to bring verification capabilities across the different SDK platforms. We will do so by allowing Edge Wallets to initiate a ProofRequest to a known Identifier (DID), also this same Edge wallet need to be capable of Generating the Proof and send it back. This would basically allow any Edge wallet to initiate and complete verification requests by itself with Credential Type SD JWT. As this is a Selective Disclosure JWT, during the verification process the Verifier will receive both the shared disclosures and the SD JWT Credential.User CasesHigh level description SD-JWT-Based Verifiable Credentials: An Introduction (criipto.com)Current Draft Spec https://datatracker.ietf.org/doc/draft-ietf-oauth-selective-disclosure-jwt/EBSI Spec https://hub.ebsi.eu/vc-framework/did/selective-disclosure-sd-jwtAge Verification: For services that require age verification, such as venues where entrants need to be over 18. Entrants can share their driving licence as verifiable presentation and security can receive on a mobile device and automatically confirm that they are over the age of 18 without actually disclosing their age.Voting Systems: In digital voting systems, edge wallets can store digital identities, allowing citizens to vote securely and anonymously, ensuring the integrity of the electoral process.Feature descriptionUsing Presentation exchange protocol we add the ability for any SDK Verifier to now request SDJWT Presentation with all the disclosure capabilities bundled in.The verification will only pass if the claims we asked have been provided by the user, and disclosed correctlyAnything else?No response"
+    "snippet": "URL: https://github.com/decentralized-identity/decentralized-web-node/issues/239While implementing support for JsonSchemaCredential I have stumbled on implementation issue that I have not foreseen ...",
+    "content": "URL: https://github.com/decentralized-identity/decentralized-web-node/issues/239While implementing support for JsonSchemaCredential I have stumbled on implementation issue that I have not foreseen at the beginning. Namely it is the JSON Schema versions supports for the jsonSchema property.Let me explain.From the spec, the JsonSchemaCredential document requires the credentialSchema property to be exactly:{  \"id\": \"https://www.w3.org/ns/credentials/json-schema/v2.json\",  \"type\": \"JsonSchema\",  \"digestSRI\": \"sha384-S57yQDg1MTzF56Oi9DbSQ14u7jBy0RDdx0YbeV7shwhCS88G8SCXeFq82PafhCrW\"}Fetching “https://www.w3.org/ns/credentials/json-schema/v2.json” gives the following schema for jsonSchema:\"jsonSchema\": {  \"anyOf\": [    {      \"$ref\": \"https://json-schema.org/draft/2020-12/schema\"    },    {      \"$ref\": \"https://json-schema.org/draft/2019-09/schema\"    },    {      \"$ref\": \"http://json-schema.org/draft-07/schema\"    }  ]}As you can see, the schema itself is referencing all the recommended JSON Schema versions by spec (draft-7, 2019-09, 2020-12).I am using Ajv as the most standard JSON Schema library for JS, and for the support of 2020-12 version it has a note (https://ajv.js.org/json-schema.html#draft-2020-12) that it is not compatible with older schemas. When using this and when the schema is being compiled, it is failing to load the 2019-09 and draft-07 schemas over and over again entering into endless loop. This is because this schemas as not being expected and not considered meta schemas.I am still not able to find workaround for this issue for using Ajv. I am considering switching to hyperjump-io/json-schema as it seems to support this.Before doing switch or another hacky workaround, it is very suspicious to me that the Ajv team that has focused so much on JSON Schema would make such limiting design decision when not being required. My concern is that such schemas may be considered invalid.Can you please clarify the support of all these schema versions? Maybe it makes sense to make the jsonSchema field be just an object schema and let the implementations try to compile the contents it."
   },
   
   {
-    "title": "TTL is mandatory 5 minute period if not specified",
-    "url": "/github-discussions/identus-edge-agent-sdk-ts/174/",
-    "categories": "hyperledger",
-    "tags": "identus-edge-agent-sdk-ts",
-    "date": "2024-02-15 07:55:21 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus-edge-agent-sdk-ts/issues/174The specification currently states that if a TTL isn’t specified, it’s 5 minutes. This is a problem for offline use cases whe...",
-    "content": "URL: https://github.com/hyperledger/identus-edge-agent-sdk-ts/issues/174The specification currently states that if a TTL isn’t specified, it’s 5 minutes. This is a problem for offline use cases where organizations might not want to use the TTL and do not want to presume it is 5 minutes.The specification needs to make TTL completely optional with no minimum timeout assumed unless stated."
-  },
-  
-  {
-    "title": "Many errors in rocksdb/_rocksdb.pyx cause build failure",
-    "url": "/github-discussions/uni-resolver-driver-did-key/9/",
-    "categories": "decentralized-identity",
-    "tags": "uni-resolver-driver-did-key",
-    "date": "2024-02-06 23:19:56 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/uni-resolver-driver-did-key/issues/9The first error is:/tmp/pip-build-clvy4twe/python-rocksdb/.eggs/Cython-3.0.8-py3.5.egg/Cython/Compiler/Main.py:381...",
-    "content": "URL: https://github.com/decentralized-identity/uni-resolver-driver-did-key/issues/9The first error is:/tmp/pip-build-clvy4twe/python-rocksdb/.eggs/Cython-3.0.8-py3.5.egg/Cython/Compiler/Main.py:381: FutureWarning: Cython directive 'language_level' not set, using '3str' for now (Py3). This has changed from earlier releases! File: /tmp/pip-build-clvy4twe/python-rocksdb/rocksdb/_rocksdb.pyxAfter that, there are hundreds of errors in the module — many referencing a missing “gil”."
-  },
-  
-  {
-    "title": "DIDComm Message Decryption + Disruption by `eth_getLogs`/`eth_getChainId` calls",
-    "url": "/github-discussions/vc-data-model/1432/",
+    "title": "Verifiable Credential Issued in JWT  should use  short-form Prism DID  in iss",
+    "url": "/github-discussions/dpv/89/",
     "categories": "w3c",
-    "tags": "vc-data-model",
-    "date": "2024-02-03 10:43:05 -0800",
+    "tags": "dpv",
+    "date": "2023-04-13 05:14:50 -0700",
     
 
 
@@ -1373,16 +319,16 @@
 
 
     
-    "snippet": "URL: https://github.com/w3c/vc-data-model/issues/1432ProblemIn our use case we are decrypting didcomm messages within the context of our custom MetaMask Snap. This process is quite time consuming (...",
-    "content": "URL: https://github.com/w3c/vc-data-model/issues/1432ProblemIn our use case we are decrypting didcomm messages within the context of our custom MetaMask Snap. This process is quite time consuming (up to approx. 100 seconds). Our specific use case does not invoke calls to the network, however, Veramo (via the provider) does invoke the eth_getLogs and eth_getChainId calls using ethers. In the case of their failure (i.e. in the case the RPC provider comes back with an error, for example, a rate limit), the long running decryption process (i.e. the decryption) is interrupted. Therefore, there are two components to this issue we are facing:  Decryption Time: Why would the decryption take so long? In our case decrypting the DIDComm message (jwe encoded) takes around or over 100 seconds;  Error Handling/Unnecessary Calls: Where calls to the network are not required, such as the case described above, what is the case for these calls?SolutionAs it relates to the decryption time any feedback or insight you can provide on the matter is greatly appreciated. As it pertains to the provider calls on eth_getChainId and eth_getLogs errors bubbling up and cancelling the other processes - even when the aforementioned calls do not appear to be required - it would appear that these could be deactivated.Other QuestionsAny information you can provide on this is greatly appreciated. If we can align on the solution, we would be happy to present a PR, but wanted to sync up here first.ScreenshotExample of offending calls within the background.html in the MetaMask Snap. "
+    "snippet": "URL: https://github.com/w3c/dpv/issues/89A Verifiable Credential issued in JWT format currently uses the long-form of a Prism DID in the iss field of the JWT. We should update this to use the short...",
+    "content": "URL: https://github.com/w3c/dpv/issues/89A Verifiable Credential issued in JWT format currently uses the long-form of a Prism DID in the iss field of the JWT. We should update this to use the short-form Prism DID instead. Below is an example of a VC issued in JWT format, and upon decoding, the iss field displays the long-form DIDhttps://github.com/hyperledger/identus-cloud-agent/issues/1451"
   },
   
   {
-    "title": "Allow using Crypto.getRandomValues() in Shadow Realms",
-    "url": "/github-discussions/vc-api/361/",
-    "categories": "w3c-ccg",
-    "tags": "vc-api",
-    "date": "2024-01-30 08:47:10 -0800",
+    "title": "New verification material property supporting JWK sets by reference",
+    "url": "/github-discussions/did-core/811/",
+    "categories": "w3c",
+    "tags": "did-core",
+    "date": "2021-12-17 17:31:10 -0800",
     
 
 
@@ -1390,195 +336,8 @@
 
 
     
-    "snippet": "URL: https://github.com/w3c-ccg/vc-api/pull/361Note that this depends on the introduction of UniversalGlobalScope in https://github.com/whatwg/html/pull/9893.Closes #338The following implementers h...",
-    "content": "URL: https://github.com/w3c-ccg/vc-api/pull/361Note that this depends on the introduction of UniversalGlobalScope in https://github.com/whatwg/html/pull/9893.Closes #338The following implementers have shown interest:  …  …The following tasks have been completed:  Modified Web platform tests (link to pull request): https://github.com/web-platform-tests/wpt/pull/44137Implementation issues:  Chromium (https://bugs.chromium.org/p/chromium/issues/detail?id=)  Gecko (https://bugzilla.mozilla.org/show_bug.cgi?id=)  WebKit (https://bugs.webkit.org/show_bug.cgi?id=)  Deno (https://github.com/denoland/deno/issues/)  Node.js (https://github.com/nodejs/node/issues/)  workerd (https://github.com/cloudflare/workerd/issues/)  Vercel Edge Runtime (https://github.com/vercel/edge-runtime/issues/)Preview | Diff"
-  },
-  
-  {
-    "title": "Missing MAINTAINERS.md",
-    "url": "/github-discussions/identus-cloud-agent/864/",
-    "categories": "hyperledger",
-    "tags": "identus-cloud-agent",
-    "date": "2024-01-25 01:23:55 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/identus-cloud-agent/issues/864Is this a regression?NoDescriptionAs part of Hyperledger - we MUST have a MAINTAINERS.md file (as per https://toc.hyperledger.org/g...",
-    "content": "URL: https://github.com/hyperledger/identus-cloud-agent/issues/864Is this a regression?NoDescriptionAs part of Hyperledger - we MUST have a MAINTAINERS.md file (as per https://toc.hyperledger.org/guidelines/MAINTAINERS-guidelines.html)The repository is currently missing this file, we must create this file and populate according to the expecations defined in the guidelinesSome content may already be defined in other files in the repositor (from CONTRIBUTING.md)Please provide the exception or error you sawN/APlease provide the environment you discovered this bug inN/AAnything else?No response"
-  },
-  
-  {
-    "title": "Proof configuration and previousProof (maybe editorial)",
-    "url": "/github-discussions/aries-acapy-docs/93/",
-    "categories": "hyperledger",
-    "tags": "aries-acapy-docs",
-    "date": "2024-01-09 10:41:08 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/hyperledger/aries-acapy-docs/issues/93Just checking.§3.2.5 Proof Configuration does not mention the previousProof property, if applicable. I.e., when calculating the value o...",
-    "content": "URL: https://github.com/hyperledger/aries-acapy-docs/issues/93Just checking.§3.2.5 Proof Configuration does not mention the previousProof property, if applicable. I.e., when calculating the value of canonicalProofConfig, that value is not taken into consideration.I do not know whether this is intentional or an omission.If it is intentional, it might be worth emphasizing. The formulation in §3.2.2 Verify Proof, point (2) only mentions proofValue as the property to be removed, which gives the false impression that previousProof is fine. (I know that in §3.2.5 the properties to be used are listed explicitly, but then why bother with point (2) in §3.2.2 in the first place?)(The ecdsa case is identical.)"
-  },
-  
-  {
-    "title": "(feat) Cheqd DID resolver #1300",
-    "url": "/github-discussions/veramo/1305/",
-    "categories": "decentralized-identity",
-    "tags": "veramo",
-    "date": "2023-12-11 19:25:41 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/veramo/pull/1305Closes #1300Implements a did:cheqd resolver using cheqd’s gRPC resolver provided by nodes.For this approach i decided to check-in cheq...",
-    "content": "URL: https://github.com/decentralized-identity/veramo/pull/1305Closes #1300Implements a did:cheqd resolver using cheqd’s gRPC resolver provided by nodes.For this approach i decided to check-in cheqd’s .proto type files, and also check in the generated rust files for these proto types. These rust files are generated using tonic, a defacto rust lib for handling grpc. I justify the decision to check-in the files in the README, please see there.Out of Scope (for now)  doc version resolution  DID resource resolution (including did-doc metadata with the resources metadata)Other changes  added some const context definitions in the did_doc crate, and a utility method to get the required context for a given VM type.          longer term, we may consider have some general “normalize” function of DIDDocuments, which scans the doc contents, finds all appropriate JSON-LD contexts, and adds them if they were missing.        removed RsaVerificationKey2018 - unused legacy VM type  added specific parsing for did:cheqd DIDs"
-  },
-  
-  {
-    "title": "Clarify: node out of consensus",
-    "url": "/github-discussions/linked-vp/10/",
-    "categories": "decentralized-identity",
-    "tags": "linked-vp",
-    "date": "2023-11-27 01:07:15 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/linked-vp/issues/10After running the debian based container in the ID Union Test Network for a few days, the node is now out of consensus (“3.0”). May...",
-    "content": "URL: https://github.com/decentralized-identity/linked-vp/issues/10After running the debian based container in the ID Union Test Network for a few days, the node is now out of consensus (“3.0”). Maybe the Pypi package should be replaced by the deb package for indy node 1.12.4, also adressing the missing init script issue https://github.com/IDunion/indy-node-container/issues/3"
-  },
-  
-  {
-    "title": "Unclear use of `tag` in key derivation and wrapping algorithm",
-    "url": "/github-discussions/presentation-exchange/457/",
-    "categories": "decentralized-identity",
-    "tags": "presentation-exchange",
-    "date": "2023-11-02 11:00:26 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/presentation-exchange/issues/457I don’t understand how to use a tag in key derivation/wrapping algorithm as described in sections:  5.1.9 ECDH-1PU key...",
-    "content": "URL: https://github.com/decentralized-identity/presentation-exchange/issues/457I don’t understand how to use a tag in key derivation/wrapping algorithm as described in sections:  5.1.9 ECDH-1PU key wrapping and common protected headers  5.1.10 ECDH-ES key wrapping and common protected headersThere is a mention“As per this requirement, the JWE building must first encrypt the payload, then use the resulting tag as part of the key derivation process when wrapping the cek.”But I don’t see any information on how that tag should be used in derivation of kek  or wrapping of cek with kek. Am I missing something?"
-  },
-  
-  {
-    "title": "Update maintainers `w3cid` value in documents",
-    "url": "/github-discussions/traceability-interop/589/",
-    "categories": "w3c-ccg",
-    "tags": "traceability-interop",
-    "date": "2023-08-23 06:13:40 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c-ccg/traceability-interop/issues/589Hi @apuchitnis @stenreijers @gatemezing @adam-burns @Steffytan @MizukiSonoko @rajivrajani @genaris @ajile-in and @KDean-Dolphin,Public...",
-    "content": "URL: https://github.com/w3c-ccg/traceability-interop/issues/589Hi @apuchitnis @stenreijers @gatemezing @adam-burns @Steffytan @MizukiSonoko @rajivrajani @genaris @ajile-in and @KDean-Dolphin,Publication of did-extensions is currently failing because some of you don’t have w3cid values listed in your Editor’s entry in each specification. I need each of you to update your w3cid value in the “Editors” section of each document listed below:  https://github.com/w3c/did-extensions/blob/main/index.html#L54-L95  https://github.com/w3c/did-extensions/blob/main/methods/index.html#L95-L136  https://github.com/w3c/did-extensions/blob/main/properties/index.html#L54-L96  https://github.com/w3c/did-extensions/blob/main/resolution/index.html#L54-L96If you don’t have a free w3.org account, you can get one here:https://www.w3.org/account/request/You can then see your w3cid value by logging into w3.org and going to this link:https://www.w3.org/users/myprofile/The value will be in the URL in your web browser address bar. For example, when I go to the URL above, I get redirected to this URL (and my w3cid value is 41758):https://www.w3.org/users/41758/Just raise a PR on all four documents above and I’ll merge them as they come in."
-  },
-  
-  {
-    "title": "context examples in spec have not been updated to reflect did core.",
-    "url": "/github-discussions/credential-trust-establishment/8/",
-    "categories": "decentralized-identity",
-    "tags": "credential-trust-establishment",
-    "date": "2023-05-25 15:58:54 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/credential-trust-establishment/issues/8see https://github.com/digitalbazaar/ed25519-signature-2020-context",
-    "content": "URL: https://github.com/decentralized-identity/credential-trust-establishment/issues/8see https://github.com/digitalbazaar/ed25519-signature-2020-context"
-  },
-  
-  {
-    "title": "Add invalid proof type, cryptosuite, & verificationMethod tests",
-    "url": "/github-discussions/org/22/",
-    "categories": "decentralized-identity",
-    "tags": "org",
-    "date": "2023-02-24 03:09:43 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/org/pull/22  Adds a new option reason to verificationFail so test report can see why verification should have failed  Adds a new test that simulates w...",
-    "content": "URL: https://github.com/decentralized-identity/org/pull/22  Adds a new option reason to verificationFail so test report can see why verification should have failed  Adds a new test that simulates what happens when transformation options are invalid.Statement tested: “The transformation options MUST contain a type identifier for the cryptographic suite (type), a cryptosuite identifier (cryptosuite), and a verification method (verificationMethod). “"
-  },
-  
-  {
-    "title": "Exporting the Pluto models on the SDK",
-    "url": "/github-discussions/vc-api/331/",
-    "categories": "w3c-ccg",
-    "tags": "vc-api",
-    "date": "2023-01-10 12:58:42 -0800",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/w3c-ccg/vc-api/issues/331Proposed featureWe want to propose to export the pluto models, Credentials., DIDs, etc in order to provide external access outside of the SDK and th...",
-    "content": "URL: https://github.com/w3c-ccg/vc-api/issues/331Proposed featureWe want to propose to export the pluto models, Credentials., DIDs, etc in order to provide external access outside of the SDK and that Developers can use this to create their own models.Anything else?No response"
-  },
-  
-  {
-    "title": "Remove `checks` option in favor of loading from implementation configs.",
-    "url": "/github-discussions/did-resolver/97/",
-    "categories": "decentralized-identity",
-    "tags": "did-resolver",
-    "date": "2021-08-30 02:14:56 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/did-resolver/issues/97  @PatStLouis @BigBlueHat so DB needs checks: ['proof'] but other implementers might not need that option and further options.ch...",
-    "content": "URL: https://github.com/decentralized-identity/did-resolver/issues/97  @PatStLouis @BigBlueHat so DB needs checks: ['proof'] but other implementers might not need that option and further options.checks has not be in the VC API for awhile so the best way to handle this is to add options.checks to the DB implementation and do something like this:  https://github.com/w3c-ccg/data-integrity-test-suite-assertion/blob/6d61d0f3940694edb12437bcb0f457a8b7cb56cb/assertions.js#L25-L46  How to handle this situation in the bitstring status list suite is another issue as those tests will probably need us to expose a second verify with the correct checks for our verifier.Originally posted by @aljones15 in https://github.com/w3c/vc-data-model-2.0-test-suite/pull/92#discussion_r1693550614"
-  },
-  
-  {
-    "title": "How to know if a credential is a full disclosure?",
-    "url": "/github-discussions/did-jwt/194/",
-    "categories": "decentralized-identity",
-    "tags": "did-jwt",
-    "date": "2021-08-24 21:51:03 -0700",
-    
-
-
-
-
-
-    
-    "snippet": "URL: https://github.com/decentralized-identity/did-jwt/issues/194If the holder is to never present the base VC it feels like it would be valuable information for a verifier to know that they have r...",
-    "content": "URL: https://github.com/decentralized-identity/did-jwt/issues/194If the holder is to never present the base VC it feels like it would be valuable information for a verifier to know that they have received a derived proof that is a full disclosure.There is probably something technical with the indexes that can help them determine it but I wonder if this information should be easily accessible or at least specified in this spec."
+    "snippet": "URL: https://github.com/w3c/did-core/issues/811Presently, publicKeyJwk and publicKeyMultibase are the only verification material types supported for verification methods in the specification. This ...",
+    "content": "URL: https://github.com/w3c/did-core/issues/811Presently, publicKeyJwk and publicKeyMultibase are the only verification material types supported for verification methods in the specification. This is limiting for enterprise adoption where security best practice dictates frequent key rolling and hygiene, along with the broad adoption of external key management capabilities such as Azure Key Vault or the Amazon Key Management Service.Proposal is to add a new verification material property publicKeyJwks of type URL, which is similar in behaviour to the jwks_uri property in OpenID Connect metadata."
   }
   
 ]

@@ -4,7 +4,7 @@
   <id>/github-discussions/</id>
   <title>Identosphere's Github Discussions</title>
   <subtitle>Its more Self-Sovereign Identity Feeds</subtitle>
-  <updated>2024-11-27T10:42:15-08:00</updated>
+  <updated>2025-01-05T15:00:39-08:00</updated>
   <author>
     <name>DecentralizedID</name>
     <uri>/github-discussions/</uri>
@@ -13,93 +13,73 @@
   <link rel="alternate" type="text/html" hreflang="en"
     href="/github-discussions/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
-  <rights> © 2024 DecentralizedID </rights>
+  <rights> © 2025 DecentralizedID </rights>
   <icon>/github-discussions/assets/img/favicons/favicon.ico</icon>
   <logo>/github-discussions/assets/img/favicons/favicon-96x96.png</logo>
 
 
   
   <entry>
-    <title>Add test wallet config option</title>
-    <link href="/github-discussions/acapy/3355/" rel="alternate" type="text/html" title="Add test wallet config option" />
-    <published>2024-11-26T10:38:58-08:00</published>
+    <title>Add a method to get all the credentials for a rely party on the client device to support the rely party (website) to limit the number of accounts a user can register</title>
+    <link href="/github-discussions/webauthn/2222/" rel="alternate" type="text/html" title="Add a method to get all the credentials for a rely party on the client device to support the rely party (website) to limit the number of accounts a user can register" />
+    <published>2024-12-26T16:29:59-08:00</published>
   
-    <updated>2024-11-26T11:05:04-08:00</updated>
+    <updated>2024-12-26T20:22:27-08:00</updated>
   
-    <id>/github-discussions/acapy/3355/</id>
-    <content type="text/html" src="/github-discussions/acapy/3355/" />
+    <id>/github-discussions/webauthn/2222/</id>
+    <content type="text/html" src="/github-discussions/webauthn/2222/" />
     <author>
-      <name>jamshale</name>
+      <name>bigradish</name>
     </author>
 
   
     
-    <category term="openwallet-foundation" />
+    <category term="w3c" />
     
   
 
-  <summary>Should probably just be a `store_true` rather than a str</summary>
+  <summary>Hi Shane,
+I think we should not emphasize the user privacy too much. Providing more info to the RP properly may make Webauthn be used more widely. Thank you very much anyway. :)</summary>
 
   </entry>
 
   
   <entry>
-    <title>ACA-Py failing to start, gives KeyError: 'pattern'</title>
-    <link href="/github-discussions/acapy/3353/" rel="alternate" type="text/html" title="ACA-Py failing to start, gives KeyError: &amp;apos;pattern&amp;apos;" />
-    <published>2024-11-25T07:25:18-08:00</published>
+    <title>Define fragment processing rules for `application/did`</title>
+    <link href="/github-discussions/did-core/873/" rel="alternate" type="text/html" title="Define fragment processing rules for `application/did`" />
+    <published>2024-12-19T08:48:46-08:00</published>
   
-    <updated>2024-11-25T09:14:31-08:00</updated>
+    <updated>2024-12-28T23:22:23-08:00</updated>
   
-    <id>/github-discussions/acapy/3353/</id>
-    <content type="text/html" src="/github-discussions/acapy/3353/" />
+    <id>/github-discussions/did-core/873/</id>
+    <content type="text/html" src="/github-discussions/did-core/873/" />
     <author>
-      <name>nodlesh</name>
+      <name>msporny</name>
     </author>
 
   
     
-    <category term="openwallet-foundation" />
+    <category term="w3c" />
     
   
 
-  <summary>The default is the dev universal resolver. So it might be expected to have breaking changes. It&amp;#39;s an easy update in acapy. Creating a PR.</summary>
+  <summary>&amp;gt; should a resolver return the associated DIDDoc (and hence, the fragment) when the fragment is not in the current version of the DIDDoc but is in a prior version of the DIDDoc?
+As discussed, in my opinion this isn&amp;#39;t possible, a fragment can&amp;#39;t identify something that&amp;#39;s not in the DID document
+&amp;gt; The DID Controller could choose to keep all #frag values in the current DIDDoc
+Yes this would work. A...</summary>
 
   </entry>
 
   
   <entry>
-    <title>Support for subdirectory in SERVICE_ENDPOINTS</title>
-    <link href="/github-discussions/identus-mediator/382/" rel="alternate" type="text/html" title="Support for subdirectory in SERVICE_ENDPOINTS" />
-    <published>2024-11-23T16:04:25-08:00</published>
+    <title>The links in a spec should tested - manually or automatically - after each build.</title>
+    <link href="/github-discussions/did-extensions/598/" rel="alternate" type="text/html" title="The links in a spec should tested - manually or automatically - after each build." />
+    <published>2024-11-22T07:57:38-08:00</published>
   
-    <updated>2024-11-25T00:27:06-08:00</updated>
+    <updated>2024-12-27T09:13:20-08:00</updated>
   
-    <id>/github-discussions/identus-mediator/382/</id>
-    <content type="text/html" src="/github-discussions/identus-mediator/382/" />
-    <author>
-      <name>robertocarvajal</name>
-    </author>
-
-  
-    
-    <category term="hyperledger" />
-    
-  
-
-  <summary>Yes, forgot to mention, the service seems to still work but the webpage doesn&amp;#39;t render.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches</title>
-    <link href="/github-discussions/did-extensions/597/" rel="alternate" type="text/html" title="SUPER/META PROPOSAL: Authentication of unique DID Method names: allowing for multiple approaches" />
-    <published>2024-11-22T07:09:36-08:00</published>
-  
-    <updated>2024-11-26T07:01:00-08:00</updated>
-  
-    <id>/github-discussions/did-extensions/597/</id>
-    <content type="text/html" src="/github-discussions/did-extensions/597/" />
+    <id>/github-discussions/did-extensions/598/</id>
+    <content type="text/html" src="/github-discussions/did-extensions/598/" />
     <author>
       <name>mwherman2000</name>
     </author>
@@ -110,31 +90,55 @@
     
   
 
-  <summary>Please don&amp;#39;t use pictures of text when the text itself could be used.</summary>
+  <summary>Can you post a link to the updated build process documentation?</summary>
 
   </entry>
 
   
   <entry>
-    <title>Restore `--base-wallet-routes` flag functionality</title>
-    <link href="/github-discussions/acapy/3344/" rel="alternate" type="text/html" title="Restore `--base-wallet-routes` flag functionality" />
-    <published>2024-11-21T10:21:14-08:00</published>
+    <title>Fix mac-os build</title>
+    <link href="/github-discussions/credential-schemas/21/" rel="alternate" type="text/html" title="Fix mac-os build" />
+    <published>2024-11-04T05:41:24-08:00</published>
   
-    <updated>2024-11-21T11:25:31-08:00</updated>
+    <updated>2025-01-02T18:12:24-08:00</updated>
   
-    <id>/github-discussions/acapy/3344/</id>
-    <content type="text/html" src="/github-discussions/acapy/3344/" />
+    <id>/github-discussions/credential-schemas/21/</id>
+    <content type="text/html" src="/github-discussions/credential-schemas/21/" />
     <author>
-      <name>esune</name>
+      <name>WadeBarnes</name>
     </author>
 
   
     
-    <category term="openwallet-foundation" />
+    <category term="decentralized-identity" />
     
   
 
-  <summary>Actually just noticed a tiny spelling error here. Might as well fix it.</summary>
+  <summary>Hey @ottomorac !  Happy New Year to you! Yes, you can close this out.  Thanks for the info.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>(chore) rust 1.83 update, dependency updates and workspace deps usage</title>
+    <link href="/github-discussions/identus-cloud-agent/1320/" rel="alternate" type="text/html" title="(chore) rust 1.83 update, dependency updates and workspace deps usage" />
+    <published>2024-09-04T10:03:40-07:00</published>
+  
+    <updated>2024-12-31T20:21:21-08:00</updated>
+  
+    <id>/github-discussions/identus-cloud-agent/1320/</id>
+    <content type="text/html" src="/github-discussions/identus-cloud-agent/1320/" />
+    <author>
+      <name>gmulhearn</name>
+    </author>
+
+  
+    
+    <category term="hyperledger" />
+    
+  
+
+  <summary>disabled this flakey test. \&amp;quot;local/batch revocation\&amp;quot; needs to be re-assessed</summary>
 
   </entry>
 
